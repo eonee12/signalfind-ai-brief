@@ -12,8 +12,8 @@ on:
           - us
           - kr
   schedule:
-    # KR only: 09:50~15:50 KST weekdays, once per hour.
-    - cron: "50 0-6 * * 1-5"
+    # KR only: 09:40~15:40 KST weekdays, once per hour.
+    - cron: "40 0-6 * * 1-5"
 
 permissions:
   contents: write
