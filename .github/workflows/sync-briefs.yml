@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch selected brief
+      - name: Fetch selected brief and CURRENT MASTER
         id: fetch
         shell: bash
         run: |
@@ -41,10 +41,14 @@ jobs:
           case "$TARGET" in
             kr)
               URL="https://signalfind.co.kr/ai/brief-latest.txt"
+              DOC_URL="https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/export?format=txt"
+              DOC_TITLE="SignalFind KR CURRENT MASTER"
               FILE="kr-brief.txt"
               ;;
             us)
               URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
+              DOC_URL="https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/export?format=txt"
+              DOC_TITLE="SignalFind US CURRENT MASTER"
               FILE="us-brief.txt"
               ;;
             *)
@@ -53,26 +57,53 @@ jobs:
               ;;
           esac
 
-          TMP="$(mktemp)"
+          BRIEF_TMP="$(mktemp)"
+          DOC_TMP="$(mktemp)"
+          COMBINED_TMP="$(mktemp)"
+
           curl --fail --location --silent --show-error \
             --connect-timeout 15 --max-time 60 \
             --retry 2 --retry-delay 2 \
             --user-agent "SignalFind-Public-Mirror/1.0" \
-            "$URL" -o "$TMP"
+            "$URL" -o "$BRIEF_TMP"
 
-          BYTES="$(wc -c < "$TMP" | tr -d ' ')"
-          if [ "$BYTES" -lt 512 ]; then
-            echo "Brief too small: $FILE ($BYTES bytes)" >&2
+          BRIEF_BYTES="$(wc -c < "$BRIEF_TMP" | tr -d ' ')"
+          if [ "$BRIEF_BYTES" -lt 512 ]; then
+            echo "Brief too small: $FILE ($BRIEF_BYTES bytes)" >&2
             exit 1
           fi
-          if grep -qiE '^\s*<!doctype html|^\s*<html' "$TMP"; then
+          if grep -qiE '^\s*<!doctype html|^\s*<html' "$BRIEF_TMP"; then
             echo "Unexpected HTML response: $FILE" >&2
             exit 1
           fi
 
-          mv "$TMP" "$FILE"
+          curl --fail --location --silent --show-error \
+            --connect-timeout 15 --max-time 60 \
+            --retry 2 --retry-delay 2 \
+            --user-agent "SignalFind-Public-Mirror/1.0" \
+            "$DOC_URL" -o "$DOC_TMP"
+
+          DOC_BYTES="$(wc -c < "$DOC_TMP" | tr -d ' ')"
+          if [ "$DOC_BYTES" -lt 200 ]; then
+            echo "CURRENT MASTER too small: $TARGET ($DOC_BYTES bytes)" >&2
+            exit 1
+          fi
+          if grep -qiE '^\s*<!doctype html|^\s*<html' "$DOC_TMP"; then
+            echo "Unexpected HTML response from CURRENT MASTER: $TARGET" >&2
+            exit 1
+          fi
+
+          cat "$BRIEF_TMP" > "$COMBINED_TMP"
+          printf '\n\n============================================================\n' >> "$COMBINED_TMP"
+          printf '[CURRENT MASTER — GOOGLE DOC]\n' >> "$COMBINED_TMP"
+          printf '%s\n' "$DOC_TITLE" >> "$COMBINED_TMP"
+          printf '============================================================\n\n' >> "$COMBINED_TMP"
+          cat "$DOC_TMP" >> "$COMBINED_TMP"
+          printf '\n' >> "$COMBINED_TMP"
+
+          mv "$COMBINED_TMP" "$FILE"
           echo "file=$FILE" >> "$GITHUB_OUTPUT"
-          echo "SYNC_FETCH_PASS target=$TARGET file=$FILE bytes=$BYTES"
+          echo "SYNC_FETCH_PASS target=$TARGET file=$FILE brief_bytes=$BRIEF_BYTES doc_bytes=$DOC_BYTES"
 
       - name: Commit only when selected brief changed
         shell: bash
