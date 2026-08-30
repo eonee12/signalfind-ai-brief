@@ -1,6 +1,6 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-08-30 15:32 KST
+BRIEF_GENERATED_AT_KST: 2026-08-30 20:00 KST
 BASIS_DATE: 2026-08-28
 RUN: EOD (장종료)
 PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
@@ -17,7 +17,7 @@ PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-08-30 15:32 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-08-30 20:00 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 이 문서의 기계적 FinalState/Target/Exit 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
 최신 외부 펀더멘털·뉴스·Revision을 추가 조사할 수 있지만 SignalFind 기계적 상태와 외부 판단을 구분한다.
@@ -755,3 +755,112 @@ SignalFind US — CURRENT RULES AUTO
 - 💰²는 독립 Overlay이며 최종상태/Entry/Rocket을 변경하지 않음
 
 [END OF AI BRIEF]
+
+
+============================================================
+[CURRENT MASTER — GOOGLE DOC]
+SignalFind US CURRENT MASTER
+============================================================
+
+﻿SignalFind US 핵심메모 — CURRENT MASTER
+
+
+[필수 참조 주소 — CURRENT]
+• US SignalFind AI Brief: https://signalfind-us.marketpilot.workers.dev/ai/brief.txt
+• KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
+• KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
+• KR GitHub mirror: eonee12/signalfind-us → mirror/kr/brief-latest.txt / mirror/kr/meta.json
+• 미국장 CURRENT MASTER: https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/edit?usp=drivesdk
+• 한국장 CURRENT MASTER: https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/edit?usp=drivesdk
+• 글로벌 인텔리전스 시트: https://docs.google.com/spreadsheets/d/14iQm3E7eykZmyirVc-s9X73xGT_J676vEsto8GDmtZM/edit?usp=drivesdk
+• 미국장은 Brief 생성시각/EOD 기준일을 먼저 확인하고 EOD 기준으로 판단한다.
+
+
+
+
+[목적]
+• 이 문서는 미국주식 판단의 현재 정본만 보관한다. 과거 일별 스냅샷·보유수량·당일 후보·폐기 규칙은 저장하지 않는다.
+• 규칙은 검증 상태를 구분한다: PRODUCTION / PILOT / RESEARCH. 폐기된 규칙은 본문에 남기지 않는다.
+• 신규 분석 순서: 이 핵심메모 → 최신 US EOD RAW → 섹터/ETF → Telegram_Global_21D_Intelligence → 최근 1개월 Revision·실적·가이던스·공시·정책 → 가격/추격위험 → 최종 판단.
+
+
+[1. 상태체계 — PRODUCTION]
+• SignalFind 상태는 BUY / HOLD / WATCH / SELL 4개만 사용한다.
+• BUY = 현재 신규진입 가능 + 기존보유 유지 가능.
+• HOLD = 기존보유 유지 가능, 신규진입은 하지 않음.
+• WATCH = 관찰/경계, 신규진입 금지.
+• SELL = 매도/회피.
+• Fresh 여부와 Target은 상태를 대체하지 않는 Overlay 정보다.
+
+
+[2. 신규 Entry / Target]
+• Target-A 🎯🌱 — PRODUCTION 공식 Entry-1: 현재 BUY + 전일 비BUY→당일 BUY의 Fresh onset + ΔScore≥+2.5 + RS20≥+10%.
+• Target-B 🎯📈 — PILOT: Fresh BUY + Target-A 미충족 + RS20≥+10% + 최근 5D 가격수익률≥+5%. 최근 레짐에서 유효하지만 Discovery 전기간 Robust는 아니므로 A보다 낮은 신뢰도로 운용한다.
+• Target-C 🎯🔥 — PILOT/Re-entry: non-Fresh OSC turnaround + Mature 강도구간(Score 9~9.5 중심) + Norm_RS≥90 + StableCore=0 + 상승장. DD252는 broad high-zone sanity check로만 사용하고 exact 52주 신고가는 hard gate로 사용하지 않는다.
+• Target-D 🎯🔥 — RESEARCH Higher-Upside subtype: C에 RS≥92.5 및 위험조정 Momentum 강화조건을 추가한 소표본 연구형. C보다 단기 안정적이라고 해석하지 않는다.
+• standalone POST10 Target은 폐기한다. 과거 Score10→Reset 이력은 Target-B가 실제 발생했을 때 confidence/ranking 보조가점으로만 사용한다.
+• 표시 의미: 🎯🌱 상승초기 진입 / 🎯📈 본격상승 진입 / 🎯🔥 고점상태 재진입·재가속.
+
+
+[3. Entry 실행창]
+• Target-A의 기본 실행창: Primary D+1~D+3 시가, Extended D+4~D+5 시가.
+• D+6 이후는 같은 Fresh Entry의 자동 유효창으로 보지 않고 Delayed/Re-entry로 재평가한다.
+• Fresh onset 당일 현재 Score가 높거나 최근 5D 가격이 강하다는 이유만으로 자동 탈락시키지 않는다. 미국장은 Score 절대값보다 Fresh onset·ΔScore·RS20·신호 신선도가 핵심이다.
+• PRE-ENTRY 저점수는 감시용 참고정보일 뿐 매수공식이 아니다.
+• Target 배지는 현재 UI 운영상 발생 후 3거래일 유지한다. 이는 표시 운영값이며 매도시점과 동일하지 않다.
+
+
+[4. Target별 건강도 / Failure]
+• A: D5 SPY Excess≤-3%는 경고, D10 SPY Excess≤-3%는 강한 Failure Flag.
+• B: D5 SPY Excess≤-3%부터 강한 Failure Flag. B는 상승확인형이므로 A보다 Follow-through 실패를 빠르게 본다.
+• C: 초기 3~5D 흔들림을 허용한다. Fresh Entry의 3~5D Time Stop을 이식하지 않는다. D10 SPY Excess≤-3% + MA5·MA10 동시이탈은 강한 Failure 후보.
+• D: 전용 Failure/Exit는 아직 미확정. A/B/C 규칙을 자동 이식하지 않는다.
+• Failure Flag는 자동 전량매도와 동일하지 않다. 현재 구조상태·대체 Entry·기회비용과 함께 행동을 결정한다.
+
+
+[5. 📉 수익흐름 약화 표시 — PRODUCTION UX]
+• 📉는 오직 ‘수익 모멘텀/상승 흐름 약화 감지’ 의미다. 자동매도·부분매도·교체·현금화 지시가 아니다.
+• 📉가 발생하면 기존 old-cycle 🎯🌱/🎯📈/🎯🔥 Target은 제거하며 동시에 표시하지 않는다.
+• 같은 날 새로운 Fresh/Re-entry Target이 새 이벤트로 실제 발생하면 새 Target이 우선한다. 우선순위는 old Target < 📉 < new Target.
+• 📉 이후 과거 Target을 복원하지 않는다. 다시 강해지면 새로운 Entry/Re-entry 이벤트가 발생해야 새 🎯를 부여한다.
+• 매도·축소·교체는 별도 포트폴리오 판단에서 수행한다.
+
+
+[6. 보유/Exit]
+• 최우선 운용목표는 확보한 수익의 보전이다. 다만 📉 자체를 Sell 신호로 오해하지 않는다.
+• Mature는 구조상태와 사용자 행동을 분리한다. 의미 있는 약화가 나오면 단순 ‘감시하며 보유’를 기본값으로 두지 않고 유지/부분매도/축소/교체 중 실행안을 명확히 제시한다.
+• Structural Sell은 MA10 종가 이탈 + StableCore 손상 확대 + 추세 이탈 + Score 지속 하락 + 펀더멘털/Revision 하향을 조합한다.
+• MA10은 수익보호 시작점이 아니라 최종 구조 방어선에 가깝다.
+• 기존 보유주는 과거 진입오류만으로 소급 일괄매도하지 않는다. 현재 기대값·SignalFind 상태·섹터·Revision·구조훼손·대체기회를 기준으로 판단한다.
+
+
+[7. 섹터/ETF]
+• 신규후보는 섹터/ETF 상태와 가속을 먼저 본 뒤 종목 Entry를 판단한다.
+• 강한 개별주가 Target/Revision/Catalyst/upside를 갖추면 섹터가 중립·회복초기여도 제한적 진입 가능. 섹터가 명확한 SELL·추세붕괴면 비중 축소/대기를 우선한다.
+• 반도체 대표 ETF는 SOXX를 우선 사용하고 SMH는 AI/대형 반도체 리더십 보조 확인용으로 사용한다.
+• 섹터·ETF는 가중치이지 무조건 veto가 아니다. 단 명확한 섹터 붕괴는 강한 감점이다.
+
+
+[8. 펀더멘털·외부채널]
+• SignalFind = 타이밍, Revision/실적/가이던스 = 상승 근거, 섹터/ETF = 환경, 가격 = 추격위험, 외부채널 = 아이디어/Catalyst 탐지로 역할을 분리한다.
+• Telegram_Global_21D_Intelligence는 US뿐 아니라 BOTH·MACRO도 함께 읽는다. 단독 매매근거로 사용하지 않고 EOD·공시·Revision과 일치할 때 Confluence 가점을 준다.
+• 최근 1개월 EPS·매출·가이던스·목표가·투자의견 Revision과 공식 공시를 우선 검증한다.
+
+
+[9. 변경관리]
+• 이미 검증되어 PASS한 규칙은 이유 없이 재검사하지 않는다.
+• 규칙 변경은 오류/실패가설 → 역사/Validation/Forward 분리검증 → 기존 보유 소급적용 금지 → 기대수익·손실위험 비교를 통과해야 한다.
+• Progress 필드를 BUY 경과일로 해석하지 않는다. Fresh 여부는 전일 FinalState와 당일 FinalState를 직접 대조한다.
+• 과거 일별 포트폴리오·섹터 점수·당일 후보는 최신 EOD가 나오면 이 문서에 남기지 않는다. 연구가치는 SignalWarehouse 연구문서에 보관한다.
+
+
+[10. 출력 필수]
+• 신규후보: 상태 / Target 타입 / Fresh 여부 / ΔScore / RS20 / 최근5D / 섹터·ETF / Revision / Catalyst / 실행가능일 / 추격위험.
+• 보유종목: 구조상태 / 📉 여부 / Target 유효여부 / Failure Flag / MA·StableCore·OSC / 수익보호 행동 / 재진입 조건.
+.
+[11. CURRENT EXTERNAL VERIFICATION OVERLAY]
+• 미국 매크로: Jackson Hole 이후 Fed의 인플레이션 억제 기조가 강화되어 단기 성장주 밸류에이션 부담을 높이는 환경으로 반영한다. 강한 Entry라도 추격위험을 별도 평가한다.
+• Salesforce(CRM): FY27 매출 가이던스와 조정 EPS 가이던스가 상향되고 다수 증권사 목표가가 동시 상향. SignalFind Entry와 펀더멘털 방향은 일치하나 실적 직후 급등 시 추격위험은 별도 감점한다.
+• CrowdStrike(CRWD): FY27 ARR/매출 전망 상향과 다수 증권사 목표가 상향이 동시에 확인되어 사이버보안 Entry의 펀더멘털 Confluence가 강함. 단 실적 직후 큰 갭 상승은 기계적 상태와 별도로 가격추격 위험을 점검한다.
+• Palo Alto Networks(PANW): 강한 Analyst Revision이 있으나 다음 실적 발표 직전 이벤트 리스크와 높은 가격 기대가 존재하므로 신규진입은 실적 전후 변동성까지 반영한다.
+• 섹터 해석: 소프트웨어·클라우드 및 사이버보안은 현재 외부 실적/Revision과 SignalFind 방향이 가장 잘 일치한다. 반도체는 NVIDIA 수요 강세가 확인돼도 최신 SOXX 기계상태가 SELL/추세이탈이면 broad-sector 신규진입 판단을 임의로 BUY로 바꾸지 않는다.
