@@ -2,78 +2,91 @@ name: Sync SignalFind AI Briefs
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/sync-briefs.yml"
+    inputs:
+      target:
+        description: "Brief to sync"
+        required: true
+        default: us
+        type: choice
+        options:
+          - us
+          - kr
   schedule:
-    # KR: 09:50~15:50 KST weekdays, shortly after the 09:45~15:45 source refreshes.
+    # KR only: 09:50~15:50 KST weekdays, once per hour.
     - cron: "50 0-6 * * 1-5"
-    # US: 05:20 KST Tue-Sat, after US EOD publication.
-    - cron: "20 20 * * 1-5"
 
 permissions:
   contents: write
 
 concurrency:
-  group: signalfind-ai-brief-sync
+  group: signalfind-ai-brief-sync-${{ github.event_name }}-${{ inputs.target || 'kr' }}
   cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      TARGET: ${{ github.event_name == 'schedule' && 'kr' || inputs.target }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch latest public briefs
+      - name: Fetch selected brief
+        id: fetch
         shell: bash
         run: |
           set -euo pipefail
 
-          KR_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief.txt"
-          US_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
-
-          fetch_brief() {
-            local url="$1"
-            local out="$2"
-            local tmp
-            tmp="$(mktemp)"
-
-            curl --fail --location --silent --show-error \
-              --connect-timeout 15 --max-time 60 \
-              --retry 2 --retry-delay 2 \
-              --user-agent "SignalFind-Public-Mirror/1.0" \
-              "$url" -o "$tmp"
-
-            local bytes
-            bytes="$(wc -c < "$tmp" | tr -d ' ')"
-            if [ "$bytes" -lt 512 ]; then
-              echo "Brief too small: $out ($bytes bytes)" >&2
+          case "$TARGET" in
+            kr)
+              URL="https://signalfind.co.kr/ai/brief-latest.txt"
+              FILE="kr-brief.txt"
+              ;;
+            us)
+              URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
+              FILE="us-brief.txt"
+              ;;
+            *)
+              echo "Unknown target: $TARGET" >&2
               exit 1
-            fi
-            if grep -qiE '^\s*<!doctype html|^\s*<html' "$tmp"; then
-              echo "Unexpected HTML response: $out" >&2
-              exit 1
-            fi
+              ;;
+          esac
 
-            mv "$tmp" "$out"
-          }
+          TMP="$(mktemp)"
+          curl --fail --location --silent --show-error \
+            --connect-timeout 15 --max-time 60 \
+            --retry 2 --retry-delay 2 \
+            --user-agent "SignalFind-Public-Mirror/1.0" \
+            "$URL" -o "$TMP"
 
-          fetch_brief "$KR_URL" kr-brief.txt
-          fetch_brief "$US_URL" us-brief.txt
+          BYTES="$(wc -c < "$TMP" | tr -d ' ')"
+          if [ "$BYTES" -lt 512 ]; then
+            echo "Brief too small: $FILE ($BYTES bytes)" >&2
+            exit 1
+          fi
+          if grep -qiE '^\s*<!doctype html|^\s*<html' "$TMP"; then
+            echo "Unexpected HTML response: $FILE" >&2
+            exit 1
+          fi
 
-      - name: Commit only when content changed
+          mv "$TMP" "$FILE"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "SYNC_FETCH_PASS target=$TARGET file=$FILE bytes=$BYTES"
+
+      - name: Commit only when selected brief changed
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- kr-brief.txt us-brief.txt && git ls-files --error-unmatch kr-brief.txt us-brief.txt >/dev/null 2>&1; then
-            echo "BRIEFS_UNCHANGED"
+          FILE="${{ steps.fetch.outputs.file }}"
+
+          if git diff --quiet -- "$FILE" && git ls-files --error-unmatch "$FILE" >/dev/null 2>&1; then
+            echo "BRIEF_UNCHANGED target=$TARGET file=$FILE"
             exit 0
           fi
 
           git config user.name "signalfind-ai-brief-bot"
           git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
-          git add kr-brief.txt us-brief.txt
-          git commit -m "chore: refresh public AI briefs"
+          git add "$FILE"
+          git commit -m "chore: refresh ${TARGET^^} public AI brief"
           git push
