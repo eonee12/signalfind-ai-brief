@@ -1,0 +1,79 @@
+name: Sync SignalFind AI Briefs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-briefs.yml"
+  schedule:
+    # KR: 09:50~15:50 KST weekdays, shortly after the 09:45~15:45 source refreshes.
+    - cron: "50 0-6 * * 1-5"
+    # US: 05:20 KST Tue-Sat, after US EOD publication.
+    - cron: "20 20 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signalfind-ai-brief-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch latest public briefs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          KR_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief.txt"
+          US_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
+
+          fetch_brief() {
+            local url="$1"
+            local out="$2"
+            local tmp
+            tmp="$(mktemp)"
+
+            curl --fail --location --silent --show-error \
+              --connect-timeout 15 --max-time 60 \
+              --retry 2 --retry-delay 2 \
+              --user-agent "SignalFind-Public-Mirror/1.0" \
+              "$url" -o "$tmp"
+
+            local bytes
+            bytes="$(wc -c < "$tmp" | tr -d ' ')"
+            if [ "$bytes" -lt 512 ]; then
+              echo "Brief too small: $out ($bytes bytes)" >&2
+              exit 1
+            fi
+            if grep -qiE '^\s*<!doctype html|^\s*<html' "$tmp"; then
+              echo "Unexpected HTML response: $out" >&2
+              exit 1
+            fi
+
+            mv "$tmp" "$out"
+          }
+
+          fetch_brief "$KR_URL" kr-brief.txt
+          fetch_brief "$US_URL" us-brief.txt
+
+      - name: Commit only when content changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- kr-brief.txt us-brief.txt && git ls-files --error-unmatch kr-brief.txt us-brief.txt >/dev/null 2>&1; then
+            echo "BRIEFS_UNCHANGED"
+            exit 0
+          fi
+
+          git config user.name "signalfind-ai-brief-bot"
+          git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
+          git add kr-brief.txt us-brief.txt
+          git commit -m "chore: refresh public AI briefs"
+          git push
