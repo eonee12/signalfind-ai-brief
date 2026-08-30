@@ -1,0 +1,91 @@
+name: Refresh SignalFind Briefs Now
+
+on:
+  push:
+    paths:
+      - ".github/workflows/refresh-now.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-now:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Refresh KR and US briefs with CURRENT MASTER
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sync_one() {
+            local target="$1"
+            local url doc_url doc_title file
+
+            case "$target" in
+              kr)
+                url="https://signalfind.co.kr/ai/brief-latest.txt"
+                doc_url="https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/export?format=txt"
+                doc_title="SignalFind KR CURRENT MASTER"
+                file="kr-brief.txt"
+                ;;
+              us)
+                url="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
+                doc_url="https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/export?format=txt"
+                doc_title="SignalFind US CURRENT MASTER"
+                file="us-brief.txt"
+                ;;
+            esac
+
+            local brief_tmp doc_tmp combined_tmp
+            brief_tmp="$(mktemp)"
+            doc_tmp="$(mktemp)"
+            combined_tmp="$(mktemp)"
+
+            curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 \
+              --retry 2 --retry-delay 2 --user-agent "SignalFind-Public-Mirror/1.0" \
+              "$url" -o "$brief_tmp"
+
+            curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 \
+              --retry 2 --retry-delay 2 --user-agent "SignalFind-Public-Mirror/1.0" \
+              "$doc_url" -o "$doc_tmp"
+
+            local brief_bytes doc_bytes
+            brief_bytes="$(wc -c < "$brief_tmp" | tr -d ' ')"
+            doc_bytes="$(wc -c < "$doc_tmp" | tr -d ' ')"
+            [ "$brief_bytes" -ge 512 ] || { echo "Brief too small: $target" >&2; exit 1; }
+            [ "$doc_bytes" -ge 200 ] || { echo "CURRENT MASTER too small: $target" >&2; exit 1; }
+            ! grep -qiE '^\s*<!doctype html|^\s*<html' "$brief_tmp" || { echo "Unexpected brief HTML: $target" >&2; exit 1; }
+            ! grep -qiE '^\s*<!doctype html|^\s*<html' "$doc_tmp" || { echo "Unexpected doc HTML: $target" >&2; exit 1; }
+
+            cat "$brief_tmp" > "$combined_tmp"
+            printf '\n\n============================================================\n' >> "$combined_tmp"
+            printf '[CURRENT MASTER — GOOGLE DOC]\n' >> "$combined_tmp"
+            printf '%s\n' "$doc_title" >> "$combined_tmp"
+            printf '============================================================\n\n' >> "$combined_tmp"
+            cat "$doc_tmp" >> "$combined_tmp"
+            printf '\n' >> "$combined_tmp"
+            mv "$combined_tmp" "$file"
+
+            echo "REFRESH_NOW_PASS target=$target brief_bytes=$brief_bytes doc_bytes=$doc_bytes"
+          }
+
+          sync_one kr
+          sync_one us
+
+      - name: Commit refreshed briefs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- kr-brief.txt us-brief.txt; then
+            echo "BRIEFS_UNCHANGED"
+            exit 0
+          fi
+          git config user.name "signalfind-ai-brief-bot"
+          git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
+          git add kr-brief.txt us-brief.txt
+          git commit -m "chore: refresh KR and US public AI briefs"
+          git push
