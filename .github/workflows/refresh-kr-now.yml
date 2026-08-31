@@ -11,7 +11,7 @@ permissions:
 
 # Keep this workflow file as the stable Cloudflare dispatch target.
 # Updating this file also forces one immediate KR refresh through the push trigger.
-# Manual force refresh marker: 2026-08-31 14:48 KST.
+# Manual force refresh marker: 2026-08-31 16:20 KST.
 
 jobs:
   refresh-kr-now:
