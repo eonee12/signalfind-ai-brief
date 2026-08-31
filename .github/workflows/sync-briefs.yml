@@ -11,9 +11,6 @@ on:
         options:
           - us
           - kr
-  schedule:
-    # KR only: 09:40~16:40 KST weekdays, once per hour.
-    - cron: "40 0-7 * * 1-5"
 
 permissions:
   contents: write
@@ -27,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      TARGET: ${{ github.event_name == 'schedule' && 'kr' || inputs.target }}
+      TARGET: ${{ inputs.target }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
