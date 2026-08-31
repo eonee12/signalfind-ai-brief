@@ -1,0 +1,60 @@
+name: Force US Brief Once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/force-us-brief-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch latest US brief and CURRENT MASTER
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRIEF_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/brief.txt"
+          DOC_URL="https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/export?format=txt"
+          BRIEF_TMP="$(mktemp)"
+          DOC_TMP="$(mktemp)"
+
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 --retry 2 --retry-delay 2 "$BRIEF_URL" -o "$BRIEF_TMP"
+          test "$(wc -c < "$BRIEF_TMP")" -ge 512
+          grep -q '^SignalFind US — AI BRIEF' "$BRIEF_TMP"
+
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 --retry 2 --retry-delay 2 "$DOC_URL" -o "$DOC_TMP"
+          test "$(wc -c < "$DOC_TMP")" -ge 200
+
+          cat "$BRIEF_TMP" > us-brief.txt
+          printf '\n\n============================================================\n' >> us-brief.txt
+          printf '[CURRENT MASTER — GOOGLE DOC]\n' >> us-brief.txt
+          printf 'SignalFind US CURRENT MASTER\n' >> us-brief.txt
+          printf '============================================================\n\n' >> us-brief.txt
+          cat "$DOC_TMP" >> us-brief.txt
+          printf '\n' >> us-brief.txt
+
+          head -n 5 us-brief.txt
+
+      - name: Commit forced US brief
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- us-brief.txt; then
+            echo 'US_BRIEF_UNCHANGED=PASS'
+            exit 0
+          fi
+          git config user.name "signalfind-ai-brief-bot"
+          git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
+          git add us-brief.txt
+          git commit -m "chore: force refresh US public AI brief"
+          git push
+          echo 'US_BRIEF_FORCE_SYNC=PASS'
