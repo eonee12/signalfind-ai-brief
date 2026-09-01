@@ -11,10 +11,6 @@ on:
         options:
           - us
           - kr
-  # 05:10 KST Tue-Sat: one fallback sync after the 05:00 KST US batch refresh.
-  # No recurring 5-minute polling/commits.
-  schedule:
-    - cron: "10 20 * * 1-5"
 
 permissions:
   contents: write
