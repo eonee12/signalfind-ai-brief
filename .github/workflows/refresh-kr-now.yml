@@ -2,14 +2,18 @@ name: Refresh KR Brief Now
 
 on:
   workflow_dispatch:
+    inputs:
+      after_utc:
+        description: "Wait until Supabase KR mirror is newer than this UTC time"
+        required: false
+        default: ""
+        type: string
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
   # Public self-heal backup. GitHub cron is UTC.
   # 00:45~05:45 UTC = 09:45~14:45 KST, weekdays only.
   # 07:15 UTC = 16:15 KST final backup.
-  # Cloudflare :40 dispatch refreshes the Supabase mirror first;
-  # this workflow follows 5 minutes later and publishes kr-brief.txt.
   schedule:
     - cron: "45 0-5 * * 1-5"
     - cron: "15 7 * * 1-5"
@@ -32,6 +36,8 @@ jobs:
       - name: Sync latest KR mirror with CURRENT MASTER
         id: sync
         shell: bash
+        env:
+          AFTER_UTC: ${{ inputs.after_utc || '' }}
         run: |
           set -euo pipefail
 
@@ -45,33 +51,55 @@ jobs:
           DOC_TMP="$(mktemp)"
           COMBINED_TMP="$(mktemp)"
 
-          curl --fail --location --silent --show-error \
-            --connect-timeout 15 --max-time 45 \
-            --retry 2 --retry-delay 2 \
-            --user-agent "SignalFind-Public-Mirror/1.0" \
-            "${MIRROR_META_URL}?_=$(date +%s)" -o "$META_TMP"
+          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' "$FILE" | head -n1 || true)"
+          WAIT_UNTIL="$AFTER_UTC"
+          if [ -z "$WAIT_UNTIL" ]; then
+            WAIT_UNTIL="$LAST_UTC"
+          fi
 
-          MIRROR_UTC="$(python - "$META_TMP" <<'PY'
+          MIRROR_UTC=""
+          MIRROR_SHA=""
+          for attempt in $(seq 1 18); do
+            curl --fail --location --silent --show-error \
+              --connect-timeout 15 --max-time 30 \
+              --retry 1 --retry-delay 1 \
+              --user-agent "SignalFind-Public-Mirror/1.0" \
+              "${MIRROR_META_URL}?_=$(date +%s%N)" -o "$META_TMP"
+
+            MIRROR_UTC="$(python - "$META_TMP" <<'PY'
           import json, sys
           with open(sys.argv[1], encoding='utf-8') as f:
               data = json.load(f)
           print(str(data.get('fetched_at_utc') or '').strip())
           PY
-          )"
-          MIRROR_SHA="$(python - "$META_TMP" <<'PY'
+            )"
+            MIRROR_SHA="$(python - "$META_TMP" <<'PY'
           import json, sys
           with open(sys.argv[1], encoding='utf-8') as f:
               data = json.load(f)
           print(str(data.get('sha256') or '').strip())
           PY
-          )"
+            )"
 
-          if [ -z "$MIRROR_UTC" ]; then
-            echo "Missing fetched_at_utc in KR mirror meta" >&2
-            exit 1
-          fi
+            if [ -z "$MIRROR_UTC" ]; then
+              echo "Missing fetched_at_utc in KR mirror meta" >&2
+              exit 1
+            fi
 
-          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' "$FILE" | head -n1 || true)"
+            MIRROR_EPOCH="$(date -u -d "$MIRROR_UTC" +%s 2>/dev/null || echo 0)"
+            WAIT_EPOCH="$(date -u -d "$WAIT_UNTIL" +%s 2>/dev/null || echo 0)"
+            if [ -z "$WAIT_UNTIL" ] || [ "$WAIT_EPOCH" -eq 0 ] || [ "$MIRROR_EPOCH" -gt "$WAIT_EPOCH" ]; then
+              echo "KR_PUBLIC_SYNC=MIRROR_READY attempt=$attempt mirror=$MIRROR_UTC after=$WAIT_UNTIL"
+              break
+            fi
+
+            if [ "$attempt" -eq 18 ]; then
+              echo "KR mirror did not advance in time: mirror=$MIRROR_UTC after=$WAIT_UNTIL" >&2
+              exit 1
+            fi
+            sleep 5
+          done
+
           if [ "${{ github.event_name }}" = "schedule" ] && [ -n "$LAST_UTC" ]; then
             MIRROR_EPOCH="$(date -u -d "$MIRROR_UTC" +%s 2>/dev/null || echo 0)"
             LAST_EPOCH="$(date -u -d "$LAST_UTC" +%s 2>/dev/null || echo 0)"
@@ -86,7 +114,7 @@ jobs:
             --connect-timeout 15 --max-time 60 \
             --retry 2 --retry-delay 2 \
             --user-agent "SignalFind-Public-Mirror/1.0" \
-            "${MIRROR_BRIEF_URL}?_=$(date +%s)" -o "$BRIEF_TMP"
+            "${MIRROR_BRIEF_URL}?_=$(date +%s%N)" -o "$BRIEF_TMP"
 
           BRIEF_BYTES="$(wc -c < "$BRIEF_TMP" | tr -d ' ')"
           if [ "$BRIEF_BYTES" -lt 10000 ]; then
