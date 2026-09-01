@@ -5,13 +5,19 @@ on:
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
+  # Independent backup for the Cloudflare :40 primary refresh.
+  # 00:45~06:45 UTC = 09:45~15:45 KST, 07:15 UTC = 16:15 KST final backup.
+  schedule:
+    - cron: "45 0-6 * * 1-5"
+    - cron: "15 7 * * 1-5"
 
 permissions:
   contents: write
 
-# Keep this workflow file as the stable Cloudflare dispatch target.
-# Updating this file also forces one immediate KR refresh through the push trigger.
-# Manual force refresh marker: 2026-09-01 09:41 KST.
+# Cloudflare remains the primary KR refresh scheduler.
+# Scheduled runs here are a failover only: if the Cloudflare heartbeat is fresh,
+# the backup exits without fetching or committing.
+# Manual force refresh marker: 2026-09-01 09:45 KST.
 
 jobs:
   refresh-kr-now:
@@ -21,7 +27,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Decide whether backup refresh is needed
+        id: guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "KR_BACKUP_GUARD=FORCE event=${{ github.event_name }}"
+            exit 0
+          fi
+
+          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' kr-brief.txt | head -n1 || true)"
+          if [ -z "$LAST_UTC" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "KR_BACKUP_GUARD=RUN reason=no_cloudflare_heartbeat"
+            exit 0
+          fi
+
+          NOW_EPOCH="$(date -u +%s)"
+          LAST_EPOCH="$(date -u -d "$LAST_UTC" +%s 2>/dev/null || echo 0)"
+          AGE="$((NOW_EPOCH - LAST_EPOCH))"
+          if [ "$LAST_EPOCH" -gt 0 ] && [ "$AGE" -ge 0 ] && [ "$AGE" -le 600 ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "KR_BACKUP_GUARD=SKIP heartbeat_age_seconds=$AGE"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "KR_BACKUP_GUARD=RUN heartbeat_age_seconds=$AGE"
+          fi
+
       - name: Refresh KR brief with CURRENT MASTER
+        if: steps.guard.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -66,16 +102,25 @@ jobs:
             exit 1
           fi
 
-          cat "$BRIEF_TMP" > "$COMBINED_TMP"
-          printf '\n\n============================================================\n' >> "$COMBINED_TMP"
-          printf '[CURRENT MASTER — GOOGLE DOC]\n' >> "$COMBINED_TMP"
-          printf 'SignalFind KR CURRENT MASTER\n' >> "$COMBINED_TMP"
-          printf '============================================================\n\n' >> "$COMBINED_TMP"
-          cat "$DOC_TMP" >> "$COMBINED_TMP"
-          printf '\n' >> "$COMBINED_TMP"
+          REFRESHED_UTC="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          REFRESHED_KST="$(TZ=Asia/Seoul date +'%Y-%m-%dT%H:%M:%S+09:00')"
+          {
+            printf '[SIGNALFIND_MIRROR]\n'
+            printf 'refreshed_at_kst: %s\n' "$REFRESHED_KST"
+            printf 'refreshed_at_utc: %s\n' "$REFRESHED_UTC"
+            printf 'trigger_cron: github:%s\n\n' "${{ github.event_name }}"
+            cat "$BRIEF_TMP"
+            printf '\n\n============================================================\n'
+            printf '[CURRENT MASTER — GOOGLE DOC]\n'
+            printf 'SignalFind KR CURRENT MASTER\n'
+            printf '============================================================\n\n'
+            cat "$DOC_TMP"
+            printf '\n'
+          } > "$COMBINED_TMP"
           mv "$COMBINED_TMP" "$FILE"
 
       - name: Commit KR brief if changed
+        if: steps.guard.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
