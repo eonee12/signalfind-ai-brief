@@ -11,12 +11,12 @@ on:
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
-  # Public self-heal backup. GitHub cron is UTC.
-  # 00:45~05:45 UTC = 09:45~14:45 KST, weekdays only.
-  # 07:15 UTC = 16:15 KST final backup.
+  # Public self-heal redundancy. GitHub cron is UTC.
+  # KR mirror primary refresh runs at :40 KST hourly (09:40~14:40) and 16:10 final.
+  # Public sync retries at +2, +5, +10 minutes so it does not depend on cross-repo dispatch permission.
   schedule:
-    - cron: "45 0-5 * * 1-5"
-    - cron: "15 7 * * 1-5"
+    - cron: "42,45,50 0-5 * * 1-5"
+    - cron: "12,15,20 7 * * 1-5"
 
 permissions:
   contents: write
