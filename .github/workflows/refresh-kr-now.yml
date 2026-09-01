@@ -5,19 +5,21 @@ on:
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
-  # Independent backup for the Cloudflare :40 primary refresh.
-  # 00:45~06:45 UTC = 09:45~15:45 KST, 07:15 UTC = 16:15 KST final backup.
+  # Public self-heal poll. GitHub cron is UTC.
+  # 00:40~00:55 = 09:40~09:55 KST
+  # 01:00~06:55 = 10:00~15:55 KST
+  # 07:00~07:15 = 16:00~16:15 KST
   schedule:
-    - cron: "45 0-6 * * 1-5"
-    - cron: "15 7 * * 1-5"
+    - cron: "40-59/5 0 * * 1-5"
+    - cron: "*/5 1-6 * * 1-5"
+    - cron: "0-15/5 7 * * 1-5"
 
 permissions:
   contents: write
 
-# Cloudflare remains the primary KR refresh scheduler.
-# Scheduled runs here are a failover only: if the Cloudflare heartbeat is fresh,
-# the backup exits without fetching or committing.
-# Manual force refresh marker: 2026-09-01 10:41 KST.
+concurrency:
+  group: signalfind-kr-public-self-heal
+  cancel-in-progress: true
 
 jobs:
   refresh-kr-now:
@@ -27,63 +29,81 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Decide whether backup refresh is needed
-        id: guard
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "KR_BACKUP_GUARD=FORCE event=${{ github.event_name }}"
-            exit 0
-          fi
-
-          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' kr-brief.txt | head -n1 || true)"
-          if [ -z "$LAST_UTC" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "KR_BACKUP_GUARD=RUN reason=no_cloudflare_heartbeat"
-            exit 0
-          fi
-
-          NOW_EPOCH="$(date -u +%s)"
-          LAST_EPOCH="$(date -u -d "$LAST_UTC" +%s 2>/dev/null || echo 0)"
-          AGE="$((NOW_EPOCH - LAST_EPOCH))"
-          if [ "$LAST_EPOCH" -gt 0 ] && [ "$AGE" -ge 0 ] && [ "$AGE" -le 600 ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "KR_BACKUP_GUARD=SKIP heartbeat_age_seconds=$AGE"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "KR_BACKUP_GUARD=RUN heartbeat_age_seconds=$AGE"
-          fi
-
-      - name: Refresh KR brief with CURRENT MASTER
-        if: steps.guard.outputs.run == 'true'
+      - name: Sync latest KR mirror with CURRENT MASTER
+        id: sync
         shell: bash
         run: |
           set -euo pipefail
 
-          BRIEF_URL="https://signalfind.co.kr/ai/brief-latest.txt"
+          MIRROR_BRIEF_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief.txt"
+          MIRROR_META_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief-meta.json"
           DOC_URL="https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/export?format=txt"
           FILE="kr-brief.txt"
 
+          META_TMP="$(mktemp)"
           BRIEF_TMP="$(mktemp)"
           DOC_TMP="$(mktemp)"
           COMBINED_TMP="$(mktemp)"
 
           curl --fail --location --silent --show-error \
+            --connect-timeout 15 --max-time 45 \
+            --retry 2 --retry-delay 2 \
+            --user-agent "SignalFind-Public-Mirror/1.0" \
+            "${MIRROR_META_URL}?_=$(date +%s)" -o "$META_TMP"
+
+          MIRROR_UTC="$(python - "$META_TMP" <<'PY'
+          import json, sys
+          with open(sys.argv[1], encoding='utf-8') as f:
+              data = json.load(f)
+          print(str(data.get('fetched_at_utc') or '').strip())
+          PY
+          )"
+          MIRROR_SHA="$(python - "$META_TMP" <<'PY'
+          import json, sys
+          with open(sys.argv[1], encoding='utf-8') as f:
+              data = json.load(f)
+          print(str(data.get('sha256') or '').strip())
+          PY
+          )"
+
+          if [ -z "$MIRROR_UTC" ]; then
+            echo "Missing fetched_at_utc in KR mirror meta" >&2
+            exit 1
+          fi
+
+          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' "$FILE" | head -n1 || true)"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -n "$LAST_UTC" ]; then
+            MIRROR_EPOCH="$(date -u -d "$MIRROR_UTC" +%s 2>/dev/null || echo 0)"
+            LAST_EPOCH="$(date -u -d "$LAST_UTC" +%s 2>/dev/null || echo 0)"
+            if [ "$MIRROR_EPOCH" -gt 0 ] && [ "$LAST_EPOCH" -ge "$MIRROR_EPOCH" ]; then
+              echo "KR_PUBLIC_SYNC=SKIP mirror_not_newer mirror=$MIRROR_UTC public=$LAST_UTC"
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+
+          curl --fail --location --silent --show-error \
             --connect-timeout 15 --max-time 60 \
             --retry 2 --retry-delay 2 \
             --user-agent "SignalFind-Public-Mirror/1.0" \
-            "$BRIEF_URL" -o "$BRIEF_TMP"
+            "${MIRROR_BRIEF_URL}?_=$(date +%s)" -o "$BRIEF_TMP"
 
           BRIEF_BYTES="$(wc -c < "$BRIEF_TMP" | tr -d ' ')"
-          if [ "$BRIEF_BYTES" -lt 512 ]; then
-            echo "Brief too small: $BRIEF_BYTES bytes" >&2
+          if [ "$BRIEF_BYTES" -lt 10000 ]; then
+            echo "KR mirror brief too small: $BRIEF_BYTES bytes" >&2
             exit 1
           fi
           if grep -qiE '^\s*<!doctype html|^\s*<html' "$BRIEF_TMP"; then
-            echo "Unexpected HTML response from KR brief" >&2
+            echo "Unexpected HTML response from KR mirror brief" >&2
             exit 1
+          fi
+
+          if [ -n "$MIRROR_SHA" ]; then
+            ACTUAL_SHA="$(sha256sum "$BRIEF_TMP" | awk '{print $1}')"
+            if [ "$ACTUAL_SHA" != "$MIRROR_SHA" ]; then
+              echo "KR mirror SHA mismatch" >&2
+              exit 1
+            fi
           fi
 
           curl --fail --location --silent --show-error \
@@ -102,13 +122,13 @@ jobs:
             exit 1
           fi
 
-          REFRESHED_UTC="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          REFRESHED_KST="$(TZ=Asia/Seoul date +'%Y-%m-%dT%H:%M:%S+09:00')"
+          REFRESHED_KST="$(TZ=Asia/Seoul date -d "$MIRROR_UTC" +'%Y-%m-%dT%H:%M:%S+09:00')"
           {
             printf '[SIGNALFIND_MIRROR]\n'
             printf 'refreshed_at_kst: %s\n' "$REFRESHED_KST"
-            printf 'refreshed_at_utc: %s\n' "$REFRESHED_UTC"
-            printf 'trigger_cron: github:%s\n\n' "${{ github.event_name }}"
+            printf 'refreshed_at_utc: %s\n' "$MIRROR_UTC"
+            printf 'source_sha256: %s\n' "$MIRROR_SHA"
+            printf 'trigger_cron: github:%s:mirror-self-heal\n\n' "${{ github.event_name }}"
             cat "$BRIEF_TMP"
             printf '\n\n============================================================\n'
             printf '[CURRENT MASTER — GOOGLE DOC]\n'
@@ -117,20 +137,24 @@ jobs:
             cat "$DOC_TMP"
             printf '\n'
           } > "$COMBINED_TMP"
-          mv "$COMBINED_TMP" "$FILE"
 
-      - name: Commit KR brief if changed
-        if: steps.guard.outputs.run == 'true'
+          mv "$COMBINED_TMP" "$FILE"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "KR_PUBLIC_SYNC=READY mirror=$MIRROR_UTC bytes=$BRIEF_BYTES"
+
+      - name: Commit KR public brief if changed
+        if: steps.sync.outputs.changed == 'true'
         shell: bash
         run: |
           set -euo pipefail
           FILE="kr-brief.txt"
           if git diff --quiet -- "$FILE" && git ls-files --error-unmatch "$FILE" >/dev/null 2>&1; then
-            echo "KR_BRIEF_UNCHANGED"
+            echo "KR_PUBLIC_SYNC=UNCHANGED"
             exit 0
           fi
           git config user.name "signalfind-ai-brief-bot"
           git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
           git add "$FILE"
-          git commit -m "chore: refresh KR public AI brief"
+          git commit -m "chore: sync KR public AI brief from mirror"
           git push
+          echo "KR_PUBLIC_SYNC=PASS"
