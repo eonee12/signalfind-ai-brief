@@ -1,3 +1,8 @@
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-01T09:44:49+09:00
+refreshed_at_utc: 2026-09-01T00:44:49Z
+trigger_cron: github:push
+
 # Signalfind AI Brief (공개판)
 
 한국 주식시장 섹터·종목 신호와 외부채널 판독 자료. 투자 권유가 아니다.
