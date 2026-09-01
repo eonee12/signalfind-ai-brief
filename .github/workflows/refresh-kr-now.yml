@@ -17,7 +17,7 @@ permissions:
 # Cloudflare remains the primary KR refresh scheduler.
 # Scheduled runs here are a failover only: if the Cloudflare heartbeat is fresh,
 # the backup exits without fetching or committing.
-# Manual force refresh marker: 2026-09-01 09:45 KST.
+# Manual force refresh marker: 2026-09-01 10:41 KST.
 
 jobs:
   refresh-kr-now:
