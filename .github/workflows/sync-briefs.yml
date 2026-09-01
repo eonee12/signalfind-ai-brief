@@ -1,6 +1,9 @@
 name: Sync SignalFind AI Briefs
 
 on:
+  push:
+    paths:
+      - .github/workflows/sync-briefs.yml
   workflow_dispatch:
     inputs:
       target:
