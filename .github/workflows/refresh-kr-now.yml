@@ -11,6 +11,7 @@ on:
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
+  # Force-sync marker: 2026-09-02 11:40 KST recovery.
   # GitHub scheduled workflows can be delayed/dropped. Use several explicit retry slots
   # after each KR mirror refresh instead of relying on a single or */5 cron expression.
   # Mirror primary: 09:40~14:40 KST hourly, final 16:10 KST.
