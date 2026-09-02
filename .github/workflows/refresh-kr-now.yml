@@ -12,15 +12,13 @@ on:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
   # Public self-heal redundancy. GitHub cron is UTC.
-  # KR mirror primary refresh runs at :40 KST hourly (09:40~14:40) and 16:10 final.
-  # Use independent cron entries instead of comma-combined slots to reduce missed schedule events.
+  # During KR market hours, poll the Supabase mirror every 5 minutes so both
+  # Cloudflare :40 refreshes and manual KR refreshes propagate to public GitHub
+  # without requiring cross-repo GitHub write/dispatch permission from Worker.
   schedule:
-    - cron: "42 0-5 * * 1-5"
-    - cron: "45 0-5 * * 1-5"
-    - cron: "50 0-5 * * 1-5"
-    - cron: "12 7 * * 1-5"
-    - cron: "15 7 * * 1-5"
-    - cron: "20 7 * * 1-5"
+    - cron: "40,45,50,55 0 * * 1-5"   # 09:40~09:55 KST
+    - cron: "*/5 1-6 * * 1-5"         # 10:00~15:55 KST
+    - cron: "0,5,10,15,20 7 * * 1-5"  # 16:00~16:20 KST
 
 permissions:
   contents: write
