@@ -1,12 +1,12 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-03T21:04:55+09:00
-refreshed_at_utc: 2026-09-03T12:04:55Z
-source_sha256: f77c10d34f17a9ad5d6065af69c80dc6d1b54d80687d53b50819763a44bb3f8e
-trigger_cron: github:schedule:mirror-self-heal
+refreshed_at_kst: 2026-09-03T21:53:24+09:00
+refreshed_at_utc: 2026-09-03T12:53:24Z
+source_sha256: 3735905f3aa03012810c71e4744785fd3db33004cf8d9bd063e415865191ba4e
+trigger_cron: cloudflare:manual:mirror-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-03 21:04 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-03 21:53 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-03 (한국 거래일 종가)
 종목·섹터 스냅샷: 2026-09-03 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-03 20:38 KST (5분 폴링)
@@ -3660,14 +3660,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 28 | 1
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -3691,14 +3689,10 @@ SignalFind KR CURRENT MASTER
 • Worker KR brief는 event-driven fallback의 공식 2순위 경로다. 응답의 x-signalfind-source가 live-origin이면 실시간 원본, last-good이면 저장본으로 구분하고 stale 여부를 판단에 표시한다.
 
 
-[현재 시장상태 — 다음 EOD에서 교체]
-• 기준: 2026-09-02 EOD. SignalFind KR 공개 미러는 16:11:02 KST 갱신본(source SHA 64dfdde5...)이며 시장상태는 위험회피다. KOSPI는 6,562.72(-3.99%), KOSDAQ은 803.98(-2.10%)로 마감했다. 미국·이란 교전 재격화, Brent 95달러대, 미국 10년물 4.81%대가 위험자산 할인율을 높였다. KOSPI RSI14는 약 31로 과매도권에 근접하고 장기 MA200 부근이어서 시장 전체를 저점에서 추격매도하기보다 종목별 구조 훼손 여부를 구분한다.
-• 섹터 상위는 화장품K뷰티 8.88(Δ-0.3, S), 소비재K푸드 8.19(-0.6, A), 금융 7.91(+1.2, A), 여행레저 7.01(+0.7, A), 반도체 6.87(+0.2, B+)다. 반도체는 SOL 반도체전공정 8.23, SOL 반도체후공정 7.65로 일부 내부 강도가 유지된다.
-• 약화축은 에너지친환경 5.20(Δ-1.9), 산업재인프라 4.80(-3.0), 전력기기 4.48(-0.1), 바이오헬스케어 3.33(-3.4)다. KODEX 건설 4.74·Δ-3.6, ACE 원자력테마딥서치 3.90·Δ-4.0으로 건설/원전·전력 관련 단기 환경이 급격히 약화됐다.
-• 신규 Entry는 수식 통과만으로 매수하지 않는다. 와이씨는 Score5·Δ+3·5D -1.39%로 CORE이고 최종판단 매수·단기선 정상이나 당일 급등/거래량 증가로 추격위험을 별도 확인해야 한다. 솔브레인은 Score6·Δ+2·5D -0.15% CORE이나 최종판단 매도·MA10 이탈, 엘오티베큠은 Score6·Δ+3·5D -2.69% CORE이나 최종판단 매도·MA10 이탈이라 기술확인 전 신규증액을 보류한다. 고확신 신규매수는 강제로 만들지 않고 현금유지를 허용한다.
-• 주요 보유관리 상태: 코스맥스 Score9.5 Mature·상승추세 유지로 강한 보유축. 한미약품 Score8·Δ+1·상승추세 유지이나 MA10 이탈/최종매도와 강한 EPS·영업이익 Revision이 충돌해 조건부 유지. 비에이치아이 Score7·Δ+2·상승추세 유지이나 MA10 이탈. 대한광통신은 2→3→5·Δ+3·최종매수·상승추세 유지이나 공식 Entry는 없고 5MA 이탈. HPSP는 Score5·회복중. 구조적 약화는 테크윙 Score1·Δ-4·추세/MA10 이탈, 씨에스윈드 7→7→4·Δ-3·MA10 이탈, LS ELECTRIC 4.5·Δ-1.5·추세/MA10 이탈, 한화솔루션 Score4·추세/MA10 이탈, 현대건설 Score3·Δ-1·추세/MA10 이탈, 알테오젠 Score5·Δ-2·MA10 이탈이다.
-• 외국인+기관 수급OSC Drive 최신 파일은 아직 2026-09-01 EOD뿐이다. 9/2 수급값을 임의 추정하지 않고 9/1 위치는 전일 선행 참고치로만 사용한다.
-• 대응: 시장 자체는 과매도 접근이라 전량 투매를 피하되, MA10 이탈·추세이탈·Score 하락이 겹친 종목은 반등 시 비중축소 우선순위를 높인다. 펀더멘털/Revision이 강한 종목은 단기 기술경고 하나만으로 전량매도하지 않는다. 신규는 Entry+캔들/거래량+MA+수급이 동시에 확인될 때만 실행하고 그 전에는 현금을 유지한다.
+[현재 상태 저장 위치]
+• 일별 시장상태·보유종목 판단·축소/유지/교체 내용은 SignalFind_KR_US_투자의사결정_LOG_CURRENT에만 기록한다. CURRENT MASTER에는 개인 보유종목·보유수량·평가금액·수익률을 저장하지 않는다.
+
+
 
 
 
