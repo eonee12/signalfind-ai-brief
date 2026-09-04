@@ -1,16 +1,16 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-04T11:53:00+09:00
-refreshed_at_utc: 2026-09-04T02:53:00Z
-source_sha256: a4809f32ea095099688f16cb743031ef8bb925c7719e9d1893c1844d54ad19f5
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-04T12:05:35+09:00
+refreshed_at_utc: 2026-09-04T03:05:35Z
+source_sha256: b20a9476246e245a49da361b1319689d57eb81cb563cd27a04437f16c33e8dd6
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:push:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:33831918164
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-04 11:53 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-04 12:05 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-04 (한국 거래일 종가)
 종목·섹터 스냅샷: 2026-09-04 10:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-04 11:39 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-04 12:00 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1704,14 +1704,16 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 771건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **552건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 773건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **554건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-04 12:00 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17669) [미디어] · 이미지: https://signalfind.co.kr/ai/media/1619402703_17669.jpg
+- [2026-09-04 12:00 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17668) 9월 4일 12시00분 주도테마 주도주(등락률) 📌 스탁이지 - https://stockeasy.intellio.kr · 이미지: https://signalfind.co.kr/ai/media/1619402703_17668.jpg
 - [2026-09-04 11:39 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17667) [미디어] · 이미지: https://signalfind.co.kr/ai/media/1619402703_17667.jpg
 - [2026-09-04 11:39 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17666) 📊 외국인/기관 순매수 비중 상위 20 2026-09-04 11:39 · 이미지: https://signalfind.co.kr/ai/media/1619402703_17666.jpg
 - [2026-09-04 11:33 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17665) 📌 오늘의 스탁이지 - https://stockeasy.intellio.kr 업데이트: 9월 4일 11:33 · 이미지: https://signalfind.co.kr/ai/media/1619402703_17665.jpg
@@ -3594,14 +3596,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 28 | 1
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
