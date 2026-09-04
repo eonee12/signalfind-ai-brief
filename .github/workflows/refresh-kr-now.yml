@@ -11,16 +11,17 @@ on:
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
-  # Single scheduled run per slot, moved 4 minutes earlier from the previous first slot.
-  # If the source fetch/validation fails, retry internally up to 3 times.
+  # BACKUP / SELF-HEAL ONLY.
+  # Cloudflare primary runs at :38 KST and drives mirror -> Supabase meta -> public sync.
+  # GitHub public fallback runs 10 minutes later, after the 5-minute mirror backup window.
   schedule:
-    - cron: "38 0 * * 1-5"
-    - cron: "38 1 * * 1-5"
-    - cron: "38 2 * * 1-5"
-    - cron: "38 3 * * 1-5"
-    - cron: "38 4 * * 1-5"
-    - cron: "38 5 * * 1-5"
-    - cron: "8 7 * * 1-5"
+    - cron: "48 0 * * 1-5"
+    - cron: "48 1 * * 1-5"
+    - cron: "48 2 * * 1-5"
+    - cron: "48 3 * * 1-5"
+    - cron: "48 4 * * 1-5"
+    - cron: "48 5 * * 1-5"
+    - cron: "18 7 * * 1-5"
 
 permissions:
   contents: write
