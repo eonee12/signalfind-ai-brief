@@ -4,17 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       after_utc:
-        description: "Wait until Supabase KR mirror is newer than this UTC time"
+        description: "Optional minimum brief-full generation time in UTC"
         required: false
         default: ""
         type: string
   push:
     paths:
       - ".github/workflows/refresh-kr-now.yml"
-  # Force-sync marker: 2026-09-02 12:40 KST recovery.
-  # GitHub scheduled workflows can be delayed/dropped. Use several explicit retry slots
-  # after each KR mirror refresh instead of relying on a single or */5 cron expression.
-  # Mirror primary: 09:40~14:40 KST hourly, final 16:10 KST.
+  # GitHub scheduled workflows can be delayed/dropped, so keep several retry slots.
   schedule:
     - cron: "42,45,48,52 0 * * 1-5"
     - cron: "42,45,48,52 1 * * 1-5"
@@ -38,45 +35,95 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Sync latest KR mirror with CURRENT MASTER
+
+      - name: Sync latest KR brief-full with CURRENT MASTER
         id: sync
         shell: bash
         env:
           AFTER_UTC: ${{ inputs.after_utc || '' }}
         run: |
           set -euo pipefail
-          MIRROR_BRIEF_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief.txt"
-          MIRROR_META_URL="https://hhmgsaprbpcdajniykro.supabase.co/storage/v1/object/public/signalfind-us/latest/ai/kr-brief-meta.json"
+          SOURCE_URL="https://signalfind.co.kr/ai/brief-full.txt"
           DOC_URL="https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/export?format=txt"
           FILE="kr-brief.txt"
-          META_TMP="$(mktemp)"; BRIEF_TMP="$(mktemp)"; DOC_TMP="$(mktemp)"; COMBINED_TMP="$(mktemp)"
-          LAST_UTC="$(sed -n 's/^refreshed_at_utc:[[:space:]]*//p' "$FILE" | head -n1 || true)"
-          WAIT_UNTIL="$AFTER_UTC"; [ -n "$WAIT_UNTIL" ] || WAIT_UNTIL="$LAST_UTC"
-          MIRROR_UTC=""; MIRROR_SHA=""
-          for attempt in $(seq 1 18); do
-            curl --fail --location --silent --show-error --connect-timeout 15 --max-time 30 --retry 1 --retry-delay 1 --user-agent "SignalFind-Public-Mirror/1.0" "${MIRROR_META_URL}?_=$(date +%s%N)" -o "$META_TMP"
-            MIRROR_UTC="$(python -c 'import json,sys; print(str(json.load(open(sys.argv[1])).get("fetched_at_utc") or "").strip())' "$META_TMP")"
-            MIRROR_SHA="$(python -c 'import json,sys; print(str(json.load(open(sys.argv[1])).get("sha256") or "").strip())' "$META_TMP")"
-            [ -n "$MIRROR_UTC" ] || { echo "Missing fetched_at_utc" >&2; exit 1; }
-            MIRROR_EPOCH="$(date -u -d "$MIRROR_UTC" +%s 2>/dev/null || echo 0)"; WAIT_EPOCH="$(date -u -d "$WAIT_UNTIL" +%s 2>/dev/null || echo 0)"
-            if [ -z "$WAIT_UNTIL" ] || [ "$WAIT_EPOCH" -eq 0 ] || [ "$MIRROR_EPOCH" -gt "$WAIT_EPOCH" ]; then break; fi
-            [ "$attempt" -lt 18 ] || { echo "KR mirror did not advance" >&2; exit 1; }; sleep 5
-          done
-          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 --retry 2 --retry-delay 2 --user-agent "SignalFind-Public-Mirror/1.0" "${MIRROR_BRIEF_URL}?_=$(date +%s%N)" -o "$BRIEF_TMP"
-          BRIEF_BYTES="$(wc -c < "$BRIEF_TMP" | tr -d ' ')"; [ "$BRIEF_BYTES" -ge 10000 ] || { echo "KR mirror brief too small" >&2; exit 1; }
-          if [ -n "$MIRROR_SHA" ]; then ACTUAL_SHA="$(sha256sum "$BRIEF_TMP" | awk '{print $1}')"; [ "$ACTUAL_SHA" = "$MIRROR_SHA" ] || { echo "KR mirror SHA mismatch" >&2; exit 1; }; fi
-          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 60 --retry 2 --retry-delay 2 --user-agent "SignalFind-Public-Mirror/1.0" "$DOC_URL" -o "$DOC_TMP"
-          DOC_BYTES="$(wc -c < "$DOC_TMP" | tr -d ' ')"; [ "$DOC_BYTES" -ge 200 ] || { echo "CURRENT MASTER too small" >&2; exit 1; }
-          REFRESHED_KST="$(TZ=Asia/Seoul date -d "$MIRROR_UTC" +'%Y-%m-%dT%H:%M:%S+09:00')"
-          { printf '[SIGNALFIND_MIRROR]\nrefreshed_at_kst: %s\nrefreshed_at_utc: %s\nsource_sha256: %s\ntrigger_cron: github:%s:mirror-self-heal\n\n' "$REFRESHED_KST" "$MIRROR_UTC" "$MIRROR_SHA" "${{ github.event_name }}"; cat "$BRIEF_TMP"; printf '\n\n============================================================\n[CURRENT MASTER — GOOGLE DOC]\nSignalFind KR CURRENT MASTER\n============================================================\n\n'; cat "$DOC_TMP"; printf '\n'; } > "$COMBINED_TMP"
-          mv "$COMBINED_TMP" "$FILE"; echo "changed=true" >> "$GITHUB_OUTPUT"
+          BRIEF_TMP="$(mktemp)"
+          DOC_TMP="$(mktemp)"
+          COMBINED_TMP="$(mktemp)"
+
+          curl --fail --location --silent --show-error \
+            --connect-timeout 15 --max-time 60 \
+            --retry 2 --retry-delay 2 \
+            --user-agent "SignalFind-Public-Mirror/1.0" \
+            "${SOURCE_URL}?_=$(date +%s%N)" -o "$BRIEF_TMP"
+
+          BRIEF_BYTES="$(wc -c < "$BRIEF_TMP" | tr -d ' ')"
+          [ "$BRIEF_BYTES" -ge 10000 ] || { echo "KR brief-full too small: $BRIEF_BYTES bytes" >&2; exit 1; }
+          if grep -qiE '^\s*<!doctype html|^\s*<html' "$BRIEF_TMP"; then
+            echo "Unexpected HTML response from KR brief-full" >&2
+            exit 1
+          fi
+
+          SOURCE_KST="$(python -c 'import re,sys; t=open(sys.argv[1],encoding="utf-8").read(4096); m=re.search(r"^생성 시각:\s*(\d{4}-\d{2}-\d{2} \d{2}:\d{2}(?::\d{2})?) KST",t,re.M); print(m.group(1) if m else "")' "$BRIEF_TMP")"
+          [ -n "$SOURCE_KST" ] || { echo "Missing 생성 시각 in KR brief-full" >&2; exit 1; }
+          SOURCE_UTC="$(python -c 'from datetime import datetime,timezone; from zoneinfo import ZoneInfo; import sys; s=sys.argv[1]; f="%Y-%m-%d %H:%M:%S" if len(s)==19 else "%Y-%m-%d %H:%M"; d=datetime.strptime(s,f).replace(tzinfo=ZoneInfo("Asia/Seoul")); print(d.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))' "$SOURCE_KST")"
+          SOURCE_KST_ISO="$(python -c 'from datetime import datetime; from zoneinfo import ZoneInfo; import sys; s=sys.argv[1]; f="%Y-%m-%d %H:%M:%S" if len(s)==19 else "%Y-%m-%d %H:%M"; d=datetime.strptime(s,f).replace(tzinfo=ZoneInfo("Asia/Seoul")); print(d.isoformat(timespec="seconds"))' "$SOURCE_KST")"
+          SOURCE_SHA="$(sha256sum "$BRIEF_TMP" | awk '{print $1}')"
+
+          if [ -n "$AFTER_UTC" ]; then
+            SOURCE_EPOCH="$(date -u -d "$SOURCE_UTC" +%s 2>/dev/null || echo 0)"
+            AFTER_EPOCH="$(date -u -d "$AFTER_UTC" +%s 2>/dev/null || echo 0)"
+            if [ "$AFTER_EPOCH" -gt 0 ] && [ "$SOURCE_EPOCH" -le "$AFTER_EPOCH" ]; then
+              echo "KR_SOURCE_NOT_NEWER source=$SOURCE_UTC after=$AFTER_UTC"
+              exit 0
+            fi
+          fi
+
+          curl --fail --location --silent --show-error \
+            --connect-timeout 15 --max-time 60 \
+            --retry 2 --retry-delay 2 \
+            --user-agent "SignalFind-Public-Mirror/1.0" \
+            "$DOC_URL" -o "$DOC_TMP"
+
+          DOC_BYTES="$(wc -c < "$DOC_TMP" | tr -d ' ')"
+          [ "$DOC_BYTES" -ge 200 ] || { echo "CURRENT MASTER too small" >&2; exit 1; }
+          if grep -qiE '^\s*<!doctype html|^\s*<html' "$DOC_TMP"; then
+            echo "Unexpected HTML response from CURRENT MASTER" >&2
+            exit 1
+          fi
+
+          {
+            printf '[SIGNALFIND_SOURCE]\n'
+            printf 'refreshed_at_kst: %s\n' "$SOURCE_KST_ISO"
+            printf 'refreshed_at_utc: %s\n' "$SOURCE_UTC"
+            printf 'source_sha256: %s\n' "$SOURCE_SHA"
+            printf 'source_url: %s\n' "$SOURCE_URL"
+            printf 'trigger_cron: github:%s:brief-full-direct-sync\n\n' "${{ github.event_name }}"
+            cat "$BRIEF_TMP"
+            printf '\n\n============================================================\n'
+            printf '[CURRENT MASTER — GOOGLE DOC]\n'
+            printf 'SignalFind KR CURRENT MASTER\n'
+            printf '============================================================\n\n'
+            cat "$DOC_TMP"
+            printf '\n'
+          } > "$COMBINED_TMP"
+
+          mv "$COMBINED_TMP" "$FILE"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "KR_BRIEF_FULL_FETCH_PASS generated_kst=$SOURCE_KST bytes=$BRIEF_BYTES"
+
       - name: Commit KR public brief if changed
         if: steps.sync.outputs.changed == 'true'
         shell: bash
         run: |
           set -euo pipefail
           FILE="kr-brief.txt"
-          if git diff --quiet -- "$FILE"; then echo "KR_PUBLIC_SYNC=UNCHANGED"; exit 0; fi
-          git config user.name "signalfind-ai-brief-bot"; git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
-          git add "$FILE"; git commit -m "chore: sync KR public AI brief from mirror"; git push
+          if git diff --quiet -- "$FILE"; then
+            echo "KR_PUBLIC_SYNC=UNCHANGED"
+            exit 0
+          fi
+          git config user.name "signalfind-ai-brief-bot"
+          git config user.email "signalfind-ai-brief-bot@users.noreply.github.com"
+          git add "$FILE"
+          git commit -m "chore: sync KR public AI brief from brief-full"
+          git push
           echo "KR_PUBLIC_SYNC=PASS"
