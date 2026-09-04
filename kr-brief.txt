@@ -1,13 +1,13 @@
-[SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-04T17:12:43+09:00
-refreshed_at_utc: 2026-09-04T08:12:43Z
-source_sha256: 58a660cc80ee0a6328ea60855764922d81ea67da256fa20885a2ed7763ac5c15
+[SIGNALFIND_SOURCE]
+refreshed_at_kst: 2026-09-04T17:14:00+09:00
+refreshed_at_utc: 2026-09-04T08:14:00Z
+source_sha256: f59337df98a15fa84b9a0ffbc8fc61dc811ac8889d7782a3845432f0a21a51ad
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:33852328207
+trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-04 17:12 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-04 17:14 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-04 (한국 거래일 종가)
 종목·섹터 스냅샷: 2026-09-04 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-04 17:01 KST (5분 폴링)
@@ -3697,12 +3697,14 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 28 | 1
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
+
+
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-SignalFind 한국장 핵심메모 — CURRENT MASTER
+﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
