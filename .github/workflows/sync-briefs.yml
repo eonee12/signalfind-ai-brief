@@ -37,7 +37,7 @@ jobs:
 
           case "$TARGET" in
             kr)
-              URL="https://signalfind.co.kr/ai/brief-latest.txt"
+              URL="https://signalfind.co.kr/ai/brief-full.txt"
               DOC_URL="https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/export?format=txt"
               DOC_TITLE="SignalFind KR CURRENT MASTER"
               FILE="kr-brief.txt"
