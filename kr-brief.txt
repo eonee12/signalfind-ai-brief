@@ -1,16 +1,16 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-08T18:06:00+09:00
-refreshed_at_utc: 2026-09-08T09:06:00Z
-source_sha256: 6b7257c764fbbb883660f5690fc998a551174b87596a420e3a5bef12eed21934
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-08T19:03:53+09:00
+refreshed_at_utc: 2026-09-08T10:03:53Z
+source_sha256: ca10f56e11eda93b68969534edc6cc1f45b6e557b3742baa54f0f327a824d796
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:34213415123
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-08 18:06 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-08 19:03 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-08 (한국 거래일 종가)
 종목·섹터 스냅샷: 2026-09-08 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-08 17:40 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-08 18:54 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1982,14 +1982,19 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 492건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **319건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 497건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **324건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-08 18:54 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9263) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_9263.jpg
+- [2026-09-08 18:54 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9262) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_9262.jpg
+- [2026-09-08 18:54 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9261) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_9261.jpg
+- [2026-09-08 18:54 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9260) 전력기기는 빈집 반도체 전닉 많이 차지하는 곳은 빈집은 아님 · 이미지: https://signalfind.co.kr/ai/media/4362306699_9260.jpg
+- [2026-09-08 18:52 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9259) 코스피 지수와 연동된것을 투자하는데 현금 비중은 25% 해보라고 여긴 발생중 · 이미지: https://signalfind.co.kr/ai/media/4362306699_9259.jpg
 - [2026-09-08 17:40 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9258) ㄴ블룸이 움직이면 국내에 산일전기도 움직이기도 합니다.
 - [2026-09-08 17:40 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9257) UBS, 블룸 에너지(Bloom Energy, $BE), 목표주가 300달러에서 325달러로 상향 S&P 다우존스 지수(S&P Dow Jones Indices)가 9월 21일부로 블룸 에너지를 S&P 500 지수에 편입한다고 발표한 이후, 블룸 에너지의 목표주가를 300달러에서 325달러로 상향 조정하고 투자의견 '매수(Buy)'를 유지했습니다. 역사적으로 S&P 500 편입이 패시브 자금의 유의미한 확대로 이어졌음을 지적하며, 이번 편입을 "주가에 있어 중대한 긍정적 촉매제"라고 평가했습니다.
 - [2026-09-08 17:37 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9256) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_9256.jpg
@@ -3629,14 +3634,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 28 | 1
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -3855,4 +3858,13 @@ SignalFind KR CURRENT MASTER
 • 종목 편중 점검에서도 StrictSign은 263종목에 거래가 발생했고 종목별 중앙승률 77.78%, 평균수익 양수 종목 76.43%, 종목승률 50% 초과 종목 84.79%였다. Ticker-cluster bootstrap 10,000회에서 pooled 대비 승률 개선폭 95% CI는 +12.59%p~+17.64%p, 평균수익 개선폭 95% CI는 +0.053%p~+0.970%p였다.
 • 경로품질도 개선됐다. pooled→StrictSign의 Validation 중앙 MFE 4.71%→5.51%, MFE Capture 39.63%→62.33%, Peak Giveback 3.16%→2.13%, 10D 이내 Whipsaw 24.13%→6.93%였다. 반면 중앙 MAE는 -3.82%→-4.03%, 10D 초과 손실거래 비중은 15.53%→17.61%로 소폭 악화하여 드물게 남는 실패 Turn은 더 오래 끌 수 있는 리스크가 있다.
 • StrictSign 도입 후 Discovery에서 Main 5/7/10/12 × SignalSmooth 5/6/7을 다시 선택하면 2023 최고는 Main12+Smooth5(74.89%)였지만 이를 2024~2025에 적용한 결과 승률 72.45%/PF2.01로 기존 고정 Main12+Smooth7의 75.45%/PF2.10을 넘지 못했다. 따라서 Validation 최고값을 좇아 12/7을 변경하지 않는다.
-• 현재 판단: Main12 + StrictSign Directional Indicator Signal + SignalSmooth7은 강한 연구후보(PARTIAL PASS)다. 다만 2024~2025는 기존 연구에서 이미 관찰된 Validation이고 2026도 반복 관찰된 진단구간이므로 pristine OOS로 부르지 않는다. 새로운 natural shadow에서 재현되기 전 Production 변경은 금지한다.
+• 현재 판단: Main12 + StrictSign Directional Indicator Signal + SignalSmooth7은 강한 연구후보(PARTIAL PASS)다. 다만 2024~2025는 기존 연구에서 이미 관찰된 Validation이고 2026도 반복 관찰된 진단구간이므로 pristine OOS로 부르지 않는다. 새로운 natural shadow에서 재현되기 전 Production 변경은 금지한다
+[22. No-Hardcoding Signal Line 재연구 — 2026-09-08]
+• Main OSC는 현 Simple Composite SMA12를 동결한다. 이번 연구에서는 Main을 재튜닝하지 않고 Signal Line만 재설계한다.
+• 기존 StrictSign 12/7은 Validation 승률 75.45%였으나 Signal=Main−25×Score, Main/50·MainD1/20, Signal EMA7 등 인위적 설계요소가 확인됐고 005930·000660의 2026년 4~6월 대형상승을 놓치는 구조가 관찰되어 최종후보에서 보류한다. Production 미적용.
+• Signal Line 필수원칙: 종목별 식·수동 multiplier/scale·임의 threshold·수동 Signal smoothing·Main−score형 시각선 금지. 모든 Signal 계수/분산/상태지속성은 Discovery 데이터에서 추정하고 Validation/2026 진단으로 재튜닝하지 않는다.
+• No-hard V32~V47 연구에서 높은 대형상승 포착(약 90~100%)은 대체로 승률 30~40%와 높은 Whipsaw를 동반했고, 승률 60%+ 모델은 대형상승 Capture를 크게 희생했다. 현재 핵심 미해결 과제는 ‘대형파동 capture 유지 + false Turn 억제’의 동시 달성이다.
+• 현 Reference는 V36 Structural OLS: Signal=E(Main | 현재 원천지표), OLS, Signal smoothing/multiplier/threshold 없음. Validation N12,210, 승률46.01%, PF1.31, W10 상승파동 Capture63.72%, Whipsaw48.57%. 최종/Production Signal은 아니며 비교 기준선으로만 사용한다.
+• 파동 지속성 정보는 유효하다(Discovery에서 up/down next-day persistence 약 90%, duration hazard는 8~10D 부근에서 자연 증가). 그러나 현재 Markov/Duration 적용은 과민 또는 과도한 지속성 문제가 있어 최종 채택하지 않는다.
+• 상세 연구이력은 Drive `투자/한국장 오실레이터/SignalFind_KR_OSC_NoHard_Signal_Research_Progress_2026-09-08`에 보관한다. Production 변경 없음.
+.
