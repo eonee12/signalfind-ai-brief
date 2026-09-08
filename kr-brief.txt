@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-08T13:38:35+09:00
-refreshed_at_utc: 2026-09-08T04:38:35Z
-source_sha256: e650458ac1680a959217bf5d9a9ae9cdfc77efc1dd9c5b053dd727b2136d9385
+refreshed_at_kst: 2026-09-08T14:10:57+09:00
+refreshed_at_utc: 2026-09-08T05:10:57Z
+source_sha256: 79a8b7bec01ac7c07b4e4607cf738457b044bb14a3c31c673eedf549814a267a
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:34187703195
+trigger_cron: cloudflare:mirror-complete:34189644577
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-08 13:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-08 14:10 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-08 (한국 거래일 종가)
 종목·섹터 스냅샷: 2026-09-08 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-08 13:33 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-08 14:06 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1215,8 +1215,16 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [4] 외부채널 인텔리전스
 ======================================================================
 
-외부채널 판독 정리분 184건 — **최신순** · 만료·중복분 포함(표시함)
+외부채널 판독 정리분 186건 — **최신순** · 만료·중복분 포함(표시함)
 
+- [2026-09-08 · BOTH · 중요도 A · 긍정] 두산에너빌리티 (034020) / xAI / AI Data Center Power / Gas Turbine / Combined Cycle / Power Equipment
+  xAI의 발전소 건설책임자 채용공고에 멤피스 슈퍼컴퓨팅 인프라용 'Doosan combined cycle power plant' 건설 계획이 명시됐고, 두산에너빌리티의 가스터빈·스팀터빈·HRSG·BOP를 적용한다고 기재. 500MW+ 복합화력 건설 경험을 우대해 대형 프로젝트임을 시사. 기존 가스터빈 공급을 넘어 복합발전 전체 설비로 협력 범위가 확대될 가능성이 있어 두산에너빌리티의 북미 AI 전력 인프라 수주 확장에 직접적인 긍정 Catalyst. 다만 구체 발전용량·계약금액·최종 부지는 아직 공개되지 않음.
+  검증: CONFIRMED/PARTIAL — xAI 채용공고 미러(8VC)가 Memphis용 Doosan combined-cycle plant와 Doosan GT·ST·HRSG·BOP 적용을 직접 확인. 두산에너빌리티 공식자료도 2026-05-27 미국 기업에 370MW 스팀터빈·발전기 4기, 3월 2기에 이은 추가 북미 수주를 확인했지만 고객사는 비공개. 이번 xAI 프로젝트의 최종 용량·계약금액·개별 설비 귀속은 미공개.
+  출처: bornlupin
+- [2026-09-08 · KR · 중요도 B · 긍정] 백화점 업종 (신세계 / 현대백화점 / 롯데쇼핑 read-through) / Department Stores / Retail Traffic / Domestic Consumption
+  메리츠증권 백화점 트래커에서 8/17~23 주간 백화점 지수가 전년 대비 +19.9%, 8월 동일점 성장률은 +6.6%로 추정. 8/31~9/6 방문객 트래픽도 +1.8% YoY를 기록해 국내 백화점 소비와 객수 흐름이 플러스를 유지한 것으로 분석. 개별 업체 실적 확정치가 아니라 브로커 트래커 기반의 업황 보조신호로 사용.
+  검증: BROKER TRACKER — 메리츠증권 유통 리서치의 주간/월간 추정 및 방문객 트래픽 데이터. 회사 공식 실적·가이던스가 아니며 개별 백화점 종목의 직접 매수신호로 사용하지 않음.
+  출처: meritz_research
 - [2026-09-08 · KR · 중요도 B · 긍정] 현대로템 (064350) / Defense / K2PL / Poland / Localization
   현대로템이 폴란드 MSPO에서 폴란드형 K2PL 라인업을 처음 공개하고 현지 Miranda 위장막, OBRUM 공동개발 교량전차 등 폴란드산 임무장비를 탑재. 지난 4월 PGZ 산하 Bumar-Łabędy와 현지 생산·정비 협약 이후 현지화 실행이 구체화되고 있어 2차 이행계약의 납품·현지생산 체계 구축에 긍정적. 다만 신규 수주 발표는 아님.
   검증: MEDIA/EVENT CONFIRM — Herald Economy가 MSPO 현장 공개와 폴란드 현지 장비 적용, 기존 현지 생산·정비 협약을 보도. 추가 계약금액이나 신규 수주는 확인되지 않음.
@@ -1958,14 +1966,20 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 424건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **284건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 430건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **289건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-08 14:06 · 주식장인 이창대 텔레그램] (id 2428152138_29125) https://www.newstnt.com/news/articleView.html?idxno=717207 · 이미지: https://signalfind.co.kr/ai/media/2428152138_29125.jpg
+- [2026-09-08 13:51 · 주식장인 이창대 텔레그램] (id 2428152138_29123) 텍사스의 데이터센터 개발사들이 대규모 가스 발전소 건설 프로젝트를 계획하고 있다 https://www.yahoo.com/news/science/articles/data-center-developers-texas-plan-120000072.html · 이미지: https://signalfind.co.kr/ai/media/2428152138_29123.jpg
+- [2026-09-08 13:39 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17751) [미디어] · 이미지: https://signalfind.co.kr/ai/media/1619402703_17751.jpg
+- [2026-09-08 13:39 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_17750) 📊 외국인/기관 순매수 비중 상위 20 2026-09-08 13:39 · 이미지: https://signalfind.co.kr/ai/media/1619402703_17750.jpg
+- [2026-09-08 13:35 · 주식장인 이창대 텔레그램] (id 2428152138_29122) 올해 2분기 글로벌 D램 시장 규모가 전분기 대비 60% 가까이 증가한 가운데 삼성전자가 점유율 1위를 유지했다. 삼성전자는 2분기 출하량을 크게 늘리면서 2위인 SK하이닉스와도 점유율 격차를 늘렸다. SK하이닉스의 점유율 하락으로 인한 수혜는 중국의 창신메모리(CXMT)가 가져간 것으로 보인다.
+- [2026-09-08 13:35 · 주식장인 이창대 텔레그램] (id 2428152138_29121) [미디어] · 이미지: https://signalfind.co.kr/ai/media/2428152138_29121.jpg
 - [2026-09-08 13:33 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_9249) * (iM 이상헌) 티엘비(356860) ★ 공급자 우위/SOCAMM 등으로 올해/내년 사상 최대 실적 ▶️공급자 우위 시장 환경하에서 기존 고부가가치 제품의 견조한 매출 상승 및 SOCAMM 매출 가세 등으로 올해 사상 최대 실적 달성 가능할 듯 ▶️전방산업 수요 확대에 힘입어 SOCAMM 매출 올해 700억원, 내년 1,500억원 이상 예상됨⇒ 평균 ASP 상승을 이끌면서 실적개선 가속화 ▶️공급자 우위 시장이 심화되는 가운데 고부가가치 제품 등에 대한 고객사의 선제적인 발주 증가 및 SOCAMM 수주 증가로 수주잔고 대폭적으로 확대 중 ⇒ 향후 매출증가 및 실적개선의 기반 마련 https://lrl.kr/ZbhF
 - [2026-09-08 13:22 · 주식장인 이창대 텔레그램] (id 2428152138_29120) 오늘 기존에 상승폭을 키웠던 로봇주들은 조정을 보이고 있지만 로봇 감속기, 부품관련주들은 강한 흐름을 보이고 있습니다.
 - [2026-09-08 13:21 · 주식장인 이창대 텔레그램] (id 2428152138_29119) [미디어] · 이미지: https://signalfind.co.kr/ai/media/2428152138_29119.jpg
@@ -3673,3 +3687,33 @@ SignalFind 한국장 핵심메모 — CURRENT MASTER
 • 2026-01-01~2026-08-19 Forward 닫힌 거래 N2,331(미청산 13), 승률 59.0%, 평균 +3.11%, PF 1.89, 평균보유 7.95D, MFE capture 중앙 28.2%였다. 고정 D5/D10/D20은 승률 50.0/51.5/50.1%, 평균 +1.75/+2.47/+2.96%, PF 1.54/1.51/1.43이다.
 • KODEX 코스피 대비 초과수익은 D5 +0.24%, D10 -1.83%, D20 -2.05%로 중장기 종목선별 Alpha는 확인되지 않았다. 따라서 이 OSC는 독립 종목추천기보다 SignalFind·섹터·Revision으로 이미 선별한 종목의 매수·보유·Peak·Exit Timing Overlay로 연구한다.
 • Caveat: 역사 스크리너 universe 최대 280종목의 survivorship bias 가능성, KOSDAQ 종목에도 공통 KODEX 코스피 benchmark 사용, 2026 부분기간, 반복 연구과정에서 Forward 구간을 관찰한 점이 있다. 현재 V4는 가장 유망한 연구후보지만 Production에는 적용하지 않는다. 다음 단계는 Turn/Peak Lead-Lag 검증, KOSPI/KOSDAQ benchmark 분리, 새 natural Forward shadow 검증이다.
+
+
+[14. Optimal Composite OSC — Winner/Whipsaw 개선연구]
+• Frozen V4를 기준으로 2022~2023만 학습, 2024~2025 검증, 2026-08-19까지 별도 확인했다. Entry 당일 24개 Level/Δ5/Accel5 + OSC/Signal trajectory를 이용한 Winner-vs-Whipsaw Turn Quality는 Validation AUC 0.645, 2026 AUC 0.616으로 Whipsaw 위험을 구분하는 정보는 재현됐다.
+• 그러나 Turn Quality P>0.5 Hard Gate는 Validation 승률 56.64%→56.58%, PF 1.514→1.531로 승률 개선이 없었고, 2026은 58.99%→59.20%로 미미한 반면 PF 1.894→1.771로 악화했다. Whipsaw는 Validation 21.67%→13.74%, 2026 27.97%→17.46%로 크게 감소했지만 좋은 거래도 많이 탈락했다. 따라서 Hard Gate로 사용하지 않는다.
+• 낮은 Quality 신호를 버리지 않고 Diff>0 동안 P>0.5까지 기다리는 Delay Entry도 Validation 승률 56.79%/PF1.514, 2026 승률 59.29%/PF1.764에 그쳐 실질 개선이 없었다. 평균 지연은 약 2~3D였다.
+• 전체 Profit Probability를 직접 학습한 모델은 Validation AUC 0.49로 FAIL. Sector/Theme leave-one-out Context를 추가해도 Profit AUC 0.49, Turn AUC 0.645 수준으로 개선되지 않았다. 단순 Sector/Theme Context 추가를 Production OSC에 넣지 않는다.
+• 보유 중 매일 원래 V4 Exit까지의 잔여상승 확률을 추정하는 Continuation Head도 Validation AUC 0.502로 FAIL했고, 적용 시 승률 56.64%→55.20%, PF1.514→1.405로 악화했다. 조기 Exit Head로 사용하지 않는다.
+• 결론: 현재 유효하게 남은 새 정보는 Turn Quality가 ‘짧은 가짜 Turn/Whipsaw 위험’을 구분한다는 점이다. 다만 이를 매수 Gate·지연 Entry·조기 Exit로 직접 연결하면 승률과 PF를 동시에 높이지 못한다. V4는 유지하고 Turn Quality는 연구용 Confidence/Risk Overlay로만 보존한다. 다음 구조연구는 threshold 추가가 아니라 State-dependent weighting 및 KOSPI/KOSDAQ benchmark 분리 후 동일 지표조합을 재학습하는 방향으로 제한한다.
+
+
+[15. Optimal Composite OSC 연구 보유기간 우선순위 — 2026-09-08]
+• 사용자 실제 운용패턴은 5~10거래일 보유가 중심이다. 향후 KR Composite OSC 연구의 1차 목적함수는 D5·D10 성과와 5~10D 내 Turn/Peak/Failure/Exit 품질로 둔다.
+• 주요 평가축은 D5/D10 승률, 평균·중앙수익, PF, MAE/MFE, MFE Capture, 5~10D Whipsaw, 평균/중앙 보유기간이다. D20 이상 장기성과는 robustness/참고용 보조축이며 모델선택의 주목표로 사용하지 않는다.
+• State-dependent weighting도 장기 추세 추종보다 5~10D 파동 포착에 맞춘다. Turn은 초기 1~3D 가속, Trend는 3~7D 지속성, Peak/Failure는 5~10D 내 감속·구조약화를 우선 학습한다.
+• 장기지표(RS60/120, DD120/252 등)는 단기 매매의 환경·리스크 문맥으로 사용할 수 있으나, 장기수익 자체를 목표로 최적화하지 않는다. Production 변경 없음.
+
+
+[15. Composite OSC 연구목표 — One Turn Rotation]
+• 최종목표는 장기 최종위너 예측이 아니라, 하나의 상승 Turn 안에서 현재 가장 좋은 종목을 고르고 좋은 지점에 진입해 Turn이 끝날 때 효율적으로 청산·교체하는 것이다.
+• 기본 보유패턴은 5~10거래일 중심이지만 고정 Horizon 청산은 사용하지 않는다. 상승추세·OSC 강세·Structure/RS가 유지되면 12~15거래일 이상도 보유할 수 있고, Turn 약화가 빨리 오면 5일 이전이라도 Exit/교체할 수 있다.
+• 모델선택의 핵심 평가지표는 최종 Winner 분류 정확도가 아니라 Turn 단위 승률, Turn 평균/중앙수익, PF, 진입 후 1~3D 가속, 5~10D MFE, MFE Capture, Peak Giveback, Whipsaw, 평균 보유기간, 다음 후보로의 Rotation Opportunity Cost다.
+• D20 이상 장기수익 및 장기 최종성과는 강건성 참고값일 뿐 주 최적화 목표가 아니다. 현재 종목의 남은 Turn 기대값이 다른 신규후보의 기대값보다 낮아질 때 교체를 검토한다.
+
+
+[16. Composite OSC 연구목표 — One-Turn 공통룰]
+• OSC의 목적은 한 번의 상승 Turn에서 매수→보유→매도의 전체 승률과 손익효율을 최대화하는 것이다. 장기 최종 Winner 예측, 종목의 생애수익률 예측, Rotation 의사결정은 OSC 자체의 목표가 아니다.
+• 연구방법은 특정 종목·기간·수익률에 맞춘 threshold stacking이나 사후 조건추가가 아니라, Score/ΔScore·RS·Momentum·Structure·Trend·Quality/StableCore 원천요소·OSC/M1·Participation/Volume·Drawdown·Market 등 원천지표를 공통적인 연속형 조합식으로 합성하는 것이다.
+• 매수와 매도는 동일 Composite OSC의 상태전환에서 도출하며, 개별 종목별 다른 식이나 임의 예외규칙을 두지 않는다. 가중치·변환·smoothing은 Discovery에서 탐색할 수 있으나 Validation/Forward에서 고정한다.
+• 평가단위는 ‘한 Turn의 거래’다. 핵심 평가지표는 Turn 승률, 평균/중앙수익, PF, MAE/MFE, MFE Capture, Peak Giveback, Whipsaw이며, D5/D10은 중심 확인구간이고 Turn이 유지되면 D12/D15까지 자연스럽게 연장한다.
