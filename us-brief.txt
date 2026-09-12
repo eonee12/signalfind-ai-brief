@@ -1,8 +1,8 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-09-12 06:29 KST
+BRIEF_GENERATED_AT_KST: 2026-09-12 16:44 KST
 BASIS_DATE: 2026-09-11
-RUN: AUTO_EOD
+RUN: EOD (장종료)
 PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 
 [MANDATORY REFERENCE SOURCES]
@@ -17,14 +17,14 @@ PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-09-12 06:29 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-09-12 16:44 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 이 문서의 기계적 FinalState/FINAL15 Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
 최신 외부 펀더멘털·뉴스·Revision을 추가 조사할 수 있지만 SignalFind 기계적 상태와 외부 판단을 구분한다.
 
 [CURRENT SNAPSHOT COUNTS]
 stocks=527 sectors=32 etfs=74
-BUY=56 HOLD=12 WATCH=96 SELL=363
+BUY=56 HOLD=10 WATCH=99 SELL=362
 ACTIVE_ENTRY=0 NEW_ENTRY=0 ENTRY_HOLD=0 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
 
 [CORE INTERPRETATION]
@@ -36,15 +36,16 @@ ACTIVE_ENTRY=0 NEW_ENTRY=0 ENTRY_HOLD=0 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 - 🔴 EXIT = Event 종료. 종목 메뉴 🎯 없음.
 - A/B/C/D Target Badge와 3거래일 Target 표시 의미는 새 FINAL15 UI에서 사용하지 않는다.
 - WLB50은 FINAL15 Entry hard gate/ranker/add-on이 아니며 참고정보일 뿐이다.
-- FINAL15 Production Exit v1.0은 D2 Fail-Fast(#3 면제) → PG10 또는 U10 → MA10 Final Defense로 동결되어 있다.
+- FINAL15 Production Exit v1.0은 D2 Fail-Fast(순수 초기 #3 Entry만 면제) → PG10 또는 U10 → MA10 Final Defense로 동결되어 있다.
 - First MA5 Warning은 WARNING 전용이며 즉시 Exit가 아니다. 모든 Exit는 EOD Confirmed → 다음 정상거래일 Open 실행 기준이다.
+- ExitDate/EntryExitSignalDate는 EOD Exit 신호일이고 EntryExitExecutionDate/Price는 다음 정상거래일 Open 실제 실행 검증값이다.
 - FW_FAILSAFE/RECLAIM_SAFE는 위험 참고 전용, WLB50은 보유 confidence 참고 전용이며 자동 Exit/Entry gate가 아니다.
 - Rocket/Multi-Bagger는 별도 Overlay이며 FinalState 또는 FINAL15 Entry 의미를 바꾸지 않는다.
 
 [AI ANALYSIS PRIORITY]
 1. Signalfind_US_핵심메모의 최신 정정/운영원칙을 확인한다.
 2. 이 Brief의 최신 Refresh 생성시각·FinalState·FINAL15 Entry lifecycle을 확인한다.
-3. Entry 관리 상태에서 ENTRY/HOLD/WARNING/EXIT, Family, 체결일, Entry후수익과 D2/PG10/U10/MA10 상태를 확인한다.
+3. Entry 관리 상태에서 ENTRY/HOLD/WARNING/EXIT, Family, 체결일, Entry후수익과 D2/PG10/U10/MA10 상태 및 Exit 실행 검증값을 확인한다.
 4. 최신 섹터/ETF 상태와 가속을 확인한다.
 5. Telegram_Global_21D에서 만료되지 않은 US/BOTH/MACRO 정보와 검증상태를 확인한다.
 6. 최근 1개월 EPS·매출·이익·가이던스·목표가·투자의견 Revision, 공식 공시와 Catalyst를 교차확인한다.
@@ -124,7 +125,7 @@ ACTIVE_ENTRY=0 NEW_ENTRY=0 ENTRY_HOLD=0 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 35,원자력·우라늄,우라늄,URA,🔴 SELL,5.405405405405404,7.927927927927928,5.7207207207207205,⤵️ 상승 둔화,조정 중,➖ 거래보통
 36,금융,지역은행,KRE,🔴 SELL,5.180180180180179,4.81981981981982,5.225225225225225,➖ 보합 유지,상승추세 이탈,➖ 거래보통
 37,부동산,주거·헬스케어 리츠,REZ,🔴 SELL,5.135135135135135,4.684684684684685,5.045045045045046,➖ 보합 유지,상승추세 이탈,➖ 거래보통
-38,청정에너지,풍력,FAN,🟡 WATCH,4.864864864864865,4.909909909909909,4.0090090090090085,〰️ 혼조,상승추세 이탈,➖ 거래보통
+38,청정에너지,풍력,FAN,🔴 SELL,4.864864864864865,4.909909909909909,4.0090090090090085,〰️ 혼조,상승추세 이탈,➖ 거래보통
 39,전력 인프라,스마트그리드,GRID,🟡 WATCH,4.72972972972973,4.2792792792792795,2.6126126126126126,〰️ 혼조,회복 중,➖ 거래보통
 40,부동산,미국 리츠,VNQ,🔴 SELL,4.684684684684685,4.684684684684684,4.774774774774775,➖ 보합 유지,상승추세 이탈,➖ 거래보통
 41,인터넷·미디어,소셜미디어,SOCL,🔴 SELL,4.63963963963964,2.522522522522523,3.7387387387387387,⤴️ 반등 전환,상승추세 이탈,➖ 거래보통
@@ -163,534 +164,534 @@ ACTIVE_ENTRY=0 NEW_ENTRY=0 ENTRY_HOLD=0 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 74,산업재,미국 산업 르네상스,AIRR,🔴 SELL,0.36036036036036034,0.4504504504504505,0.4954954954954955,➖ 보합 유지,상승추세 이탈,↗ 상승·거래증가
 
 [LATEST STOCK CORE TABLE]
-순위,구분,신호,종목명,티커,BUY/SELL,점수,Final15RuleVersion,Final15RawEntry,Final15EntrySignal,Final15RawFamilyIDs,Final15FamilyIDs,Final15PrimaryFamily,EntryEventID,EntrySignalDate,EntryExecutionDate,EntryPrice,EntryFamilyIDs,EntryPrimaryFamily,EntryConfirmationFamilies,EntryReferenceHorizon,EntryCleanLegMedian,EntryLifecycleState,EntryLifecycleStateDate,EntryAgeTradingDays,EntryPeakPrice,EntryPeakReturn,EntryCurrentReturn,EntryMA5State,EntryMA10State,EntryD2State,EntryPG10State,EntryU10State,EntryFWFailsafeState,EntryReclaimSafeState,EntryWLBState,EntryRiskState,EntryWarningActive,EntryWarningReason,EntryExitActive,EntryExitDate,EntryExitReason,EntryExitExecutionRule,EntryExitEngineVersion,EntryActive,EntryBadge,EntryLastUpdatedDate,EntryLifecyclePreview,흐름,OSC Signal,OSC Status,Progress,StableCoreDamageBlocks,수급상태,거래꼬리표,Rocket,MultiBaggerCandidate
-1,우선,🔵 유지,Deere & Company,DE,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-2,우선,🔵 유지,Salesforce,CRM,🔴 SELL,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-3,우선,🔵 강화,Expeditors International,EXPD,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
-4,우선,🟢 신규,Skyworks Solutions,SWKS,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Breakdown,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
-5,가능,🟡 후보,Paramount Skydance Corporation,PSKY,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+7D,2,🟡 관찰,➖ 거래보통,0,0
-6,가능,🟡 후보,Northern Trust,NTRS,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-7,가능,🟡 후보,Star Bulk Carriers Corp.,SBLK,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-8,가능,🟡 후보,Thermo Fisher Scientific,TMO,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-9,가능,🟡 후보,Zebra Technologies,ZBRA,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-10,가능,🟡 후보,Allstate,ALL,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-11,가능,🟡 후보,"ASE Technology Holding Co., Ltd. ADR",ASX,🟡 WATCH,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-12,고려,🔵 강화,Devon Energy,DVN,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-13,고려,🔵 강화,AT&T,T,🟢 BUY 🚀,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+13D,0,🟡 관찰,➖ 거래보통,1,0
-14,고려,🔵 강화,Occidental Petroleum,OXY,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
-15,고려,🟢 재편입,EOG Resources,EOG,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
-16,고려,🟢 신규,HCA Healthcare,HCA,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-17,고려,🟡 후보,Biogen,BIIB,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
-18,고려,🟡 후보,Apple Inc.,AAPL,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,1,0
-19,고려,🟡 후보,Meta Platforms,META,🟢 BUY 🚀,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🟢 가능,Above,+16D,0,🔴 출회,↗ 상승·거래증가,1,0
-20,고려,🟡 후보,Ameriprise Financial,AMP,🟢 BUY 🚀,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+13D,0,🟡 관찰,↗ 상승·거래증가,1,0
-21,고려,🟡 후보,MetLife,MET,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
-22,고려,🟡 후보,AbbVie,ABBV,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
-23,고려,🟡 후보,Supermicro,SMCI,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+3D,1,🟡 관찰,➖ 거래보통,0,0
-24,고려,🟡 후보,Elevance Health,ELV,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🟢 가능,Above,+7D,0,🔴 출회,↗ 상승·거래증가,1,0
-25,고려,🟡 후보,Humana,HUM,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
-26,고려,🟡 후보,Lumentum,LITE,🟡 WATCH,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-27,고려,🟡 후보,Bio-Techne,TECH,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-28,고려,🟡 후보,Incyte,INCY,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-29,고려,🟡 후보,Amphenol,APH,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-30,고려,🟡 후보,West Pharmaceutical Services,WST,🟢 BUY,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-31,고려,🟡 후보,Corpay,CPAY,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-32,관찰,🟢 신규,Universal Health Services,UHS,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-33,관찰,🔵 유지,CF Industries,CF,🔴 SELL,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-34,관찰,🔵 유지,Mosaic Company (The),MOS,🟡 WATCH,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-35,관찰,🟠 약화,APA Corporation,APA,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
-36,관찰,🟢 신규,Bunge Global,BG,🟡 WATCH,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
-37,관찰,🔵 유지,Verizon,VZ,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-38,관찰,🟡 후보,Travelers Companies (The),TRV,🟢 BUY,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
-39,관찰,🟡 후보,Archer Daniels Midland,ADM,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-40,관찰,🟡 후보,Progressive Corporation,PGR,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
-41,관찰,🟡 후보,Verisign,VRSN,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
-42,관찰,🟡 후보,Valero Energy,VLO,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,🔴 출회,↗ 상승·거래증가,1,0
-43,관찰,🟡 후보,Hewlett Packard Enterprise,HPE,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+9D,0,🟡 관찰,↗ 상승·거래증가,1,0
-44,관찰,🟡 후보,Philip Morris International,PM,🟢 BUY 🚀,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+1D,0,⚪ 보통,➖ 거래보통,1,0
-45,관찰,🟡 후보,"International Seaways, Inc.",INSW,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,1,0
-46,관찰,🟡 후보,Constellation Energy,CEG,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-47,관찰,🟡 후보,State Street Corporation,STT,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
-48,관찰,🟡 후보,NetApp,NTAP,🟢 BUY,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-49,관찰,🟡 후보,Dell Technologies,DELL,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,1,0
-50,관찰,🟡 후보,Principal Financial Group,PFG,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
-51,관찰,🟡 후보,Robinhood Markets,HOOD,🟡 WATCH,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+4D,2,⚪ 보통,➖ 거래보통,0,0
-52,관찰,🟡 후보,Solventum,SOLV,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-53,관찰,🟡 후보,Automatic Data Processing,ADP,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
-54,관찰,🟡 후보,Eaton Corporation,ETN,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
-55,관찰,🟡 후보,Labcorp,LH,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+1D,1,🟡 관찰,↗ 상승·거래증가,0,0
-56,관찰,🟡 후보,Paychex,PAYX,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-57,관찰,🟡 후보,Invesco,IVZ,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-58,매수1,🟢 재편입,ExxonMobil,XOM,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-59,매수1,🔵 유지,ConocoPhillips,COP,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+11D,0,⚪ 보통,➖ 거래보통,0,0
-60,매수1,🔵 유지,Chevron Corporation,CVX,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-61,매수1,🔵 강화,Strategy Inc Common Stock Class A,MSTR,🔴 SELL,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+7D,2,⚪ 보통,➖ 거래보통,0,0
-62,매수1,🔵 유지,Ulta Beauty,ULTA,🟡 WATCH,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-63,매수1,🟢 신규,AES Corporation,AES,🟡 WATCH,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔴 매도,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-64,매수1,🟢 재편입,Accenture,ACN,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+2D,1,🟡 관찰,➖ 거래보통,0,0
-65,매수1,🔵 강화,Corteva,CTVA,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-66,매수1,🟢 재편입,Diamondback Energy,FANG,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-67,매수1,🟠 약화,Oneok,OKE,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-68,매수2,🟡 회복,Fox Corporation (Class B),FOX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
-69,매수2,🟡 회복,Cintas,CTAS,🟢 BUY,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-70,매수2,🟡 회복,Fox Corporation (Class A),FOXA,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-71,매수2,🟡 회복,Sysco,SYY,🟢 BUY 🚀,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+5D,0,🔴 출회,↗ 상승·거래증가,1,0
-72,매수2,🟡 회복,Halliburton,HAL,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-73,매수2,🟡 회복,PNC Financial Services,PNC,🟡 WATCH,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+6D,0,🟡 관찰,➖ 거래보통,0,0
-74,매수2,🟡 회복,American Tower,AMT,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
-75,매수2,🟡 회복,CSX Corporation,CSX,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
-76,매수2,🟡 회복,Amazon,AMZN,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-77,매수2,🟡 회복,Wabtec,WAB,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-78,관심후보,🟡 후보,Republic Services,RSG,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-79,관심후보,🟡 후보,Microsoft,MSFT,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-80,관심후보,🟡 후보,CDW Corporation,CDW,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-81,관심후보,🟡 후보,Berkshire Hathaway,BRK-B,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-82,관심후보,🟡 후보,Bank of America,BAC,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-83,관심후보,🟡 후보,Abercrombie & Fitch Co.,ANF,🔴 SELL,10.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-84,관심후보,🟡 후보,Schlumberger,SLB,🔴 SELL,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-85,관심후보,🟡 후보,Newmont,NEM,🔴 SELL,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-86,관심후보,🟡 후보,Phillips 66,PSX,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-87,관심후보,🟡 후보,"Circle Internet Group, Inc.",CRCL,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+7D,2,⚪ 보통,➖ 거래보통,0,0
-88,관심후보,🟡 후보,Moderna,MRNA,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+8D,1,🟡 관찰,➖ 거래보통,0,0
-89,관심후보,🟡 후보,Marathon Petroleum,MPC,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+3D,1,🟡 관찰,➖ 거래보통,0,0
-90,관심후보,🟡 후보,IQVIA,IQV,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-91,관심후보,🟡 후보,"Natera, Inc.",NTRA,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+16D,1,🟡 관찰,➖ 거래보통,0,0
-92,관심후보,🟡 후보,HP Inc.,HPQ,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+2D,0,🟡 관찰,↗ 상승·거래증가,1,0
-93,관심후보,🟡 후보,Gen Digital,GEN,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
-94,관심후보,🟡 후보,Best Buy,BBY,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-95,관심후보,🟡 후보,BNY Mellon,BNY,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-96,관심후보,🟡 후보,Quest Diagnostics,DGX,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-97,관심후보,🟡 후보,Veeva Systems,VEEV,🔴 SELL,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-98,관심후보,🟡 후보,Coca-Cola Company (The),KO,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-99,관심후보,🟡 후보,U.S. Bancorp,USB,🟢 BUY,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-100,관심후보,🟡 후보,News Corp (Class A),NWSA,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-101,관심후보,🟡 후보,Waters Corporation,WAT,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-102,관심후보,🟡 후보,Agilent Technologies,A,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🟠 약세,Below,+4D,0,🟡 관찰,➖ 거래보통,0,0
-103,관심후보,🟡 후보,Centene Corporation,CNC,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-104,관심후보,🟡 후보,Visa Inc.,V,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+10D,0,🟡 관찰,➖ 거래보통,0,0
-105,관심후보,🟡 후보,Wells Fargo,WFC,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-106,관심후보,🟡 후보,"Precigen, Inc.",PGEN,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+13D,2,⚪ 보통,➖ 거래보통,0,0
-107,관심후보,🟡 후보,Guardant Health,GH,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-108,관심후보,🟡 후보,Genuine Parts Company,GPC,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+7D,1,⚪ 보통,➖ 거래보통,0,0
-109,관심후보,🟡 후보,Garmin,GRMN,🟢 BUY,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-110,관심후보,🟡 후보,Merck & Co.,MRK,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
-111,관심후보,🟡 후보,Charles River Laboratories,CRL,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
-112,관심후보,🟡 후보,"Maravai LifeSciences Holdings, Inc.",MRVI,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+8D,1,⚪ 보통,➖ 거래보통,0,0
-113,관심후보,🟡 후보,Revvity,RVTY,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-114,관심후보,🟡 후보,ServiceNow,NOW,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-115,관심후보,🟡 후보,"Box, Inc.",BOX,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-116,관심후보,🟡 후보,Arista Networks,ANET,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-117,관심후보,🟡 후보,Semtech Corporation 💰²,SMTC,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔴 매도,Below,+4D,0,⚪ 보통,➖ 거래보통,0,1
-118,관심후보,🟡 후보,Targa Resources,TRGP,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
-119,관심후보,🟡 후보,Viatris,VTRS,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-120,관심후보,🟡 후보,Target Corporation,TGT,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
-121,관심후보,🟡 후보,"F5, Inc.",FFIV,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-122,관심후보,🟡 후보,Global Payments,GPN,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-123,관심후보,🟡 후보,Dave Inc,DAVE,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-124,관심후보,🟡 후보,Jack Henry & Associates,JKHY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
-125,관심후보,🟡 후보,Motorola Solutions,MSI,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-126,관심후보,🟡 후보,Walt Disney Company (The),DIS,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-127,관심후보,🟡 후보,Jacobs Solutions,J,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+5D,0,⚪ 보통,➖ 거래보통,0,0
-128,관심후보,🟡 후보,GoDaddy,GDDY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+9D,2,🟡 관찰,➖ 거래보통,0,0
-129,관심후보,🟡 후보,Assurant,AIZ,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,1,🟡 관찰,➖ 거래보통,0,0
-130,관심후보,🟡 후보,W. R. Berkley Corporation,WRB,🔵 HOLD 🚀,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+14D,0,🔴 출회,↘ 하락·거래증가,1,0
-131,관심후보,🟡 후보,Dexcom,DXCM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-132,관심후보,🟡 후보,Kraft Heinz,KHC,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+10D,0,🟢 유입,🔺 상승·거래급등,0,0
-133,관심후보,🟡 후보,TE Connectivity,TEL,🔵 HOLD,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+14D,0,🟡 관찰,➖ 거래보통,0,0
-134,관심후보,🟡 후보,Expedia Group,EXPE,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-135,관심후보,🟡 후보,Fifth Third Bancorp,FITB,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🔵 매수,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-136,관심후보,🟡 후보,Nucor,NUE,🟡 WATCH,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-137,관심후보,🟡 후보,Micron Technology,MU,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
-138,기타,🔴 제외,Estée Lauder Companies (The),EL,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
-139,기타,🔴 제외,Cencora,COR,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-140,기타,🔴 제외,Intercontinental Exchange,ICE,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-141,기타,🔴 제외,McKesson Corporation,MCK,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-142,기타,🔴 제외,Gilead Sciences,GILD,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-143,기타,🔴 제외,Coinbase,COIN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+7D,2,⚪ 보통,➖ 거래보통,0,0
-144,기타,🔴 제외,Pfizer,PFE,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-145,기타,🔴 제외,Becton Dickinson,BDX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
-146,기타,🔴 제외,Cognizant,CTSH,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
-147,기타,🔴 제외,Mastercard,MA,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+5D,0,⚪ 보통,➖ 거래보통,0,0
-148,기타,🔴 제외,Trimble Inc.,TRMB,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-149,기타,🔴 제외,Chipotle Mexican Grill,CMG,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+11D,0,⚪ 보통,➖ 거래보통,0,0
-150,기타,🔴 제외,American Water Works,AWK,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-151,기타,🔴 제외,Johnson & Johnson,JNJ,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-152,기타,🔴 제외,Leidos,LDOS,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-153,기타,🔴 제외,Medtronic,MDT,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-154,기타,🔴 제외,Texas Pacific Land Corporation,TPL,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-155,기타,🔴 제외,Everest Group,EG,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+10D,0,🟡 관찰,➖ 거래보통,0,0
-156,기타,🔴 제외,Ventas,VTR,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-157,기타,🔴 제외,Nordson Corporation,NDSN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+8D,0,🟡 관찰,➖ 거래보통,0,0
-158,기타,🔴 제외,EQT Corporation,EQT,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+5D,0,⚪ 보통,➖ 거래보통,0,0
-159,기타,🔴 제외,Expand Energy,EXE,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
-160,기타,🔴 제외,Tyler Technologies,TYL,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,2,⚪ 보통,➖ 거래보통,0,0
-161,기타,🔴 제외,Warner Bros. Discovery,WBD,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
-162,기타,🔴 제외,Hartford (The),HIG,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-163,기타,🔴 제외,Broadridge Financial Solutions,BR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
-164,기타,🔴 제외,Dollar General,DG,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-165,기타,🔴 제외,News Corp (Class B),NWS,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-166,기타,🔴 제외,CME Group,CME,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-167,기타,🔴 제외,Welltower,WELL,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-168,기타,🔴 제외,"MercadoLibre, Inc. Common Stock",MELI,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
-169,기타,🔴 제외,McCormick & Company,MKC,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-170,기타,🔴 제외,Vertex Pharmaceuticals,VRTX,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
-171,기타,🔴 제외,Bristol Myers Squibb,BMY,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-172,기타,🔴 제외,Gartner,IT,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-173,기타,🔴 제외,Hasbro,HAS,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-174,기타,🔴 제외,Regeneron Pharmaceuticals,REGN,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-175,기타,🔴 제외,PayPal,PYPL,🟡 WATCH,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-176,기타,🔴 제외,LyondellBasell,LYB,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-177,기타,🔴 제외,J.M. Smucker Company (The),SJM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
-178,기타,🔴 제외,Charles Schwab Corporation,SCHW,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
-179,기타,🔴 제외,"Workday, Inc.",WDAY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
-180,기타,🔴 제외,DoorDash,DASH,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,2,⚪ 보통,➖ 거래보통,0,0
-181,기타,🔴 제외,Arch Capital Group,ACGL,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
-182,기타,🔴 제외,Allegion,ALLE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-183,기타,🔴 제외,General Motors,GM,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-184,기타,🔴 제외,Baxter International,BAX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-185,기타,🔴 제외,"Rubrik, Inc.",RBRK,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-186,기타,🔴 제외,Airbnb,ABNB,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,2,⚪ 보통,➖ 거래보통,0,0
-187,기타,🔴 제외,International Flavors & Fragrances,IFF,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+11D,0,⚪ 보통,➖ 거래보통,0,0
-188,기타,🔴 제외,Fastenal,FAST,🔵 HOLD,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-189,기타,🔴 제외,Erie Indemnity,ERIE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-190,기타,🔴 제외,Willis Towers Watson,WTW,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-191,기타,🔴 제외,Danaher Corporation,DHR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-192,기타,🔴 제외,T-Mobile US,TMUS,🔵 HOLD,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
-193,기타,🔴 제외,Tractor Supply,TSCO,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
-194,기타,🔴 제외,Palo Alto Networks,PANW,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-195,기타,🔴 제외,Veralto,VLTO,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-196,기타,🔴 제외,Henry Schein,HSIC,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-197,기타,🔴 제외,ResMed,RMD,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-198,기타,🔴 제외,Raymond James Financial,RJF,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-199,기타,🔴 제외,Adobe Inc.,ADBE,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,1,🟢 유입,🔺 상승·거래급등,0,0
-200,기타,🔴 제외,JPMorgan Chase,JPM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,🟡 관찰,➖ 거래보통,0,0
-201,기타,🔴 제외,Prudential Financial,PRU,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
-202,기타,🔴 제외,Ametek,AME,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-203,기타,🔴 제외,Shark ninja,SN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+7D,2,🟡 관찰,↘ 하락·거래증가,0,0
-204,기타,🔴 제외,Roper Technologies,ROP,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-205,기타,🔴 제외,Palantir Technologies,PLTR,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-206,기타,🔴 제외,CrowdStrike,CRWD,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-207,기타,🔴 제외,M&T Bank,MTB,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+5D,0,🟡 관찰,➖ 거래보통,0,0
-208,기타,🔴 제외,Regions Financial Corporation,RF,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-209,기타,🔴 제외,Union Pacific Corporation,UNP,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
-210,기타,🔴 제외,Abbott Laboratories,ABT,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-211,기타,🔴 제외,Cardinal Health,CAH,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-212,기타,🔴 제외,Thomson Reuters Corporation Common Shares,TRI,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+4D,2,⚪ 보통,➖ 거래보통,0,0
-213,기타,🔴 제외,Altria,MO,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-214,기타,🔴 제외,Citizens Financial Group,CFG,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-215,기타,🔴 제외,Alexandria Real Estate Equities,ARE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+8D,1,🟡 관찰,➖ 거래보통,0,0
-216,기타,🔴 제외,Kroger,KR,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+2D,0,🟢 유입,↗ 상승·거래증가,0,0
-217,기타,🔴 제외,Comcast,CMCSA,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+8D,0,🟡 관찰,◇ 보합·거래증가,0,0
-218,기타,🔴 제외,Brown & Brown,BRO,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
-219,기타,🔴 제외,Ecolab,ECL,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🔴 매도,Below,+8D,0,🟡 관찰,➖ 거래보통,0,0
-220,기타,🔴 제외,Mettler Toledo,MTD,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
-221,기타,🔴 제외,American International Group,AIG,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+10D,0,🟡 관찰,↗ 상승·거래증가,0,0
-222,기타,🔴 제외,Avery Dennison,AVY,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-223,기타,🔴 제외,Mondelez International,MDLZ,🔵 HOLD,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🟢 가능,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
-224,기타,🔴 제외,Amgen,AMGN,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+2D,2,⚪ 보통,➖ 거래보통,0,0
-225,기타,🔴 제외,Arthur J. Gallagher & Co.,AJG,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
-226,기타,🔴 제외,Nvidia,NVDA,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-227,기타,🔴 제외,Fortinet,FTNT,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-228,기타,🔴 제외,eBay Inc.,EBAY,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-229,기타,🔴 제외,Chubb Limited,CB,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-230,기타,🔴 제외,Cigna,CI,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-231,기타,🔴 제외,Procter & Gamble,PG,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔴 매도,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-232,기타,🔴 제외,Johnson Controls,JCI,🔵 HOLD,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
-233,기타,🔴 제외,Shopify Inc. Class A Subordinate Voting Shares,SHOP,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+6D,1,🟡 관찰,↗ 상승·거래증가,0,0
-234,기타,🔴 제외,"Block, Inc.",XYZ,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-235,기타,🔴 제외,Loews Corporation,L,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-236,기타,🔴 제외,Franklin Resources,BEN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-237,기타,🔴 제외,Autodesk,ADSK,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+2D,2,🟡 관찰,➖ 거래보통,0,0
-238,기타,🔴 제외,Reddit,RDDT,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-239,기타,🔴 제외,Norfolk Southern,NSC,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-240,기타,🔴 제외,PTC Inc.,PTC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+11D,2,🟡 관찰,↗ 상승·거래증가,0,0
-241,기타,🔴 제외,IBM,IBM,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+17D,1,🟡 관찰,➖ 거래보통,0,0
-242,기타,🔴 제외,FactSet,FDS,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-243,기타,🔴 제외,RTX Corporation,RTX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-244,기타,🔴 제외,Zimmer Biomet,ZBH,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-245,기타,🔴 제외,Ross Stores,ROST,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+9D,0,🟡 관찰,➖ 거래보통,0,0
-246,기타,🔴 제외,Air Products,APD,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-247,기타,🔴 제외,Williams Companies,WMB,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-248,기타,🔴 제외,Emerson Electric,EMR,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-249,기타,🔴 제외,CBRE Group,CBRE,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+10D,0,⚪ 보통,➖ 거래보통,0,0
-250,기타,🔴 제외,Axon Enterprise,AXON,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+6D,2,⚪ 보통,➖ 거래보통,0,0
-251,기타,🔴 제외,Illinois Tool Works,ITW,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+10D,0,🟡 관찰,➖ 거래보통,0,0
-252,기타,🔴 제외,Stanley Black & Decker,SWK,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-253,기타,🔴 제외,Huntington Bancshares,HBAN,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+9D,0,🟡 관찰,➖ 거래보통,0,0
-254,기타,🔴 제외,Cboe Global Markets,CBOE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-255,기타,🔴 제외,Keysight Technologies,KEYS,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+9D,0,🟡 관찰,➖ 거래보통,0,0
-256,기타,🔴 제외,Darden Restaurants,DRI,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-257,기타,🔴 제외,Digital Realty,DLR,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-258,기타,🔴 제외,Dollar Tree,DLTR,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+4D,0,🟡 관찰,↘ 하락·거래증가,0,0
-259,기타,🔴 제외,Cincinnati Financial,CINF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+14D,0,⚪ 보통,➖ 거래보통,0,0
-260,기타,🔴 제외,Marsh McLennan,MRSH,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-261,기타,🔴 제외,CoStar Group,CSGP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,2,🟡 관찰,➖ 거래보통,0,0
-262,기타,🔴 제외,"Alnylam Pharmaceuticals, Inc. Common Stock",ALNY,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-263,기타,🔴 제외,"Tesla, Inc.",TSLA,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-264,기타,🔴 제외,Citigroup,C,🟡 WATCH,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-265,기타,🔴 제외,Ford Motor Company,F,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+15D,0,⚪ 보통,➖ 거래보통,0,0
-266,기타,🔴 제외,Moody's Corporation,MCO,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
-267,기타,🔴 제외,Packaging Corporation of America,PKG,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+13D,0,🟡 관찰,↗ 상승·거래증가,0,0
-268,기타,🔴 제외,Corning Inc.,GLW,🟡 WATCH,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-269,기타,🔴 제외,Coca-Cola Europacific Partners plc Ordinary Shares,CCEP,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
-270,기타,🔴 제외,Equifax,EFX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+3D,2,⚪ 보통,➖ 거래보통,0,0
-271,기타,🔴 제외,TSMC (ADR),TSM,🔵 HOLD,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
-272,기타,🔴 제외,General Mills,GIS,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-273,기타,🔴 제외,GE HealthCare,GEHC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
-274,기타,🔴 제외,Truist Financial,TFC,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
-275,기타,🔴 제외,Live Nation Entertainment,LYV,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-276,기타,🔴 제외,Aflac,AFL,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-277,기타,🔴 제외,J.B. Hunt,JBHT,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-278,기타,🔴 제외,Ball Corporation,BALL,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-279,기타,🔴 제외,Essex Property Trust,ESS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-280,기타,🔴 제외,Paccar,PCAR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-281,기타,🔴 제외,"Nasdaq, Inc.",NDAQ,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-282,기타,🔴 제외,Advanced Micro Devices,AMD,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-283,기타,🔴 제외,Capital One,COF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+8D,2,⚪ 보통,➖ 거래보통,0,0
-284,기타,🔴 제외,Freeport-McMoRan,FCX,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-285,기타,🔴 제외,Emcor,EME,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-286,기타,🔴 제외,S&P Global,SPGI,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-287,기타,🔴 제외,Vistra Corp.,VST,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-288,기타,🔴 제외,Teradyne,TER,🔵 HOLD,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-289,기타,🔴 제외,General Dynamics,GD,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
-290,기타,🔴 제외,Oracle Corporation,ORCL,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+9D,1,🔴 출회,🔻 하락·거래급등,0,0
-291,기타,🔴 제외,Parker Hannifin,PH,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-292,기타,🔴 제외,"NVR, Inc.",NVR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
-293,기타,🔴 제외,Globe Life,GL,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-294,기타,🔴 제외,Hershey Company (The),HSY,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-295,기타,🔴 제외,Steris,STE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-296,기타,🔴 제외,BlackRock,BLK,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-297,기타,🔴 제외,3M,MMM,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
-298,기타,🔴 제외,Netflix,NFLX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,🟡 관찰,➖ 거래보통,0,0
-299,기타,🔴 제외,Synchrony Financial,SYF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
-300,기타,🔴 제외,Starbucks,SBUX,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
-301,기타,🔴 제외,Sherwin-Williams,SHW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-302,기타,🔴 제외,Molson Coors Beverage Company,TAP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-303,기타,🔴 제외,Keurig Dr Pepper,KDP,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-304,기타,🔴 제외,C.H. Robinson,CHRW,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-305,기타,🔴 제외,AppLovin,APP,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔵 매수,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
-306,기타,🔴 제외,KeyCorp,KEY,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+4D,0,🟡 관찰,↗ 상승·거래증가,0,0
-307,기타,🔴 제외,Kinder Morgan,KMI,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-308,기타,🔴 제외,Celestica Inc.,CLS,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
-309,기타,🔴 제외,FirstEnergy,FE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-310,기타,🔴 제외,SBA Communications,SBAC,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+9D,0,🟡 관찰,↗ 상승·거래증가,0,0
-311,기타,🔴 제외,Consolidated Edison,ED,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-312,기타,🔴 제외,Amcor,AMCR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+14D,1,⚪ 보통,➖ 거래보통,0,0
-313,기타,🔴 제외,IDEX Corporation,IEX,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-314,기타,🔴 제외,Copart,CPRT,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakout,0D,2,🔴 출회,↘ 하락·거래증가,0,0
-315,기타,🔴 제외,Carvana,CVNA,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
-316,기타,🔴 제외,Cisco,CSCO,🟡 WATCH,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-317,기타,🔴 제외,DaVita,DVA,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
-318,기타,🔴 제외,Quanta Services,PWR,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟠 약세,Below,+5D,0,🟡 관찰,➖ 거래보통,0,0
-319,기타,🔴 제외,Interactive Brokers,IBKR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
-320,기타,🔴 제외,Otis Worldwide,OTIS,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-321,기타,🔴 제외,"Tapestry, Inc.",TPR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+12D,1,🟡 관찰,➖ 거래보통,0,0
-322,기타,🔴 제외,Healthpeak Properties,DOC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-323,기타,🔴 제외,PepsiCo,PEP,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-324,기타,🔴 제외,Lilly (Eli),LLY,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-325,기타,🔴 제외,Verisk Analytics,VRSK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-326,기타,🔴 제외,Realty Income,O,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-327,기타,🔴 제외,Comfort Systems USA,FIX,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-328,기타,🔴 제외,Bloom Energy Corporation,BE,🔵 HOLD,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
-329,기타,🔴 제외,Analog Devices,ADI,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-330,기타,🔴 제외,Omnicom Group,OMC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+10D,0,⚪ 보통,➖ 거래보통,0,0
-331,기타,🔴 제외,EchoStar,ECHO,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+11D,1,⚪ 보통,➖ 거래보통,0,0
-332,기타,🔴 제외,Church & Dwight,CHD,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-333,기타,🔴 제외,O’Reilly Automotive,ORLY,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+15D,0,⚪ 보통,➖ 거래보통,0,0
-334,기타,🔴 제외,Lockheed Martin,LMT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-335,기타,🔴 제외,Broadcom,AVGO,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-336,기타,🔴 제외,Atmos Energy,ATO,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-337,기타,🔴 제외,Brown–Forman,BF-B,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-338,기타,🔴 제외,W. W. Grainger,GWW,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-339,기타,🔴 제외,Waste Management,WM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-340,기타,🔴 제외,Eversource Energy,ES,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
-341,기타,🔴 제외,Morgan Stanley,MS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+14D,0,⚪ 보통,➖ 거래보통,0,0
-342,기타,🔴 제외,GE Vernova,GEV,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
-343,기타,🔴 제외,ATI,ATI,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-344,기타,🔴 제외,Datadog,DDOG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-345,기타,🔴 제외,Evergy,EVRG,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-346,기타,🔴 제외,Snap-on,SNA,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-347,기타,🔴 제외,PDD Holdings Inc. American Depositary Shares,PDD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+5D,1,⚪ 보통,➖ 거래보통,0,0
-348,기타,🔴 제외,PG&E Corporation,PCG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-349,기타,🔴 제외,T. Rowe Price,TROW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-350,기타,🔴 제외,Smurfit Westrock,SW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-351,기타,🔴 제외,KKR & Co.,KKR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
-352,기타,🔴 제외,NXP Semiconductors,NXPI,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-353,기타,🔴 제외,Delta Air Lines,DAL,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-354,기타,🔴 제외,Colgate-Palmolive,CL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-355,기타,🔴 제외,Edison International,EIX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-356,기타,🔴 제외,Goldman Sachs,GS,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-357,기타,🔴 제외,Duke Energy,DUK,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-358,기타,🔴 제외,Huntington Ingalls Industries,HII,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-359,기타,🔴 제외,Baker Hughes,BKR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🔴 매도,Breakdown,0D,0,🟡 관찰,↘ 하락·거래증가,0,0
-360,기타,🔴 제외,Northrop Grumman,NOC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+5D,1,🟡 관찰,➖ 거래보통,0,0
-361,기타,🔴 제외,"Williams-Sonoma, Inc.",WSM,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-362,기타,🔴 제외,Costco,COST,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-363,기타,🔴 제외,Coherent Corp.,COHR,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-364,기타,🔴 제외,TJX Companies,TJX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+8D,1,⚪ 보통,➖ 거래보통,0,0
-365,기타,🔴 제외,Qualcomm,QCOM,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+2D,1,🟢 유입,↗ 상승·거래증가,0,0
-366,기타,🔴 제외,Caterpillar Inc.,CAT,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
-367,기타,🔴 제외,NextEra Energy,NEE,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-368,기타,🔴 제외,"BXP, Inc.",BXP,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
-369,기타,🔴 제외,Equinix,EQIX,🟡 WATCH,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-370,기타,🔴 제외,Blackstone Inc.,BX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-371,기타,🔴 제외,Crown Castle,CCI,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+10D,0,🟡 관찰,➖ 거래보통,0,0
-372,기타,🔴 제외,Exelon,EXC,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
-373,기타,🔴 제외,Vici Properties,VICI,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-374,기타,🔴 제외,Xcel Energy,XEL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-375,기타,🔴 제외,NiSource,NI,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-376,기타,🔴 제외,Boston Scientific,BSX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+6D,1,⚪ 보통,➖ 거래보통,0,0
-377,기타,🔴 제외,Regency Centers,REG,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-378,기타,🔴 제외,PPL Corporation,PPL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-379,기타,🔴 제외,Intuitive Surgical,ISRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+5D,1,🟡 관찰,➖ 거래보통,0,0
-380,기타,🔴 제외,Booking Holdings,BKNG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+7D,2,🟡 관찰,↘ 하락·거래증가,0,0
-381,기타,🔴 제외,Kenvue,KVUE,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+5D,1,🟡 관찰,↘ 하락·거래증가,0,0
-382,기타,🔴 제외,Xylem Inc.,XYL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+16D,0,🟡 관찰,↗ 상승·거래증가,0,0
-383,기타,🔴 제외,Domino's,DPZ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-384,기타,🔴 제외,Marvell Technology,MRVL,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔺 상승 지속,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
-385,기타,🔴 제외,Uber,UBER,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+3D,0,🔴 출회,↘ 하락·거래증가,0,0
-386,기타,🔴 제외,ASML Holding N.V. New York Registry Shares,ASML,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
-387,기타,🔴 제외,Ares Management,ARES,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
-388,기타,🔴 제외,American Electric Power,AEP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-389,기타,🔴 제외,ON Semiconductor,ON,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+7D,1,🟡 관찰,↗ 상승·거래증가,0,0
-390,기타,🔴 제외,Prologis,PLD,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-391,기타,🔴 제외,Qnity Electronics,Q,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-392,기타,🔴 제외,Extra Space Storage,EXR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+11D,0,🟡 관찰,↗ 상승·거래증가,0,0
-393,기타,🔴 제외,Cameco Corporation,CCJ,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
-394,기타,🔴 제외,FedEx,FDX,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-395,기타,🔴 제외,Texas Instruments,TXN,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🔵 매수,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
-396,기타,🔴 제외,A. O. Smith,AOS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-397,기타,🔴 제외,Entergy,ETR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+7D,0,🔴 출회,↘ 하락·거래증가,0,0
-398,기타,🔴 제외,Dow Inc.,DOW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-399,기타,🔴 제외,Synopsys,SNPS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,1,🟡 관찰,➖ 거래보통,0,0
-400,기타,🔴 제외,MSCI Inc.,MSCI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
-401,기타,🔴 제외,Lennar,LEN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,1,🟡 관찰,↗ 상승·거래증가,0,0
-402,기타,🔴 제외,NRG Energy,NRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,1,🟡 관찰,➖ 거래보통,0,0
-403,기타,🔴 제외,Steel Dynamics,STLD,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+8D,0,🟡 관찰,➖ 거래보통,0,0
-404,기타,🔴 제외,TKO Group Holdings,TKO,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-405,기타,🔴 제외,Teledyne Technologies,TDY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-406,기타,🔴 제외,Walmart,WMT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+7D,0,🟡 관찰,➖ 거래보통,0,0
-407,기타,🔴 제외,PulteGroup,PHM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,0,0
-408,기타,🔴 제외,Hubbell Incorporated,HUBB,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-409,기타,🔴 제외,Linde plc,LIN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
-410,기타,🔴 제외,Jabil,JBL,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-411,기타,🔴 제외,Las Vegas Sands,LVS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-412,기타,🔴 제외,Ameren,AEE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-413,기타,🔴 제외,Ferguson Enterprises,FERG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-414,기타,🔴 제외,CVS Health,CVS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-415,기타,🔴 제외,AutoZone,AZO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-416,기타,🔴 제외,Dominion Energy,D,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+13D,1,🔴 출회,↘ 하락·거래증가,0,0
-417,기타,🔴 제외,Constellation Brands,STZ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-418,기타,🔴 제외,Pentair,PNR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-419,기타,🔴 제외,McDonald's,MCD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-420,기타,🔴 제외,Builders FirstSource,BLDR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+12D,1,⚪ 보통,➖ 거래보통,0,0
-421,기타,🔴 제외,Martin Marietta Materials,MLM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-422,기타,🔴 제외,Idexx Laboratories,IDXX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
-423,기타,🔴 제외,Lennox International,LII,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-424,기타,🔴 제외,Alphabet Inc. (Class A),GOOGL,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
-425,기타,🔴 제외,AST SpaceMobile,ASTS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
-426,기타,🔴 제외,Simon Property Group,SPG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
-427,기타,🔴 제외,United Parcel Service,UPS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🔴 매도,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-428,기타,🔴 제외,Lowe's,LOW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
-429,기타,🔴 제외,Textron,TXT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+10D,0,🟢 유입,↗ 상승·거래증가,0,0
-430,기타,🔴 제외,L3Harris,LHX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
-431,기타,🔴 제외,Centrus Energy Corp.,LEU,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+3D,3,🔴 출회,↘ 하락·거래증가,0,0
-432,기타,🔴 제외,Stryker Corporation,SYK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+4D,0,🟡 관찰,↗ 상승·거래증가,0,0
-433,기타,🔴 제외,Home Depot (The),HD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-434,기타,🔴 제외,"Rollins, Inc.",ROL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+11D,1,⚪ 보통,➖ 거래보통,0,0
-435,기타,🔴 제외,Trane Technologies,TT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-436,기타,🔴 제외,Sempra,SRE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-437,기타,🔴 제외,Alphabet Inc. (Class C),GOOG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-438,기타,🔴 제외,Sandisk,SNDK,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
-439,기타,🔴 제외,Planet Labs,PL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+15D,2,⚪ 보통,➖ 거래보통,0,0
-440,기타,🔴 제외,Flex Ltd.,FLEX,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+10D,1,🟡 관찰,➖ 거래보통,0,0
-441,기타,🔴 제외,Dover Corporation,DOV,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-442,기타,🔴 제외,Intel,INTC,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
-443,기타,🔴 제외,Clorox,CLX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,↘ 하락·거래증가,0,0
-444,기타,🔴 제외,Apollo Global Management,APO,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
-445,기타,🔴 제외,Deckers Brands,DECK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
-446,기타,🔴 제외,CRH plc,CRH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
-447,기타,🔴 제외,CMS Energy,CMS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-448,기타,🔴 제외,Aon plc,AON,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+14D,0,🔴 출회,↘ 하락·거래증가,0,0
-449,기타,🔴 제외,"SoundHound AI, Inc.",SOUN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
-450,기타,🔴 제외,Align Technology,ALGN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-451,기타,🔴 제외,Albemarle Corporation,ALB,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+4D,3,⚪ 보통,➖ 거래보통,0,0
-452,기타,🔴 제외,WEC Energy Group,WEC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-453,기타,🔴 제외,CenterPoint Energy,CNP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
-454,기타,🔴 제외,Vertiv,VRT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+11D,1,🟡 관찰,↗ 상승·거래증가,0,0
-455,기타,🔴 제외,Masco,MAS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
-456,기타,🔴 제외,D. R. Horton,DHI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,0,0
-457,기타,🔴 제외,Rockwell Automation,ROK,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
-458,기타,🔴 제외,Honeywell Technologies,HON,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-459,기타,🔴 제외,American Express,AXP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
-460,기타,🔴 제외,Boeing,BA,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-461,기타,🔴 제외,Public Service Enterprise Group,PEG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-462,기타,🔴 제외,Edwards Lifesciences,EW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-463,기타,🔴 제외,TransDigm Group,TDG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
-464,기타,🔴 제외,Southern Company,SO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-465,기타,🔴 제외,Yum! Brands,YUM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
-466,기타,🔴 제외,Generac,GNRC,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+2D,1,🟡 관찰,➖ 거래보통,0,0
-467,기타,🔴 제외,Weyerhaeuser,WY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-468,기타,🔴 제외,Hilton Worldwide,HLT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-469,기타,🔴 제외,Camden Property Trust,CPT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+14D,0,⚪ 보통,➖ 거래보통,0,0
-470,기타,🔴 제외,"UDR, Inc.",UDR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+2D,0,🔴 출회,◇ 보합·거래증가,0,0
-471,기타,🔴 제외,Ingersoll Rand,IR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+4D,1,🔴 출회,↘ 하락·거래증가,0,0
-472,기타,🔴 제외,Vulcan Materials Company,VMC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
-473,기타,🔴 제외,Marriott International,MAR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
-474,기타,🔴 제외,Oklo Inc.,OKLO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakout,0D,2,🔴 출회,🔻 하락·거래급등,0,0
-475,기타,🔴 제외,Fortive,FTV,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-476,기타,🔴 제외,Pinnacle West Capital,PNW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-477,기타,🔴 제외,Ciena,CIEN,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,1,🟡 관찰,➖ 거래보통,0,0
-478,기타,🔴 제외,Host Hotels & Resorts,HST,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-479,기타,🔴 제외,Wynn Resorts,WYNN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,🔴 출회,↘ 하락·거래증가,0,0
-480,기타,🔴 제외,Alliant Energy,LNT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
-481,기타,🔴 제외,Carrier Global,CARR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
-482,기타,🔴 제외,Monster Beverage,MNST,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
-483,기타,🔴 제외,First Solar,FSLR,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,🔴 출회,↗ 상승·거래증가,0,0
-484,기타,🔴 제외,International Paper,IP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+11D,0,⚪ 보통,➖ 거래보통,0,0
-485,기타,🔴 제외,DTE Energy,DTE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
-486,기타,🔴 제외,Norwegian Cruise Line Holdings,NCLH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-487,기타,🔴 제외,Ferrovial N.V. Ordinary Shares,FER,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
-488,기타,🔴 제외,Kimco Realty,KIM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,🔴 출회,🔻 하락·거래급등,0,0
-489,기타,🔴 제외,Akamai Technologies,AKAM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-490,기타,🔴 제외,Take-Two Interactive,TTWO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
-491,기타,🔴 제외,Microchip Technology,MCHP,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Breakout,0D,1,🟡 관찰,➖ 거래보통,0,0
-492,기타,🔴 제외,PPG Industries,PPG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+11D,0,🔴 출회,↗ 상승·거래증가,0,0
-493,기타,🔴 제외,Cadence Design Systems,CDNS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,1,🟡 관찰,➖ 거래보통,0,0
-494,기타,🔴 제외,Southwest Airlines,LUV,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,1,🟡 관찰,➖ 거래보통,0,0
-495,기타,🔴 제외,Arm Holdings plc American Depositary Shares,ARM,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+11D,1,🟡 관찰,➖ 거래보통,0,0
-496,기타,🔴 제외,Rocket Lab Corporation Common Stock,RKLB,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
-497,기타,🔴 제외,DuPont,DD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-498,기타,🔴 제외,Entegris,ENTG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-499,기타,🔴 제외,Monolithic Power Systems,MPWR,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,🟡 관찰,➖ 거래보통,0,0
-500,기타,🔴 제외,Mid-America Apartment Communities,MAA,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+8D,0,🔴 출회,↗ 상승·거래증가,0,0
-501,기타,🔴 제외,Iron Mountain,IRM,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
-502,기타,🔴 제외,Federal Realty Investment Trust,FRT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
-503,기타,🔴 제외,United Airlines Holdings,UAL,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+15D,0,🟡 관찰,↗ 상승·거래증가,0,0
-504,기타,🔴 제외,Ralph Lauren Corporation,RL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+10D,0,⚪ 보통,➖ 거래보통,0,0
-505,기타,🔴 제외,United Rentals,URI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
-506,기타,🔴 제외,Cummins,CMI,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
-507,기타,🔴 제외,Invitation Homes,INVH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+1D,0,🔴 출회,↘ 하락·거래증가,0,0
-508,기타,🔴 제외,MYR Group,MYRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,1,🟡 관찰,➖ 거래보통,0,0
-509,기타,🔴 제외,Cooper Companies (The),COO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,3,🔴 출회,↘ 하락·거래증가,0,0
-510,기타,🔴 제외,Old Dominion,ODFL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
-511,기타,🔴 제외,Royal Caribbean Group,RCL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+15D,0,⚪ 보통,➖ 거래보통,0,0
-512,기타,🔴 제외,GE Aerospace,GE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+10D,0,⚪ 보통,➖ 거래보통,0,0
-513,기타,🔴 제외,Carnival Corporation,CCL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
-514,기타,🔴 제외,"CoreWeave, Inc. Class A Common Stock",CRWV,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,3,⚪ 보통,➖ 거래보통,0,0
-515,기타,🔴 제외,Nebius Group N.V. Class A Ordinary Shares,NBIS,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
-516,기타,🔴 제외,MGM Resorts,MGM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+11D,0,⚪ 보통,➖ 거래보통,0,0
-517,기타,🔴 제외,Applied Materials,AMAT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,🟡 관찰,➖ 거래보통,0,0
-518,기타,🔴 제외,"Astera Labs, Inc. Common Stock",ALAB,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,1,🟡 관찰,➖ 거래보통,0,0
-519,기타,🔴 제외,Howmet Aerospace,HWM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,2,🟡 관찰,↗ 상승·거래증가,0,0
-520,기타,🔴 제외,Public Storage,PSA,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
-521,기타,🔴 제외,Lam Research,LRCX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
-522,기타,🔴 제외,UnitedHealth Group,UNH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+4D,0,🔴 출회,↘ 하락·거래증가,0,0
-523,기타,🔴 제외,"IonQ, Inc.",IONQ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
-524,기타,🔴 제외,KLA Corporation,KLAC,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,1,🟡 관찰,➖ 거래보통,0,0
-525,기타,🔴 제외,Casey's,CASY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+9D,3,🟡 관찰,↘ 하락·거래증가,0,0
-526,기타,🔴 제외,Seagate Technology,STX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
-527,기타,🔴 제외,Western Digital,WDC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+4D,3,⚪ 보통,➖ 거래보통,0,0
+순위,구분,신호,종목명,티커,BUY/SELL,점수,Final15RuleVersion,Final15RawEntry,Final15EntrySignal,Final15RawFamilyIDs,Final15FamilyIDs,Final15PrimaryFamily,EntryEventID,EntrySignalDate,EntryExecutionDate,EntryPrice,EntryFamilyIDs,EntryPrimaryFamily,EntryConfirmationFamilies,EntryReferenceHorizon,EntryCleanLegMedian,EntryLifecycleState,EntryLifecycleStateDate,EntryAgeTradingDays,EntryPeakPrice,EntryPeakReturn,EntryCurrentReturn,EntryMA5State,EntryMA10State,EntryD2State,EntryPG10State,EntryU10State,EntryFWFailsafeState,EntryReclaimSafeState,EntryWLBState,EntryRiskState,EntryWarningActive,EntryWarningReason,EntryExitActive,EntryExitDate,EntryExitSignalDate,EntryExitExecutionDate,EntryExitPrice,EntryExitExecutionStatus,EntryExitReason,EntryExitExecutionRule,EntryExitEngineVersion,EntryActive,EntryBadge,EntryLastUpdatedDate,EntryLifecyclePreview,흐름,OSC Signal,OSC Status,Progress,StableCoreDamageBlocks,수급상태,거래꼬리표,Rocket,MultiBaggerCandidate
+1,우선,🔵 유지,Deere & Company,DE,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+2,우선,🔵 유지,Salesforce,CRM,🔴 SELL,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+3,우선,🔵 강화,Expeditors International,EXPD,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+10D,0,⚪ 보통,➖ 거래보통,1,0
+4,우선,🟢 신규,Skyworks Solutions,SWKS,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🔵 매수,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
+5,가능,🟢 신규,Universal Health Services,UHS,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+6,가능,🟡 후보,Travelers Companies (The),TRV,🟢 BUY 🚀,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+5D,0,🟡 관찰,➖ 거래보통,1,0
+7,가능,🟡 후보,Valero Energy,VLO,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,0,🔴 출회,↗ 상승·거래증가,1,0
+8,가능,🟡 후보,Hewlett Packard Enterprise,HPE,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🔵 매수,Above,+10D,0,🟢 유입,↗ 상승·거래증가,1,0
+9,가능,🟡 후보,Philip Morris International,PM,🟢 BUY 🚀,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🔵 매수,Above,+2D,0,⚪ 보통,➖ 거래보통,1,0
+10,가능,🟡 후보,"International Seaways, Inc.",INSW,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,0,🟢 유입,↗ 상승·거래증가,1,0
+11,가능,🟡 후보,State Street Corporation,STT,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+5D,0,🟡 관찰,➖ 거래보통,0,0
+12,가능,🟡 후보,NetApp,NTAP,🟢 BUY 🚀⚠️,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🔵 매수,Above,+8D,0,🟡 관찰,➖ 거래보통,1,0
+13,가능,🟡 후보,Waters Corporation,WAT,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+14,가능,🟡 후보,Arista Networks,ANET,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+15,가능,🟡 후보,Viatris,VTRS,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,0,0
+16,가능,🟡 후보,"F5, Inc.",FFIV,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+17,가능,🟡 후보,Eaton Corporation,ETN,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
+18,가능,🟡 후보,Labcorp,LH,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+2D,1,🟡 관찰,↗ 상승·거래증가,0,0
+19,가능,🟡 후보,Paychex,PAYX,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+20,가능,🟡 후보,Global Payments,GPN,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+21,고려,🔵 강화,Devon Energy,DVN,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+22,고려,🔵 강화,AT&T,T,🟢 BUY 🚀,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+14D,0,🟡 관찰,↗ 상승·거래증가,1,0
+23,고려,🔵 강화,Occidental Petroleum,OXY,🟢 BUY 🚀,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,1,0
+24,고려,🟢 신규,HCA Healthcare,HCA,🟢 BUY 🚀,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+5D,0,🟡 관찰,↗ 상승·거래증가,1,0
+25,고려,🟡 후보,Biogen,BIIB,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+7D,0,🟡 관찰,↗ 상승·거래증가,0,0
+26,고려,🟡 후보,MetLife,MET,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+5D,0,🟡 관찰,➖ 거래보통,0,0
+27,고려,🟡 후보,Northern Trust,NTRS,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+28,고려,🟡 후보,Star Bulk Carriers Corp.,SBLK,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+29,고려,🟡 후보,AbbVie,ABBV,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
+30,고려,🟡 후보,Supermicro,SMCI,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+4D,1,🟡 관찰,➖ 거래보통,0,0
+31,고려,🟡 후보,Thermo Fisher Scientific,TMO,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+32,고려,🟡 후보,Lumentum,LITE,🟡 WATCH,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+33,고려,🟡 후보,Bio-Techne,TECH,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+34,고려,🟡 후보,Incyte,INCY,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+35,고려,🟡 후보,Zebra Technologies,ZBRA,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+36,고려,🟡 후보,Allstate,ALL,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+37,고려,🟡 후보,West Pharmaceutical Services,WST,🟢 BUY,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+38,관찰,🟠 약화,APA Corporation,APA,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
+39,관찰,🔵 유지,Verizon,VZ,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+40,관찰,🟡 후보,CDW Corporation,CDW,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,1,0
+41,관찰,🟡 후보,Apple Inc.,AAPL,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+8D,0,🟢 유입,↗ 상승·거래증가,1,0
+42,관찰,🟡 후보,Meta Platforms,META,🟢 BUY 🚀,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+17D,0,🔴 출회,↗ 상승·거래증가,1,0
+43,관찰,🟡 후보,Ameriprise Financial,AMP,🟢 BUY 🚀,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+14D,0,🟡 관찰,↗ 상승·거래증가,1,0
+44,관찰,🟡 후보,Paramount Skydance Corporation,PSKY,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+8D,2,🟡 관찰,➖ 거래보통,0,0
+45,관찰,🟡 후보,HP Inc.,HPQ,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
+46,관찰,🟡 후보,Quest Diagnostics,DGX,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+47,관찰,🟡 후보,Constellation Energy,CEG,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
+48,관찰,🟡 후보,Dell Technologies,DELL,🟢 BUY 🚀⚠️,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,0,🟡 관찰,↗ 상승·거래증가,1,0
+49,관찰,🟡 후보,Principal Financial Group,PFG,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
+50,관찰,🟡 후보,Elevance Health,ELV,🟢 BUY 🚀,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Above,+8D,0,🔴 출회,↗ 상승·거래증가,1,0
+51,관찰,🟡 후보,Robinhood Markets,HOOD,🟡 WATCH,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+5D,2,⚪ 보통,➖ 거래보통,0,0
+52,관찰,🟡 후보,Automatic Data Processing,ADP,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
+53,관찰,🟡 후보,"ASE Technology Holding Co., Ltd. ADR",ASX,🟡 WATCH,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+54,관찰,🟡 후보,Corpay,CPAY,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+55,매수1,🟢 재편입,ExxonMobil,XOM,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+56,매수1,🔵 유지,CF Industries,CF,🔴 SELL,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+57,매수1,🔵 유지,Mosaic Company (The),MOS,🟡 WATCH,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+58,매수1,🔵 유지,ConocoPhillips,COP,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+12D,0,⚪ 보통,➖ 거래보통,0,0
+59,매수1,🔵 유지,Chevron Corporation,CVX,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+60,매수1,🔵 강화,Strategy Inc Common Stock Class A,MSTR,🔴 SELL,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+8D,2,⚪ 보통,➖ 거래보통,0,0
+61,매수1,🔵 유지,Ulta Beauty,ULTA,🟡 WATCH,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+62,매수1,🟢 재편입,EOG Resources,EOG,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+63,매수1,🟢 신규,AES Corporation,AES,🟡 WATCH,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
+64,매수1,🟢 재편입,Accenture,ACN,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+3D,1,🟡 관찰,➖ 거래보통,0,0
+65,매수1,🔵 강화,Corteva,CTVA,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+66,매수1,🟢 재편입,Diamondback Energy,FANG,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+67,매수1,🟠 약화,Oneok,OKE,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+68,매수1,🟢 신규,Bunge Global,BG,🟡 WATCH,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Breakdown,0D,0,🔴 출회,↘ 하락·거래증가,0,0
+69,매수2,🟡 회복,Fox Corporation (Class B),FOX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+1D,0,🟡 관찰,➖ 거래보통,0,0
+70,매수2,🟡 회복,Cintas,CTAS,🟢 BUY,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+71,매수2,🟡 회복,Fox Corporation (Class A),FOXA,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+72,매수2,🟡 회복,Sysco,SYY,🟢 BUY 🚀,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+6D,0,🔴 출회,↗ 상승·거래증가,1,0
+73,매수2,🟡 회복,Halliburton,HAL,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+74,매수2,🟡 회복,PNC Financial Services,PNC,🟡 WATCH,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+7D,0,🟡 관찰,➖ 거래보통,0,0
+75,매수2,🟡 회복,American Tower,AMT,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+13D,0,🟡 관찰,➖ 거래보통,0,0
+76,매수2,🟡 회복,CSX Corporation,CSX,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+77,매수2,🟡 회복,Amazon,AMZN,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+78,매수2,🟡 회복,Wabtec,WAB,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+79,관심후보,🟡 후보,Republic Services,RSG,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+80,관심후보,🟡 후보,Microsoft,MSFT,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+81,관심후보,🟡 후보,Archer Daniels Midland,ADM,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+82,관심후보,🟡 후보,Progressive Corporation,PGR,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+83,관심후보,🟡 후보,Berkshire Hathaway,BRK-B,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+84,관심후보,🟡 후보,Abercrombie & Fitch Co.,ANF,🔴 SELL,10.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+85,관심후보,🟡 후보,Bank of America,BAC,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+86,관심후보,🟡 후보,Verisign,VRSN,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+87,관심후보,🟡 후보,Schlumberger,SLB,🔴 SELL,7.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+88,관심후보,🟡 후보,Newmont,NEM,🟡 WATCH,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+7D,0,🟡 관찰,➖ 거래보통,0,0
+89,관심후보,🟡 후보,Phillips 66,PSX,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+90,관심후보,🟡 후보,"Circle Internet Group, Inc.",CRCL,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+8D,2,⚪ 보통,➖ 거래보통,0,0
+91,관심후보,🟡 후보,Moderna,MRNA,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+9D,1,🟡 관찰,➖ 거래보통,0,0
+92,관심후보,🟡 후보,Marathon Petroleum,MPC,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+4D,1,🟡 관찰,➖ 거래보통,0,0
+93,관심후보,🟡 후보,IQVIA,IQV,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+94,관심후보,🟡 후보,"Natera, Inc.",NTRA,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+17D,1,🟡 관찰,➖ 거래보통,0,0
+95,관심후보,🟡 후보,Gen Digital,GEN,🔴 SELL,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+4D,0,🟡 관찰,➖ 거래보통,0,0
+96,관심후보,🟡 후보,Best Buy,BBY,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+97,관심후보,🟡 후보,BNY Mellon,BNY,🟡 WATCH,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+98,관심후보,🟡 후보,Veeva Systems,VEEV,🔴 SELL,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+99,관심후보,🟡 후보,Coca-Cola Company (The),KO,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+100,관심후보,🟡 후보,U.S. Bancorp,USB,🟢 BUY,8.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+101,관심후보,🟡 후보,News Corp (Class A),NWSA,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+102,관심후보,🟡 후보,Agilent Technologies,A,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🟠 약세,Below,+5D,0,🟡 관찰,➖ 거래보통,0,0
+103,관심후보,🟡 후보,Centene Corporation,CNC,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+104,관심후보,🟡 후보,Visa Inc.,V,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+11D,0,🟡 관찰,➖ 거래보통,0,0
+105,관심후보,🟡 후보,Wells Fargo,WFC,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+106,관심후보,🟡 후보,"Precigen, Inc.",PGEN,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+14D,2,⚪ 보통,➖ 거래보통,0,0
+107,관심후보,🟡 후보,Guardant Health,GH,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+108,관심후보,🟡 후보,Genuine Parts Company,GPC,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+8D,1,⚪ 보통,➖ 거래보통,0,0
+109,관심후보,🟡 후보,Garmin,GRMN,🟢 BUY,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+110,관심후보,🟡 후보,Merck & Co.,MRK,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
+111,관심후보,🟡 후보,Humana,HUM,🟢 BUY,9.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+112,관심후보,🟡 후보,Charles River Laboratories,CRL,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
+113,관심후보,🟡 후보,"Maravai LifeSciences Holdings, Inc.",MRVI,🔴 SELL,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+9D,1,⚪ 보통,➖ 거래보통,0,0
+114,관심후보,🟡 후보,ServiceNow,NOW,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+115,관심후보,🟡 후보,"Box, Inc.",BOX,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+116,관심후보,🟡 후보,Revvity,RVTY,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+117,관심후보,🟡 후보,Semtech Corporation 💰²,SMTC,🟢 BUY,8.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Below,+5D,0,⚪ 보통,➖ 거래보통,0,1
+118,관심후보,🟡 후보,Targa Resources,TRGP,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+10D,0,⚪ 보통,➖ 거래보통,0,0
+119,관심후보,🟡 후보,Solventum,SOLV,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+120,관심후보,🟡 후보,Target Corporation,TGT,🔴 SELL,6.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
+121,관심후보,🟡 후보,Amphenol,APH,🟢 BUY,7.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+122,관심후보,🟡 후보,Invesco,IVZ,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+123,관심후보,🟡 후보,Dave Inc,DAVE,🔴 SELL,6.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,2026-09-10,2026-09-11,363.26,VERIFIED_NEXT_OPEN,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+124,관심후보,🟡 후보,Jack Henry & Associates,JKHY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+10D,0,⚪ 보통,➖ 거래보통,0,0
+125,관심후보,🟡 후보,Motorola Solutions,MSI,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+126,관심후보,🟡 후보,Walt Disney Company (The),DIS,🟢 BUY,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+127,관심후보,🟡 후보,Jacobs Solutions,J,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
+128,관심후보,🟡 후보,GoDaddy,GDDY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,2,🟡 관찰,➖ 거래보통,0,0
+129,관심후보,🟡 후보,Kraft Heinz,KHC,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+11D,0,🟢 유입,🔺 상승·거래급등,0,0
+130,관심후보,🟡 후보,Assurant,AIZ,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,1,🟡 관찰,➖ 거래보통,0,0
+131,관심후보,🟡 후보,W. R. Berkley Corporation,WRB,🔵 HOLD 🚀,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+15D,0,🔴 출회,↘ 하락·거래증가,1,0
+132,관심후보,🟡 후보,Dexcom,DXCM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
+133,관심후보,🟡 후보,TE Connectivity,TEL,🟡 WATCH,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+134,관심후보,🟡 후보,Expedia Group,EXPE,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
+135,관심후보,🟡 후보,Fifth Third Bancorp,FITB,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+136,관심후보,🟡 후보,Nucor,NUE,🟡 WATCH,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+137,관심후보,🟡 후보,Micron Technology,MU,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+9D,0,⚪ 보통,➖ 거래보통,0,0
+138,기타,🔴 제외,Estée Lauder Companies (The),EL,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
+139,기타,🔴 제외,Cencora,COR,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+140,기타,🔴 제외,Intercontinental Exchange,ICE,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+141,기타,🔴 제외,McKesson Corporation,MCK,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+142,기타,🔴 제외,Gilead Sciences,GILD,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+143,기타,🔴 제외,Coinbase,COIN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+8D,2,⚪ 보통,➖ 거래보통,0,0
+144,기타,🔴 제외,Pfizer,PFE,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+145,기타,🔴 제외,Becton Dickinson,BDX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+10D,0,⚪ 보통,➖ 거래보통,0,0
+146,기타,🔴 제외,Cognizant,CTSH,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+4D,0,🟡 관찰,➖ 거래보통,0,0
+147,기타,🔴 제외,Mastercard,MA,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
+148,기타,🔴 제외,Trimble Inc.,TRMB,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+149,기타,🔴 제외,Chipotle Mexican Grill,CMG,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+12D,0,⚪ 보통,➖ 거래보통,0,0
+150,기타,🔴 제외,American Water Works,AWK,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+151,기타,🔴 제외,Leidos,LDOS,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
+152,기타,🔴 제외,Johnson & Johnson,JNJ,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+153,기타,🔴 제외,Medtronic,MDT,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+154,기타,🔴 제외,Texas Pacific Land Corporation,TPL,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔵 매수,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
+155,기타,🔴 제외,Everest Group,EG,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
+156,기타,🔴 제외,Ventas,VTR,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+157,기타,🔴 제외,Nordson Corporation,NDSN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+9D,0,🟡 관찰,➖ 거래보통,0,0
+158,기타,🔴 제외,Expand Energy,EXE,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+1D,0,🔴 출회,↘ 하락·거래증가,0,0
+159,기타,🔴 제외,EQT Corporation,EQT,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+6D,0,⚪ 보통,➖ 거래보통,0,0
+160,기타,🔴 제외,Tyler Technologies,TYL,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,2,⚪ 보통,➖ 거래보통,0,0
+161,기타,🔴 제외,Hartford (The),HIG,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+162,기타,🔴 제외,Warner Bros. Discovery,WBD,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
+163,기타,🔴 제외,Dollar General,DG,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+164,기타,🔴 제외,Broadridge Financial Solutions,BR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
+165,기타,🔴 제외,News Corp (Class B),NWS,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+166,기타,🔴 제외,CME Group,CME,🔴 SELL,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+167,기타,🔴 제외,Chubb Limited,CB,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+168,기타,🔴 제외,Welltower,WELL,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+169,기타,🔴 제외,"MercadoLibre, Inc. Common Stock",MELI,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
+170,기타,🔴 제외,Vertex Pharmaceuticals,VRTX,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Breakout,0D,2,⚪ 보통,➖ 거래보통,0,0
+171,기타,🔴 제외,McCormick & Company,MKC,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+172,기타,🔴 제외,Bristol Myers Squibb,BMY,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+173,기타,🔴 제외,Gartner,IT,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+174,기타,🔴 제외,Hasbro,HAS,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+175,기타,🔴 제외,Regeneron Pharmaceuticals,REGN,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+176,기타,🔴 제외,PayPal,PYPL,🟡 WATCH,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+177,기타,🔴 제외,LyondellBasell,LYB,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+178,기타,🔴 제외,J.M. Smucker Company (The),SJM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+5D,0,⚪ 보통,➖ 거래보통,0,0
+179,기타,🔴 제외,Charles Schwab Corporation,SCHW,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
+180,기타,🔴 제외,"Workday, Inc.",WDAY,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
+181,기타,🔴 제외,DoorDash,DASH,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔴 매도,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
+182,기타,🔴 제외,Arch Capital Group,ACGL,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
+183,기타,🔴 제외,Allegion,ALLE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+184,기타,🔴 제외,General Motors,GM,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakout,0D,0,🔴 출회,↘ 하락·거래증가,0,0
+185,기타,🔴 제외,Baxter International,BAX,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+186,기타,🔴 제외,"Rubrik, Inc.",RBRK,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+187,기타,🔴 제외,Airbnb,ABNB,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,2,⚪ 보통,➖ 거래보통,0,0
+188,기타,🔴 제외,International Flavors & Fragrances,IFF,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+12D,0,⚪ 보통,➖ 거래보통,0,0
+189,기타,🔴 제외,Fastenal,FAST,🔵 HOLD,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
+190,기타,🔴 제외,Willis Towers Watson,WTW,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+191,기타,🔴 제외,Erie Indemnity,ERIE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+192,기타,🔴 제외,Tractor Supply,TSCO,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
+193,기타,🔴 제외,Danaher Corporation,DHR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+194,기타,🔴 제외,T-Mobile US,TMUS,🔵 HOLD,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+7D,0,🟡 관찰,➖ 거래보통,0,0
+195,기타,🔴 제외,Palo Alto Networks,PANW,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+196,기타,🔴 제외,Williams Companies,WMB,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+197,기타,🔴 제외,Veralto,VLTO,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+198,기타,🔴 제외,Henry Schein,HSIC,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+199,기타,🔴 제외,ResMed,RMD,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
+200,기타,🔴 제외,Raymond James Financial,RJF,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+201,기타,🔴 제외,Adobe Inc.,ADBE,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+1D,1,🟢 유입,🔺 상승·거래급등,0,0
+202,기타,🔴 제외,Prudential Financial,PRU,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
+203,기타,🔴 제외,JPMorgan Chase,JPM,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Below,+1D,1,🟡 관찰,➖ 거래보통,0,0
+204,기타,🔴 제외,Shark ninja,SN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+8D,2,🟡 관찰,↘ 하락·거래증가,0,0
+205,기타,🔴 제외,Ametek,AME,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+206,기타,🔴 제외,Roper Technologies,ROP,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+207,기타,🔴 제외,CrowdStrike,CRWD,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+208,기타,🔴 제외,Palantir Technologies,PLTR,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+209,기타,🔴 제외,M&T Bank,MTB,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+6D,0,🟡 관찰,➖ 거래보통,0,0
+210,기타,🔴 제외,Regions Financial Corporation,RF,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+211,기타,🔴 제외,Union Pacific Corporation,UNP,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+9D,0,⚪ 보통,➖ 거래보통,0,0
+212,기타,🔴 제외,Cardinal Health,CAH,🔴 SELL,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+213,기타,🔴 제외,Abbott Laboratories,ABT,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+214,기타,🔴 제외,Thomson Reuters Corporation Common Shares,TRI,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
+215,기타,🔴 제외,Citizens Financial Group,CFG,🟡 WATCH,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
+216,기타,🔴 제외,Altria,MO,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+217,기타,🔴 제외,Alexandria Real Estate Equities,ARE,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+9D,1,🟡 관찰,➖ 거래보통,0,0
+218,기타,🔴 제외,Kroger,KR,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,0,🟢 유입,🔺 상승·거래급등,0,0
+219,기타,🔴 제외,Comcast,CMCSA,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+9D,0,🟡 관찰,↗ 상승·거래증가,0,0
+220,기타,🔴 제외,Brown & Brown,BRO,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
+221,기타,🔴 제외,Mettler Toledo,MTD,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+8D,0,⚪ 보통,➖ 거래보통,0,0
+222,기타,🔴 제외,Ecolab,ECL,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+9D,0,🟡 관찰,➖ 거래보통,0,0
+223,기타,🔴 제외,American International Group,AIG,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+11D,0,🟡 관찰,🔺 상승·거래급등,0,0
+224,기타,🔴 제외,Avery Dennison,AVY,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+225,기타,🔴 제외,Mondelez International,MDLZ,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+226,기타,🔴 제외,Nvidia,NVDA,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+227,기타,🔴 제외,Amgen,AMGN,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+3D,2,⚪ 보통,➖ 거래보통,0,0
+228,기타,🔴 제외,Arthur J. Gallagher & Co.,AJG,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+4D,1,⚪ 보통,➖ 거래보통,0,0
+229,기타,🔴 제외,Fortinet,FTNT,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+230,기타,🔴 제외,eBay Inc.,EBAY,🟡 WATCH,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+231,기타,🔴 제외,Cigna,CI,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+232,기타,🔴 제외,Procter & Gamble,PG,🟡 WATCH,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+233,기타,🔴 제외,Johnson Controls,JCI,🔵 HOLD,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,0,🟢 유입,🔺 상승·거래급등,0,0
+234,기타,🔴 제외,Shopify Inc. Class A Subordinate Voting Shares,SHOP,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,1,🟡 관찰,↗ 상승·거래증가,0,0
+235,기타,🔴 제외,"Block, Inc.",XYZ,🔴 SELL,5.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+236,기타,🔴 제외,Loews Corporation,L,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🔴 출회,↘ 하락·거래증가,0,0
+237,기타,🔴 제외,Autodesk,ADSK,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+3D,2,🟡 관찰,➖ 거래보통,0,0
+238,기타,🔴 제외,Franklin Resources,BEN,🔴 SELL,5.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+239,기타,🔴 제외,Reddit,RDDT,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
+240,기타,🔴 제외,PTC Inc.,PTC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+12D,2,🟡 관찰,↗ 상승·거래증가,0,0
+241,기타,🔴 제외,Norfolk Southern,NSC,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+242,기타,🔴 제외,FactSet,FDS,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,1,🟡 관찰,↘ 하락·거래증가,0,0
+243,기타,🔴 제외,Zimmer Biomet,ZBH,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+244,기타,🔴 제외,IBM,IBM,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+18D,1,🟡 관찰,➖ 거래보통,0,0
+245,기타,🔴 제외,RTX Corporation,RTX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+246,기타,🔴 제외,Ross Stores,ROST,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+10D,0,🟡 관찰,➖ 거래보통,0,0
+247,기타,🔴 제외,Air Products,APD,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
+248,기타,🔴 제외,Emerson Electric,EMR,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
+249,기타,🔴 제외,CBRE Group,CBRE,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+250,기타,🔴 제외,Axon Enterprise,AXON,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
+251,기타,🔴 제외,Stanley Black & Decker,SWK,🔴 SELL,4.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+7D,1,🟡 관찰,◇ 보합·거래증가,0,0
+252,기타,🔴 제외,Illinois Tool Works,ITW,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+11D,0,🟡 관찰,↗ 상승·거래증가,0,0
+253,기타,🔴 제외,Huntington Bancshares,HBAN,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+10D,0,🟡 관찰,➖ 거래보통,0,0
+254,기타,🔴 제외,Keysight Technologies,KEYS,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+10D,0,🟡 관찰,➖ 거래보통,0,0
+255,기타,🔴 제외,Darden Restaurants,DRI,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+256,기타,🔴 제외,Digital Realty,DLR,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+257,기타,🔴 제외,Cboe Global Markets,CBOE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+258,기타,🔴 제외,Dollar Tree,DLTR,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+5D,0,🟡 관찰,↘ 하락·거래증가,0,0
+259,기타,🔴 제외,Marsh McLennan,MRSH,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+260,기타,🔴 제외,Cincinnati Financial,CINF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+261,기타,🔴 제외,CoStar Group,CSGP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+1D,2,🟡 관찰,➖ 거래보통,0,0
+262,기타,🔴 제외,"Alnylam Pharmaceuticals, Inc. Common Stock",ALNY,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
+263,기타,🔴 제외,"Tesla, Inc.",TSLA,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+264,기타,🔴 제외,Citigroup,C,🟡 WATCH,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+265,기타,🔴 제외,Packaging Corporation of America,PKG,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+14D,0,🟡 관찰,↗ 상승·거래증가,0,0
+266,기타,🔴 제외,Coca-Cola Europacific Partners plc Ordinary Shares,CCEP,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
+267,기타,🔴 제외,Corning Inc.,GLW,🟡 WATCH,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
+268,기타,🔴 제외,Ford Motor Company,F,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+16D,0,⚪ 보통,➖ 거래보통,0,0
+269,기타,🔴 제외,Moody's Corporation,MCO,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+5D,1,⚪ 보통,➖ 거래보통,0,0
+270,기타,🔴 제외,Equifax,EFX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+4D,2,⚪ 보통,➖ 거래보통,0,0
+271,기타,🔴 제외,General Mills,GIS,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+272,기타,🔴 제외,TSMC (ADR),TSM,🔵 HOLD,3.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+5D,0,🟡 관찰,➖ 거래보통,0,0
+273,기타,🔴 제외,GE HealthCare,GEHC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+14D,0,⚪ 보통,➖ 거래보통,0,0
+274,기타,🔴 제외,Truist Financial,TFC,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+275,기타,🔴 제외,Live Nation Entertainment,LYV,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
+276,기타,🔴 제외,"Nasdaq, Inc.",NDAQ,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+277,기타,🔴 제외,Aflac,AFL,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+278,기타,🔴 제외,Ball Corporation,BALL,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+8D,1,🟡 관찰,↗ 상승·거래증가,0,0
+279,기타,🔴 제외,J.B. Hunt,JBHT,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+280,기타,🔴 제외,Essex Property Trust,ESS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+281,기타,🔴 제외,Paccar,PCAR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+282,기타,🔴 제외,Advanced Micro Devices,AMD,🔵 HOLD,4.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+283,기타,🔴 제외,Eversource Energy,ES,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+9D,1,⚪ 보통,➖ 거래보통,0,0
+284,기타,🔴 제외,Capital One,COF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,2,⚪ 보통,➖ 거래보통,0,0
+285,기타,🔴 제외,Freeport-McMoRan,FCX,🔴 SELL,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
+286,기타,🔴 제외,S&P Global,SPGI,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+287,기타,🔴 제외,Emcor,EME,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+288,기타,🔴 제외,Oracle Corporation,ORCL,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+10D,1,🔴 출회,🔻 하락·거래급등,0,0
+289,기타,🔴 제외,Vistra Corp.,VST,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+290,기타,🔴 제외,Parker Hannifin,PH,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+291,기타,🔴 제외,Teradyne,TER,🔵 HOLD,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+292,기타,🔴 제외,Globe Life,GL,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+293,기타,🔴 제외,Hershey Company (The),HSY,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+294,기타,🔴 제외,Steris,STE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+295,기타,🔴 제외,"NVR, Inc.",NVR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
+296,기타,🔴 제외,BlackRock,BLK,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+297,기타,🔴 제외,Netflix,NFLX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakout,0D,1,🟡 관찰,➖ 거래보통,0,0
+298,기타,🔴 제외,3M,MMM,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
+299,기타,🔴 제외,Synchrony Financial,SYF,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+7D,0,⚪ 보통,➖ 거래보통,0,0
+300,기타,🔴 제외,Molson Coors Beverage Company,TAP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+301,기타,🔴 제외,Starbucks,SBUX,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
+302,기타,🔴 제외,Sherwin-Williams,SHW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,0,0
+303,기타,🔴 제외,Keurig Dr Pepper,KDP,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+304,기타,🔴 제외,C.H. Robinson,CHRW,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+3D,1,🔴 출회,↗ 상승·거래증가,0,0
+305,기타,🔴 제외,AppLovin,APP,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,🟢 가능,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
+306,기타,🔴 제외,KeyCorp,KEY,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+5D,0,🟡 관찰,↗ 상승·거래증가,0,0
+307,기타,🔴 제외,Kinder Morgan,KMI,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+308,기타,🔴 제외,FirstEnergy,FE,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+309,기타,🔴 제외,Celestica Inc.,CLS,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
+310,기타,🔴 제외,SBA Communications,SBAC,🔴 SELL,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+10D,0,🟡 관찰,↗ 상승·거래증가,0,0
+311,기타,🔴 제외,Consolidated Edison,ED,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+312,기타,🔴 제외,Amcor,AMCR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+15D,1,⚪ 보통,➖ 거래보통,0,0
+313,기타,🔴 제외,IDEX Corporation,IEX,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+314,기타,🔴 제외,Copart,CPRT,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+1D,2,🔴 출회,🔻 하락·거래급등,0,0
+315,기타,🔴 제외,Carvana,CVNA,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
+316,기타,🔴 제외,Cisco,CSCO,🟡 WATCH,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+317,기타,🔴 제외,Quanta Services,PWR,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+6D,0,🟡 관찰,➖ 거래보통,0,0
+318,기타,🔴 제외,DaVita,DVA,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+5D,1,🔴 출회,↗ 상승·거래증가,0,0
+319,기타,🔴 제외,Interactive Brokers,IBKR,🔴 SELL,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+3D,0,🟡 관찰,➖ 거래보통,0,0
+320,기타,🔴 제외,Otis Worldwide,OTIS,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+321,기타,🔴 제외,"Tapestry, Inc.",TPR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+13D,1,🟡 관찰,➖ 거래보통,0,0
+322,기타,🔴 제외,PepsiCo,PEP,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+323,기타,🔴 제외,Healthpeak Properties,DOC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+324,기타,🔴 제외,Lilly (Eli),LLY,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+325,기타,🔴 제외,Verisk Analytics,VRSK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+326,기타,🔴 제외,Bloom Energy Corporation,BE,🔵 HOLD,3.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+12D,0,🟡 관찰,➖ 거래보통,0,0
+327,기타,🔴 제외,Comfort Systems USA,FIX,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+328,기타,🔴 제외,Realty Income,O,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+329,기타,🔴 제외,Omnicom Group,OMC,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+11D,0,⚪ 보통,➖ 거래보통,0,0
+330,기타,🔴 제외,Analog Devices,ADI,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+331,기타,🔴 제외,Church & Dwight,CHD,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+5D,0,🟡 관찰,↗ 상승·거래증가,0,0
+332,기타,🔴 제외,EchoStar,ECHO,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+12D,1,⚪ 보통,➖ 거래보통,0,0
+333,기타,🔴 제외,O’Reilly Automotive,ORLY,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+16D,0,⚪ 보통,➖ 거래보통,0,0
+334,기타,🔴 제외,Lockheed Martin,LMT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+335,기타,🔴 제외,Broadcom,AVGO,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
+336,기타,🔴 제외,Waste Management,WM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+337,기타,🔴 제외,Atmos Energy,ATO,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+338,기타,🔴 제외,Brown–Forman,BF-B,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+339,기타,🔴 제외,W. W. Grainger,GWW,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+340,기타,🔴 제외,ATI,ATI,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+341,기타,🔴 제외,Snap-on,SNA,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+342,기타,🔴 제외,Datadog,DDOG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+343,기타,🔴 제외,Evergy,EVRG,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+344,기타,🔴 제외,GE Vernova,GEV,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+2D,0,🟡 관찰,➖ 거래보통,0,0
+345,기타,🔴 제외,Morgan Stanley,MS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+15D,0,⚪ 보통,➖ 거래보통,0,0
+346,기타,🔴 제외,PDD Holdings Inc. American Depositary Shares,PDD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+6D,1,⚪ 보통,➖ 거래보통,0,0
+347,기타,🔴 제외,PG&E Corporation,PCG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+348,기타,🔴 제외,T. Rowe Price,TROW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+349,기타,🔴 제외,Smurfit Westrock,SW,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+350,기타,🔴 제외,Delta Air Lines,DAL,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+351,기타,🔴 제외,Colgate-Palmolive,CL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+8D,0,🔴 출회,↘ 하락·거래증가,0,0
+352,기타,🔴 제외,NXP Semiconductors,NXPI,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
+353,기타,🔴 제외,KKR & Co.,KKR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
+354,기타,🔴 제외,Edison International,EIX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+355,기타,🔴 제외,Goldman Sachs,GS,🟡 WATCH,2.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+356,기타,🔴 제외,Huntington Ingalls Industries,HII,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
+357,기타,🔴 제외,Duke Energy,DUK,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+358,기타,🔴 제외,Northrop Grumman,NOC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+6D,1,🟡 관찰,➖ 거래보통,0,0
+359,기타,🔴 제외,Baker Hughes,BKR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Breakout,0D,0,🟡 관찰,↘ 하락·거래증가,0,0
+360,기타,🔴 제외,"Williams-Sonoma, Inc.",WSM,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+361,기타,🔴 제외,Costco,COST,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+362,기타,🔴 제외,Coherent Corp.,COHR,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
+363,기타,🔴 제외,Regency Centers,REG,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+8D,0,🟡 관찰,◇ 보합·거래증가,0,0
+364,기타,🔴 제외,TJX Companies,TJX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+9D,1,⚪ 보통,➖ 거래보통,0,0
+365,기타,🔴 제외,Qualcomm,QCOM,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+3D,1,🟢 유입,↗ 상승·거래증가,0,0
+366,기타,🔴 제외,Caterpillar Inc.,CAT,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+367,기타,🔴 제외,"BXP, Inc.",BXP,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+2D,0,⚪ 보통,➖ 거래보통,0,0
+368,기타,🔴 제외,NextEra Energy,NEE,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+369,기타,🔴 제외,Equinix,EQIX,🟡 WATCH,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+370,기타,🔴 제외,Blackstone Inc.,BX,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
+371,기타,🔴 제외,Crown Castle,CCI,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+11D,0,🟡 관찰,➖ 거래보통,0,0
+372,기타,🔴 제외,Exelon,EXC,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+13D,0,⚪ 보통,➖ 거래보통,0,0
+373,기타,🔴 제외,Vici Properties,VICI,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+374,기타,🔴 제외,Xcel Energy,XEL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+375,기타,🔴 제외,Boston Scientific,BSX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,1,🔴 출회,↘ 하락·거래증가,0,0
+376,기타,🔴 제외,NiSource,NI,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+377,기타,🔴 제외,PPL Corporation,PPL,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+378,기타,🔴 제외,Intuitive Surgical,ISRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,1,🟡 관찰,↗ 상승·거래증가,0,0
+379,기타,🔴 제외,Booking Holdings,BKNG,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+8D,2,🟡 관찰,◇ 보합·거래증가,0,0
+380,기타,🔴 제외,Kenvue,KVUE,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+6D,1,🟡 관찰,◆ 보합·거래급등,0,0
+381,기타,🔴 제외,Xylem Inc.,XYL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+17D,0,🟡 관찰,↗ 상승·거래증가,0,0
+382,기타,🔴 제외,Domino's,DPZ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+383,기타,🔴 제외,Uber,UBER,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+4D,0,🔴 출회,↘ 하락·거래증가,0,0
+384,기타,🔴 제외,Marvell Technology,MRVL,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔺 상승 지속,⚪ 중립,Below,+3D,1,⚪ 보통,➖ 거래보통,0,0
+385,기타,🔴 제외,ASML Holding N.V. New York Registry Shares,ASML,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+9D,0,🟡 관찰,➖ 거래보통,0,0
+386,기타,🔴 제외,American Electric Power,AEP,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+387,기타,🔴 제외,Ares Management,ARES,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+2D,1,⚪ 보통,➖ 거래보통,0,0
+388,기타,🔴 제외,ON Semiconductor,ON,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+8D,1,🟡 관찰,↗ 상승·거래증가,0,0
+389,기타,🔴 제외,Qnity Electronics,Q,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+390,기타,🔴 제외,Prologis,PLD,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+391,기타,🔴 제외,Extra Space Storage,EXR,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+12D,0,🟡 관찰,↗ 상승·거래증가,0,0
+392,기타,🔴 제외,Invitation Homes,INVH,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,0,🔴 출회,◇ 보합·거래증가,0,0
+393,기타,🔴 제외,FedEx,FDX,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+394,기타,🔴 제외,A. O. Smith,AOS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+395,기타,🔴 제외,Cameco Corporation,CCJ,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+5D,1,⚪ 보통,➖ 거래보통,0,0
+396,기타,🔴 제외,Texas Instruments,TXN,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+10D,0,⚪ 보통,➖ 거래보통,0,0
+397,기타,🔴 제외,Entergy,ETR,🔴 SELL,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+8D,0,🔴 출회,↘ 하락·거래증가,0,0
+398,기타,🔴 제외,Dow Inc.,DOW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
+399,기타,🔴 제외,Synopsys,SNPS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟠 약세,Below,+4D,1,🟡 관찰,➖ 거래보통,0,0
+400,기타,🔴 제외,MSCI Inc.,MSCI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
+401,기타,🔴 제외,Lennar,LEN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+4D,1,🟡 관찰,↗ 상승·거래증가,0,0
+402,기타,🔴 제외,NRG Energy,NRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+4D,1,🟡 관찰,➖ 거래보통,0,0
+403,기타,🔴 제외,Steel Dynamics,STLD,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Below,+9D,0,🟡 관찰,➖ 거래보통,0,0
+404,기타,🔴 제외,Teledyne Technologies,TDY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+405,기타,🔴 제외,TKO Group Holdings,TKO,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+406,기타,🔴 제외,Walmart,WMT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+8D,0,🟡 관찰,➖ 거래보통,0,0
+407,기타,🔴 제외,PulteGroup,PHM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+8D,0,🟡 관찰,↗ 상승·거래증가,0,0
+408,기타,🔴 제외,Hubbell Incorporated,HUBB,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+8D,0,🟡 관찰,➖ 거래보통,0,0
+409,기타,🔴 제외,Linde plc,LIN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
+410,기타,🔴 제외,Jabil,JBL,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+411,기타,🔴 제외,Las Vegas Sands,LVS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+412,기타,🔴 제외,Ameren,AEE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+413,기타,🔴 제외,Ferguson Enterprises,FERG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+414,기타,🔴 제외,AutoZone,AZO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+415,기타,🔴 제외,CVS Health,CVS,🔴 SELL,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+416,기타,🔴 제외,Dominion Energy,D,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+14D,1,🔴 출회,↘ 하락·거래증가,0,0
+417,기타,🔴 제외,Constellation Brands,STZ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
+418,기타,🔴 제외,Pentair,PNR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+419,기타,🔴 제외,McDonald's,MCD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+420,기타,🔴 제외,Builders FirstSource,BLDR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,🟡 관찰,↗ 상승·거래증가,0,0
+421,기타,🔴 제외,Martin Marietta Materials,MLM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+8D,0,🟡 관찰,↗ 상승·거래증가,0,0
+422,기타,🔴 제외,Lennox International,LII,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Breakout,0D,1,⚪ 보통,➖ 거래보통,0,0
+423,기타,🔴 제외,Idexx Laboratories,IDXX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
+424,기타,🔴 제외,Alphabet Inc. (Class A),GOOGL,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+13D,0,🟡 관찰,➖ 거래보통,0,0
+425,기타,🔴 제외,Simon Property Group,SPG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+10D,0,⚪ 보통,➖ 거래보통,0,0
+426,기타,🔴 제외,AST SpaceMobile,ASTS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+6D,1,⚪ 보통,➖ 거래보통,0,0
+427,기타,🔴 제외,Lowe's,LOW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,0,0
+428,기타,🔴 제외,United Parcel Service,UPS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+429,기타,🔴 제외,Textron,TXT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+11D,0,🟢 유입,↗ 상승·거래증가,0,0
+430,기타,🔴 제외,Centrus Energy Corp.,LEU,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+4D,3,🔴 출회,↘ 하락·거래증가,0,0
+431,기타,🔴 제외,L3Harris,LHX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+5D,1,⚪ 보통,➖ 거래보통,0,0
+432,기타,🔴 제외,Stryker Corporation,SYK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+5D,0,🟡 관찰,↗ 상승·거래증가,0,0
+433,기타,🔴 제외,"Rollins, Inc.",ROL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+12D,1,⚪ 보통,➖ 거래보통,0,0
+434,기타,🔴 제외,Home Depot (The),HD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+435,기타,🔴 제외,Trane Technologies,TT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Breakout,0D,0,⚪ 보통,➖ 거래보통,0,0
+436,기타,🔴 제외,Sempra,SRE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+437,기타,🔴 제외,Alphabet Inc. (Class C),GOOG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Breakout,0D,0,🟡 관찰,➖ 거래보통,0,0
+438,기타,🔴 제외,Planet Labs,PL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+16D,2,🔴 출회,↘ 하락·거래증가,0,0
+439,기타,🔴 제외,Sandisk,SNDK,🟡 WATCH,2.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,2,⚪ 보통,➖ 거래보통,0,0
+440,기타,🔴 제외,Dover Corporation,DOV,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+441,기타,🔴 제외,Clorox,CLX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,🔻 하락·거래급등,0,0
+442,기타,🔴 제외,Flex Ltd.,FLEX,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,🟢 가능,Above,+11D,1,🟡 관찰,➖ 거래보통,0,0
+443,기타,🔴 제외,Intel,INTC,🟡 WATCH,1.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+4D,1,⚪ 보통,➖ 거래보통,0,0
+444,기타,🔴 제외,General Dynamics,GD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,⚪ 중립,Above,+13D,0,🟡 관찰,↗ 상승·거래증가,0,0
+445,기타,🔴 제외,Apollo Global Management,APO,🔴 SELL,0.5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+5D,1,⚪ 보통,➖ 거래보통,0,0
+446,기타,🔴 제외,Deckers Brands,DECK,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+5D,1,⚪ 보통,➖ 거래보통,0,0
+447,기타,🔴 제외,CRH plc,CRH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,1,⚪ 보통,➖ 거래보통,0,0
+448,기타,🔴 제외,Aon plc,AON,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+15D,0,🔴 출회,↘ 하락·거래증가,0,0
+449,기타,🔴 제외,CMS Energy,CMS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+450,기타,🔴 제외,"SoundHound AI, Inc.",SOUN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,1,⚪ 보통,➖ 거래보통,0,0
+451,기타,🔴 제외,Align Technology,ALGN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+452,기타,🔴 제외,Albemarle Corporation,ALB,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🔵 매수,Above,+5D,3,⚪ 보통,➖ 거래보통,0,0
+453,기타,🔴 제외,WEC Energy Group,WEC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+454,기타,🔴 제외,CenterPoint Energy,CNP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+2D,0,⚪ 보통,➖ 거래보통,0,0
+455,기타,🔴 제외,Vertiv,VRT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+12D,1,🟡 관찰,↗ 상승·거래증가,0,0
+456,기타,🔴 제외,Masco,MAS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+10D,0,🟡 관찰,↗ 상승·거래증가,0,0
+457,기타,🔴 제외,Rockwell Automation,ROK,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,0,🔴 출회,↗ 상승·거래증가,0,0
+458,기타,🔴 제외,Honeywell Technologies,HON,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+459,기타,🔴 제외,D. R. Horton,DHI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+8D,0,🟡 관찰,↗ 상승·거래증가,0,0
+460,기타,🔴 제외,American Express,AXP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Above,+5D,0,🟡 관찰,➖ 거래보통,0,0
+461,기타,🔴 제외,Public Service Enterprise Group,PEG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+462,기타,🔴 제외,Boeing,BA,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+463,기타,🔴 제외,Edwards Lifesciences,EW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Breakout,0D,0,🔴 출회,↘ 하락·거래증가,0,0
+464,기타,🔴 제외,TransDigm Group,TDG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+2D,0,🟡 관찰,➖ 거래보통,0,0
+465,기타,🔴 제외,Southern Company,SO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔴 매도,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+466,기타,🔴 제외,Yum! Brands,YUM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🔵 매수,Above,+1D,0,⚪ 보통,➖ 거래보통,0,0
+467,기타,🔴 제외,Camden Property Trust,CPT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+15D,0,⚪ 보통,➖ 거래보통,0,0
+468,기타,🔴 제외,Weyerhaeuser,WY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+7D,0,⚪ 보통,➖ 거래보통,0,0
+469,기타,🔴 제외,Hilton Worldwide,HLT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+470,기타,🔴 제외,Generac,GNRC,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+3D,1,🟡 관찰,➖ 거래보통,0,0
+471,기타,🔴 제외,"UDR, Inc.",UDR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,🔴 출회,◇ 보합·거래증가,0,0
+472,기타,🔴 제외,Ingersoll Rand,IR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+5D,1,🔴 출회,↘ 하락·거래증가,0,0
+473,기타,🔴 제외,Vulcan Materials Company,VMC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+474,기타,🔴 제외,Marriott International,MAR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,🟡 관찰,➖ 거래보통,0,0
+475,기타,🔴 제외,Oklo Inc.,OKLO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+1D,2,🔴 출회,🔻 하락·거래급등,0,0
+476,기타,🔴 제외,Fortive,FTV,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+477,기타,🔴 제외,Ciena,CIEN,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,1,🟡 관찰,➖ 거래보통,0,0
+478,기타,🔴 제외,Host Hotels & Resorts,HST,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,⚪ 보통,➖ 거래보통,0,0
+479,기타,🔴 제외,Pinnacle West Capital,PNW,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+480,기타,🔴 제외,Wynn Resorts,WYNN,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,1,🔴 출회,↘ 하락·거래증가,0,0
+481,기타,🔴 제외,Monster Beverage,MNST,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+4D,0,🟡 관찰,➖ 거래보통,0,0
+482,기타,🔴 제외,Alliant Energy,LNT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+483,기타,🔴 제외,Carrier Global,CARR,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+1D,1,⚪ 보통,➖ 거래보통,0,0
+484,기타,🔴 제외,First Solar,FSLR,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,1,🔴 출회,↗ 상승·거래증가,0,0
+485,기타,🔴 제외,International Paper,IP,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Breakdown,0D,0,⚪ 보통,➖ 거래보통,0,0
+486,기타,🔴 제외,DTE Energy,DTE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,0,🔴 출회,↘ 하락·거래증가,0,0
+487,기타,🔴 제외,Norwegian Cruise Line Holdings,NCLH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,🟡 관찰,↗ 상승·거래증가,0,0
+488,기타,🔴 제외,Ferrovial N.V. Ordinary Shares,FER,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+5D,0,⚪ 보통,➖ 거래보통,0,0
+489,기타,🔴 제외,Akamai Technologies,AKAM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,1,🔴 출회,↘ 하락·거래증가,0,0
+490,기타,🔴 제외,Kimco Realty,KIM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Breakout,0D,0,🔴 출회,🔻 하락·거래급등,0,0
+491,기타,🔴 제외,Take-Two Interactive,TTWO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟠 약세,Below,+3D,0,⚪ 보통,➖ 거래보통,0,0
+492,기타,🔴 제외,Microchip Technology,MCHP,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+1D,1,🟡 관찰,➖ 거래보통,0,0
+493,기타,🔴 제외,PPG Industries,PPG,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+12D,0,🔴 출회,↗ 상승·거래증가,0,0
+494,기타,🔴 제외,Cadence Design Systems,CDNS,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+4D,1,🟡 관찰,➖ 거래보통,0,0
+495,기타,🔴 제외,Southwest Airlines,LUV,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+4D,1,🟡 관찰,➖ 거래보통,0,0
+496,기타,🔴 제외,Arm Holdings plc American Depositary Shares,ARM,🟡 WATCH,1.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+12D,1,🟡 관찰,➖ 거래보통,0,0
+497,기타,🔴 제외,Rocket Lab Corporation Common Stock,RKLB,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+7D,1,⚪ 보통,➖ 거래보통,0,0
+498,기타,🔴 제외,DuPont,DD,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+499,기타,🔴 제외,Entegris,ENTG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔴 매도,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+500,기타,🔴 제외,Monolithic Power Systems,MPWR,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Above,+8D,1,🟡 관찰,➖ 거래보통,0,0
+501,기타,🔴 제외,Federal Realty Investment Trust,FRT,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+8D,0,⚪ 보통,➖ 거래보통,0,0
+502,기타,🔴 제외,Mid-America Apartment Communities,MAA,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+9D,0,🔴 출회,↗ 상승·거래증가,0,0
+503,기타,🔴 제외,United Airlines Holdings,UAL,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+16D,0,🟡 관찰,↗ 상승·거래증가,0,0
+504,기타,🔴 제외,Iron Mountain,IRM,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,0,🟡 관찰,➖ 거래보통,0,0
+505,기타,🔴 제외,United Rentals,URI,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+4D,0,⚪ 보통,➖ 거래보통,0,0
+506,기타,🔴 제외,Ralph Lauren Corporation,RL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+11D,0,⚪ 보통,➖ 거래보통,0,0
+507,기타,🔴 제외,Cummins,CMI,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Breakdown,0D,0,🟡 관찰,➖ 거래보통,0,0
+508,기타,🔴 제외,MYR Group,MYRG,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟠 약세,Below,+2D,1,🟡 관찰,➖ 거래보통,0,0
+509,기타,🔴 제외,Cooper Companies (The),COO,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,🟢 가능,Above,+8D,3,🔴 출회,🔻 하락·거래급등,0,0
+510,기타,🔴 제외,Old Dominion,ODFL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+9D,1,⚪ 보통,➖ 거래보통,0,0
+511,기타,🔴 제외,Royal Caribbean Group,RCL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+16D,0,⚪ 보통,➖ 거래보통,0,0
+512,기타,🔴 제외,GE Aerospace,GE,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟠 약세,Below,+11D,0,⚪ 보통,➖ 거래보통,0,0
+513,기타,🔴 제외,"CoreWeave, Inc. Class A Common Stock",CRWV,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+4D,3,⚪ 보통,➖ 거래보통,0,0
+514,기타,🔴 제외,Carnival Corporation,CCL,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔴 매도,Below,+2D,1,⚪ 보통,➖ 거래보통,0,0
+515,기타,🔴 제외,Nebius Group N.V. Class A Ordinary Shares,NBIS,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+3D,1,⚪ 보통,➖ 거래보통,0,0
+516,기타,🔴 제외,MGM Resorts,MGM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+12D,0,🔴 출회,↘ 하락·거래증가,0,0
+517,기타,🔴 제외,"Astera Labs, Inc. Common Stock",ALAB,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Above,+7D,1,🟡 관찰,➖ 거래보통,0,0
+518,기타,🔴 제외,Applied Materials,AMAT,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,⚪ 중립,Below,+1D,1,🟡 관찰,➖ 거래보통,0,0
+519,기타,🔴 제외,Howmet Aerospace,HWM,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+1D,2,🟡 관찰,↗ 상승·거래증가,0,0
+520,기타,🔴 제외,Public Storage,PSA,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,⚪ 중립,Below,+1D,0,⚪ 보통,➖ 거래보통,0,0
+521,기타,🔴 제외,Lam Research,LRCX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+8D,1,⚪ 보통,➖ 거래보통,0,0
+522,기타,🔴 제외,"IonQ, Inc.",IONQ,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🔵 매수,Breakout,0D,2,⚪ 보통,➖ 거래보통,0,0
+523,기타,🔴 제외,UnitedHealth Group,UNH,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🔵 매수,Above,+5D,0,🔴 출회,↘ 하락·거래증가,0,0
+524,기타,🔴 제외,KLA Corporation,KLAC,🟡 WATCH,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,⚪ 중립,Above,+8D,1,🟡 관찰,➖ 거래보통,0,0
+525,기타,🔴 제외,Casey's,CASY,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+10D,3,🟡 관찰,↘ 하락·거래증가,0,0
+526,기타,🔴 제외,Seagate Technology,STX,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+6D,0,⚪ 보통,➖ 거래보통,0,0
+527,기타,🔴 제외,Western Digital,WDC,🔴 SELL,0.0,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+5D,3,⚪ 보통,➖ 거래보통,0,0
 
 [CURRENT MACHINE RULES — AUTO GENERATED FROM rules/*.py]
 SignalFind US — CURRENT RULES AUTO
@@ -749,6 +750,11 @@ A/B/C/D Target 및 legacy Target Lifecycle은 FINAL15 사용자 Entry 의미로 
 - ENTRY/HOLD only show 🎯; WARNING/EXIT remove 🎯; HOLD recovery restores 🎯
 - LIVE = preview-only; persistent state never mutates
 - Additional threshold/wait-day/rule mining = STOP; next phase LIVE OOS monitoring only
+- Safety v2: persistent FINAL15 state download/parse failure aborts Refresh; no empty-state overwrite
+- Safety v2: active event ticker missing from snapshot is reconciled from completed EOD history or Refresh fails
+- Safety v2: D+1 Open/EntryPrice and D2 Close/MA5 must be verifiable; missing data never silently passes D2
+- Safety v2: D2 #3 exemption is fixed to a pure initial #3 Entry event; later confirmations cannot grant exemption
+- Safety v2: Exit signal date and verified next-open execution date/price are tracked separately
 
 ========================================================================
 [Rocket] PRACTICAL_LIVE_V1
