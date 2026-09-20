@@ -1,12 +1,12 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-09-20 14:55 KST
+BRIEF_GENERATED_AT_KST: 2026-09-20 20:49 KST
 BASIS_DATE: 2026-09-18
 STOCK_BASIS_DATE: 2026-09-18
 SECTOR_BASIS_DATE: 2026-09-18
 ETF_BASIS_DATE: 2026-09-18
 SAME_EOD_STATUS: PASS
-RUN: MANUAL
+RUN: EOD (장종료)
 PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 
 [MANDATORY REFERENCE SOURCES]
@@ -19,7 +19,7 @@ PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-09-20 14:55 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-09-20 20:49 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 혼합 기준일임을 명시하고 신규진입 판단을 확정하지 않는다.
 이 문서의 기계적 FinalState/Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
@@ -28,7 +28,7 @@ STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 
 [CURRENT SNAPSHOT COUNTS]
 stocks=528 sectors=32 etfs=74
 BUY=52 HOLD=14 WATCH=92 SELL=370
-ACTIVE_ENTRY=5 NEW_ENTRY=2 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
+ACTIVE_ENTRY=6 NEW_ENTRY=3 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
 
 [CORE INTERPRETATION]
 - BUY/HOLD/WATCH/SELL = 현재 기계적 상태 축이며 Entry lifecycle과 별개다.
@@ -232,7 +232,7 @@ ACTIVE_ENTRY=5 NEW_ENTRY=2 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 66,고려,🟡 후보,Incyte,INCY,🟢 BUY,6.5,-0.0416535,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,➖ 보합 유지,🟢 가능,Above,+3D,0,🔴 출회,🔻 하락·거래급등,0,0
 67,고려,🟡 후보,Berkshire Hathaway,BRK-B,🔴 SELL,6.0,0.000439635,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↘️ 하락 우세,🟢 가능,Above,+3D,0,🟢 유입,🔺 상승·거래급등,0,0
 68,고려,🟡 후보,Automatic Data Processing,ADP,🟡 WATCH,6.0,-0.0185197,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🟢 가능,Above,+6D,0,🟡 관찰,🔻 하락·거래급등,0,0
-69,고려,🟡 후보,Advanced Micro Devices,AMD,🟢 BUY 🚀,7.0,0.105149,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+12D,0,🟢 유입,↗ 상승·거래증가,1,0
+69,고려,🟡 후보,Advanced Micro Devices,AMD,🟢 BUY 🎯 🚀,7.0,0.105149,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,AMD:2026-09-18:001,2026-09-18,,,,,,40.0,,ENTRY,2026-09-18,0.0,,,,INTERNAL_M_PROFILE,INTERNAL_M_PROFILE,N/A_INTERNAL_M,N/A_INTERNAL_M,N/A_INTERNAL_M,,,,,0,,0,,,,,,,,INTERNAL_M_D20_D40_MA20_2D_V2_20260920,1,🎯,2026-09-18,,⤴️ 반등 전환,🟢 가능,Above,+12D,0,🟢 유입,↗ 상승·거래증가,1,0
 70,고려,🟡 후보,Genuine Parts Company,GPC,🔴 SELL,6.0,-0.0430194,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,🔻 하락 지속,🟢 가능,Above,+3D,0,🔴 출회,🔻 하락·거래급등,0,0
 71,관찰,🟢 재편입,"Circle Internet Group, Inc.",CRCL,🟡 WATCH,7.0,-0.123608,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakout,0D,2,🟡 관찰,↗ 상승·거래증가,0,0
 72,관찰,🟢 신규,Johnson & Johnson,JNJ,🟢 BUY 🚀,8.0,-0.0223308,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,↗️ 상승 우세,⚪ 중립,Breakout,0D,0,🟡 관찰,◆ 보합·거래급등,1,0
@@ -807,7 +807,7 @@ A/B/C/D Target 및 legacy Target Lifecycle은 FINAL15 사용자 Entry 의미로 
 - WLB50은 FINAL15 Entry hard gate/ranker/add-on 규칙이 아님
 
 ========================================================================
-[Entry Lifecycle Stack — FINAL15 / C3-M1 / Score-M1 / Internal-M] INTERNAL_M_RS70_V1_20260920
+[Entry Lifecycle Stack — FINAL15 / C3-M1 / Score-M1 / Internal-M] INTERNAL_M_RS70_V2_RECENT1D_20260920
 ========================================================================
 - Production source: SignalFind US FINAL15 Entry / Exit Production v1.0 · 2026-09-11
 - FINAL15 = #1~#10, #12~#16; #11 FINAL DROP
