@@ -1,30 +1,28 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-09-20 13:51 KST
+BRIEF_GENERATED_AT_KST: 2026-09-20 14:55 KST
 BASIS_DATE: 2026-09-18
 STOCK_BASIS_DATE: 2026-09-18
 SECTOR_BASIS_DATE: 2026-09-18
 ETF_BASIS_DATE: 2026-09-18
 SAME_EOD_STATUS: PASS
-RUN: EOD (장종료)
+RUN: MANUAL
 PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 
 [MANDATORY REFERENCE SOURCES]
-다른 AI는 미국 종목/섹터 분석 전에 아래 2개 Drive 자료의 최신 내용을 반드시 함께 확인한다.
-1. Signalfind_US_핵심메모_2026-08-28: https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/edit?usp=drivesdk
-2. Telegram_Global_21D_Intelligence / Telegram_Global_21D: https://docs.google.com/spreadsheets/d/14iQm3E7eykZmyirVc-s9X73xGT_J676vEsto8GDmtZM/edit?usp=drivesdk
-- 핵심메모는 누적형 연구/운영 문서이므로 과거 기록보다 가장 최근 날짜의 정정·폐기·최종결정 항목을 우선한다.
-- 현재 기계적 FinalState/FINAL15 Entry/점수/산식은 이 최신 Refresh Snapshot과 아래 CURRENT MACHINE RULES가 최우선 기준이다.
+다른 AI는 미국 종목/섹터 분석 시 아래 Intelligence 자료의 최신 내용을 함께 확인한다.
+1. Telegram_Global_21D_Intelligence / Telegram_Global_21D: https://docs.google.com/spreadsheets/d/14iQm3E7eykZmyirVc-s9X73xGT_J676vEsto8GDmtZM/edit?usp=drivesdk
+- 현재 기계적 FinalState/Entry/Exit/점수/산식은 이 최신 Refresh Snapshot과 아래 CURRENT MACHINE RULES가 최우선 기준이다.
 - Telegram_Global_21D는 미국 분석에서 US/BOTH/MACRO 행을 우선 읽고 verification, importance, expires_at_kst를 함께 확인한다.
 - 만료된 정보는 현재 판단 근거에서 제외하고, Telegram 단독 주장으로 매수·매도를 확정하지 않는다.
 - 외부채널 정보가 SignalFind와 같은 방향이면 Confluence 가점, 반대면 충돌을 명시하고 EOD·공시·실적·Revision을 우선한다.
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-09-20 13:51 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-09-20 14:55 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 혼합 기준일임을 명시하고 신규진입 판단을 확정하지 않는다.
-이 문서의 기계적 FinalState/FINAL15 Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
+이 문서의 기계적 FinalState/Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
 최신 외부 펀더멘털·뉴스·Revision을 추가 조사할 수 있지만 SignalFind 기계적 상태와 외부 판단을 구분한다.
 
 [CURRENT SNAPSHOT COUNTS]
@@ -33,30 +31,24 @@ BUY=52 HOLD=14 WATCH=92 SELL=370
 ACTIVE_ENTRY=5 NEW_ENTRY=2 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
 
 [CORE INTERPRETATION]
-- BUY/HOLD/WATCH/SELL = 현재 기계적 상태 축이며 FINAL15 Entry lifecycle과 별개다.
-- 🎯 = FINAL15 Entry Event가 현재 ENTRY 또는 HOLD 상태로 살아 있음.
-- 🟢 ENTRY = 오늘 EOD에서 확정된 신규 FINAL15 Event.
-- 🔵 HOLD = 동일 Event 정상 지속. 종목 메뉴 🎯 유지.
-- 🟡 WARNING = 동일 Event 약화 감시. 종목 메뉴 🎯 제거.
-- 🔴 EXIT = Event 종료. 종목 메뉴 🎯 없음.
-- A/B/C/D Target Badge와 3거래일 Target 표시 의미는 새 FINAL15 UI에서 사용하지 않는다.
+- BUY/HOLD/WATCH/SELL = 현재 기계적 상태 축이며 Entry lifecycle과 별개다.
+- 🎯 = 자동매매 엔진에서 현재 선정되어 관리 중인 종목.
+- Entry/Exit 세부 조건은 아래 AUTOMATIC TRADING DETAIL과 CURRENT MACHINE RULES를 함께 본다.
 - WLB50은 FINAL15 Entry hard gate/ranker/add-on이 아니며 참고정보일 뿐이다.
-- FINAL15 Production Exit v1.0은 D2 Fail-Fast(순수 초기 #3 Entry만 면제) → PG10 또는 U10 → MA10 Final Defense로 동결되어 있다.
-- First MA5 Warning은 WARNING 전용이며 즉시 Exit가 아니다. 모든 Exit는 EOD Confirmed → 다음 정상거래일 Open 실행 기준이다.
-- ExitDate/EntryExitSignalDate는 EOD Exit 신호일이고 EntryExitExecutionDate/Price는 다음 정상거래일 Open 실제 실행 검증값이다.
+- First MA5 Warning은 WARNING 전용이며 즉시 Exit가 아니다. 모든 Next-Open Exit는 EOD Confirmed → 다음 정상거래일 Open 실행 기준이다.
+- ExitDate/EntryExitSignalDate는 EOD Exit 신호일이고 EntryExitExecutionDate/Price는 실제 실행 검증값이다.
 - FW_FAILSAFE/RECLAIM_SAFE는 위험 참고 전용, WLB50은 보유 confidence 참고 전용이며 자동 Exit/Entry gate가 아니다.
-- Rocket/Multi-Bagger는 별도 Overlay이며 FinalState 또는 FINAL15 Entry 의미를 바꾸지 않는다.
+- Rocket/Multi-Bagger는 별도 Overlay이며 FinalState 또는 Entry 의미를 바꾸지 않는다.
 
 [AI ANALYSIS PRIORITY]
-1. Signalfind_US_핵심메모의 최신 정정/운영원칙을 확인한다.
-2. 이 Brief의 최신 Refresh 생성시각·STOCK/SECTOR/ETF 기준일·SAME_EOD_STATUS·FinalState·FINAL15 Entry lifecycle을 확인한다.
-3. Entry 관리 상태에서 ENTRY/HOLD/WARNING/EXIT, Family, 체결일, Entry후수익과 D2/PG10/U10/MA10 상태 및 Exit 실행 검증값을 확인한다.
-4. 신규/Active Entry마다 해당 Family 공식과 이 Brief에 존재하는 실제 입력값을 대조해 왜 Entry가 발생했는지 설명한다. 필요한 입력값이 없으면 추정하지 말고 확인되지 않음으로 표시한다.
+1. 이 Brief의 최신 Refresh 생성시각·STOCK/SECTOR/ETF 기준일·SAME_EOD_STATUS·FinalState·Entry lifecycle을 확인한다.
+2. 자동매매 선정종목마다 Entry/HOLD/WARNING/EXIT, Family, 체결일, 수익률과 Exit 실행 검증값을 확인한다.
+3. 신규/Active 종목마다 아래 자동매매 상세조건과 실제 입력값을 대조해 왜 선정됐는지 설명한다. 필요한 입력값이 없으면 추정하지 말고 확인되지 않음으로 표시한다.
+4. 매수/매도 조건의 의미와 연구결과는 아래 웹 동일 상세설명을 우선 참고하고, 정확한 현재 실행규칙은 CURRENT MACHINE RULES로 교차확인한다.
 5. 최신 섹터/ETF 상태와 가속을 확인한다.
 6. Telegram_Global_21D에서 만료되지 않은 US/BOTH/MACRO 정보와 검증상태를 확인한다.
 7. 최근 1개월 EPS·매출·이익·가이던스·목표가·투자의견 Revision, 공식 공시와 Catalyst를 교차확인한다.
-8. 신규매수 후보는 FINAL15 Entry 신선도와 기존 FinalState/점수/RS/OSC/MA/StableCore, 섹터·ETF 상태를 함께 본다.
-9. FINAL15 Entry 발생 자체를 자동 매수 결론으로 취급하지 않고 기계적 Entry 이유와 외부 검증의 강화/중립/약화를 구분해 최종 판단한다.
+8. Entry 발생 자체를 자동 매수 결론으로 취급하지 않고 기계적 Entry 이유와 외부 검증의 강화/중립/약화를 구분해 최종 판단한다.
 
 [LATEST SECTOR TABLE]
 기준일,순위,섹터,대표ETF,대표ETF명,EOD,현재점수,3일전,5일전,흐름,추세
@@ -701,6 +693,80 @@ ACTIVE_ENTRY=5 NEW_ENTRY=2 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 527,기타,🔴 제외,CVS Health,CVS,🔴 SELL,0.0,-0.0666451,Q2,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤵️ 상승 둔화,🔵 매수,Above,+2D,0,🔴 출회,🔻 하락·거래급등,0,0
 528,기타,🔴 제외,Flex Ltd.,FLEX,🔴 SELL,0.0,0.0333795,Q2,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Above,+1D,1,🟡 관찰,🔻 하락·거래급등,0,0
 
+[AUTOMATIC TRADING DETAIL — SAME AS WEB UI]
+[ENTRY AUTO-JUDGMENT DETAIL]
+# | 조건 | 조건식 | 해석 | 연구결과 | 비고
+#1 | A-HH + Monthly 5M>10M | A-HighHit ∧ 월봉 5M>10M | 강한 종목 중 월간 추세까지 상승한 종목을 찾습니다. | 성공률 67.7% · 평균수익 +10.38% | 중장기 추세 확인형
+#2 | A-HighHit | Target-A ∧ RS60≥0 ∧ RS120≥0 ∧ SPY20≥0 ∧ SPY60≥-5% ∧ DD60≥-8% ∧ DD252≥-10% ∧ PriceRet5≥0 ∧ VolumeAccel≥-0.2 | 시장보다 강하고 하락폭이 작은 강한 Fresh BUY 종목을 찾습니다. | 성공률 65.8% · 평균수익 +9.17% | 강한 상승종목 선별형
+#3 | Target-A Strong | Target-A ∧ Score≥7 ∧ RS20≥20% ∧ DD60≥-3% | 점수와 상대강도가 매우 높은 최강 주도주를 찾습니다. | 성공률 72.7% · 평균수익 +14.90% | 최고 확률 주도주
+#4 | A-HighHit-Lite | Target-A ∧ RS120≥0 ∧ SPY20≥0 ∧ DD60≥-8% ∧ DD252≥-10% ∧ VolumeAccel≥-0.2 | 핵심 조건을 유지하며 일부를 완화해 상승 초입 종목을 더 넓게 찾습니다. | 성공률 64.3% · 평균수익 +8.44% | 상승 초기 확장형
+#5 | Fast5 Q5 Recovery | Fresh BUY ∧ SPY120≥-10% ∧ Trend=회복 ∧ LeaderQ=Q5 | 주도종목이 조정 후 다시 살아나는 구간을 찾습니다. | 성공률 69.0% · 평균수익 +11.58% | 주도종목 회복형
+#6 | B Strong-Market | Target-B ∧ Score≥6 ∧ SPY20≥5% ∧ SPY60≥0 ∧ SPY120≥5% ∧ DD60≥-15% ∧ MA5≥MA10 | 시장과 종목이 함께 강한 상승 흐름인 종목을 찾습니다. | 성공률 68.4% · 평균수익 +9.20% | 강한 시장 동행형
+#7 | E1 ΔScore Recovery + Volume | BUY ∧ PrevScore<6→Score≥6 ∧ ΔScore≥2.5 ∧ Recovery ∧ VolumeAccel≥0 | 점수와 빠르게 상승하고 거래량도 증가하는 초기 회복 구간을 찾습니다. | 성공률 64.3% · 평균수익 +4.05% | 점수 가속·회복형
+#8 | DD60 / Volume / Q4 Recovery | Fresh BUY ∧ DD60≥-5% ∧ VolumeAccel≥0.1 ∧ Recovery ∧ LeaderQ=Q4 | 낙폭이 작고 거래량이 늘며 회복하는 안정적 반등 종목을 찾습니다. | 성공률 64.1% · 평균수익 +3.41% | 안정적 회복형
+#9 | E1 Score≥7 Recovery + Volume | BUY ∧ PrevScore<6→Score≥6 ∧ Score≥7 ∧ Recovery ∧ VolumeAccel≥0 | 높은 점수까지 올라오며 회복하는 종목을 찾습니다. | 성공률 67.5% · 평균수익 +5.58% | 고득점 회복형
+#10 | E1 ΔScore≥3 Recovery + Volume | BUY ∧ ScoreCross ∧ ΔScore≥5 ∧ Recovery ∧ VolumeAccel≥0 | 점수가 매우 빠르게 가속하는 강한 상승 초기 종목을 찾습니다. | 성공률 64.0% · 평균수익 +5.06% | 강한 점수 가속형
+#11 | RS20D5 +5 Upcross | PrevBUY ∧ BUY ∧ non-SELL ∧ Recovery ∧ RS20≥5% ∧ RS20D5 +5 상향돌파 | 기존 BUY 종목에서 단기 상대강도가 다시 강해지는 순간을 찾습니다. | 성공률 68.6% · 평균수익 +7.80% | 상대강도 재가속형
+#12 | PriceRet5 +5 Upcross | PrevBUY ∧ BUY ∧ non-SELL ∧ Recovery ∧ RS20≥5% ∧ PriceRet5 +5% 상향돌파 | 기존 BUY 종목에서 단기 가격이 다시 강해지는 순간을 찾습니다. | 성공률 63.4% · 평균수익 +6.77% | 가격 재가속형
+#13 | RS20D5 0 Upcross | PrevBUY ∧ BUY ∧ non-SELL ∧ Recovery ∧ SPY20>0 ∧ RS20D5 0 상향돌파 | 상대강도가 음에서 양으로 전환되는 초기 회복 구간을 찾습니다. | 성공률 60.5% · 평균수익 +2.56% | 상대강도 전환형
+#14 | MA5→MA10 Recovery Cross | PrevBUY ∧ BUY ∧ non-SELL ∧ Recovery ∧ PrevMA5≤MA10 ∧ MA5>MA10 | MA5가 MA10을 다시 돌파하는 가격 추세 회복 종목을 찾습니다. | 성공률 63.9% · 평균수익 +6.67% | 추세 회복형
+#15 | LeaderQ Upgrade + Recovery | PrevBUY ∧ BUY ∧ non-SELL ∧ Recovery ∧ Score≥7 ∧ LeaderQ_today>prev | 주도력 수준이 한 단계 상승하는 회복 종목을 찾습니다. | 성공률 59.9% · 평균수익 +4.68% | 주도력 개선형
+#18 | E-M1-BALANCED | Score 5~7 ∧ M1 Turn ∧ ScoreDelta1>0 ∧ Norm_RS≥60 | 중간 점수 구간에서 오실레이터가 다시 위로 도는 종목을 찾습니다. | 성공률 62.8% · 평균수익 +2.82% | M1 기본 진입형
+#20 | E-M1-PERSIST | #18 조건 ∧ Score3D≥+0.5 ∧ M1 Δ3D≥+10 ∧ Norm_RS≥65 | 점수와 오실레이터가 함께 강해지며 상승이 지속되는 종목을 찾습니다. | 성공률 74.6% · 평균수익 +4.52% | 상승 지속형
+#21 | E-IM-RS70 | Score 5~7 ∧ ScoreDelta1>0 ∧ Norm_RS≥70 ∧ Internal M bullCross | 상대강도가 높고 Internal M이 상승 전환하는 초기 상승 종목을 찾습니다. | 성공률 62.7% · 평균수익 +3.91% | 오실레이터 상승전환형
+
+[EXIT AUTO-JUDGMENT DETAIL]
+# | 조건 | 조건식 | 해석 | 연구결과 | 비고
+#1 | D2 Fail-Fast | age=2 EOD ∧ Close<Entry Open ∧ Close<MA5 | 매수 직후 흐름이 약하면 초기에 빠르게 정리합니다. | 평균 4.49일 조기회수 | 초기 실패형
+#2 | PG10 Persistent MA5 Giveback | ProfitLeg 발생 ∧ 수익상태 First MA5 Warning ∧ 다음 holding day도 Close<MA5 ∧ MA5 하락 | 수익 후 흐름이 계속 약해지면 수익을 보호합니다. | 수익 반납 감소 효과 | 수익 보호형
+#3 | U10 Profitable Second Failure | First MA5 Warning → MA5 Reclaim → Second MA5 Loss ∧ Close>Entry Open | 한 번 회복 후 다시 무너지면 남은 수익을 확정합니다. | 수익종료율 97.0% · 평균수익 +8.93% | 2차 수익 보호형
+#4 | MA10 Final Defense | EOD Close<MA10 | 10일선까지 무너지면 상승 흐름이 훼손된 것으로 보고 종료합니다. | 최종 구조 방어선 | 추세 훼손형
+#5 | M1 SellTrigger | M1 falling ∧ M1_SMA3<M1_EMA5 ∧ prior SellState=false | 오실레이터 상승 흐름이 끝나고 하락으로 돌아설 때 종료합니다. | M1 전용 종료조건 | 오실레이터 하락전환형
+#6 | M1 20D Expiry | No prior M1 SellTrigger ∧ Entry age≥20D EOD | 상승파동 최대 20거래일까지 보유한 뒤 종료합니다. | M1 최대 보유기간 | 기간 종료형
+#7 | X-M1-EARLY6 | D6 Close<MA20 ∧ current ScoreDelta1<0 ∧ RS20D5≤-3%p | M1 진입 후 6일까지 회복하지 못하면 초기 실패로 정리합니다. | D20 보유 대비 손실 개선 | M1 초기 실패형
+#8 | X-M1-CONFIRM10 | D10 Close≤MA5≤MA10≤MA20 ∧ Score≤5.5 ∧ RS20D5≤-3%p | 10일까지 가격·점수·상대강도가 모두 약하면 종료합니다. | D20 방치 대비 손실 개선 | M1 구조 실패형
+#9 | X-M1-TIME20 | No earlier Score-M1 Failure ∧ age≥20D EOD | 너무 일찍 팔지 않고 20일까지 보유 후 종료합니다. | 승률 74.6% · 평균수익 +4.52% | M1 상승파 종료형
+#10 | X-IM-TIME20 | D20 EOD ∧ NOT(Close≥MA5≥MA10≥MA20≥MA50) | 20일까지 강한 상승구조가 안 만들어지면 종료합니다. | 승률 62.7% · 평균수익 +3.91% | Internal M 기본 종료형
+#11 | X-IM-MA20-2D | D20 Extension ∧ Close<MA20 2 EOD 연속 | 연장 보유 중 20일선을 이틀 연속 이탈하면 종료합니다. | 평균수익 +5.00% | Internal M 추세 방어형
+#12 | X-IM-TIME40 | D20 Extension 생존 ∧ age≥40D EOD | 강한 상승이 계속돼도 최대 40거래일에서 종료합니다. | D20 이후 추가상승 포착 효과 | Internal M 장기 수익화형
+
+[SIGNALFIND PROFIT STRUCTURE — SAME AS WEB UI]
+SignalFind 한눈에 이해하기
+SignalFind는 어떻게 수익을 만들까요?
+핵심은 많이 맞히는 것이 아니라, 작게 잃고 크게 버는 구조를 만드는 것입니다.
+×
+1
+틀렸을 때는 작게
+예상과 다르게 움직이면 손실이 커지기 전에 Exit합니다.
+→
+2
+맞았을 때는 크게
+잘 가는 종목은 너무 빨리 팔지 않고 상승 흐름을 충분히 가져갑니다.
+쉬운 숫자 예시
+성공 4번
+4 × +15% = +60%
+실패 6번
+6 × -5% = -30%
+10번 중 4번만 성공해도
+최종 +30%
+※ 단순 이해를 위한 예시이며 실제 수익률을 보장하지 않습니다.
+SignalFind가 하는 3가지
+🔎
+1. 올라갈 가능성이 높은 종목을 찾습니다.
+Entry 조건으로 상승 가능성이 높은 종목을 선별합니다.
+🛡️
+2. 틀린 종목은 빨리 정리합니다.
+초기 실패·추세 훼손이 확인되면 손실 확대 전에 Exit합니다.
+📈
+3. 잘 가는 종목은 오래 보유합니다.
+강한 상승이 이어지면 D20, 경우에 따라 D40까지 수익 구간을 추구합니다.
+실패한 투자 → 작은 손실
+-3% ~ -5% 예시
+성공한 투자 → 큰 수익
++10% ~ +20% 이상 예시
+한 문장으로 정리
+상승 가능성이 높은 종목을 사고, 실패한 종목은 빨리 정리하고, 성공한 종목은 오래 보유해 큰 수익을 만드는 구조입니다.
+
 [CURRENT MACHINE RULES — AUTO GENERATED FROM rules/*.py]
 SignalFind US — CURRENT RULES AUTO
 이 파일은 rules/*.py에서 자동 생성됩니다. 직접 수정하지 마십시오.
@@ -799,454 +865,3 @@ A/B/C/D Target 및 legacy Target Lifecycle은 FINAL15 사용자 Entry 의미로 
 - 💰²는 독립 Overlay이며 최종상태/Entry/Rocket을 변경하지 않음
 
 [END OF AI BRIEF]
-
-============================================================
-[CURRENT MASTER — GOOGLE DOC]
-SignalFind US CURRENT MASTER
-============================================================
-
-SignalFind US 핵심메모 — CURRENT MASTER
-
-
-[필수 참조 주소 — CURRENT]
-• US SignalFind AI Brief: https://signalfind-us.marketpilot.workers.dev/ai/brief.txt
-• KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
-• KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
-• KR GitHub mirror: eonee12/signalfind-us → mirror/kr/brief-latest.txt / mirror/kr/meta.json
-• 미국장 CURRENT MASTER: https://docs.google.com/document/d/1wNwzk-jcW5N1UpMz_SCF338GYcvTm2jYjw6m5pTVa9w/edit?usp=drivesdk
-• 한국장 CURRENT MASTER: https://docs.google.com/document/d/1LCZZ5xl6u2y5vvxR2XgF3nZ_nm3P9nX4kyuk3-QLvM8/edit?usp=drivesdk
-• 글로벌 인텔리전스 시트: https://docs.google.com/spreadsheets/d/14iQm3E7eykZmyirVc-s9X73xGT_J676vEsto8GDmtZM/edit?usp=drivesdk
-• 미국장은 Brief 생성시각/EOD 기준일을 먼저 확인하고 EOD 기준으로 판단한다.
-
-
-
-
-[목적]
-• 이 문서는 미국주식 판단의 현재 정본만 보관한다. 과거 일별 스냅샷·보유수량·당일 후보·폐기 규칙은 저장하지 않는다.
-• 규칙은 검증 상태를 구분한다: PRODUCTION / PILOT / RESEARCH. 폐기된 규칙은 본문에 남기지 않는다.
-• 신규 분석 순서: 이 핵심메모 → 최신 US EOD RAW → 섹터/ETF → Telegram_Global_21D_Intelligence → 최근 1개월 Revision·실적·가이던스·공시·정책 → 가격/추격위험 → 최종 판단.
-
-
-[1. 상태체계 — PRODUCTION]
-• SignalFind 상태는 BUY / HOLD / WATCH / SELL 4개만 사용한다.
-• BUY = 현재 신규진입 가능 + 기존보유 유지 가능.
-• HOLD = 기존보유 유지 가능, 신규진입은 하지 않음.
-• WATCH = 관찰/경계, 신규진입 금지.
-• SELL = 매도/회피.
-• Fresh 여부와 Target은 상태를 대체하지 않는 Overlay 정보다.
-
-
-[2. 신규 Entry / Target]
-• Target-A 🎯🌱 — PRODUCTION 공식 Entry-1: 현재 BUY + 전일 비BUY→당일 BUY의 Fresh onset + ΔScore≥+2.5 + RS20≥+10%.
-• Target-B 🎯📈 — PILOT: Fresh BUY + Target-A 미충족 + RS20≥+10% + 최근 5D 가격수익률≥+5%. 최근 레짐에서 유효하지만 Discovery 전기간 Robust는 아니므로 A보다 낮은 신뢰도로 운용한다.
-• Target-C 🎯🔥 — PILOT/Re-entry: non-Fresh OSC turnaround + Mature 강도구간(Score 9~9.5 중심) + Norm_RS≥90 + StableCore=0 + 상승장. DD252는 broad high-zone sanity check로만 사용하고 exact 52주 신고가는 hard gate로 사용하지 않는다.
-• Target-D 🎯🔥 — RESEARCH Higher-Upside subtype: C에 RS≥92.5 및 위험조정 Momentum 강화조건을 추가한 소표본 연구형. C보다 단기 안정적이라고 해석하지 않는다.
-• standalone POST10 Target은 폐기한다. 과거 Score10→Reset 이력은 Target-B가 실제 발생했을 때 confidence/ranking 보조가점으로만 사용한다.
-• 표시 의미: 🎯🌱 상승초기 진입 / 🎯📈 본격상승 진입 / 🎯🔥 고점상태 재진입·재가속.
-
-
-[3. Entry 실행창]
-• Target-A의 기본 실행창: Primary D+1~D+3 시가, Extended D+4~D+5 시가.
-• D+6 이후는 같은 Fresh Entry의 자동 유효창으로 보지 않고 Delayed/Re-entry로 재평가한다.
-• Fresh onset 당일 현재 Score가 높거나 최근 5D 가격이 강하다는 이유만으로 자동 탈락시키지 않는다. 미국장은 Score 절대값보다 Fresh onset·ΔScore·RS20·신호 신선도가 핵심이다.
-• PRE-ENTRY 저점수는 감시용 참고정보일 뿐 매수공식이 아니다.
-• Target 배지는 현재 UI 운영상 발생 후 3거래일 유지한다. 이는 표시 운영값이며 매도시점과 동일하지 않다.
-
-
-[4. Target별 건강도 / Failure]
-• A: D5 SPY Excess≤-3%는 경고, D10 SPY Excess≤-3%는 강한 Failure Flag.
-• B: D5 SPY Excess≤-3%부터 강한 Failure Flag. B는 상승확인형이므로 A보다 Follow-through 실패를 빠르게 본다.
-• C: 초기 3~5D 흔들림을 허용한다. Fresh Entry의 3~5D Time Stop을 이식하지 않는다. D10 SPY Excess≤-3% + MA5·MA10 동시이탈은 강한 Failure 후보.
-• D: 전용 Failure/Exit는 아직 미확정. A/B/C 규칙을 자동 이식하지 않는다.
-• Failure Flag는 자동 전량매도와 동일하지 않다. 현재 구조상태·대체 Entry·기회비용과 함께 행동을 결정한다.
-
-
-[5. 📉 수익흐름 약화 표시 — PRODUCTION UX]
-• 📉는 오직 ‘수익 모멘텀/상승 흐름 약화 감지’ 의미다. 자동매도·부분매도·교체·현금화 지시가 아니다.
-• 📉가 발생하면 기존 old-cycle 🎯🌱/🎯📈/🎯🔥 Target은 제거하며 동시에 표시하지 않는다.
-• 같은 날 새로운 Fresh/Re-entry Target이 새 이벤트로 실제 발생하면 새 Target이 우선한다. 우선순위는 old Target < 📉 < new Target.
-• 📉 이후 과거 Target을 복원하지 않는다. 다시 강해지면 새로운 Entry/Re-entry 이벤트가 발생해야 새 🎯를 부여한다.
-• 매도·축소·교체는 별도 포트폴리오 판단에서 수행한다.
-
-
-[6. 보유/Exit]
-• 최우선 운용목표는 확보한 수익의 보전이다. 다만 📉 자체를 Sell 신호로 오해하지 않는다.
-• Mature는 구조상태와 사용자 행동을 분리한다. 의미 있는 약화가 나오면 단순 ‘감시하며 보유’를 기본값으로 두지 않고 유지/부분매도/축소/교체 중 실행안을 명확히 제시한다.
-• Structural Sell은 MA10 종가 이탈 + StableCore 손상 확대 + 추세 이탈 + Score 지속 하락 + 펀더멘털/Revision 하향을 조합한다.
-• MA10은 수익보호 시작점이 아니라 최종 구조 방어선에 가깝다.
-• 기존 보유주는 과거 진입오류만으로 소급 일괄매도하지 않는다. 현재 기대값·SignalFind 상태·섹터·Revision·구조훼손·대체기회를 기준으로 판단한다.
-
-
-[7. 섹터/ETF]
-• 신규후보는 섹터/ETF 상태와 가속을 먼저 본 뒤 종목 Entry를 판단한다.
-• 강한 개별주가 Target/Revision/Catalyst/upside를 갖추면 섹터가 중립·회복초기여도 제한적 진입 가능. 섹터가 명확한 SELL·추세붕괴면 비중 축소/대기를 우선한다.
-• 반도체 대표 ETF는 SOXX를 우선 사용하고 SMH는 AI/대형 반도체 리더십 보조 확인용으로 사용한다.
-• 섹터·ETF는 가중치이지 무조건 veto가 아니다. 단 명확한 섹터 붕괴는 강한 감점이다.
-
-
-[8. 펀더멘털·외부채널]
-• SignalFind = 타이밍, Revision/실적/가이던스 = 상승 근거, 섹터/ETF = 환경, 가격 = 추격위험, 외부채널 = 아이디어/Catalyst 탐지로 역할을 분리한다.
-• Telegram_Global_21D_Intelligence는 US뿐 아니라 BOTH·MACRO도 함께 읽는다. 단독 매매근거로 사용하지 않고 EOD·공시·Revision과 일치할 때 Confluence 가점을 준다.
-• 최근 1개월 EPS·매출·가이던스·목표가·투자의견 Revision과 공식 공시를 우선 검증한다.
-
-
-[9. 변경관리]
-• 이미 검증되어 PASS한 규칙은 이유 없이 재검사하지 않는다.
-• 규칙 변경은 오류/실패가설 → 역사/Validation/Forward 분리검증 → 기존 보유 소급적용 금지 → 기대수익·손실위험 비교를 통과해야 한다.
-• Progress 필드를 BUY 경과일로 해석하지 않는다. Fresh 여부는 전일 FinalState와 당일 FinalState를 직접 대조한다.
-• 과거 일별 포트폴리오·섹터 점수·당일 후보는 최신 EOD가 나오면 이 문서에 남기지 않는다. 연구가치는 SignalWarehouse 연구문서에 보관한다.
-
-
-[10. 출력 필수]
-• 신규후보: 상태 / Target 타입 / Fresh 여부 / ΔScore / RS20 / 최근5D / 섹터·ETF / Revision / Catalyst / 실행가능일 / 추격위험.
-• 보유종목: 구조상태 / 📉 여부 / Target 유효여부 / Failure Flag / MA·StableCore·OSC / 수익보호 행동 / 재진입 조건.
-.
-[11. CURRENT EXTERNAL VERIFICATION OVERLAY]
-• 미국 매크로: Jackson Hole 이후 Fed의 인플레이션 억제 기조가 강화되어 단기 성장주 밸류에이션 부담을 높이는 환경으로 반영한다. 강한 Entry라도 추격위험을 별도 평가한다.
-• Salesforce(CRM): FY27 매출 가이던스와 조정 EPS 가이던스가 상향되고 다수 증권사 목표가가 동시 상향. SignalFind Entry와 펀더멘털 방향은 일치하나 실적 직후 급등 시 추격위험은 별도 감점한다.
-• CrowdStrike(CRWD): FY27 ARR/매출 전망 상향과 다수 증권사 목표가 상향이 동시에 확인되어 사이버보안 Entry의 펀더멘털 Confluence가 강함. 단 실적 직후 큰 갭 상승은 기계적 상태와 별도로 가격추격 위험을 점검한다.
-• Palo Alto Networks(PANW): 강한 Analyst Revision이 있으나 다음 실적 발표 직전 이벤트 리스크와 높은 가격 기대가 존재하므로 신규진입은 실적 전후 변동성까지 반영한다.
-• 섹터 해석: 소프트웨어·클라우드 및 사이버보안은 현재 외부 실적/Revision과 SignalFind 방향이 가장 잘 일치한다. 반도체는 NVIDIA 수요 강세가 확인돼도 최신 SOXX 기계상태가 SELL/추세이탈이면 broad-sector 신규진입 판단을 임의로 BUY로 바꾸지 않는다
-
-
-[12. LATEST EOD OVERLAY — 8월 31, 2026]
-• Latest Snapshot: XOP WATCH 8.57 rising, AMLP WATCH 7.79 rising, MOO WATCH 7.89 rebound; IGV WATCH 7.28 decelerating, CIBR WATCH 6.04 decelerating/correction, SOXX SELL 1.77 trend break.
-• Active Entry Target 6: CTVA BUY Target-B is the only NewTargetToday+Fresh target. NOW BUY-B, VEEV BUY-C, SLB BUY-B remain active; ADBE WATCH-B and DASH SELL-B are not new-entry candidates because FinalState overrides the overlay.
-• External cross-check: CTVA raised full-year EBITDA/EPS guidance, but price is near its 52-week high and consensus upside is modest, so pilot/partial-entry is preferred over gap chasing. SLB's Kelvion deal strengthens AI-data-center cooling exposure, but the latest session's high-volume decline/outflow means stabilization is required before adding aggressively.
-• Macro: rising oil and long yields favor energy rotation and penalize duration-heavy tech; broad semiconductor demand remains positive, but SOXX machine SELL/trend break has priority for timing.
-• Action overlay: no fresh Target-A production candidate is present in the active target set. CTVA is the best pilot new-entry candidate; SLB is second only after stabilization.
-
-
-[13. TARGET-B 실행 안전장치 — PLTR 사례 반영 / 2026-09-02]
-• PLTR 사례의 핵심 교훈: 섹터를 참조했지만 실제 매수 시점과 동일한 최신 ETF/시장 상태를 충분히 엄격하게 선확인하지 못했고, 개별 Target-B + 강한 실적을 과대가중했다. 이는 Target-B 자체의 폐기가 아니라 실행·가중치 오류 사례로 기록한다.
-• 미국 신규매수는 반드시 최신 동일 EOD 기준으로 SPY/QQQ 및 관련 섹터 ETF 상태·가속을 먼저 확인한 뒤 개별 Entry를 판단한다. ETF 데이터가 stale·publish 실패·시점 불일치이면 신규확정을 금지하고 현금대기 또는 소규모 Pilot만 허용한다.
-• Target-B는 PILOT이므로 Target-A보다 섹터/ETF Confluence를 더 엄격히 요구한다. 관련 섹터/ETF가 명확한 SELL 또는 추세붕괴이면 Target-B 신규진입은 원칙적으로 보류한다. WATCH 상태는 뚜렷한 가속/회복 + 강한 Revision/Catalyst + 충분한 Risk/Reward가 동시에 있을 때만 제한적으로 허용한다.
-• Target-A는 강한 Fresh Trigger + Revision + 충분한 upside가 있으면 섹터 중립/회복초기에서도 제한적 진입 가능하다는 기존 원칙을 유지한다. 단, 섹터 SELL/추세붕괴는 여전히 강한 감점이다.
-• Target-B에서 고밸류 + 컨센서스 기준 잔여 upside 10% 미만이면 강한 감점한다. 예외적으로 강한 동시 Revision/Catalyst가 없으면 신규매수보다 현금대기를 우선한다.
-• 실행 순서를 고정한다: 최신 동일 EOD SPY/QQQ·섹터ETF → 개별 Entry/Target → Revision·실적·가이던스 → 실제가격·MA·RSI·거래량 → 밸류에이션·잔여 upside·하방위험 → 포트폴리오 섹터중복·기회비용.
-• 시장/섹터와 개별 Target-B가 충돌하면 Target-B가 이를 자동으로 덮어쓰지 못한다. 충돌을 명시하고 기본 행동은 신규매수 보류/소규모 Pilot로 낮춘다.
-• 위 항목은 실행 안전장치 Overlay이며 Target-A/B의 기계적 산식 자체를 변경한 것이 아니다. 산식 변경은 별도 Validation/Forward 검증 후에만 수행한다.
-.
-[14. 섹터 선행 Exit 우선원칙 — 2026-09-03]
-• 미국장 보유종목은 개별 종목이 BUY/HOLD이고 실적·Revision·Catalyst가 양호하더라도, 관련 대표 섹터/ETF가 정상 EOD 기준으로 명확한 하락전환(SELL 또는 추세붕괴)하면 개별 종목 유지보다 섹터 리스크 회피를 우선한다.
-• 이 경우 기본 행동은 먼저 매도/축소하고 섹터 회복 후 재진입을 검토한다. 개별 종목의 좋은 펀더멘털은 매도 유예 사유가 아니라 재진입 우선순위 판단에 사용한다.
-• 단순 1일 하락이나 점수 소폭 둔화만으로 섹터 전환으로 보지 않는다. 대표 ETF FinalState SELL 또는 추세붕괴가 정상 EOD에서 확인되는 경우를 핵심 트리거로 사용한다.
-• 개별주 FinalState BUY/HOLD와 섹터 ETF SELL이 충돌하면 보유/Exit 판단에서는 섹터 신호를 우선한다. 신규 Entry와 달리 기존 보유주도 섹터 붕괴를 강한 Exit 우선신호로 취급한다.
-• 재진입은 섹터/ETF가 SELL에서 벗어나 HOLD/BUY 또는 명확한 회복·가속으로 전환되고, 개별 종목 SignalFind 상태·Revision·Risk/Reward가 다시 양호할 때 검토한다.
-[15. 독립판단·추천 사후관리 원칙 — 2026-09-04]
-• 사용자의 의견·보유수익률·기존 결론·AI의 과거 추천은 현재 행동을 자동 결정하지 않는다. 매 판단은 최신 정상 EOD SignalFind → 섹터/ETF → Revision·실적·가이던스·Catalyst → 실제가격·구조 → Risk/Reward → 교체 기회비용 순으로 독립 재평가한다.
-• 사용자가 ‘보유’, ‘매도’, ‘MA10 이탈 시 매도’ 등 개인 실행규칙을 제시하더라도 이를 분석가의 결론으로 자동 채택하지 않는다. 사용자 실행규칙과 분석가 독립판단을 분리해 표시하고, 데이터가 반대면 명확히 반대한다.
-• 신규매수 추천 시 반드시 동시에 4가지를 제시한다: ① 왜 사는지 ② 어떤 조건이 깨지면 추천 논리가 무효화되는지 ③ 어느 정도의 정상 변동은 보유로 허용하는지 ④ 어떤 조건에서 축소·매도·교체할지.
-• 추천 후 핵심 근거가 훼손되면 과거 추천을 방어하지 않는다. FinalState 악화, 대표 섹터ETF 정상 EOD SELL/추세붕괴, Revision·가이던스 하향, 중대한 회사 고유 악재, 가격구조 훼손 중 의미 있는 변화가 확인되면 무엇이 달라졌는지 명시하고 현재 기대값 기준으로 즉시 재판단한다.
-• 사용자의 최신 의견에 맞춰 결론을 뒤집지 않는다. 같은 데이터라면 같은 결론을 유지하고, 결론이 바뀔 때는 반드시 새 데이터·규칙·Risk/Reward 변화라는 객관적 원인을 제시한다.
-• MA10 단독 이탈은 기본적으로 자동매도 신호가 아니다. Structural Sell은 [6. 보유/Exit]의 MA10 종가 이탈 + StableCore 손상 확대 + 추세 이탈 + Score 지속 하락 + 펀더멘털/Revision 하향의 조합을 우선한다. 사용자가 별도 MA10 실행규칙을 선택한 경우에도 ‘사용자 실행규칙’으로만 분리 기록한다.
-• 프리마켓·장중 움직임은 정상 EOD를 자동으로 덮어쓰지 않는다. 다만 EOD 이후 확인된 중대한 회사 고유 이벤트나 정책·실적·가이던스 변화는 별도 Event Risk로 즉시 반영할 수 있으며, 이 경우에도 프리장 등락 자체와 검증된 이벤트 원인을 구분한다.
-• 보유종목 답변에서는 먼저 분석가의 독립 결론과 행동을 제시한 뒤 사용자 선호·개인 실행규칙을 별도로 병기한다. ‘사용자가 원하므로 보유/매도’ 식의 결론은 금지한다.
-[16. Earnings Event Quality 연구상태 — 2026-09-05]
-• Fast/Clean-Leg Monthly 5M>10M universe에서 Dual Beat + Positive Reaction은 Discovery 4/6=66.7%로 연구후보였으나, 당시 뉴스·회사보도·SEC로 deterministic hold-out을 보강한 결과 Validation 3/4=75.0%, Forward 1/4=25.0%, pooled 8/14=57.1%로 Forward 재현에 실패했다.
-• 따라서 Dual Beat + Positive Reaction family는 Fast/Clean-Leg Entry Gate에서 FAIL/CLOSE. Dual Beat 단독, Positive Reaction 단독, G5-B(Donchian/Volume/MA200), Comparable Guidance Raise도 모두 FAIL 유지.
-• 실적 beat·당일 positive reaction은 펀더멘털/Confluence 보조정보로는 사용 가능하지만 신규 Entry 자격을 독립 부여하지 않는다. Surprise magnitude·gap·volume threshold를 사후 추가해 재튜닝하지 않는다.
-• A-HighHit + Monthly Slow 20D engine과 혼합하지 않는다. Production 변경 없음.
-
-
-
-
-
-
-
-
-
-
-[17. M1/TRS + Sector ETF M1 Entry 연구상태]
-• C3 C-Relax = TRS<+0.10 + Stock M1 3D↑ + 관련 Sector ETF M1 3D↑. C3 연구에서 가장 우선순위 높은 선행 Entry Family로 유지한다. 가격3D 하락조건은 병목이 아니어서 제거하며, 일반 Match 자체는 hard gate로 쓰지 않는다.
-• C1(RS70+) 확장검증: 4,384 이벤트에 동일 공식을 적용하면 C-Relax 761건. 전체 5D +0.83%/승률 56.0%, 10D +1.17%/57.0%, 20D +2.39%/56.5%. Discovery 5D 55.3%, Validation 58.6%, Forward 50.7%. C3 수준의 최우선 신뢰도로 승격하지 않고 넓은 보조 후보군으로만 사용한다.
-• C1 C-Relax 발생빈도: 1,382 거래일 중 389일 발생, 총 761건. 거래일 평균 0.55건, 발생일 평균 1.96건. Forward 구간은 127거래일 중 33일/67건으로 거래일 평균 0.53건이다. 따라서 매일 신호가 나오는 Family가 아니다.
-• B-Acceleration = C-Relax 우선적용 후 Stock M1 3D≥+10 + RS≥90 + Sector ETF M1↑. C1에서는 전체 5D +1.81%/58.4%이나 Forward 5D -1.85%/48.1%로 단기 재현 실패. 다만 Forward 10D +2.26%/63.0%, 20D +8.95%/66.7%로 보유기간 성격이 달라질 가능성은 RESEARCH로 남긴다. C3 PILOT을 C1에 그대로 확대하지 않는다.
-• Sector Non-Chase = Sector ETF M1↑ + Price3D≤+3% + 상승장. C1에서는 5D +0.50%/52.7%, 10D +0.61%/49.2%, Forward 5D 45.6%로 확장 실패. C1 Family로 폐기한다.
-• 세 Family를 C1에 모두 적용하면 하루 평균 신호 수는 1.04건까지 늘지만 신호 없는 날이 56.2%이며, Forward 5D 승률 48.1%로 품질이 희석된다. 신호량을 맞추기 위해 약한 Family를 추가하지 않는다.
-• 운영 우선순위: C3 C-Relax 최우선 → C3 B-Acceleration PILOT → C1 C-Relax 보조확장. C1 B-Acceleration은 10~20D 별도 lifecycle 연구 전까지 RESEARCH, C1 Sector Non-Chase는 사용하지 않는다.
-• ETF 역사데이터는 SignalFind US ETF 운영본과 같은 Yahoo Finance yfinance auto_adjust=True 일봉 OHLCV를 사용했으며, 연구용 분리 브랜치에서 계산했다. Production 산식 변경 없음.
-
-
-
-
-[18. M1 Turnaround × Score BUY 연구 정리]
-• 연구 모집단은 52주 신고가 종목군이 아니라 SignalFind US 전체 Universe로 고정한다. 기존 미국 전용 M1 이벤트 25,258건 중 종목·일자 기준 Score exact join은 24,842건(약 98.4%)까지 확보되어 있어 새 데이터 수집 없이 Score×M1 BUY 연구가 가능하다.
-• M1 단독 대규모 검증은 Validation 약 16,647거래/499종목에서 평균 순수익 약 +0.657%, 중앙 +0.202%, 승률 약 52.0%; Discovery 평균 +0.311%, 승률 약 51.4%였다. 따라서 M1 단독은 Direction 엔진이 아니라 Participation/Strength Overlay로 해석한다.
-• 확인된 강한 Mature Re-entry 구간: non-Fresh M1 OSC Turnaround + Score 9.0~9.5 + Norm_RS≥90 + StableCore=0 + 상승장. 20D 성과는 Discovery N62 평균 +3.50%, 승률 59.7%, SPY초과 +2.12%; Validation N38 +6.80%, 60.5%, 초과 +5.01%; Forward N52 +6.46%, 61.5%, 초과 +6.42%. 현재 확인된 Score band 중 9.0~9.5가 가장 안정적이다.
-• Score 10은 9~9.5와 자동 혼합하지 않는다. Forward 표본 N6에서 20D +3.58%였지만 10D -1.97%로 별도 Peak Re-entry 연구대상이다.
-• 52주 신고가 근접은 모집단/Hard Gate가 아니다. Mature 조건에서 Forward 20D 평균은 DD252≥-10% 약 +6.46%, ≥-2% +4.35%, ≥-1% +3.31%, exact 52W High(DD252=0) +2.35%로, 정확한 신고가를 강제할수록 성과가 낮아졌다. 신고가 근접도는 리더 위치정보/보조변수로만 사용한다.
-• POST10 Dynamic 연구의 유효한 관찰: 이전 Score10 peak → 5.5~6.5 Reset → 현재 7.5~9.5 재가속 + RS20≥+5% + 최근 2거래일 이내 M1 Turnaround 조합의 20D 성과는 Discovery N86 +2.71%/승률 60.5%/SPY초과 +2.05%, Validation N67 +3.92%/58.2%/+2.50%, Forward N40 +5.57%/65.0%/+3.94%. 다만 bootstrap CI가 0을 포함하고 일부 연도 초과수익이 음수이므로 standalone Target으로 승격하지 않는다.
-• POST10 threshold 연구에서는 현재 Score 최소값을 7.0/7.5/8.0으로 바꿔도 대체로 양(+) 성과가 유지됐다. 절대 현재 Score 자체보다 Reset 깊이 + RS + M1 Turn + Score 재가속 조합이 더 중요하다는 관찰을 유지한다.
-• 완료(2026-09-19): 전체 24,842 exact-join M1 Turn 이벤트의 Score band별 D/V/F 및 5D/10D/20D/40D BUY 성과를 전수분해했다. 상세 결론은 [19]를 따른다.
-• 1차 Score-band 전수분해는 [19]에서 완료했다. 추가 Overlay는 기존 PASS 규칙을 재검증하지 않고, Score-band 결과에서 실제 정보가치가 확인된 구간에 한해 ΔScore·RS·StableCore·Sector ETF M1·DD252를 사전고정 조건으로 검증한다.
-• 연구 우선순위는 ‘M1 Turn이 전체 Universe에서 어느 Score lifecycle 구간에서 가장 기대값이 높은가’이며, 52주 신고가 전략은 독립 모집단이 아니라 DD252/52W proximity 하위분석으로만 검증한다.
-
-
-
-
-[19. M1 Turnaround × Score BUY 전수연구 — 2026-09-19 완료]
-• 데이터 재현: 미국 M1 원본 이벤트 25,258건과 2021~2026 Score snapshot 702,354행을 종목·신호일 exact join하여 24,842건을 재현했다. 기존 Mature 연구의 exact-join 건수와 완전히 일치한다. OHLCV는 2021~2026 총 767,301행(553 ticker, 2026-08-27까지)을 사용했다. 기간은 Discovery=2021~2023 / Validation=2024~2025 / Forward=2026으로 고정했다.
-• 전체 M1 Turn raw baseline의 20D 성과는 N24,842, 평균 +1.22%, 중앙 +0.92%, 절대승률 54.6%, SPY초과 평균 -0.01%, 초과승률 48.1%. 즉 M1 Turn 자체는 절대수익은 양(+)이나 시장초과 알파는 사실상 0이므로 단독 BUY Gate로 사용하지 않는다.
-• 20D Score band raw 결과: 0~0.5 +1.09%/53.8%/SPY초과 -0.19%; 1~1.5 +1.51%/56.7%/+0.15%; 2~2.5 +1.45%/55.1%/+0.05%; 3~3.5 +0.72%/53.2%/-0.46%; 4~4.5 +1.02%/55.1%/-0.25%; 5~5.5 +1.29%/55.6%/-0.02%; 6~6.5 +1.28%/54.9%/-0.11%; 7~7.5 +1.42%/55.1%/+0.28%; 8~8.5 +0.90%/52.5%/+0.07%; 9~9.5 +1.17%/53.3%/+0.24%; 10점 +2.14%/55.7%/+0.73%. 높은 Score일수록 단조롭게 좋아지는 구조는 아니다.
-• Raw lifecycle에서 가장 유망한 중간구간은 6.5~7.0점 관찰구간이다. 20D pooled N1,723 평균 +1.43%, 승률 56.4%, SPY초과 +0.20%; Discovery N1,010 +0.87%/54.0%/초과 +0.02%; Validation N552 +2.03%/59.4%/+0.10%; Forward N161 +2.92%/61.5%/+1.65%. 다만 날짜군집 bootstrap의 SPY초과 95% CI는 D/V/F 모두 0을 포함하므로 독립 Production Entry로 승격하지 않고 RESEARCH 우선관찰구간으로만 둔다.
-• 7.0점 exact는 Forward N127에서 20D +2.16%, 승률 62.2%, 중앙 +2.86%, SPY초과 +1.34%, 초과승률 57.5%로 최근 구간이 강했다. 그러나 Discovery는 +0.71%, 승률 52.3%, SPY초과 -0.05%라 전기간 robust 규칙으로 확정하지 않는다.
-• 5.0~5.5점은 초기/중간 회복 후보다. 20D pooled +1.29%/55.6%, Forward +2.11%/57.6%, SPY초과 +0.61%. ScoreDelta1>0까지 붙이면 Forward N62 +4.21%/70.97%/초과 +2.35%였지만 Discovery 초과 +0.09%, Validation -0.30%로 최근구간 편향이 있어 새 공식으로 채택하지 않는다.
-• 3.0~3.5점은 raw M1 Turn의 약한 구간이다. pooled 20D SPY초과 -0.46%이고 날짜군집 95% CI가 약 -0.88%~-0.07%로 0 아래였다. Validation 초과 -1.04%, Forward -1.29%였다. M1 Turn만으로 3점대에서 선행매수하는 근거는 부족하다.
-• 8.0~8.5점은 평균수익만 보면 양(+)이지만 precision이 약하다. Forward 20D 평균 +1.48% 수준이지만 승률 약45.4%, 중앙값이 음(-)으로 positive-skew 성격이 강하다. raw M1 Turn만으로 8점대를 고확률 Entry로 보지 않는다.
-• 9.0~9.5점 raw M1 Turn은 pooled +1.17%/53.3%/SPY초과 +0.24%, Forward +1.71%/51.3%/+1.39%로 단독 precision이 높지 않다. 기존 Target-C의 강한 결과는 Score 9~9.5 자체가 아니라 Norm_RS≥90 + StableCore=0 + 상승장 + non-Fresh M1 Turn의 Confluence에서 발생한 것으로 해석한다. 기존 Target-C 결과를 우선한다.
-• Score 10 raw는 pooled 평균 +2.14%로 높지만 Forward N35는 +1.28%, 승률 48.6%, SPY초과 -0.22%로 재현성이 약하다. 평균은 소수 큰 Winner의 positive-skew 영향을 받으므로 9~9.5와 합치지 않고 Peak 상태로 별도 취급한다.
-• 40D raw M1 Turn은 대부분 Score band에서 절대 평균수익이 양(+)이나 SPY초과 승률이 대체로 50% 미만이다. 따라서 장기 보유만 늘려 raw M1의 약한 초과알파를 해결할 수 있다는 근거는 없다.
-• BUY 결론: M1 Turnaround는 전체 Universe에서 독립 매수신호가 아니라 Timing Overlay가 맞다. Raw 우선관찰은 6.5~7.0점, 5.0~5.5점은 회복 후보, 3점대와 8점대는 M1 단독 신규진입 신뢰도가 낮다. 9~9.5점은 기존 Mature Confluence(Target-C) 조건이 있을 때만 강한 Re-entry 후보로 본다. 10점은 별도 Peak 상태다.
-• 운영변경: 없음. 이 연구만으로 현재 Target-A/B/C 또는 Production 상태머신을 변경하지 않는다. 다음 추가연구가 필요하면 6.5~7.0 및 5.0~5.5 구간에서 사전고정된 ΔScore/RS/StableCore/Sector ETF M1 조건이 D/V/F와 SPY초과까지 개선하는지만 최소 검증한다.
-
-
-• Signal Supply도 승률과 동급의 평가축으로 고정한다. 2021-01-04~2026-07-07 연구구간 1,382거래일 기준 raw M1 Turn은 25,258건으로 거래일 평균 18.28건, 1,355일에 발생하여 신호발생일 비율 98.0%, 발생일 평균 18.64건, 무신호일 2.0%다. Score 5.0~5.5 raw 구간은 총 2,244건으로 전체 거래일 평균 1.62건/일, 6.5~7.0은 1,723건으로 1.25건/일, 9.0~9.5는 2,752건으로 1.99건/일, Score10은 273건으로 0.20건/일이다. 단 Score band별 신호발생일 비율/발생일 평균/무신호일은 추가필터 연구 시 event-level로 함께 산출한다.
-• 이후 M1 Turn 후보 공식 비교표에는 반드시 ①N ②거래일 평균 신호수 ③신호발생일 비율 ④발생일 평균 종목수 ⑤무신호일 비율 ⑥D/V/F별 공급량을 승률·평균수익·SPY초과와 함께 표시한다. 승률이 높아도 공급량이 지나치게 희소하면 주력 Entry가 아니라 보조/희소 Family로 분류한다.
-
-
-
-
-[20. M1 Turn × ΔScore × Norm_RS 최소필터 + Signal Supply — 2026-09-19]
-• 연구범위: SELL/Exit는 제외하고 BUY만 검증. Score 5.0~7.0 lifecycle 구간의 M1 Turn을 대상으로 ScoreDelta1>0, Norm_RS 컷(50/60/70), StableCore=0을 최소필터로 순차 비교했다. 성과는 Signal EOD → D+1 Open 진입 후 5/10/20/40거래일 Close, SPY도 동일 방식으로 계산했다. Norm_RS는 운영 RS20이 아니라 M1 검증본의 Mansfield RS60/120/250 정규화 평균이다.
-• ΔScore>0 단독: N1,630, 거래일 평균 1.18건, 신호발생일 57.8%, 무신호일 42.2%. 20D 평균 +1.71%, 승률 57.4%, SPY초과 +0.01%. Discovery N909 +1.47%/55.6%, Validation N561 +1.80%/59.2%, Forward N160 +2.71%/61.3%. 신호량을 크게 보존하면서 precision을 올리는 가장 유효한 1차 공통필터다. 다만 pooled 시장초과알파는 거의 0이므로 독립 BUY 공식은 아니다.
-• Norm_RS≥50 + ΔScore>0: N1,122, 0.81건/일, 신호발생일 46.0%, 20D +1.74%/57.5%, SPY초과 -0.04%. ΔScore 단독 대비 성과 개선 없이 공급량만 줄어 hard gate로 사용하지 않는다.
-• Norm_RS≥60 + ΔScore>0 — 실전형 RESEARCH 후보: N476, 0.34건/일(21거래일 환산 월 약 7.2건), 신호발생일 24.7%, 발생일 평균 1.39건, 무신호일 75.3%. 5D +1.07%/승률57.8%/SPY초과+0.45%, 10D +1.35%/56.7%/+0.64%, 20D +2.82%/62.8%/중앙+2.56%/SPY초과+0.99%, 40D +5.22%/63.2%/+1.77%. 20D D/V/F는 Discovery N303 +2.50%/62.4%/초과+0.93%, Validation N126 +3.67%/66.7%/+1.38%, Forward N47 +2.61%/55.3%/+0.30%. pooled 20D 날짜군집 SPY초과 bootstrap 95% CI는 약 +0.11~+1.90%로 0을 근소하게 벗어나나 D/V/F 개별 CI는 모두 0 포함. 따라서 Production 승격 금지, 실전형 연구후보로 유지한다.
-• Norm_RS≥70 + ΔScore>0 — 희소 고확신 RESEARCH 후보: N153, 0.11건/일(월 약 2.3건), 신호발생일 9.3%, 발생일 평균 1.20건, 무신호일 90.7%. 5D +1.53%/62.8%/SPY초과+0.89%, 10D +2.39%/61.4%/+1.73%, 20D +4.00%/64.7%/중앙+3.38%/SPY초과+1.74%, 40D +7.12%/61.4%/+3.14%. 20D D/V/F는 Discovery N96 +2.63%/61.5%/초과+0.74%, Validation N37 +7.10%/73.0%/+4.17%, Forward N20 +4.85%/65.0%/+2.07%. 절대수익 날짜군집 bootstrap 95% CI는 D/V/F 모두 0 위였지만 SPY초과 CI는 0을 포함. 주력 Entry보다는 희소 고확신 Overlay로 해석한다.
-• StableCore=0을 RS60+ΔScore 조합에 추가하면 N399, 0.29건/일, 신호발생일 21.5%, 20D +3.04%/62.2%/SPY초과+1.27%였으나 Forward N42의 승률이 50.0%로 하락했다. 따라서 Score 5~7의 공통 hard gate로는 추가가치가 없으며 StableCore=0은 기존 Mature 9~9.5 Target-C에서의 역할을 유지한다.
-• RS 단독은 평균수익을 키우는 positive-skew 효과는 있으나 승률을 안정적으로 높이지 못한다. 전체 M1 Turn에서 RS≥50/60/70/80/90의 승률은 대체로 53~55%대였다. 따라서 순서는 M1 Turn → ΔScore>0 → 필요 시 Norm_RS60/70이다.
-• 실전 후보구조: ① 공급량 우선 = Score5~7 + M1 Turn + ΔScore>0, ② 균형형 = +Norm_RS≥60, ③ 희소 고확신형 = +Norm_RS≥70. RS50은 사용하지 않고, StableCore=0도 Score5~7 공통필터로 사용하지 않는다.
-• 다음 최소검증은 위 RS60/RS70 두 후보에만 관련 Sector ETF M1 상승 동조를 1개 변수로 추가하여, 승률/수익/SPY초과 개선폭과 Signal Supply 감소폭을 동시에 측정한다. Sector ETF M1 동조가 아직 이 신규 family에 대해 직접 검증된 것은 아니므로 결과 전까지 추정하지 않는다.
-• 운영변경: 없음. Target-A/B/C 및 Production 상태머신은 변경하지 않는다
-
-
-[21. Score 5~7 최소필터 × Sector ETF M1 동조 직접검증 — 2026-09-19]
-• 검증목적: [20]에서 살아남은 두 후보(Score 5.0~7.0 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60 / ≥70)에 사전고정 변수 하나만 추가했다. 조건은 관련 대표 Sector ETF의 동일 EOD M1 Δ3D>0이다. 새로운 threshold 탐색은 하지 않았다. Sector ETF M1은 Production m1_sector_entry_rules.py의 frozen M1 산식(VolumeSpike 50% + Turnover 30% + Gap 20% → TI7 → 252D z-score → CDF OSC, Δ3D=현재 OSC-3거래일 전 OSC)을 그대로 재현했다. SignalWarehouse 2020 OHLCV를 warm-up으로 포함하고 2021~2026 OHLCV에서 11개 대표 Sector ETF(XLC/XLY/XLP/XLE/XLF/XLV/XLI/XLB/XLRE/XLK/XLU)를 계산했다. 현재 Universe 섹터매핑이 없는 PODD 1종목은 ETF 동조 비교에서 제외했다.
-• RS60 기준선은 N476, 0.344건/일, 신호발생일 24.75%, 20D +2.82%/승률62.82%/SPY초과+0.99%. Sector ETF M1 Δ3D>0을 강제하면 N325, 0.235건/일, 신호발생일16.72%, 발생일평균1.41건, 무신호일83.29%, 20D +2.35%/승률62.15%/중앙+2.31%/SPY초과+0.41%. 즉 승률은 거의 개선되지 않고 평균수익·초과수익·공급량이 모두 하락했다.
-• RS60+SectorETF↑의 20D D/V/F: Discovery N207 +1.78%/승률60.87%/SPY초과+0.29%, Validation N87 +4.14%/70.11%/+0.97%, Forward N31 +1.18%/48.39%/-0.39%. 특히 Forward에서 기준선(55.32%/+0.30%)보다 악화되어 hard gate로 FAIL한다. pooled 절대수익은 날짜군집 bootstrap 95% CI가 0 위였지만 SPY초과 CI는 0을 포함했고, Forward 절대/초과 CI도 0을 포함했다.
-• RS70 기준선은 N153, 0.111건/일, 신호발생일9.26%, 20D +4.00%/승률64.71%/SPY초과+1.74%. Sector ETF M1 Δ3D>0을 강제하면 N94, 0.068건/일, 신호발생일5.79%, 발생일평균1.18건, 무신호일94.21%, 20D +3.10%/승률64.89%/중앙+3.04%/SPY초과+0.36%. 승률은 사실상 동일하지만 수익·초과알파와 공급량이 크게 줄었다.
-• RS70+SectorETF↑의 20D D/V/F: Discovery N59 +1.05%/61.02%/SPY초과-1.37%, Validation N25 +7.78%/80.00%/+3.81%, Forward N10 +3.51%/50.00%/+1.92%. Validation만 강하고 Discovery 초과알파가 음수이며 Forward 승률이 50%로 하락하므로 재현성 있는 개선으로 볼 수 없다. 날짜군집 bootstrap에서 D/V/F의 SPY초과 CI는 모두 0을 포함했다.
-• 진단용 반대집단(새 규칙 아님): Sector ETF M1 Δ3D≤0인 사건은 RS60 N150의 20D +3.86%/64.67%/SPY초과+2.29%, Forward N16 +5.37%/68.75%/+1.65%; RS70 N58은 +5.55%/65.52%/+4.09%, Forward N10 +6.20%/80.0%/+2.22%였다. 이는 이 Score5~7 M1 Turn family가 섹터 ETF보다 개별주가 먼저 턴하는 Lead Entry 성격일 가능성과 일치하지만, 사후관찰이므로 ETF≤0를 새 Entry 조건으로 역채택하지 않는다.
-• 결론: Score5~7 + M1 Turn + ΔScore>0 + Norm_RS60/70 family에는 ‘Sector ETF M1 Δ3D>0’를 hard gate로 추가하지 않는다. RS60 균형형과 RS70 희소형의 [20] 정의를 그대로 유지한다. Sector/ETF는 여전히 시장환경·SELL/추세붕괴 리스크 확인축으로 사용하며, 이 결과가 기존 C3 C-Relax의 Sector ETF M1 조건을 폐기하는 근거는 아니다. 서로 다른 모집단/Entry family이므로 규칙을 혼용하지 않는다.
-• 운영변경: 없음. Target-A/B/C, 기존 C3 C-Relax/B-Acceleration, Production 상태머신은 변경하지 않는다.
-.
-[22. 균형형 내부 3D Score 가속 × Stock M1 Δ3D × Norm_RS 연구 — 2026-09-19]
-• 기준선은 [20]의 균형형 Score5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60을 그대로 고정한다. 이번 연구는 기준선을 대체하지 않고 내부 우선순위 Overlay만 탐색했다. Score3D는 현재 StandardScore-3거래일 전 StandardScore, M1 Δ3D는 현재 OSC-3거래일 전 OSC(0~100 점수의 포인트 변화), Norm_RS는 M1 검증본의 Mansfield RS60/120/250 정규화 평균이다.
-• 3D Score 가속은 클수록 단조롭게 좋아지지 않았다. 기준선에서 Score3D≥+0.5는 N289, 20D +3.2%/승률65.1%; ≥+1.5는 pooled 67.3%였지만 Forward 승률40%로 무너졌다. 따라서 강한 Score 가속을 추격하는 방식보다 최소 +0.5점 이상으로 실제 상승 중인지만 확인하는 것이 더 robust하다.
-• Score3D≥+0.5를 고정한 뒤 Stock M1 Δ3D를 비교하면 +10포인트가 실전적 분기점이다. Norm_RS≥60에서 M1≥+10은 N212, 0.153건/일(월 약3.2건), 20D +4.0%/승률67.5%; D/V/F 승률 69.7%/67.3%/52.4%. M1을 +20/+30 이상으로 더 높여도 승률 개선은 단조롭지 않고 표본만 급감하므로 +10 이상을 충분한 명확한 M1 가속 기준으로 본다.
-• 위 Score3D≥+0.5 + M1Δ3D≥+10 조건에서 Norm_RS를 비교하면 RS65가 공급량/재현성의 sweet-spot RESEARCH 후보였다. N118, 0.085건/일, 월 약1.8건, 신호발생일 약7.45%, 발생일 평균1.15건, 무신호일92.55%. 20D 평균 +4.6%, 승률72.9%, 중앙 약+3.99%, SPY초과 약+2.2%. D/V/F는 Discovery N81 +2.6%/71.6%, Validation N21 +10.3%/81.0%, Forward N16 +7.3%/68.8%. pooled 승률 95% Wilson CI는 약64.2~80.1%; Forward는 표본이 작아 CI가 넓으므로 Production 승격은 금지한다.
-• RS70으로 올리면 Score3D≥+0.5 + M1Δ3D≥+10에서 N57, 0.041건/일(월 약0.87건), 20D +7.1%/승률75.4%, D/V/F 69.2%/91.7%/83.3%가 나오지만 Forward N6으로 매우 희소하다. RS70 이상은 최고승률형 희소 Overlay로만 해석하고 균형형 대체조건으로 쓰지 않는다.
-• 핵심 해석: 가장 실용적인 내부 우선순위 조합은 ‘균형형 충족 + 3D Score 가속≥+0.5점 + Stock M1 Δ3D≥+10 + Norm_RS≥65’. 점수 가속을 +1.5~+2 이상으로 강제하거나 M1을 +20~+30 이상으로 높이는 것은 최근 Forward에서 재현성/공급량이 악화되어 채택하지 않는다. 정확히 Score3D +0.5~+1.0 같은 좁은 상한구간은 사후진단 결과이므로 hard gate로 사용하지 않는다.
-• 시간축은 20D에서 가장 명확하다. RS65 후보의 pooled 5D 승률61.0%, 10D56.8%, 20D72.9%, 40D67.8%로 단기 급등보다 약 20거래일 follow-through형에 가깝다.
-• 운영변경: 없음. [20] 균형형 Score5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60은 고정 유지한다. RS65/Score3D≥+0.5/M1Δ3D≥+10은 균형형 내부 우선순위 RESEARCH Overlay이며 Target-A/B/C 및 Production 상태머신을 변경하지 않는다.
-.
-
-
-[23. 평균 보유 10D 관점 — Score 3D/5D × M1 Δ3D × Norm_RS 재검증 — 2026-09-19]
-• 기존 균형형 정의는 고정한다: Score 5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60. 이번 연구는 이 family 내부 10D 우선순위 Overlay만 비교했으며 Production 산식은 변경하지 않는다.
-• Score 5D 가속은 10D precision 개선에 도움이 되지 않았다. M1Δ3D≥+10 + Norm_RS≥65 고정 시 Score3D≥+0.5는 N118, 월1.79건, 10D +1.82%/승률56.78%/SPY초과+0.94%; Score5D≥+0.5는 N104, 월1.58건, +1.59%/53.85%/+1.39%; 3D≥+0.5 & 5D≥+0.5 동시는 N91, 월1.38건, +1.73%/56.04%/+1.03%. 따라서 5D Score hard gate를 추가하지 않는다.
-• 평균 보유 약10D에 가장 유망한 coarse-grid 후보는 별도 Score3D/5D threshold를 강제하지 않고, 기존 균형형에 Stock M1 Δ3D≥+10 + Norm_RS≥70을 추가하는 조합이다. N94, 0.068건/일, 월 약1.43건, 신호발생일5.72%, 10D 평균 +3.31%, 승률67.02%, 중앙+2.29%, SPY초과+2.48%, 초과승률56.38%. 20D도 +5.72%/승률73.40%/SPY초과+3.14%였다.
-• 위 10D 후보의 D/V/F: Discovery N60 +1.57%/승률60.0%/SPY초과+0.85%; Validation N24 +7.07%/79.17%/+6.16%; Forward N10 +4.73%/80.0%/+3.41%. pooled 날짜군집 bootstrap 10D SPY초과 95% CI는 약 +0.69~+4.39%로 0 위였으나 Discovery·Forward 개별 CI는 0을 포함하고 Forward N10으로 작다. 따라서 RESEARCH Overlay로만 유지한다.
-• M1Δ3D≥+15 + Norm_RS≥70은 N76, 월1.15건, 10D +2.39%/승률68.42%/SPY초과+1.60%로 승률은 소폭 높지만 수익·표본·공급량이 감소했다. 공급량/수익 균형은 +10 기준이 우세하다.
-• 결론: 약10D 보유 관점에서는 Score 3D/5D 추가가속보다 M1 3D 강한 상승(+10 이상)과 RS70이 더 유효했다. 기존 20D용 [22]의 Score3D≥+0.5 + M1Δ3D≥+10 + RS65 Overlay와 목적이 다르므로 혼용하지 않는다. 10D용 후보는 '균형형 + M1Δ3D≥+10 + Norm_RS≥70'로 별도 RESEARCH 표기한다.
-
-
-[24. Entry Overlay별 수익화 최대일수 / 종료일 연구 — 2026-09-19]
-• 목적: 기존 Score5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60 균형형을 유지한 채, Entry Overlay별 D1~D40 고정 보유성과와 실제 M1 Lifecycle Exit를 비교해 종료일을 연구했다. D+1 Open 진입 기준이며 5/10/20D는 기존 검증본과 대조했다.
-• 균형형 Base(N476): 기존 M1 Lifecycle Exit 평균보유 9.31D/중앙8D, 총수익 +1.23%/승률56.9%. 고정 10D는 +1.15%/56.5%, 20D는 +2.59%/63.2%. 다만 Forward에서 20D SPY초과는 약 +0.27%로 약하고 D21부터 초과성과가 음수로 전환된 구간이 있어, Base 전체를 일괄 20D로 연장하는 규칙은 아직 채택하지 않는다. 기본 Lifecycle Exit 유지, D10 재평가 원칙을 연구한다.
-• 강한 RS형(균형형 + Stock M1 Δ3D≥+10 + Norm_RS≥70, N94): 실제 M1 Exit 평균보유 9.67D/중앙9D, 총수익 +3.39%/승률64.9%. 고정 10D +3.05%/66.0% → 20D +5.60%/71.3%. D10→D20 연장 시 평균 +2.55%p 추가, 61.7% 사건에서 수익률 개선, D10 손실→D20 수익 전환 16.0%, D10 수익→D20 손실 전환 9.6%. pooled SPY초과는 D20 부근이 +3.28%로 D1~30 중 최고. D21 승률은 73.4%로 최고이나 평균/SPY초과는 D20이 더 균형적. 따라서 기본 Time Exit=D20 Close, 최대 연장=D21 정도가 연구상 합리적이며 D10은 종료일이 아니라 점검일로 본다.
-• 20D 지속형(균형형 + Score3D≥+0.5 + Stock M1 Δ3D≥+10 + Norm_RS≥65, N118): 실제 M1 Exit 평균보유 9.76D/중앙8D, 총수익 +2.78%/승률58.5%. 고정 10D +1.64%/57.6% → 20D +4.52%/74.6%. D10→D20 연장 시 평균 +2.89%p 추가, 68.6% 사건에서 수익률 개선, D10 손실→D20 수익 23.7%, 수익→손실 6.8%. D20은 pooled 승률 74.6%와 SPY초과 +2.35%가 동시에 최고인 핵심 수익화 지점이며 D21 이후 승률/초과알파가 둔화한다. 따라서 기본/최대 Time Exit 모두 D20 Close가 가장 합리적이다.
-• 해석: 현재 평균보유 약 9~10D의 M1 Lifecycle Exit는 강한 Overlay 사건에서 다소 이른 편이다. 특히 Score3D+M1+RS65 지속형은 20D까지 보유할 때 승률과 수익이 크게 개선되어 기존 M1 Exit가 Winner를 조기 종료하는 성격이 확인된다. 단 구조적 훼손/명확한 SELL/섹터 추세붕괴 등은 Time Exit보다 우선한다.
-• 운영변경: 아직 없음. Production Exit를 일괄 20D로 변경하지 않는다. 연구상 권고는 Base=D10 재평가 후 기존 Lifecycle 유지, 강한 RS형=D20 기본 종료(최대 D21), Score3D 지속형=D20 종료. 이후 D10 시점 Score/M1/RS 상태로 연장 여부를 동적으로 구분하는 D10→D20 Extension Gate를 별도 검증한다.
-
-
-[25. M1 Turn 균형형/강한 Overlay의 MA5·MA10·MA20 성공·실패 분기 — 2026-09-19]
-• 연구목적: [24]의 D10 재평가 구조에서 MA5/MA10/MA20 중 어느 선이 D20 성공·실패를 가장 잘 가르는지 검증. 모집단은 ① 균형형 Base N476, ② M1 3D≥+10 + Norm_RS≥70 강한형 N94, ③ Score3D≥+0.5 + M1 3D≥+10 + Norm_RS≥65 지속형 N118. D5/D10 종가 위치와 D20 절대수익·SPY초과를 비교했다.
-• D5에서는 MA5 이탈은 조기경고 성격이 강하고 단독 실패선으로는 약하다. 강한형에서 D5 종가 MA5 위는 D20 +8.6%/승률87.5%, 아래도 +1.5%/52.6%로 일부 회복이 존재했다. D5 MA10 이탈은 더 강한 경고로, 강한형 MA10 위 +8.9%/83.1% vs 아래 -4.1%/43.5%; 지속형 MA10 위 +7.0%/80.7% vs 아래 -2.5%/50.0%. 따라서 D5의 실전 경계는 MA10, MA5는 warning overlay로 해석한다.
-• D10에서 MA10은 성공/실패 분기를 빠르게 보여준다. 균형형은 MA10 위 D20 +7.0%/승률78.9%/SPY초과+4.0%, 아래 -2.5%/42.4%/-2.6%. 강한형은 위 +10.4%/88.1%/+6.6%, 아래 -2.2%/48.6%/-2.7%. 지속형은 위 +9.0%/88.4%/+5.2%, 아래 -1.6%/51.0%/-2.0%.
-• D10 MA20은 구조적 최종 분기선이 가장 선명했다. 균형형 MA20 위는 D20 +7.1%/승률81.0%/SPY초과+4.2%, 아래 -3.8%/34.8%/-3.7%. 강한형은 위 +10.4%/88.5%/+6.5%, 아래 -3.0%/45.5%/-3.1%. 지속형은 위 +8.4%/85.9%/+4.5%, 아래 -2.8%/47.5%/-2.4%. D/V/F에서도 균형형 MA20 아래 D20 승률은 36.0%/33.3%/30.0%로 일관되게 약했다. 지속형은 53.1%/33.3%/20.0%로 약화 방향이 재현됐다.
-• D10 완전 정배열(종가≥MA5≥MA10≥MA20)은 가장 강한 성공확인 상태다. 강한형 D20 +12.7%/승률95.7%/SPY초과+8.7%, 지속형 +11.1%/90.4%/+7.1%. 균형형도 +8.3%/82.6%/+5.1%. 따라서 정배열은 보유연장 가점으로 사용 가능하다.
-• 과거 중간 이탈 자체보다 D10 현재 복구 여부가 중요하다. 강한형에서 D10 이전 MA20을 한 번 이탈했어도 D10까지 회복한 N32는 D20 +7.0%/승률90.6%; D10에도 MA20 아래인 N33은 -3.0%/45.5%. 지속형도 회복군 +5.6%/90.9% vs 미회복군 -2.8%/47.5%. 따라서 '한 번 MA20 이탈=즉시 실패'는 금지하고 D10 회복 여부를 본다.
-• 운영해석(RESEARCH): D5 MA5 이탈=초기 Warning, D5 MA10 이탈=강한 Failure Warning. D10 종가가 MA10 위이고 MA20 위이면 D20 연장 우선. D10 종가가 MA10 아래이지만 MA20 위이면 회복 가능성이 남아 있어 즉시 실패로 확정하지 않는다. D10 종가가 MA20 아래이며 특히 MA10도 동시 이탈이면 구조적 Failure 우선판정으로 본다. 다만 본 연구만으로 자동매도 Production Rule을 새로 만들지 않고 기존 Structural Sell/MA10 최종방어 원칙과 함께 사용한다.
-• 핵심결론: 성공확인선은 D10 정배열 또는 최소 MA10·MA20 동시 상회, 빠른 경고선은 MA10, 구조적 실패 분기선은 MA20이다. MA5는 노이즈가 많아 단독 Exit선으로 사용하지 않는다.
-
-
-[26. Entry 시점 MA 배열 × Norm_RS 공존성 확인 — 2026-09-19]
-• 대상은 Score5~7 + M1 Turn + ScoreDelta1>0 family의 신호일 EOD MA5/MA10/MA20 배열. 여기서 Norm_RS는 RS20이 아니라 Mansfield RS60/120/250 정규화 평균이다.
-• Norm_RS≥50 N1,122에서 신호일 정배열 37.8%, 혼조 34.3%, 역배열(MA5<MA10<MA20) 27.9%. Norm_RS≥60 N476에서는 정배열 30.0%, 혼조 32.8%, 역배열 37.2%. Norm_RS≥70 N153에서는 정배열 22.2%, 혼조 31.4%, 역배열 46.4%. 따라서 높은 Norm_RS와 단기 MA 역배열은 구조적으로 충분히 공존하며, 이 M1 Turn family에서는 오히려 드물지 않다.
-• 이유: Norm_RS는 중장기 시장대비 상대강도이고 MA5/10/20은 단기 절대가격 구조이므로 측정축이 다르다. 장기 상대강도가 높은 종목이 단기 조정으로 MA 역배열을 만든 뒤 M1 Turn으로 회복을 시작하는 상태가 가능하다.
-• 신호일 역배열을 Entry hard veto로 쓰지 않는다. RS60에서 신호일 역배열 N177의 20D 평균 +2.47%/승률63.3%, 정배열 N143은 +4.42%/66.4%; RS70에서 역배열 N71은 +2.76%/60.6%, 정배열 N34는 +6.28%/61.8%. 정배열의 평균수익은 더 좋지만 역배열도 충분한 양(+) 기대값을 보였다.
-• 따라서 Entry 시점에는 MA 배열을 강제하기보다 Score/M1/RS Trigger를 우선하고, [25]처럼 D10 시점에 MA10·MA20 회복 여부와 정배열 전환을 성공/실패 판단에 사용한다. 핵심은 'Entry 때 이미 정배열인가'보다 'Entry 후 D10까지 구조가 회복되는가'다.
-
-
-[27. M1 Turn Entry Family Exit Quality / Failure·Profit Protection 연구 — 2026-09-19]
-• 연구목적: Score5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60 균형형 N476과 강한 RS70형 N94, Score3D+M1+RS65 지속형 N118을 대상으로 D1~D40 매 거래일의 MA5/10/20, Score, M1, MarketRS20 상태를 재구성했다. Exit 평가는 손실 최소화, MFE 보존, 청산 후 10D 추가상승(오매도), D/V/F 재현성을 함께 사용했다. 상태 신호는 EOD 확정 후 다음 거래일 Open 청산으로 재계산했다.
-• 기존 M1 오실레이터 Exit의 조기청산 문제가 확인됐다. M1 Exit만 보면 균형형 N458의 오매도율(청산 후 10D 안에 +5% 이상 재상승) 43.2%, 강한 RS70형 N90은 56.7%, 지속형 N114는 50.0%였다. 강한 Overlay일수록 기존 M1 Exit가 Winner를 너무 빨리 끊는 경향이 강하다.
-• 회복/상승에 성공한 뒤 첫 MA5 또는 MA10 이탈만으로 전량 Exit하는 것은 너무 빠르다. 강한 RS70형에서 구조 회복 후 첫 MA5 이탈 Exit는 평균 약 D8.2, 수익 +3.1%로 D20 +5.6%보다 약 -2.5%p 낮았고, 첫 MA10 이탈도 약 +4.5%로 D20보다 약 -1.1%p 낮았다. 따라서 MA5=Warning, MA10=Failure Warning을 유지하되 단독 전량매도선으로 쓰지 않는다.
-• 초기 Failure 후보는 강한 Overlay가 아닌 일반 균형형에서 더 유효했다. 강한 RS70형/Score3D 지속형을 제외한 Plain 균형형 N321에서 D6 EOD 기준 ‘종가<MA20 + ScoreDelta1<0 + RS20D5≤-3%’는 N32. 다음 거래일 Open 청산 평균 -4.57% vs D20 유지 -5.67%, 청산 후 D20까지 추가수익 -1.12%. D/V/F 추가수익은 약 -0.47%/-1.20%/-3.31%로 모두 음수였고, -10% 이하 손실 비중은 즉시청산 9.4% vs D20 유지 28.1%. Forward N4로 작으므로 RESEARCH Failure Gate로만 둔다.
-• 더 강한 Confirmed Failure 상태는 D10에서 나타났다. 균형형 전체 중 ‘완전 역배열(종가≤MA5≤MA10≤MA20) + 현재 Score≤5.5 + RS20D5≤-3%’ N30은 다음 Open 청산 평균 -8.50% vs D20 -10.48%, 이후 D20까지 평균 -2.18% 추가하락. Discovery/Validation/Forward 모두 이후 수익이 음수였고, -10% 이하 손실 비중도 청산 33.3% vs D20 50.0%였다. 표본은 작지만 ‘잘 자른 구조적 실패 Exit’의 가장 명확한 상태 후보로 본다.
-• Profit Protection은 반대로 구조가 완전히 무너질 때까지 기다리면 늦다. 기존 실제 M1 Exit 중 오매도가 적은 쪽은 MA20 붕괴보다는 가격구조가 버티는 상태에서 M1이 크게 꺾이는 ‘sell into strength’ 성격이 있었다. D12 이후 M1 Δ3D≤-40이면서 MA5≥MA10일 때 다음 Open 청산하고 아니면 D20까지 보유하는 규칙은 강한 RS70형에서 N94 중 16건만 조기청산, 전체 +5.71%로 D20 +5.60%보다 약 +0.11%p였고 D/V/F 모두 D20 대비 소폭 양수였다. 지속형에서는 D20과 사실상 동일하여 Production 승격 근거는 부족하다.
-• Exit 상태 레벨(RESEARCH): ① D1~D5 MA5 이탈=Warning만. ② Plain 균형형에서 D6 종가<MA20 + Score 하락 + RS20 5D -3% 이상 악화=Early Failure/축소 후보. ③ D10 완전 역배열 + Score≤5.5 + RS20 5D -3% 이상 악화=Confirmed Structural Failure/전량 Exit 우선후보. ④ 강한 RS70형과 Score3D 지속형은 MA5/MA10 첫 이탈로 자르지 않고 D20 수익화가 기본. ⑤ D12 이후 가격구조가 살아 있는데 M1 Δ3D가 -40 이하로 급락하면 sell-into-strength Profit Protection 후보이나 아직 RESEARCH.
-• 핵심해석: ‘잘 나온 Exit’는 하나의 역배열 모양이 아니라 Entry family와 lifecycle 단계에 따라 다르다. 실패 거래는 MA20 아래 + Score/RS 동시악화처럼 회복근거가 사라진 상태에서 자르는 것이 손실 꼬리를 줄이고, 성공 거래는 완전 역배열까지 기다리기보다 D20 부근 또는 구조가 살아 있을 때 내부 M1 급락으로 수익을 보호하는 쪽이 낫다. Production Exit 변경은 아직 없음.
-
-
-[28. Exit Quality D/V/F 고정검증 — 2026-09-19]
-• 검증원칙: [27]에서 나온 Exit 후보를 이번 단계에서 threshold 재튜닝하지 않고 고정해 Discovery(2021~2023) / Validation(2024~2025) / Forward(2026)로 분리검증했다. 목표는 손실 최소화와 Winner 조기매도 방지를 동시에 만족하는지 확인하는 것이다.
-• D6 Early Failure는 강한 Overlay(Fast/Trend)를 제외한 Plain 균형형에서만 검증한다. 조건은 D6 종가<MA20 + ScoreDelta1<0 + RS20D5≤-3%p, 다음날 시가 Exit. Discovery N15: Exit -4.06% vs D20 -4.54%, +0.49%p 개선, -10% 이하 큰손실 6.7% vs D20 20.0%. Validation N13: -5.22% vs -6.41%, +1.18%p, 큰손실 15.4% vs 30.8%. Forward N4: -4.39% vs -7.51%, +3.12%p, 큰손실 0% vs 50%. 표본은 작지만 D/V/F 모두 손실축소 방향이 일치한다.
-• 같은 D6 조건을 D5~D10 각 날짜에 옮겨 비교하면 D6만 Discovery/Validation/Forward에서 평균 Exit advantage가 모두 양(+)이었다. D5는 Forward 표본이 없고 D7~D10은 적어도 한 구간에서 악화됐다. 따라서 D6는 임의 날짜라기보다 초기 회복실패를 구분하는 timing 후보로 유지한다. 단 Forward N4라 RESEARCH 상태다.
-• D10 Confirmed Failure는 전체 균형형 Base에 적용한다. 조건은 D10 종가≤MA5≤MA10≤MA20 완전 역배열 + Score≤5.5 + RS20D5≤-3%p, 다음날 시가 Exit. Discovery N21: Exit -8.20% vs D20 -9.00%, +0.79%p 개선, 큰손실 28.6% vs 38.1%. Validation N5: -10.43% vs -18.35%, +7.92%p, 큰손실 60% vs 80%. Forward N4: -7.61% vs -8.42%, +0.81%p, 큰손실 25% vs 75%. D/V/F 평균방향은 모두 개선이며 tail-loss 감소가 핵심가치다.
-• 동일 Confirmed Failure 조건을 D7~D12로 이동검증하면 D10만 D/V/F 평균 Exit advantage가 모두 양(+)이었다. D7~D9 및 D11~D12는 한 개 이상 구간에서 악화됐다. 따라서 D10은 구조적 실패확인 시점으로 유지한다. 다만 전체 N30, Forward N4로 Production 승격 금지.
-• Profit Protection 후보(D12 이후 M1 Δ3D≤-40 + MA5≥MA10 유지, 다음날 시가 Exit)는 RS70 강한형에서 D/V/F 전체 평균이 D20 대비 +0.04%p/+0.12%p/+0.45%p 개선됐지만 개선폭이 매우 작고 Validation Trigger 사건의 이후 10D +5% 재상승률이 75%였다. Score3D 지속형에서는 Discovery/Validation이 D20보다 악화되고 Forward만 개선되어 D/V/F FAIL. 따라서 이 조건을 Profit Exit로 채택하지 않는다.
-• Discovery만 사용해 별도 Profit 후보(M1 Δ3D≤-20 + Score3D<0, D10 이후)를 선정한 뒤 Validation/Forward에 고정 적용했지만 Discovery +0.13%p 개선 후 Validation -0.17%p, Forward -0.10%p로 재현 실패했다. 현재 데이터에서는 D20 이전 동적 Profit Exit를 만들 근거가 부족하다.
-• 기존 M1 Lifecycle Exit는 강한 Overlay에서 조기청산 성격이 명확하다. RS70 강한형의 동일사건 D20 대비 M1 Exit 성과차는 Discovery -1.37%p / Validation -3.18%p / Forward -5.68%p, WrongSell 비율 51.7%/68.2%/60.0%. Score3D 지속형은 -0.87%p/-2.55%p/-5.48%p, WrongSell 46.8%/47.4%/68.8%. 따라서 강한 Overlay에 기존 M1 Exit를 그대로 적용하지 않는다.
-• 강한 Overlay의 D20 고정 종료는 D/V/F 재현성이 가장 좋다. RS70 강한형 D20: Discovery +3.27%/승률65.0%, Validation +10.15%/83.3%, Forward +8.70%/80.0%. Score3D 지속형 D20: +2.50%/70.4%, +10.11%/85.7%, +7.48%/81.3%. D21~D25 일부 구간에서 pooled 평균이 더 높아지는 경우가 있으나 Forward는 둔화되므로 D20을 기본 종료점으로 유지한다.
-• 현재 RESEARCH Exit 구조: ① Plain 균형형 초기실패는 D6 MA20 미회복+Score↓+RS 급락 시 손실축소 후보, ② D10 완전역배열+Score≤5.5+RS 급락은 Confirmed Failure 후보, ③ 강한 RS70/Score3D 지속형은 조기 Profit Exit보다 D20 Time Exit 우선. Failure Exit와 Profit Exit를 동일 규칙으로 통합하지 않는다.
-• 운영변경: 없음. D6/D10 Failure는 Forward 소표본으로 RESEARCH 유지, 강한 Overlay의 Production Exit도 아직 변경하지 않는다.
-
-
-[29. Internal M → M1 Turn 대체가능성 1차 검증 — RESEARCH]
-• 검증목적: 기존 M1 PASS 결과를 재검증하지 않고, Score5~7 Entry family에서 M1 Turn만 현재 SignalFind US 오실레이터의 Internal M bullCross로 치환했을 때 승률·수익·Signal Supply가 유지 또는 개선되는지 비교했다.
-• Internal M은 현재 웹 구현식 그대로 사용했다. 종목 자기 OHLCV의 PRESS/MOMENTUM/TREND/RECOVERY를 causal self-normalization한 뒤 family median→raw median→EMA12-EMA26 Main→Main의 EMA5 Signal을 만들고, Main-Signal이 비양수에서 양수로 전환하는 bullCross를 Entry event로 사용했다. 동일 1,382거래일 연구창, Signal EOD→D+1 Open, 5/10/20/40D Close, 동일 Score snapshot·Mansfield Norm_RS·SPY benchmark를 사용했다.
-• 중복신호 과대계상 점검을 위해 동일 ticker candidate에 28 calendar-day cooldown을 추가한 보수적 결과도 계산했다. 공급량 우위는 유지됐다.
-• Base 치환(Score5~7 + Internal M bullCross + ScoreDelta1>0): cooldown 후 N4,707으로 M1 N1,630의 2.89배. 20D +1.45%/승률56.79%/SPY초과+0.18% vs M1 +1.71%/57.4%/+0.01%. Discovery/Validation/Forward 승률은 56.27%/58.44%/53.63% vs M1 55.6%/59.2%/61.3%. pooled precision은 거의 같고 공급량은 크게 증가하지만 Forward는 M1이 강하다.
-• RS60 치환: cooldown 후 N1,461 vs M1 N476으로 3.07배. 20D +2.30%/58.04%/SPY초과+0.67% vs M1 +2.82%/62.8%/+0.99%. Forward는 Internal M N152 +1.74%/51.32%/초과-0.68% vs M1 N47 +2.61%/55.3%/+0.30%. 균형형 RS60에서 M1 완전대체 근거는 부족하다.
-• RS70 치환이 가장 유망했다. cooldown 후 N504 vs M1 N153으로 3.29배이며, 20D +3.91%/승률62.70%/중앙+2.62%/SPY초과+2.18% vs M1 +4.00%/64.7%/중앙+3.38%/초과+1.74%. D/V/F는 Internal M N305/133/66, 승률63.28%/63.16%/59.09% vs M1 N96/37/20, 61.5%/73.0%/65.0%. Forward 평균/초과는 Internal M +5.40%/+2.15% vs M1 +4.85%/+2.07%로, 표본이 3배 이상 큰 상태에서도 기대수익은 유지됐다.
-• 판정: Internal M은 M1의 전면 대체로 아직 PASS하지 않는다. 그러나 ‘더 많은 신호를 확보하면서 유사한 기대값을 유지한다’는 가설은 특히 RS70에서 강하게 지지된다. 현재 해석은 M1=정밀 Timing/Confirmation, Internal M=고공급 Lead/Alternative Trigger 후보가 적절하다. 다음 최소검증은 RS70 cohort에 한해 Internal M→M1의 선행일수·겹침·후속확인 효과를 paired event로 비교한다. 추가 threshold stacking은 하지 않는다.
-• 운영변경: 없음. Target-A/B/C, 기존 M1 Entry family, Production 상태머신은 유지한다. Historical backfill은 SignalWarehouse 저장 OHLCV 재현본이므로 live Internal M과의 parity 및 추가 OOS 확인 전 Production 교체 금지.
-
-
-[29. M1 Turn Entry Family / Exit Family 정식 연구등록 — 2026-09-20]
-• 상태: RESEARCH. 아래 Family는 [20]~[28]의 D/V/F 연구결과를 운영상 한 묶음으로 정리한 것이며, Target-A/B/C 및 Production 상태머신은 아직 변경하지 않는다.
-
-
-[Entry Family]
-• E-M1-BALANCED — M1 Turn 균형형: Score 5~7 + M1 Turn + ScoreDelta1>0 + Norm_RS≥60. 공급량과 성과 균형형 기본 모집단. 2021~2026 N476, 20D +2.82%/승률62.8%/SPY초과+0.99%. Entry 시 MA5>MA10>MA20 정배열을 요구하지 않는다.
-• E-M1-STRONG — M1 Turn 강한 RS형: E-M1-BALANCED + Stock M1 Δ3D≥+10 + Norm_RS≥70. N94, 10D +3.05~3.31%/승률 약66~67%, 20D +5.60~5.72%/승률 약71~73%. 강한 Winner 성격이므로 기존 조기 M1 Exit를 자동 적용하지 않고 D20 수익화 경로를 우선 연구한다.
-• E-M1-PERSIST — M1 Turn 지속형: E-M1-BALANCED + Score3D≥+0.5 + Stock M1 Δ3D≥+10 + Norm_RS≥65. N118, 20D +4.52~4.61%/승률 약72.9~74.6%. 10D보다 20D follow-through가 강한 지속형으로 분류한다.
-
-
-[Exit Family]
-• X-M1-EARLY6 — D6 Early Failure: 일반 E-M1-BALANCED 중 E-M1-STRONG/E-M1-PERSIST 강한 Overlay를 제외한 사건에서 D6 종가<MA20 + ScoreDelta1<0 + RS20 5D 변화≤-3%p이면 다음 거래일 시가 Exit 후보. D/V/F 모두 D20 방치 대비 평균손실 개선 방향. D5~D10 동일조건 이동검증에서 D6만 D/V/F 개선방향이 일치했다. 강한 Overlay에 자동 적용 금지.
-• X-M1-CONFIRM10 — D10 Confirmed Failure: D10 종가≤MA5≤MA10≤MA20 완전 역배열 + 현재 Score≤5.5 + RS20 5D 변화≤-3%p이면 다음 거래일 시가 Exit 후보. D/V/F 모두 D20 방치 대비 평균손실 개선. D7~D12 이동검증에서 D10만 D/V/F 개선방향이 일치했다. 완전 역배열 자체가 아니라 Score·RS 동시악화를 반드시 요구한다.
-• X-M1-TIME20 — D20 Time Exit: E-M1-STRONG 및 E-M1-PERSIST에서 D6/D10 구조적 Failure가 확인되지 않은 경우 D20 Close를 기본 수익화 종료점으로 사용한다. E-M1-STRONG D/V/F D20 승률 약65.0%/83.3%/80.0%, E-M1-PERSIST 약70.4%/85.7%/81.3%. 현재 조기 Profit-Protection Exit는 D/V/F 재현에 실패했으므로 별도 Family로 등록하지 않는다.
-
-
-[Lifecycle Routing]
-• 기본 경로: Entry → D6 Early Failure 점검 → 생존 시 D10 Confirmed Failure 점검 → 강한 Overlay 생존 시 D20 Time Exit.
-• D1~D5 MA5/MA10 이탈은 Warning으로만 사용하며 현재 자동 Exit Family가 아니다.
-• Entry 당시 역배열은 허용한다. 중요한 것은 M1 Turn 이후 MA10/MA20 회복 여부이며, Entry 역배열과 Exit 역배열을 같은 의미로 해석하지 않는다.
-• 운영변경: 없음. Production 반영은 Family별 전체 포트폴리오 시뮬레이션 및 Forward 표본 확장 후 별도 결정한다.
-
-
-[30. Internal M × M1 paired-event 독립성 검증 — RESEARCH]
-• 검증범위: Score5~7 + ScoreDelta1>0 + Norm_RS≥70 cohort만 고정했다. M1은 정본 원시 이벤트 25,258건에서 exact score join 후 기존 [20]과 동일한 N153을 재현했고, Internal M은 현재 SignalFind US 웹 구현식의 bullCross를 사용하며 [29]와 동일하게 동일 ticker 28 calendar-day cooldown을 적용한 N504를 사용했다. paired 진단은 동일 ticker에서 Internal M 이후 0~10거래일 내 M1 발생 여부를 보며, 이 10D는 진단창일 뿐 신규 Entry hard gate가 아니다.
-• 겹침은 매우 낮았다. Internal M 504건 중 0~10D 내 M1이 나온 사건은 34건(6.7%), 470건(93.3%)은 M1 후속확인이 없었다. M1 153건 중 직전 0~10D 내 Internal M이 있었던 사건은 34건(22.2%), 119건(77.8%)은 Internal M 선행이 없었다. 34개 겹침의 간격은 0D 24건, 1D 2건, 2D 3건, 3D 2건, 4D 1건, 6D 2건으로, 실제 Internal M 선행은 10건뿐이었다. 따라서 ‘Internal M이 일반적으로 먼저 뜨고 M1이 후행 확인한다’는 직렬구조 가설은 지지되지 않는다.
-• Internal M 독립 사건(N470)의 20D 성과는 평균 +3.81%, 승률62.55%, 중앙 +2.47%, SPY초과 +2.07%였다. D/V/F는 Discovery N284 +3.13%/63.73%/초과+2.28%, Validation N125 +4.62%/62.40%/+1.75%, Forward N61 +5.30%/57.38%/+1.70%. 즉 Internal M의 기대값은 후속 M1 확인에 의존하지 않으며, 별도 Timing/Entry family 성격이 강하다.
-• 겹침 N34는 Internal M 발생일 진입 기준 20D +5.23%/승률64.71%/중앙+5.48%/SPY초과+3.69%, 같은 사건의 M1 발생일 진입 기준 +4.57%/61.76%/초과+2.85%였다. 실제 Internal M 선행 10건만 보면 Internal M일 진입 +7.34% vs M1일까지 대기 +5.10%, SPY초과 +6.52% vs +3.64%로 조기진입 이점이 보였지만 N10이라 규칙화하지 않는다.
-• M1 독립 사건(N119)도 20D +3.52%/승률62.18%/중앙+2.20%/SPY초과+1.60%로 양호했다. 따라서 M1 역시 Internal M에 흡수되는 신호가 아니며 독립 정보가치를 유지한다.
-• 판정: Internal M은 M1의 선행버전도, 완전 대체재도 아니다. 두 Trigger는 RS70에서 상당히 독립적·보완적인 Entry family로 보는 것이 데이터와 가장 일치한다. Internal M Entry에 M1 후속확인을 hard gate로 요구하지 않는다. 둘이 같은 날 또는 근접 발생하면 Confluence/Confidence Overlay로만 가점한다. Internal M RS70은 높은 공급량의 독립 RESEARCH Entry family 후보로 유지하며, 추가 Entry threshold stacking보다 live/OOS parity와 Internal M 전용 lifecycle/exit 검증을 우선한다.
-• 운영변경: 없음. Target-A/B/C, 기존 M1 Entry/Exit family 및 Production 상태머신은 유지한다. Historical Internal M은 SignalWarehouse 저장 OHLCV에서 현재 웹 산식을 재현한 backfill이므로 prospective live parity 확인 전 Production 승격 금지.
-[31. M1 Raw BUY × Internal M Raw BUY 순수신호 겹침 — RESEARCH]
-• 검증범위: Score·ScoreDelta·Norm_RS·섹터·MA 등 Entry 필터를 모두 제거하고 오실레이터 자체 BUY만 비교했다. M1은 현재 웹 구현의 raw buyTrigger(rising OSC + SMA3>EMA5가 새로 시작되는 날), Internal M은 현재 웹 구현의 raw bullCross(Main-Signal 비양수→양수)를 사용했다. SignalFind US 검증 Universe 501종목, 2021-01-04~2026-07-07 1,382거래일을 대상으로 SignalWarehouse OHLCV에서 동일 종목 시계열을 재현했다.
-• Raw 공급량: M1 BUY 73,274건, Internal M BUY 56,186건. 같은 종목·같은 날 동시 BUY는 7,646건이다. 따라서 같은 날 기준 겹침은 Internal M 신호의 13.61%, M1 신호의 10.43%다. 두 신호의 대다수는 같은 날 발생하지 않는다.
-• 근접 겹침(같은 ticker, 양방향 ±거래일): ±1D는 Internal M 기준 33.84% / M1 기준 26.56%, ±3D는 62.26% / 56.01%, ±5D는 78.82% / 75.36%, ±10D는 96.31% / 95.29%. 다만 raw trigger 자체가 자주 발생하므로 넓은 ±5~10D 창은 동일 파동 확인이라기보다 우연한 근접도 포함할 수 있다. Confluence 해석은 같은 날 또는 ±1D를 우선한다.
-• 같은 날 겹침의 D/V/F 안정성: Discovery(2021~2023) Internal M 기준13.52% / M1 기준10.34%, Validation(2024~2025) 13.47% /10.47%, Forward(2026~07-07) 14.62% /10.82%. 동일일 겹침비가 기간별로 매우 안정적이다.
-• 해석: 순수 BUY 수준에서는 RS70 필터 후 paired-event의 6.7%보다 겹침이 높지만, 동일일 기준으로도 Internal M의 약86%, M1의 약90%는 서로 독립적으로 발생한다. 따라서 두 오실레이터는 중복엔진이라기보다 병렬 Timing 신호로 운용하는 해석을 유지한다. 둘 다 같은 날/±1D 발생 시 Confluence 가점 후보이나, 넓은 ±3D 이상 근접 자체를 hard gate로 사용하지 않는다.
-• 주의: 역사 재현은 SignalWarehouse 저장 OHLCV를 두 엔진에 공통 적용한 apples-to-apples 비교다. 현재 live API는 M1에 Yahoo adjusted, Internal M에 Yahoo confirmed daily OHLCV를 사용하므로 split-sensitive 종목의 live parity는 별도 prospective 확인이 필요하다. Production 변경 없음.
-
-
-[32. Internal M RS70 전용 Exit/Lifecycle 1차 검증 — RESEARCH]
-• 모집단은 [29][30]과 동일한 Score5~7 + ScoreDelta1>0 + Norm_RS≥70 + Internal M bullCross, 동일 ticker 28 calendar-day cooldown 적용 N504다. Signal EOD→D+1 Open 진입, Discovery=2021~2023 / Validation=2024~2025 / Forward=2026으로 고정했다.
-• 고정 Time Exit 성과: D5 +1.38%/승률60.71%, D10 +2.38%/63.10%, D15 +3.13%/61.51%, D20 +3.91%/62.70%, D25 +4.51%/60.12%, D30 +5.24%/59.52%, D40 +6.79%/58.93%. 평균수익은 보유기간이 길수록 증가했으나 승률은 D10~D20 이후 낮아지고, D40의 -10% 이하 손실비중은 12.70%로 D20 8.53%보다 높아진다.
-• 현재 Internal M 공식의 첫 bearCross(Main-Signal이 양→음)을 EOD 확인 후 다음 Open에 청산하면 평균보유 7.25D/중앙7D, 평균수익 +1.25%, 승률48.61%, 중앙 -0.07%, SPY초과 +1.00%였다. D/V/F는 Discovery +1.28%/52.13%/초과+1.27%, Validation +1.34%/48.12%/+1.04%, Forward +0.92%/33.33%/-0.34%. 청산 후 10D 내 +5% 이상 재상승한 WrongSell 비율도 45.63%였다. 따라서 bearCross를 독립 Exit로 사용하는 가설은 FAIL이다.
-• bearCross가 너무 이른 것이 원인인지 진단하기 위해 D10 이후 bearCross만 사용하고 D20에 cap한 경우도 +3.01%/63.29%/SPY초과+1.78%로 D20 고정보유 +3.91%/62.70%/+2.18%보다 평균수익·초과수익이 낮았다. D15 이후만 허용해도 +3.55%/61.71%/+1.94%로 D20을 이기지 못했다. 즉 단순 bearCross 지연만으로 해결되지 않는다.
-• 기존 M1 Failure 구조를 그대로 이식한 D6 MA20미회복+ScoreDelta1<0+RS20D5≤-3%p → D10 완전역배열+Score≤5.5+RS20D5≤-3%p → 생존 시 D20 Time Exit는 D6 37건, D10 17건, D20 450건이었고 전체 +3.61%/승률60.12%/중앙+2.11%/SPY초과+2.03%였다. 이는 고정 D20 +3.91%/62.70%/중앙+2.62%/+2.18%보다 낮다. 특히 D10 Failure 17건은 조기청산 -9.58% vs D20 유지 -3.58%로 평균 -6.00%p 불리해 M1용 Exit를 Internal M에 자동 이식하면 안 된다.
-• D10 구조 자체의 예측력은 존재했다. D10 종가가 MA20 위인 N326은 D20 +8.17%/승률77.61%, MA20 아래 N178은 -3.91%/35.39%; 완전 정배열 N177은 +9.94%/83.05%, 완전 역배열 N64는 -4.65%/23.44%였다. 그러나 D10 아래 상태에서 즉시 다음 Open에 청산하면 평균적으로 D20까지 보유하는 것보다 더 나빠, 상태분류와 Exit 실행은 분리해야 한다.
-• D40은 평균수익 최대 후보로 관찰됐다. D40-D20 paired 차이는 전체 +2.88%p, Discovery +1.13%p, Validation +4.23%p, Forward +8.27%p이며 전체 날짜군집 bootstrap 95% CI는 약 +1.52~+4.23%p였다. 다만 Discovery CI는 0을 포함하고 승률·tail-loss·40D 자본점유 기회비용이 악화되므로 현재 D20을 즉시 D40으로 교체하지 않는다.
-• 사후진단상 D20 완전 정배열 종목만 D40까지 연장하고 나머지는 D20 종료하면 N504 전체 +5.15%/승률59.72%/SPY초과+2.92%였고 D/V/F 평균은 +3.26%/+7.41%/+9.27%였다. 그러나 같은 데이터에서 발견한 post-hoc 후보이므로 별도 고정 Validation/OOS 전에는 규칙화하지 않는다.
-• 판정: Internal M Entry는 독립 수익성이 확인됐지만 Internal M bearCross Exit는 FAIL, 기존 M1 D6/D10 Failure 구조의 직접이식도 FAIL. 현재 가장 안전한 연구 기준선은 D20 Time Exit 유지다. 다음 우선과제는 D20 이후 구조강한 사건만 30~40D 연장하는 Internal M 전용 Extension Gate를 사전고정해 검증하고, 10-slot 포트폴리오에서 추가 20D 자본점유의 기회비용까지 비교하는 것이다. Production 변경 없음.
-
-
-
-
-
-
-[33. Internal M RS70 D20→D40 Extension + MA Deadline 연구 — 2026-09-20 / RESEARCH]
-• 연구범위: [32]와 동일한 Score5~7 + ScoreDelta1>0 + Norm_RS≥70 + Internal M bullCross, 28 calendar-day cooldown cohort N504를 고정했다. Entry 산식은 변경하지 않고 D20 이후 연장조건과 이동평균 Final Deadline만 연구했다.
-• Fixed hold 기준선: D20 평균 +3.91%/승률62.70%/SPY초과+2.18%/-10% 이하 손실8.53%. D40은 +6.79%/58.93%/+3.13%/-10% 이하12.70%. 즉 40D까지 단순연장하면 평균수익은 증가하지만 precision과 tail-risk가 악화된다.
-• D20 상태로 D40 연장을 선별한 표준 MA 조건 중 가장 균형적인 후보는 D20 종가≥MA5≥MA10≥MA20≥MA50 완전 정배열이다. 해당 상태는 N114(22.6%)이며 이 사건만 D40까지 연장하고 나머지는 D20 종료하면 전체 N504 성과가 +5.10%/승률61.31%/SPY초과+2.90%/-10% 이하8.73%가 된다. D/V/F 평균은 +3.25%/+7.26%/+9.32%로 D20 기준선 +3.21%/+4.75%/+5.40% 대비 각각 +0.03/+2.50/+3.92%p 개선. pooled 날짜군집 bootstrap D20 대비 평균개선 95% CI 약 +0.44~+2.04%p. 다만 Discovery 개선폭이 사실상 0에 가까워 최근 레짐 의존 가능성이 있으므로 Production 승격 금지.
-• 비교: D20 종가≥MA5≥MA10≥MA20만 요구하면 N145 연장, 전체 +5.15%/59.72%/SPY초과+2.92%/-10% 이하8.93%. D20 종가>MA10만 요구하면 N279 연장, +5.73%/57.54%/SPY초과+2.98%/-10% 이하10.52%. 평균수익만 보면 단순 MA10이 높지만 precision/tail-risk가 악화되므로 균형형 Extension Gate로는 MA50까지 포함한 완전 정배열을 우선 RESEARCH 후보로 둔다.
-• Final Deadline 단독검증: D20 이후 MA5/10/20/30/40/50/60의 첫 1회 종가이탈을 다음날 시가 Exit로 쓰면 어느 선도 D40 고정보유보다 평균 기대값을 높이지 못했다. 첫 이탈 후 D40까지 회복하는 사건이 많아 1회 MA 이탈은 자동 전량매도가 아니라 Warning으로 해석한다.
-• 2거래일 연속 이탈 확인으로 바꾸면 MA20이 가장 실전적인 균형선이었다. 전체 N504에서 D20 이후 2일 연속 종가<MA20 시 다음날 시가 Exit, 아니면 D40 종료는 평균 +5.65%/승률55.95%/SPY초과+3.33%/-10% 이하9.52%. D40 고정(+6.79%/58.93%/+3.13%/-10% 이하12.70%) 대비 raw 평균수익은 낮지만 tail-loss를 줄이면서 초과수익을 보존하는 Risk Deadline 성격이다. MA10은 더 빠르지만 평균수익이 낮고, MA30~60은 반응이 늦고 승률/중앙값이 더 약해 Final Deadline 중심선으로 우선하지 않는다.
-• Extension Gate와 Deadline을 결합한 균형후보: D20에 종가≥MA5≥MA10≥MA20≥MA50이면 연장, 이후 종가가 MA20 아래로 2거래일 연속 마감하면 다음날 시가 Exit, 그렇지 않으면 D40 Close Time Exit. 전체 +4.95%/승률61.71%/SPY초과+2.89%/-10% 이하8.53%, 평균보유 약23.47D. D/V/F 평균 +3.22%/+6.88%/+9.05%, D20 대비 +0.01/+2.13/+3.65%p. pooled D20 대비 날짜군집 bootstrap 95% CI 약 +0.35~+1.83%p. Deadline이 없는 정배열→D40(+5.10%)보다 평균은 약 -0.15%p 낮지만 -10% tail은 D20 기준선 수준으로 복원한다.
-• 현재 RESEARCH Routing: Internal M RS70 Entry → D20 기본 점검 → D20 완전 정배열(종가≥MA5≥MA10≥MA20≥MA50)이 아니면 D20 Time Exit 우선 → 완전 정배열이면 D40 Extension → 연장 중 1회 MA20 이탈은 Warning, 2거래일 연속 MA20 이탈은 Final Structural Deadline 후보(다음 Open Exit) → 미발생 시 D40 Close Time Exit.
-• 핵심판정: Internal M의 최종 이동평균 Deadline 후보는 현재 MA20이다. 단 ‘MA20 1회 이탈=매도’가 아니라 ‘D20 이후 강한 구조에서 MA20 2거래일 연속 이탈=최종 구조 훼손 후보’로 정의한다. MA20은 수익극대화선이 아니라 tail-risk를 제어하는 최종 방어선이다. D40은 현재 연구창에서 절대 Time Cap으로 유지한다.
-• 운영변경: 없음. Historical Internal M은 backfill 재현본이므로 live parity와 추가 OOS 확인 전 Production 반영 금지. 특히 D20→D40 Extension은 Discovery 개선폭이 작아 RESEARCH 유지한다.
-
-
-[34. Internal M RS70 회복불능 지표 광역평가 — RESEARCH]
-• 목적: Internal M RS70 Entry N504에서 EMA5/bearCross 하나만 보지 않고, 가격구조·Norm_RS·Score·RS20D5·StableCore·M1·Internal M 상태·Drawdown·거래량을 함께 비교해 어떤 악화가 이후 상승복귀 실패와 가장 강하게 연결되는지 평가했다. D10/D20 고정 체크포인트에서 D40 최종 수익화, 이후 반등, 기존고점 회복, 수중 상태의 진입가 회복을 함께 측정했다.
-• 단일지표 중 가장 강한 비가격 실패축은 Norm_RS 붕괴였다. D10 Norm_RS<60은 N63, D40 수익화율 23.8%; D/V/F 29.0%/19.0%/18.2%. D10 Norm_RS<50은 N20, D40 수익화율 15.0%. D20 Norm_RS<60은 N121, 수익화율33.9%; D/V/F 36.2%/33.3%/28.6%. D20 Norm_RS<50은 N54, 수익화율14.8%; D/V/F 20.8%/11.1%/8.3%. Entry 시 Norm_RS≥70이었던 종목이 60/50 아래로 무너지는 것은 가장 강한 회복불능 경고로 본다.
-• 가격구조도 강했다. D10 종가<MA20은 N178, D40 수익화율39.9%; 완전 역배열은 N64, 37.5%. D20 종가<MA20은 N198, 39.4%; 완전 역배열 N76, 26.3%. 고점대비 Drawdown≤-10%는 D20 N74, D40 수익화율21.6%. 따라서 MA20/MA50 거리와 깊은 Drawdown은 Internal M EMA5 이탈보다 구조 실패를 더 잘 구분했다.
-• Score 절대수준도 유효했다. D10 Score≤5.5 N151의 D40 수익화율39.7%, D20 N197은35.0%. 반면 ScoreDelta1 1일 하락, M1 Δ3D 하락, Internal M spread<0/EMA5 bear 상태, RS20D5≤-3% 단독은 회복불능 판별력이 훨씬 약했다. D20 Internal M 약세상태의 D40 수익화율은59.0%로, 단독 자동매도 근거가 아니다.
-• 연속값 분별력(AUC)도 같은 방향이었다. D10의 D40 수익화 구분력은 현재 PnL 0.750, Price-MA20 거리0.723, Price-MA50 거리0.700, Internal M Main0.694, Norm_RS0.690, Score0.670 순. D20은 PnL0.835, Price-MA50 거리0.794, Score0.774, Price-MA20 거리0.768, Norm_RS0.764, Drawdown0.732 순이었다. Internal M spread·M1 level·ScoreDelta1은 0.5 부근으로 약했다.
-• 5개 실패축을 사전 정의해 복합상태를 진단했다: Norm_RS<60 / 완전 역배열 / Score≤5.5 / 고점대비 -10% 이하 / StableCore≥2. D20에 2개 이상 동시악화 N144는 D40 수익화율31.9%, 평균 D40 수익 -5.06%이며 D/V/F 수익화율31.2%/32.6%/33.3%로 일관되게 약했다. 3개 이상 N74는 수익화율20.3%, 평균 -9.74%; 4개 이상 N41은17.1%, 평균 -11.15%. 단일 EMA/M1 약화보다 다축 실패스택이 회복불능을 훨씬 잘 구분한다.
-• 현재 해석: Internal M EMA5 하향이탈은 Warning, M1/ΔScore 단기악화도 보조 Warning이다. 구조적 실패 우선순위는 ① Norm_RS 붕괴 ② MA20/MA50 가격구조 훼손·완전역배열 ③ Score 절대수준 저하 ④ 깊은 Drawdown ⑤ StableCore 중손상이다. 특히 Norm_RS<50 또는 D20 Failure Stack≥2는 회복확률이 크게 낮아지는 강한 RESEARCH Exit/축소 후보로 본다.
-• 운영변경 없음. 이번 결과는 Threshold 신규최적화가 아니라 기존 사용 중인 Score/RS/MA/StableCore 기준을 광역비교한 진단연구다. Production Exit에는 즉시 반영하지 않고, 다음 단계에서 MA20 2일 Deadline과 Norm_RS/Failure Stack을 결합했을 때 실제 손실축소와 Winner 보존이 D/V/F에서 개선되는지 고정검증한다.
-[35. Internal M RS70 Failure Stack × MA20 × Norm_RS 실제 Exit 고정검증 — 2026-09-20 / RESEARCH]
-• 검증목적: [34]에서 회복불능 판별력이 높았던 Norm_RS 붕괴, Failure Stack, MA20 2일 연속 이탈을 실제 자동 Exit로 바꿨을 때 손실축소와 Winner 보존이 동시에 개선되는지 확인했다. 모집단/Entry는 [32]~[34]와 동일한 N504이며, threshold를 새로 튜닝하지 않았다. 실제 운용형 기준선은 [33]의 D20 종가≥MA5≥MA10≥MA20≥MA50인 N114만 D40 연장, 나머지는 D20 종료하는 구조로 고정했다. 기준선 성과는 전체 +5.10%/승률61.31%/SPY초과+2.90%/-10% 이하8.73%, D/V/F 평균 +3.25%/+7.26%/+9.32%다.
-• D20 이후 MA20 2거래일 연속 이탈을 다음 Open Exit로 적용하면 전체 +4.95%/승률61.71%/SPY초과+2.89%/-10% 이하8.53%, 평균보유23.47D, Trigger69건, 청산 후 10D 내 +5% 재상승 WrongSell 29.0%였다. 기준선 대비 평균수익 -0.15%p이며 날짜군집 paired bootstrap 95% CI 약 -0.45~+0.13%p로 기대수익 개선은 확인되지 않았다. 대신 tail-loss를 8.73→8.53%로 소폭 낮추고 승률은 61.31→61.71%로 소폭 높여, MA20 2D는 수익극대화 Exit가 아니라 Risk Deadline 후보로만 유지한다.
-• Norm_RS<50을 D20 이후 자동 Exit로 쓰면 +5.07%/60.71%/SPY초과+2.88%/-10% 이하8.73%, Trigger9건, WrongSell33.3%. 기준선 대비 평균 -0.03%p(bootstrap CI 약 -0.08~+0.01)로 tail 개선도 없었다. MA20 2D AND Norm_RS<50도 +5.06%/60.71%/tail8.73%로 자동 Exit 추가가치가 없다. 따라서 Norm_RS<50은 강한 회복불능 경고지만 단독/AND 전량매도 Trigger로는 채택하지 않는다.
-• MA20 2D AND Norm_RS<60은 +5.02%/60.71%/SPY초과+2.86%/tail8.73%, Trigger17, WrongSell41.2%, 기준선 대비 -0.08%p로 개선 실패. MA20 2D AND Failure Stack≥2는 +4.95%/61.11%/SPY초과+2.84%/tail8.53%, Trigger48, WrongSell29.2%. paired 평균차는 -0.15%p, pooled bootstrap 95% CI 약 -0.29~-0.01%p이고 Forward도 기준선 대비 약 -0.40%p로 유의하게 불리하여 FAIL한다. FailCount≥2/≥3 단독도 기대수익을 낮춰 자동 Exit로 사용하지 않는다.
-• D10~D19 조기 Exit도 별도 고정검증했다. 이후 D20 정배열 Gate와 D20~D40 MA20 2D Deadline을 동일하게 둔 상태에서, 조기 MA20 2D&Norm_RS<60은 전체 +4.83%, MA20 2D&Norm_RS<50 +4.83%, Failure Stack≥3 +4.60%, MA20 2D&Failure Stack≥2 +4.33%로 조기 Exit가 없는 +4.95%보다 모두 낮았다. 조기 Trigger의 WrongSell은 대체로 36~42% 수준이었다. 특히 MA20 2D&Failure Stack≥2는 기준선 대비 평균 -0.62%p, 날짜군집 bootstrap 95% CI 약 -1.09~-0.15%p로 명확히 악화했다. 따라서 [34]의 회복불능 지표를 D10~D19 즉시 전량매도로 사용하지 않는다.
-• 핵심해석: ‘미래 회복확률을 잘 구분하는 상태’와 ‘발생 즉시 팔아야 하는 타이밍’은 다르다. Norm_RS<50, Failure Stack≥2/3는 D40 실패 확률을 강하게 설명하지만, 실제 발생시점에는 반등/회복 경로가 남아 있어 자동청산하면 Winner를 함께 자른다. 따라서 이 지표들은 ① D20 연장자격 veto/감점 ② 비중축소·경계 강화 ③ MA20 구조훼손의 신뢰도 강화 용도로 우선 사용하고, 독립 전량매도 Trigger로 사용하지 않는다.
-• 현재 RESEARCH Exit 해석을 수정한다: Internal M EMA5/bearCross=Warning, Norm_RS<60/50 및 Failure Stack=Structural Risk/회복불능 확률 Overlay, MA20 2거래일 연속 이탈=선택적 Risk Deadline 후보, D20 완전정배열 생존종목은 D40 Time Cap까지 보유하는 것이 현재 평균 기대값에는 더 유리하다. MA20 2D Deadline도 기대수익을 높인 것이 아니라 tail-risk를 소폭 줄인 선택사항이므로 ‘최종 강제매도선’으로 확정하지 않는다.
-• 운영변경 없음. Production 반영 금지. 다음 검증은 threshold 추가탐색보다 10-slot 포트폴리오 수준에서 MA20 Risk Deadline을 쓸 때 최대낙폭/자본회전/대체 Entry 기회비용이 개선되는지 비교하는 것이 우선이다.
-
-
-
-
-[36. Failure Stack2 최초발생 vs MA20 2D 최초발생 직접비교 — 2026-09-20 / RESEARCH]
-• 목적: Internal M RS70 N504에서 ‘Failure Stack≥2가 MA20 2거래일 이탈보다 먼저 실패를 알려 손실폭을 더 줄이는가’를 동일 Entry 사건별 1:1로 검증했다. 비교구간은 D20~D40 Extension 구간이며 Failure Stack은 [34]의 5축(Norm_RS<60 / 완전역배열 / Score≤5.5 / PeakDD≤-10% / StableCore≥2) 중 2개 이상 동시악화로 고정했다.
-• 전체 N504에서 MA20 2D 전략은 평균 +5.39%, 승률54.96%, 평균 손실 -6.93%, -10% 이하 9.33%, -15% 이하4.56%. Stack2 단독은 +4.98%, 승률51.39%, 평균손실 -6.86%, -10% 이하10.12%, -15% 이하3.77%. 즉 Stack2는 극단적 -15% tail은 조금 줄이지만 손실거래 수와 -10% tail은 늘어 MA20보다 일관되게 우월하지 않았다.
-• 두 신호가 모두 발생한 360건의 순서를 보면 Stack2가 먼저 90건(25.0%), 같은 날149건, MA20 2D가 먼저121건이었다. Stack2가 먼저인 90건에서는 평균 3.16거래일 선행했고, Stack2 Exit가 MA20까지 기다리는 것보다 평균 +0.57%p 유리했다. 손실거래만 보면 평균손실 -5.18% vs MA20 -6.91%로 약 +1.73%p 손실축소가 확인됐다. 따라서 ‘Stack2가 실제로 먼저 뜬 사건’에 한해서는 사용자의 선행 손실축소 가설이 맞는다.
-• 그러나 D20 완전정배열 Extension 대상 N114에서는 두 신호가 모두 발생한 51건 중 Stack2 선행19건, 동일11건, MA20 선행21건으로 Stack2가 일반적으로 더 빠르지 않았다. Stack2 선행19건에서도 평균수익은 Stack2 +20.07% vs MA20 +21.99%로 -1.92%p 낮았다. 손실폭 자체는 Stack2 평균손실 -1.79% vs MA20 -2.37%로 작았지만, Winner 수익을 더 많이 잘라 전체 기대값이 악화됐다.
-• 실제 D40 최종 Loser였던 완전정배열 Extension 7건에서는 MA20 2D Exit 평균 +3.93%, Stack2 Exit +0.37%, D40 방치 -5.16%. 이 핵심 손실집단에서도 MA20 2D가 Stack2보다 더 좋은 보호성과를 보였다.
-• ‘둘 중 먼저 뜨는 신호로 Exit’ 하이브리드는 전체 N504에서 평균 +5.12%, 승률53.37%, 평균손실 -6.50%, -10% tail8.93%, -15% tail3.57%로 MA20 단독(+5.39%/54.96%/평균손실-6.93%/-10%9.33%/-15%4.56%)보다 손실크기는 줄였다. 그러나 평균수익 -0.27%p, 승률 -1.59%p로 기대값 희생이 있었고 paired bootstrap 평균수익 차이 95% CI는 약 -0.55~-0.01%p로 불리했다.
-• 완전정배열 Extension N114에서도 earliest hybrid는 평균손실 -1.67%, 최악손실 -2.64%로 MA20 단독 -1.92%/-4.00%보다 손실크기를 줄였지만, 평균수익 +21.81% vs +22.76%, 승률93.86% vs95.61%로 낮아졌다. D/V/F 평균수익 차이도 -0.47/-0.70/-3.59%p였고 pooled paired bootstrap 95% CI 약 -1.69~-0.32%p로 MA20 대비 기대값 열위가 확인됐다.
-• Stack2가 MA20보다 먼저이면서 현재 손실상태일 때만 조기 Exit하는 제한형도 Extension N114에서 5건만 작동했고 평균수익 +22.66% vs MA20 +22.76%, 승률94.74% vs95.61%. 최악손실은 -2.64%로 개선됐지만 표본이 너무 작고 Validation에서 Winner 1건을 추가로 잘라 독립 Rule로 채택하지 않는다.
-• 판정: Failure Stack2는 ‘선행 위험경고’로 유효하고 실제로 MA20보다 먼저 발생한 손실거래에서는 평균 손실폭을 줄인다. 그러나 자동 전량 Exit로 쓰면 Winner 희생과 손실거래 수 증가 때문에 전체 기대값은 MA20 2D보다 낮다. 현재 우선순위는 Stack2=강한 위험경고/축소검토, MA20 2D=구조적 Risk Deadline 후보를 유지한다. 손실극소화가 최우선인 포트폴리오에서는 earliest hybrid가 tail-risk overlay 후보이나, 수익 기대값 기준 주력 Exit로는 MA20 2D가 우세하다. Production 변경 없음.
-[37. Internal M RS70 Exit Family 확정 — LOCKED RESEARCH / 2026-09-20]
-• 적용대상: E-IM-RS70 = Score 5~7 + ScoreDelta1>0 + Norm_RS≥70 + Internal M bullCross, 동일 ticker 28 calendar-day cooldown 연구 cohort. 본 절은 Internal M 전용 기계식 Lifecycle Exit의 연구 정본이며 [32]~[36]의 탐색·비교 결과를 하나의 실행규칙으로 동결한다.
-• 실행시점 원칙: 모든 상태판정은 EOD 확정 후 다음 정상 거래일 Open에서 실행한다. 단 사전에 날짜가 정해진 Time Exit는 Close 실행이 가능하다. D20 정배열 여부는 D20 종가 확정 후에만 알 수 있으므로 D20 상태를 보고 같은 D20 Close에 매도하는 방식은 사용하지 않는다. 최종 규칙은 D20 EOD 판정 → 비연장 종목 D21 Open Exit로 고정한다.
-• X-IM-WARN: Internal M Main이 EMA5 Signal 아래로 하향교차(bearCross)하거나 spread<0이 되는 것은 Warning만 부여한다. 자동매도 금지. 최초 bearCross 즉시 Exit는 평균 +1.25%/승률48.61%, WrongSell45.63%로 FAIL 확정.
-• X-IM-STACK2: Failure Stack은 Norm_RS<60 / 완전 역배열 / Score≤5.5 / Peak Drawdown≤-10% / StableCore≥2의 5축 중 2개 이상 동시악화다. Stack2는 강한 선행 위험경고 및 축소·교체 검토 Overlay로 사용하되 독립 전량매도 Trigger로 사용하지 않는다. Stack2가 MA20 2D보다 먼저 발생한 손실사건에서는 평균 약 +1.73%p 손실축소 효과가 있었으나 Winner 희생으로 전체 기대값은 MA20 2D보다 낮았다.
-• X-IM-TIME20-GATE: D20 EOD에 종가≥MA5≥MA10≥MA20≥MA50 완전 정배열 여부를 판정한다. 완전 정배열이 아니면 D21 Open에서 Time Exit한다. 완전 정배열이면 D40 Extension 자격을 부여한다. Entry~D19 구간의 EMA5/MA/Norm_RS/Failure Stack 악화는 자동 전량 Exit로 사용하지 않는다. D10~D19 조기 Failure Stack/Norm_RS/MA20 조합은 Winner를 과도하게 잘라 기대값을 낮춰 FAIL했다.
-• X-IM-MA20-2D: D20 완전 정배열로 Extension 된 종목은 이후 종가가 MA20 아래에서 2거래일 연속 마감한 경우 두 번째 이탈일 EOD 확정 후 다음 거래일 Open에서 Exit한다. MA20 1회 이탈은 Warning만 부여한다. MA20 2D는 수익극대화선이 아니라 tail-risk 제어용 Structural Risk Deadline으로 정의한다.
-• X-IM-TIME40: Extension 종목이 MA20 2D Deadline에 걸리지 않으면 D40 Close를 절대 Time Cap으로 종료한다.
-• Look-ahead 제거 최종 재계산: D20 EOD Gate → D21 Open 실행으로 교정한 no-deadline 구조는 N504 평균 +5.15%, 승률60.32%, -10% 이하8.33%, -15% 이하3.37%. 여기에 Extension 중 MA20 2D Next-Open Exit를 적용한 확정형은 평균 +5.00%, 승률60.71%, -10% 이하8.13%, -15% 이하3.37%. D/V/F 평균은 Discovery +3.30%, Validation +6.83%, Forward +9.12%. 즉 MA20 2D는 평균수익 약 -0.15%p를 희생하는 대신 승률과 -10% tail을 소폭 개선하는 선택적 위험보호선이라는 기존 결론이 causal 실행기준에서도 유지됐다.
-• 최종 Lifecycle: Entry(D+1 Open) → D1~D19 Warning/Structural Risk 모니터링(자동매도 없음) → D20 EOD 완전정배열 판정 → 비정배열 D21 Open Exit / 완전정배열 D40 Extension → Extension 중 Stack2는 강한 Risk Warning, Internal M EMA5 하향이탈은 Warning → MA20 2일 연속 종가이탈 시 다음 Open Exit → 미발생 시 D40 Close Time Exit.
-• 우선순위: Internal M EMA5<Signal = Warning < Failure Stack2 = Strong Risk Warning < MA20 2D = Structural Risk Exit < D40 = Absolute Time Exit. Stack2와 MA20 중 먼저 뜨는 earliest-hybrid는 tail-loss를 더 줄이나 평균수익·승률을 낮춰 주력 Exit로 채택하지 않는다.
-• 상태: LOCKED RESEARCH. 동일 데이터에서 threshold 추가튜닝·사후규칙 추가 금지. 재검증은 ① Internal M 산식/데이터 소스 변경 ② prospective live parity 실패 ③ 신규 OOS/Forward 표본 확장으로 구조적 반증이 생길 때만 수행한다. Historical backfill 기반이므로 Production 코드에는 아직 자동 반영하지 않는다. 회사 고유 중대 Event Risk 및 대표 Sector ETF의 명확한 SELL/추세붕괴는 본 기계식 Lifecycle과 별도의 상위 Risk Override로 유지한다
-[38. Internal M RS70 Entry/Exit SignalFind US 운영통합 — 2026-09-20]
-• 상태: OPERATIONALIZED LOCKED RESEARCH FAMILY. 통계적 분류는 [37]의 LOCKED RESEARCH를 유지하지만, 사용자 승인에 따라 SignalFind US 실제 EOD lifecycle에 운영 적용했다. 본 절이 [37]의 ‘Production 코드에는 아직 자동 반영하지 않는다’ 문구를 최신 결정으로 대체한다. 기존 FINAL15/C3-M1/Score-M1 Family의 산식·Exit는 변경하지 않는다.
-• Runtime 구조는 FINAL15 → C3/M1 → Score-M1 → Internal-M outer wrapper 순으로 고정한다. rules/internal_m_score_lifecycle.py가 가장 바깥에서 기존 rules/m1_score_lifecycle.py를 delegate하고, 그 아래 기존 lifecycle을 그대로 실행한 뒤 Internal-M event만 독립 profile로 관리한다. EntryExitProfile=INTERNAL_M_RS70_D20_D40, RuleVersion=INTERNAL_M_RS70_V1_20260920, ExitEngineVersion=INTERNAL_M_D20_D40_MA20_2D_V2_20260920.
-• 운영 Entry #21 E-IM-RS70: 동일 EOD 기준 Score 5~7 + ScoreDelta1>0 + Mansfield Norm_RS≥70 + current Internal M bullCross(Main-Signal 비양수→양수). EOD 확정 후 다음 정상거래일 Open 체결. M1 후속확인은 hard gate가 아니며 M1과 같은 날/±1D 발생 시 Confluence 가점으로만 해석한다. 동일 ticker의 accepted Internal-M signal은 28 calendar-day cooldown을 적용한다.
-• 운영 Exit #10 X-IM-TIME20: D20 EOD에 Close≥MA5≥MA10≥MA20≥MA50 완전 정배열이 아니면 다음 정상거래일 Open Exit. 완전 정배열이면 D40 Extension을 부여한다.
-• 운영 Exit #11 X-IM-MA20-2D: D40 Extension 중 Close<MA20이 2거래일 연속 EOD 확정되면 다음 정상거래일 Open Exit. MA20 1회 이탈은 Warning만, Failure Stack≥2와 Internal M Main<EMA5 Signal/bearCross도 강한 위험경고/Warning만 부여하며 독립 전량매도 Trigger로 사용하지 않는다.
-• 운영 Exit #12 X-IM-TIME40: D20 Extension 종목이 MA20 2D Deadline에 걸리지 않으면 D40 Close에서 절대 Time Cap으로 종료한다. D40과 MA20-2D가 같은 날 동시에 성립해도 D40 Time Cap을 우선하며, ExitExecutionRule=SAME_DAY_CLOSE로 해당 D40 종가를 실제 ExitPrice로 검증·저장한다. X-IM-TIME20 및 X-IM-MA20-2D는 기존대로 다음 정상거래일 Open 실행을 유지한다.
-• Failure Stack 정의는 Norm_RS<60 / Close≤MA5≤MA10≤MA20 완전 역배열 / Score≤5.5 / post-entry peak drawdown≤-10% / StableCoreDamageCount≥2의 5축이며, 2개 이상이면 Strong Risk Warning이다. Stack2 자동 전량매도 및 Stack2·MA20 earliest-hybrid는 연구에서 기대값을 낮춰 운영 Exit로 채택하지 않는다.
-• UI/AI 전달: Entry 관리 화면에 Entry #21 E-IM-RS70 및 Exit #10~#12를 추가하고, 최신 AI Prompt bundle/AI Brief의 CURRENT MACHINE RULES에도 Internal-M lifecycle을 자동 노출한다. UI는 persisted entry_lifecycle_state의 Internal-M profile을 읽어 기존 Family와 분리 표시한다.
-• 코드검증: Internal-M 전용 unit test와 기존 FINAL15/M1 lifecycle regression을 함께 실행하는 CI를 추가했고 PASS. generated modular engine은 Internal-M runtime marker와 FINAL15/C3-M1/Score-M1 delegate 보존을 검사해 PASS했고, Cloudflare Worker build/deploy도 PASS했다.
-• 실제 운영검증: 2026-09-20 10:00 KST one-time Refresh가 정상 완료되었고 EOD 기준일은 2026-09-18. Data Quality PASS, 기존 active lifecycle event 4건을 보존한 상태에서 Internal-M 신규 event가 실제 1건 생성되어 persisted state의 active profile이 FINAL15 3 / M1_SCORE 1 / INTERNAL_M 1, 총 5건으로 확인됐다. 당일 종목명은 CURRENT MASTER에 저장하지 않는다. 미래 D+1 Open 체결 전 event는 ExecutionDate/EntryPrice를 비워두는 fail-closed 동작이 정상 확인됐다.
-• Migration 주의: 28 calendar-day cooldown은 역사 연구에서는 적용됐지만 운영 persisted accepted-event history는 이번 배포부터 시작한다. 따라서 배포 이전 28일 안에 있었을 수 있는 ‘가상 과거 live accepted Internal-M event’를 소급 생성하지 않으며, 최초 운영 신호에는 pre-deployment cooldown history가 없다. 이번 배포 이후 accepted Internal-M event부터는 cooldown을 정확히 누적 적용한다.
-• 변경관리: Internal-M 산식·Entry threshold·Exit threshold는 LOCKED 상태로 두며 동일 데이터에서 재튜닝하지 않는다. 변경은 live parity 오류, 데이터소스/산식 변경, 신규 OOS에서 구조적 반증이 확인될 때만 별도 연구 후 수행한다. 회사 고유 중대 Event Risk 및 대표 Sector ETF의 명확한 SELL/추세붕괴는 기존 상위 Risk Override를 유지한다.
-
-
-[39. Entry/Exit 설명 표기 통일 — 2026-09-20]
-• 목적: SignalFind US Entry 관리 화면의 상세설명을 연구용 장문이 아니라 ‘설명 / 산식 / 해석 / 연구결과 / 비고’의 짧고 동일한 형식으로 통일한다. 계산 산식과 Entry/Exit 실행로직은 변경하지 않는다.
-• 번호 정본: Internal M RS70 운영 Entry는 #21 E-IM-RS70로 고정한다. #23 표기는 사용하지 않는다.
-• Entry 표시기준: #18 E-M1-BALANCED = 성공률62.8%·평균수익+2.82%, ‘M1 기본 진입형 Entry’. #20 E-M1-PERSIST = 성공률74.6%·평균수익+4.52%, ‘상승 지속형 Entry’. #21 E-IM-RS70 = 성공률62.7%·평균수익+3.91%, ‘오실레이터 상승전환형 Entry’. 기존 #1~#15도 성공률·평균수익 + 한 줄 성격표현 형식을 유지한다.
-• Exit 표시기준: 조건식은 기존 연구식을 그대로 유지하고 해석·연구결과·비고만 쉽게 표현한다. #1 초기 실패형, #2 수익 보호형, #3 2차 수익 보호형, #4 추세 훼손형, #5 오실레이터 하락전환형, #6 기간 종료형, #7 M1 초기 실패형, #8 M1 구조 실패형, #9 M1 상승파 종료형, #10 Internal M 기본 종료형, #11 Internal M 추세 방어형, #12 Internal M 장기 수익화형으로 표시한다.
-• 웹 반영: #18/#20/#21 Entry 상세와 Exit #7~#12 상세문구를 간결형으로 수정했다. UI 문구 변경이며 계산규칙·threshold·lifecycle routing은 변경하지 않는다.
-.
