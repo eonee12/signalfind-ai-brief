@@ -1,6 +1,6 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-09-20 09:22 KST
+BRIEF_GENERATED_AT_KST: 2026-09-20 11:00 KST
 BASIS_DATE: 2026-09-18
 STOCK_BASIS_DATE: 2026-09-18
 SECTOR_BASIS_DATE: 2026-09-18
@@ -21,7 +21,7 @@ PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-09-20 09:22 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-09-20 11:00 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 혼합 기준일임을 명시하고 신규진입 판단을 확정하지 않는다.
 이 문서의 기계적 FinalState/FINAL15 Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
@@ -30,7 +30,7 @@ STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 
 [CURRENT SNAPSHOT COUNTS]
 stocks=528 sectors=32 etfs=74
 BUY=52 HOLD=14 WATCH=92 SELL=370
-ACTIVE_ENTRY=4 NEW_ENTRY=1 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
+ACTIVE_ENTRY=5 NEW_ENTRY=2 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTIBAGGER=1
 
 [CORE INTERPRETATION]
 - BUY/HOLD/WATCH/SELL = 현재 기계적 상태 축이며 FINAL15 Entry lifecycle과 별개다.
@@ -266,7 +266,7 @@ ACTIVE_ENTRY=4 NEW_ENTRY=1 ENTRY_HOLD=3 ENTRY_WARNING=0 ENTRY_EXIT_TODAY=0 MULTI
 92,매수2,🟡 회복,eBay Inc.,EBAY,🟢 BUY 🎯 🚀,5.0,0.0201625,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,EBAY:2026-09-16:001,2026-09-16,2026-09-17,109.27,"#7,#10",#7,,36.0,8.0,HOLD,2026-09-17,2.0,112.93,0.033495,0.0235197,ABOVE,ABOVE,PASSED,PENDING,PENDING,,,,,0,,0,,,,,,,,FINAL15_EXIT_PRODUCTION_V1_0_20260911,1,🎯,2026-09-18,,↗️ 상승 우세,🔵 매수,Above,+10D,0,🔴 출회,🔻 하락·거래급등,1,0
 93,매수2,🟡 회복,TSMC (ADR),TSM,🟢 BUY 🚀,5.5,0.0225373,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🔵 매수,Above,+10D,0,🟡 관찰,↗ 상승·거래증가,1,0
 94,매수2,🟡 회복,Micron Technology,MU,🟢 BUY 🚀,5.0,-0.00296825,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
-95,매수2,🟡 회복,Sandisk,SNDK,🟢 BUY 🚀⚠️,5.0,0.0318267,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,⚪ 중립,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
+95,매수2,🟡 회복,Sandisk,SNDK,🟢 BUY 🎯 🚀⚠️,5.0,0.0318267,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,SNDK:2026-09-18:001,2026-09-18,,,,,,40.0,,ENTRY,2026-09-18,0.0,,,,INTERNAL_M_PROFILE,INTERNAL_M_PROFILE,N/A_INTERNAL_M,N/A_INTERNAL_M,N/A_INTERNAL_M,,,,,0,,0,,,,,,,,INTERNAL_M_D20_D40_MA20_2D_V1_20260920,1,🎯,2026-09-18,,⤴️ 반등 전환,⚪ 중립,Breakout,0D,0,🟡 관찰,↗ 상승·거래증가,1,0
 96,매수2,🟠 재진입,Eaton Corporation,ETN,🟢 BUY 🚀,5.5,0.0657467,Q4,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟢 가능,Above,+17D,0,🟢 유입,🔺 상승·거래급등,1,0
 97,관심후보,🟡 후보,Hewlett Packard Enterprise,HPE,🟢 BUY 🚀,10.0,0.0950003,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,⤴️ 반등 전환,🟠 약세,Below,+4D,0,⚪ 보통,➖ 거래보통,1,0
 98,관심후보,🟡 후보,Dell Technologies,DELL,🟢 BUY 🚀,10.0,0.140612,Q5,FINAL15_ENTRY_V1_20260908,0,0,,,,,,,,,,,,,NONE,,,,,,,,,,,,,,,0,,0,,,,,,,,,0,,,,〰️ 혼조,⚪ 중립,Below,+4D,0,🔴 출회,↘ 하락·거래증가,1,0
@@ -741,7 +741,7 @@ A/B/C/D Target 및 legacy Target Lifecycle은 FINAL15 사용자 Entry 의미로 
 - WLB50은 FINAL15 Entry hard gate/ranker/add-on 규칙이 아님
 
 ========================================================================
-[FINAL15 Entry Lifecycle] ENTRY_LIFECYCLE_V1_20260908
+[Entry Lifecycle Stack — FINAL15 / C3-M1 / Score-M1 / Internal-M] INTERNAL_M_RS70_V1_20260920
 ========================================================================
 - Production source: SignalFind US FINAL15 Entry / Exit Production v1.0 · 2026-09-11
 - FINAL15 = #1~#10, #12~#16; #11 FINAL DROP
@@ -762,7 +762,27 @@ A/B/C/D Target 및 legacy Target Lifecycle은 FINAL15 사용자 Entry 의미로 
 - Safety v2: active event ticker missing from snapshot is reconciled from completed EOD history or Refresh fails
 - Safety v2: D+1 Open/EntryPrice and D2 Close/MA5 must be verifiable; missing data never silently passes D2
 - Safety v2: D2 #3 exemption is fixed to a pure initial #3 Entry event; later confirmations cannot grant exemption
-- Safety v2: Exit signal date and verified next-open execution date/price are tracked separately
+- Safety v2: Exit execution is verified from the declared rule: standard exits use next Open; pre-scheduled Time Caps may use same-day Close
+- M1 Entry #1 = C3_C_RELAX; #2 = C3_B_ACCEL
+- M1 Exit profile = M1 SellTrigger EOD -> next normal trading-day Open
+- M1 maximum holding = age 20 EOD -> next normal trading-day Open
+- M1 events do not use D2 / MA5 Warning / PG10 / U10 / MA10 exits
+- Existing FINAL15 active event is never converted to M1; one active event per ticker
+- Same-day fresh M1 + FINAL15 with no active event = M1 Entry; FINAL15 families retained as confirmations
+- Score-M1 #18 E-M1-BALANCED = Score 5~7 + raw M1 Turn + ScoreDelta1>0 + Norm_RS>=60
+- Score-M1 #19 E-M1-STRONG = BALANCED + M1 Delta3D>=10 + Norm_RS>=70
+- Score-M1 #20 E-M1-PERSIST = BALANCED + ScoreD3Accel>=0.5 + M1 Delta3D>=10 + Norm_RS>=65
+- Score-M1 D6 Early Failure = plain BALANCED only: Close<MA20 + ScoreDelta1<0 + RS20D5<=-3%p
+- Score-M1 D10 Confirmed Failure = Close<=MA5<=MA10<=MA20 + Score<=5.5 + RS20D5<=-3%p
+- Score-M1 D20 Time Exit = no earlier failure -> next normal trading-day Open
+- Legacy C3 M1 SellTrigger profile remains unchanged and is never applied to Score-M1 events
+- Internal-M E-IM-RS70 = Score 5~7 + ScoreDelta1>0 + Mansfield Norm_RS>=70 + confirmed EOD Internal M bullCross; D+1 Open entry; same-ticker 28-calendar-day accepted-signal cooldown
+- Internal-M D1~D19 = Internal M below EMA5 and Failure Stack>=2 are warning/risk overlays only; neither is a stand-alone full exit
+- Internal-M D20 Gate = Close>=MA5>=MA10>=MA20>=MA50 -> D40 Extension; otherwise X-IM-TIME20 at next normal trading-day Open
+- Internal-M Extension Risk = one Close<MA20 is Warning; two consecutive EOD Close<MA20 -> X-IM-MA20-2D at next normal trading-day Open
+- Internal-M Failure Stack = Norm_RS<60 + full MA5/10/20 bearish alignment + Score<=5.5 + peak drawdown<=-10% + StableCoreDamageCount>=2; count>=2 is strong risk warning, not automatic liquidation
+- Internal-M D40 Time Cap = surviving extension exits at the confirmed D40 Close (same-day Close execution; absolute Time Cap)
+- Internal-M bearCross/EMA5 down-cross is not an independent exit
 
 ========================================================================
 [Rocket] PRACTICAL_LIVE_V1
@@ -1182,3 +1202,51 @@ SignalFind US 핵심메모 — CURRENT MASTER
 • 핵심해석: ‘미래 회복확률을 잘 구분하는 상태’와 ‘발생 즉시 팔아야 하는 타이밍’은 다르다. Norm_RS<50, Failure Stack≥2/3는 D40 실패 확률을 강하게 설명하지만, 실제 발생시점에는 반등/회복 경로가 남아 있어 자동청산하면 Winner를 함께 자른다. 따라서 이 지표들은 ① D20 연장자격 veto/감점 ② 비중축소·경계 강화 ③ MA20 구조훼손의 신뢰도 강화 용도로 우선 사용하고, 독립 전량매도 Trigger로 사용하지 않는다.
 • 현재 RESEARCH Exit 해석을 수정한다: Internal M EMA5/bearCross=Warning, Norm_RS<60/50 및 Failure Stack=Structural Risk/회복불능 확률 Overlay, MA20 2거래일 연속 이탈=선택적 Risk Deadline 후보, D20 완전정배열 생존종목은 D40 Time Cap까지 보유하는 것이 현재 평균 기대값에는 더 유리하다. MA20 2D Deadline도 기대수익을 높인 것이 아니라 tail-risk를 소폭 줄인 선택사항이므로 ‘최종 강제매도선’으로 확정하지 않는다.
 • 운영변경 없음. Production 반영 금지. 다음 검증은 threshold 추가탐색보다 10-slot 포트폴리오 수준에서 MA20 Risk Deadline을 쓸 때 최대낙폭/자본회전/대체 Entry 기회비용이 개선되는지 비교하는 것이 우선이다.
+
+
+
+
+[36. Failure Stack2 최초발생 vs MA20 2D 최초발생 직접비교 — 2026-09-20 / RESEARCH]
+• 목적: Internal M RS70 N504에서 ‘Failure Stack≥2가 MA20 2거래일 이탈보다 먼저 실패를 알려 손실폭을 더 줄이는가’를 동일 Entry 사건별 1:1로 검증했다. 비교구간은 D20~D40 Extension 구간이며 Failure Stack은 [34]의 5축(Norm_RS<60 / 완전역배열 / Score≤5.5 / PeakDD≤-10% / StableCore≥2) 중 2개 이상 동시악화로 고정했다.
+• 전체 N504에서 MA20 2D 전략은 평균 +5.39%, 승률54.96%, 평균 손실 -6.93%, -10% 이하 9.33%, -15% 이하4.56%. Stack2 단독은 +4.98%, 승률51.39%, 평균손실 -6.86%, -10% 이하10.12%, -15% 이하3.77%. 즉 Stack2는 극단적 -15% tail은 조금 줄이지만 손실거래 수와 -10% tail은 늘어 MA20보다 일관되게 우월하지 않았다.
+• 두 신호가 모두 발생한 360건의 순서를 보면 Stack2가 먼저 90건(25.0%), 같은 날149건, MA20 2D가 먼저121건이었다. Stack2가 먼저인 90건에서는 평균 3.16거래일 선행했고, Stack2 Exit가 MA20까지 기다리는 것보다 평균 +0.57%p 유리했다. 손실거래만 보면 평균손실 -5.18% vs MA20 -6.91%로 약 +1.73%p 손실축소가 확인됐다. 따라서 ‘Stack2가 실제로 먼저 뜬 사건’에 한해서는 사용자의 선행 손실축소 가설이 맞는다.
+• 그러나 D20 완전정배열 Extension 대상 N114에서는 두 신호가 모두 발생한 51건 중 Stack2 선행19건, 동일11건, MA20 선행21건으로 Stack2가 일반적으로 더 빠르지 않았다. Stack2 선행19건에서도 평균수익은 Stack2 +20.07% vs MA20 +21.99%로 -1.92%p 낮았다. 손실폭 자체는 Stack2 평균손실 -1.79% vs MA20 -2.37%로 작았지만, Winner 수익을 더 많이 잘라 전체 기대값이 악화됐다.
+• 실제 D40 최종 Loser였던 완전정배열 Extension 7건에서는 MA20 2D Exit 평균 +3.93%, Stack2 Exit +0.37%, D40 방치 -5.16%. 이 핵심 손실집단에서도 MA20 2D가 Stack2보다 더 좋은 보호성과를 보였다.
+• ‘둘 중 먼저 뜨는 신호로 Exit’ 하이브리드는 전체 N504에서 평균 +5.12%, 승률53.37%, 평균손실 -6.50%, -10% tail8.93%, -15% tail3.57%로 MA20 단독(+5.39%/54.96%/평균손실-6.93%/-10%9.33%/-15%4.56%)보다 손실크기는 줄였다. 그러나 평균수익 -0.27%p, 승률 -1.59%p로 기대값 희생이 있었고 paired bootstrap 평균수익 차이 95% CI는 약 -0.55~-0.01%p로 불리했다.
+• 완전정배열 Extension N114에서도 earliest hybrid는 평균손실 -1.67%, 최악손실 -2.64%로 MA20 단독 -1.92%/-4.00%보다 손실크기를 줄였지만, 평균수익 +21.81% vs +22.76%, 승률93.86% vs95.61%로 낮아졌다. D/V/F 평균수익 차이도 -0.47/-0.70/-3.59%p였고 pooled paired bootstrap 95% CI 약 -1.69~-0.32%p로 MA20 대비 기대값 열위가 확인됐다.
+• Stack2가 MA20보다 먼저이면서 현재 손실상태일 때만 조기 Exit하는 제한형도 Extension N114에서 5건만 작동했고 평균수익 +22.66% vs MA20 +22.76%, 승률94.74% vs95.61%. 최악손실은 -2.64%로 개선됐지만 표본이 너무 작고 Validation에서 Winner 1건을 추가로 잘라 독립 Rule로 채택하지 않는다.
+• 판정: Failure Stack2는 ‘선행 위험경고’로 유효하고 실제로 MA20보다 먼저 발생한 손실거래에서는 평균 손실폭을 줄인다. 그러나 자동 전량 Exit로 쓰면 Winner 희생과 손실거래 수 증가 때문에 전체 기대값은 MA20 2D보다 낮다. 현재 우선순위는 Stack2=강한 위험경고/축소검토, MA20 2D=구조적 Risk Deadline 후보를 유지한다. 손실극소화가 최우선인 포트폴리오에서는 earliest hybrid가 tail-risk overlay 후보이나, 수익 기대값 기준 주력 Exit로는 MA20 2D가 우세하다. Production 변경 없음.
+[37. Internal M RS70 Exit Family 확정 — LOCKED RESEARCH / 2026-09-20]
+• 적용대상: E-IM-RS70 = Score 5~7 + ScoreDelta1>0 + Norm_RS≥70 + Internal M bullCross, 동일 ticker 28 calendar-day cooldown 연구 cohort. 본 절은 Internal M 전용 기계식 Lifecycle Exit의 연구 정본이며 [32]~[36]의 탐색·비교 결과를 하나의 실행규칙으로 동결한다.
+• 실행시점 원칙: 모든 상태판정은 EOD 확정 후 다음 정상 거래일 Open에서 실행한다. 단 사전에 날짜가 정해진 Time Exit는 Close 실행이 가능하다. D20 정배열 여부는 D20 종가 확정 후에만 알 수 있으므로 D20 상태를 보고 같은 D20 Close에 매도하는 방식은 사용하지 않는다. 최종 규칙은 D20 EOD 판정 → 비연장 종목 D21 Open Exit로 고정한다.
+• X-IM-WARN: Internal M Main이 EMA5 Signal 아래로 하향교차(bearCross)하거나 spread<0이 되는 것은 Warning만 부여한다. 자동매도 금지. 최초 bearCross 즉시 Exit는 평균 +1.25%/승률48.61%, WrongSell45.63%로 FAIL 확정.
+• X-IM-STACK2: Failure Stack은 Norm_RS<60 / 완전 역배열 / Score≤5.5 / Peak Drawdown≤-10% / StableCore≥2의 5축 중 2개 이상 동시악화다. Stack2는 강한 선행 위험경고 및 축소·교체 검토 Overlay로 사용하되 독립 전량매도 Trigger로 사용하지 않는다. Stack2가 MA20 2D보다 먼저 발생한 손실사건에서는 평균 약 +1.73%p 손실축소 효과가 있었으나 Winner 희생으로 전체 기대값은 MA20 2D보다 낮았다.
+• X-IM-TIME20-GATE: D20 EOD에 종가≥MA5≥MA10≥MA20≥MA50 완전 정배열 여부를 판정한다. 완전 정배열이 아니면 D21 Open에서 Time Exit한다. 완전 정배열이면 D40 Extension 자격을 부여한다. Entry~D19 구간의 EMA5/MA/Norm_RS/Failure Stack 악화는 자동 전량 Exit로 사용하지 않는다. D10~D19 조기 Failure Stack/Norm_RS/MA20 조합은 Winner를 과도하게 잘라 기대값을 낮춰 FAIL했다.
+• X-IM-MA20-2D: D20 완전 정배열로 Extension 된 종목은 이후 종가가 MA20 아래에서 2거래일 연속 마감한 경우 두 번째 이탈일 EOD 확정 후 다음 거래일 Open에서 Exit한다. MA20 1회 이탈은 Warning만 부여한다. MA20 2D는 수익극대화선이 아니라 tail-risk 제어용 Structural Risk Deadline으로 정의한다.
+• X-IM-TIME40: Extension 종목이 MA20 2D Deadline에 걸리지 않으면 D40 Close를 절대 Time Cap으로 종료한다.
+• Look-ahead 제거 최종 재계산: D20 EOD Gate → D21 Open 실행으로 교정한 no-deadline 구조는 N504 평균 +5.15%, 승률60.32%, -10% 이하8.33%, -15% 이하3.37%. 여기에 Extension 중 MA20 2D Next-Open Exit를 적용한 확정형은 평균 +5.00%, 승률60.71%, -10% 이하8.13%, -15% 이하3.37%. D/V/F 평균은 Discovery +3.30%, Validation +6.83%, Forward +9.12%. 즉 MA20 2D는 평균수익 약 -0.15%p를 희생하는 대신 승률과 -10% tail을 소폭 개선하는 선택적 위험보호선이라는 기존 결론이 causal 실행기준에서도 유지됐다.
+• 최종 Lifecycle: Entry(D+1 Open) → D1~D19 Warning/Structural Risk 모니터링(자동매도 없음) → D20 EOD 완전정배열 판정 → 비정배열 D21 Open Exit / 완전정배열 D40 Extension → Extension 중 Stack2는 강한 Risk Warning, Internal M EMA5 하향이탈은 Warning → MA20 2일 연속 종가이탈 시 다음 Open Exit → 미발생 시 D40 Close Time Exit.
+• 우선순위: Internal M EMA5<Signal = Warning < Failure Stack2 = Strong Risk Warning < MA20 2D = Structural Risk Exit < D40 = Absolute Time Exit. Stack2와 MA20 중 먼저 뜨는 earliest-hybrid는 tail-loss를 더 줄이나 평균수익·승률을 낮춰 주력 Exit로 채택하지 않는다.
+• 상태: LOCKED RESEARCH. 동일 데이터에서 threshold 추가튜닝·사후규칙 추가 금지. 재검증은 ① Internal M 산식/데이터 소스 변경 ② prospective live parity 실패 ③ 신규 OOS/Forward 표본 확장으로 구조적 반증이 생길 때만 수행한다. Historical backfill 기반이므로 Production 코드에는 아직 자동 반영하지 않는다. 회사 고유 중대 Event Risk 및 대표 Sector ETF의 명확한 SELL/추세붕괴는 본 기계식 Lifecycle과 별도의 상위 Risk Override로 유지한다
+[38. Internal M RS70 Entry/Exit SignalFind US 운영통합 — 2026-09-20]
+• 상태: OPERATIONALIZED LOCKED RESEARCH FAMILY. 통계적 분류는 [37]의 LOCKED RESEARCH를 유지하지만, 사용자 승인에 따라 SignalFind US 실제 EOD lifecycle에 운영 적용했다. 본 절이 [37]의 ‘Production 코드에는 아직 자동 반영하지 않는다’ 문구를 최신 결정으로 대체한다. 기존 FINAL15/C3-M1/Score-M1 Family의 산식·Exit는 변경하지 않는다.
+• Runtime 구조는 FINAL15 → C3/M1 → Score-M1 → Internal-M outer wrapper 순으로 고정한다. rules/internal_m_score_lifecycle.py가 가장 바깥에서 기존 rules/m1_score_lifecycle.py를 delegate하고, 그 아래 기존 lifecycle을 그대로 실행한 뒤 Internal-M event만 독립 profile로 관리한다. EntryExitProfile=INTERNAL_M_RS70_D20_D40, RuleVersion=INTERNAL_M_RS70_V1_20260920, ExitEngineVersion=INTERNAL_M_D20_D40_MA20_2D_V2_20260920.
+• 운영 Entry #21 E-IM-RS70: 동일 EOD 기준 Score 5~7 + ScoreDelta1>0 + Mansfield Norm_RS≥70 + current Internal M bullCross(Main-Signal 비양수→양수). EOD 확정 후 다음 정상거래일 Open 체결. M1 후속확인은 hard gate가 아니며 M1과 같은 날/±1D 발생 시 Confluence 가점으로만 해석한다. 동일 ticker의 accepted Internal-M signal은 28 calendar-day cooldown을 적용한다.
+• 운영 Exit #10 X-IM-TIME20: D20 EOD에 Close≥MA5≥MA10≥MA20≥MA50 완전 정배열이 아니면 다음 정상거래일 Open Exit. 완전 정배열이면 D40 Extension을 부여한다.
+• 운영 Exit #11 X-IM-MA20-2D: D40 Extension 중 Close<MA20이 2거래일 연속 EOD 확정되면 다음 정상거래일 Open Exit. MA20 1회 이탈은 Warning만, Failure Stack≥2와 Internal M Main<EMA5 Signal/bearCross도 강한 위험경고/Warning만 부여하며 독립 전량매도 Trigger로 사용하지 않는다.
+• 운영 Exit #12 X-IM-TIME40: D20 Extension 종목이 MA20 2D Deadline에 걸리지 않으면 D40 Close에서 절대 Time Cap으로 종료한다. D40과 MA20-2D가 같은 날 동시에 성립해도 D40 Time Cap을 우선하며, ExitExecutionRule=SAME_DAY_CLOSE로 해당 D40 종가를 실제 ExitPrice로 검증·저장한다. X-IM-TIME20 및 X-IM-MA20-2D는 기존대로 다음 정상거래일 Open 실행을 유지한다.
+• Failure Stack 정의는 Norm_RS<60 / Close≤MA5≤MA10≤MA20 완전 역배열 / Score≤5.5 / post-entry peak drawdown≤-10% / StableCoreDamageCount≥2의 5축이며, 2개 이상이면 Strong Risk Warning이다. Stack2 자동 전량매도 및 Stack2·MA20 earliest-hybrid는 연구에서 기대값을 낮춰 운영 Exit로 채택하지 않는다.
+• UI/AI 전달: Entry 관리 화면에 Entry #21 E-IM-RS70 및 Exit #10~#12를 추가하고, 최신 AI Prompt bundle/AI Brief의 CURRENT MACHINE RULES에도 Internal-M lifecycle을 자동 노출한다. UI는 persisted entry_lifecycle_state의 Internal-M profile을 읽어 기존 Family와 분리 표시한다.
+• 코드검증: Internal-M 전용 unit test와 기존 FINAL15/M1 lifecycle regression을 함께 실행하는 CI를 추가했고 PASS. generated modular engine은 Internal-M runtime marker와 FINAL15/C3-M1/Score-M1 delegate 보존을 검사해 PASS했고, Cloudflare Worker build/deploy도 PASS했다.
+• 실제 운영검증: 2026-09-20 10:00 KST one-time Refresh가 정상 완료되었고 EOD 기준일은 2026-09-18. Data Quality PASS, 기존 active lifecycle event 4건을 보존한 상태에서 Internal-M 신규 event가 실제 1건 생성되어 persisted state의 active profile이 FINAL15 3 / M1_SCORE 1 / INTERNAL_M 1, 총 5건으로 확인됐다. 당일 종목명은 CURRENT MASTER에 저장하지 않는다. 미래 D+1 Open 체결 전 event는 ExecutionDate/EntryPrice를 비워두는 fail-closed 동작이 정상 확인됐다.
+• Migration 주의: 28 calendar-day cooldown은 역사 연구에서는 적용됐지만 운영 persisted accepted-event history는 이번 배포부터 시작한다. 따라서 배포 이전 28일 안에 있었을 수 있는 ‘가상 과거 live accepted Internal-M event’를 소급 생성하지 않으며, 최초 운영 신호에는 pre-deployment cooldown history가 없다. 이번 배포 이후 accepted Internal-M event부터는 cooldown을 정확히 누적 적용한다.
+• 변경관리: Internal-M 산식·Entry threshold·Exit threshold는 LOCKED 상태로 두며 동일 데이터에서 재튜닝하지 않는다. 변경은 live parity 오류, 데이터소스/산식 변경, 신규 OOS에서 구조적 반증이 확인될 때만 별도 연구 후 수행한다. 회사 고유 중대 Event Risk 및 대표 Sector ETF의 명확한 SELL/추세붕괴는 기존 상위 Risk Override를 유지한다.
+
+
+[39. Entry/Exit 설명 표기 통일 — 2026-09-20]
+• 목적: SignalFind US Entry 관리 화면의 상세설명을 연구용 장문이 아니라 ‘설명 / 산식 / 해석 / 연구결과 / 비고’의 짧고 동일한 형식으로 통일한다. 계산 산식과 Entry/Exit 실행로직은 변경하지 않는다.
+• 번호 정본: Internal M RS70 운영 Entry는 #21 E-IM-RS70로 고정한다. #23 표기는 사용하지 않는다.
+• Entry 표시기준: #18 E-M1-BALANCED = 성공률62.8%·평균수익+2.82%, ‘M1 기본 진입형 Entry’. #20 E-M1-PERSIST = 성공률74.6%·평균수익+4.52%, ‘상승 지속형 Entry’. #21 E-IM-RS70 = 성공률62.7%·평균수익+3.91%, ‘오실레이터 상승전환형 Entry’. 기존 #1~#15도 성공률·평균수익 + 한 줄 성격표현 형식을 유지한다.
+• Exit 표시기준: 조건식은 기존 연구식을 그대로 유지하고 해석·연구결과·비고만 쉽게 표현한다. #1 초기 실패형, #2 수익 보호형, #3 2차 수익 보호형, #4 추세 훼손형, #5 오실레이터 하락전환형, #6 기간 종료형, #7 M1 초기 실패형, #8 M1 구조 실패형, #9 M1 상승파 종료형, #10 Internal M 기본 종료형, #11 Internal M 추세 방어형, #12 Internal M 장기 수익화형으로 표시한다.
+• 웹 반영: #18/#20/#21 Entry 상세와 Exit #7~#12 상세문구를 간결형으로 수정했다. UI 문구 변경이며 계산규칙·threshold·lifecycle routing은 변경하지 않는다.
+.
