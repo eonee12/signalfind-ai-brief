@@ -1,13 +1,13 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-22T18:29:00+09:00
-refreshed_at_utc: 2026-09-22T09:29:00Z
-source_sha256: 2d8b7a9e1ace15d7ac43a9b22cff821c1d9cf2c2abdc130f17f5096c6a9673f9
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-22T19:17:44+09:00
+refreshed_at_utc: 2026-09-22T10:17:44Z
+source_sha256: 2bc3d7418c623b3f7608c9cb22920117942da0fc30c8ed03b2f194a40f46d743
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35715173180
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-22 18:29 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-22 19:17 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-22 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-09-22 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-22 17:50 KST (5분 폴링)
@@ -3570,14 +3570,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -4878,4 +4876,65 @@ E8_RS_RECLAIM_QUIET: 55 = 0.045/day
 • E10-B: 점진상승형. Ret3/Ret5/MA5/10 slope/MA cross/SetupHigh break 등 대규모 trigger를 검사했으나 10D 약53~55%로 개선 부족. 자동 Core Entry보다 Setup/Pilot/Watch로 관리하고 다른 강한 Family overlap 또는 새 독립 가속정보를 기다린다.
 • E10-C: U자형이지만 같은 가격가속 후보로는10D 약51~55%에 그쳐 명확한 Trigger 미발견. Setup/Watch 유지. ABC도 가격 trigger의 D/V 불안정으로 Core Entry 승격 금지.
 • 실행원칙: Family별로 Setup과 actual Entry를 분리할 수 있다. 최종 구조는 Setup onset → Family/Route-specific Early Fail → Acceleration Trigger → 다음 Open actual Entry. 가속이 없는 점진형은 억지 Trigger를 만들지 않고 Setup/Pilot로 관리. Production 변경 없음; 공급량은 최종 가속식 동결 후 다시 계산한다.
+
+
+[Entry Acceleration 1차 연구 최종분류]
+• E1 LOW_TURN RS Accel: 레짐민감 즉시/Pilot형으로 분류. 원 E1 뒤 1~5거래일 내 canonical LOW_EMA5_CROSS를 기다리는 확인형은 frozen 비중복 원장 진단에서 진입 후 5D N83 승률56.63% 평균+1.67%, 10D N72 51.39%/+2.23%, 20D N50 48.00%/+1.83%. D/V 차이도 커 범용 Acceleration Trigger로 미채택. Setup일 MarketRS20>0 또는 RS20Delta5>0 추가도 뚜렷한 개선 없음. 기존 E1 원식 유지, 추가 wait gate 없음.
+• E2: 즉시형. D1~D30 최고승률이 D5 부근이며 원 신호 자체가 이미 EMA5+Breadth 확인을 포함하므로 추가 지연 불필요.
+• E3: 점진형. D17 부근 승률상승은 있으나 Ret/MA/RS/Recovery 자연전환에서 큰 표본 60% Acceleration Trigger 미발견. 원 E3는 Setup/Pilot, 기존 FastRS 0~2D Confirm은 High-Confidence overlay 유지.
+• E4: 즉시형 High-Confidence/Small-N. 원 신호 자체가 초기 Entry로 충분하며 추가 지연 우선순위 낮음.
+• E5: 1차 즉시파동 + Late Re-entry형. D20~30 ThemeRS20 <=0→>0 재돌파를 2차 Acceleration 후보로 유지.
+• E6: 지연가속형. Setup 후 D3~12 Price <=MA10→>MA10 첫 재돌파를 E6-v2 Acceleration 후보로 유지; Small-N이므로 기존 E6 정본 변경 없음.
+• E7: 즉시형 Continuation. 60D 재돌파+짧은 윗꼬리+Quiet Volume 자체가 가격가속 확인이므로 추가 wait gate 불필요. Risk-On은 High-Confidence overlay 유지.
+• E8: 지연가속형. D5~15 3D 수익률 <=0→>0 첫 전환, 그 전 Trend 상승추세 이탈 시 Setup cancel 후보. 10D 가속구간 이후 Profit Protection 연구 우선.
+• E9: 완성된 2단계 확인형. Weekly Setup→Setup High 돌파+동일일 FI Turn→다음 Open 구조 유지.
+• E10: Route-specific. A=조기형, AB=지연 회복형, AC=지연 Score 재가속형, BC=중기 RS 재가속형, B=점진 Setup/Pilot, C=Setup/Watch, ABC=저품질 Setup으로 Core Entry 승격 금지.
+• 최종원칙: E1~E10 원식은 재튜닝하지 않는다. Setup→Family별 Early Fail→Acceleration→actual Entry 구조를 사용하고, 명확한 가속점이 없는 Family는 억지 Trigger를 만들지 않는다. Production 변경 없음. 다음 단계는 actual Acceleration-confirmed unique supply 재계산.
+
+
+[2026-09-22 탈락 Entry 재분류 정책 — Setup Feeder 연구]
+• 신규 공급 Family 추가탐색은 우선 중단한다. 과거 50%대 승률로 탈락한 조건 중 구조적 의미와 공급이 있는 신호를 ‘매수 실패식’이 아니라 Setup Feeder로 재분류한다.
+• 연구목표는 Setup 당일 승률이 아니라 Setup 이후 최초 observable Acceleration 시점의 actual Entry 성과다. 미래정보 소급 금지, 확인일 EOD→다음 Open.
+• 우선 재검토군: ① Fresh CORE/Score Lifecycle ② 52주 신고가·신고가 후 눌림→재돌파 ③ 8W Box Compression/변동성수축 ④ Fast RS/RS20 zero-cross 계열. Raw M1·FI OSC 단독·단순 MA회복·Rising Window/Gap·Swing Pivot/CHOCH·WLB Deep Reset 단독 Entry는 반복적으로 40~50%대여서 후순위로 둔다.
+• 공통 Acceleration 후보 라이브러리는 새 숫자 threshold 없이 자연 state transition만 사용한다: Ret3/Ret5 음·0→양, Close>MA5/MA10 reclaim, MA5 slope Turn, MarketRS20 0선 재돌파, RS20Delta5/RS중기개선 Turn, ScoreDelta1/5D 변화 재양전환, Recovery False→True, FI LOW_EMA5_CROSS/BullCross, Setup High/최근 High 돌파.
+• Family별 Early-Fail invalidator를 별도로 두며 공통 Fail gate를 강제하지 않는다. Setup 취소 후 재진입은 새 Setup onset부터 다시 시작한다.
+• 채택기준은 actual Entry 이후 5/10/20D 승률·평균·PF·MAE/MFE·D/V 일관성 + Setup→Entry 전환율 + 원 Setup 대비 수익 Capture + Date×Ticker unique supply를 함께 본다.
+• 기존 성과상 Setup→Acceleration 구조가 유효했던 사례: E6 MA10 재돌파, E8 3D 수익 재양전환, E5 ThemeRS20 재돌파, E10 AB/AC/BC 경로별 전환. Fresh CORE+Internal-M 당일 BullCross 계열도 단독 CORE보다 Entry 효율이 개선된 후보로 보존한다.
+• 이 연구에서 충분한 Acceleration-confirmed 공급이 확보되면 신규 Entry Family 발굴을 재개하지 않는다. 부족할 때만 신규 공급 Family 탐색을 다시 연다. Production 변경 없음.
+
+
+[2026-09-22 Setup Feeder 재연구 #1 — Fresh CORE → Internal-M Acceleration]
+• Setup 정본은 기존 Fresh CORE onset 그대로 유지: Score 4.0~6.5 AND ΔScore5>=+2.0 AND PriceRet5 -3~0%. CORE 자체는 넓은 상승파동 후보선택용 Setup으로 해석하고 단독 고확신 Entry로 사용하지 않는다.
+• 기존 Fresh CORE 단독 고정20D는 N1,032 승률52.52% 평균+2.24%로 60% Entry 하한에 미달했다.
+• 실제 Entry 후보 B0는 Setup 발생 당일 Internal-M BullCross AND ScoreDelta1>0 동시확인. 확인일 EOD→다음 Open Entry. 추가 threshold 없음.
+• 보유일 계산정정 기준(매수일=1일차, EntryIndex+H-1 Close)에서 B0 실제 20거래일 성과는 N64 승률60.94% 평균+5.17%. 과거 표기64.06%/+5.23%는 EntryIndex+20, 즉 매수일 포함21번째 거래일 수치이므로 이후 동일20D로 혼용하지 않는다.
+• 따라서 CORE Setup→B0 actual Entry로 20D 승률은 약+8.42%p(52.52→60.94), 평균수익은 약+2.93%p(+2.24→+5.17) 개선됐다. 이는 Setup과 Entry를 분리하는 연구방향과 일치한다.
+• Internal-M D0 BullCross만 사용하면 기존 관찰20D N79 승률62.0%/+4.52%였고, ScoreDelta1>0 동시성을 붙인 B0가 더 작은 표본의 고확신층이다. Score3D≥+0.5 추가는 Forward를 악화시켜 미채택.
+• Fresh CORE 후 generic OSC Turn/LOW_RISING을 5~10D 기다리는 전략은 개선되지 않았고, B0 이후1~3D 추가확인 대기도 현재 CORE/IM 강세유지 조건에서는 신규체결0건이었다. 따라서 임의 지연형 Entry로 만들지 않는다.
+• 완화형 J1/C1은 공급을 늘렸지만 2021 stress 및 Validation/Forward 불확실성이 남아 #1 정본 Setup→Entry 구조로 채택하지 않는다. Fresh CORE 원식을 완화하지 않는다.
+• #1 연구판정: Fresh CORE=Setup Feeder, actual Entry=동일일 Internal-M BullCross + ScoreDelta1>0. 같은날 동시확인이 없으면 actual Entry를 보내지 않고 Setup/Watch로 남긴다. 이후 별도 지연규칙을 억지로 추가하지 않는다. 상태=Research Acceleration Candidate / NOT Production. 다음 번호 연구는 #2 52주 신고가·신고가 후 눌림→재돌파 Setup Feeder.
+
+
+[2026-09-22 Setup Feeder 재연구 #2 — 52W 신고가 / 눌림→재돌파]
+• #2-A 기본 Setup: frozen selected sector + stock RS Q5 + 52주 종가신고가(Close>=직전252D 최고High) + canonical LOW_TURN. 기존 성과는 10D53.97%, 15D54.76%, 20D54.76%/+7.52/PF2.94, 30D52.38%. 평균수익/PF는 양호하지만 hit-rate는 Setup 수준.
+• #2-A 품질층 E6: 위 Setup에 양봉·짧은윗꼬리(upper shadow<=body) + SectorRSUp을 추가한 기존 E6. 20D N72 승률58.33%/+8.44/PF3.09. NEAR60 Setup으로 유지.
+• #2-A actual Entry: E6 Setup 후 D3~12 사이 Price가 MA10 아래/같음→위로 첫 재돌파한 날 EOD 확인→다음 Open. N30, 진입후5D73.33%,10D73.33%/+6.59/PF4.01,20D70.00%, 10D D/V=88.89/66.67. 추가 Early-Fail은 개선이 없어 붙이지 않는다.
+• 해석: 52주 신고가+LOW_TURN은 Setup, 짧은윗꼬리+SectorRSUp은 품질층, MA10 재돌파가 실제 상승가속 확인이다. 원 E6를 덮어쓰지 않고 E6-v2 Acceleration 후보로 관리한다.
+• #2-B Setup/확인형: 첫 52주 종가신고가 후 1~3D 내 종가 눌림이 발생하되 Low가 돌파선 아래로 내려가지 않고, 이후 Close가 첫 돌파일 High를 넘는 최초일을 확인일로 사용. 그 자체가 가격 Acceleration 확인식이다.
+• #2-B 성과: 10D N98 승률57.14%/+2.78/PF1.81. 연도별 2023 61.54%, 2024 60.71%, 2025 57.78%, 2021/2022 약세. pooled 품질하한 미달.
+• #2-B 판정: 재돌파 자체만으로 actual Core Entry로 승격하지 않는다. 추가 threshold stacking 금지. Setup/Watch로 남기고 다른 독립 Acceleration 신호와 동기화될 때만 후속 연구 대상으로 사용한다.
+• 거래량 확대는 필수조건이 아니다. 신고가+LOW_TURN에서 Volume>20D평균은 성과를 개선하지 않았고, 비확대군의 60% 관찰은 N15 소표본이라 독립 규칙으로 사용하지 않는다.
+• #2 최종판정: 성공 경로는 E6 Setup→D3~12 MA10 reclaim→actual Entry. 단순 신고가/단순 눌림재돌파는 Setup Feeder로만 사용. 상태=Research Acceleration Candidate / NOT Production. 다음 번호 연구는 #3 8W Box Compression Setup Feeder.
+
+
+[2026-09-22 Setup Feeder #2 Early-Fail 재검증 — A/B]
+• #2-A E6→MA10 reclaim은 공식72건 E6 cohort를 정확 재현한 뒤 D3~12 MA10 reclaim 30건을 기준으로 재검증했다. Base actual Entry: 5D N30 73.33%/+3.40/PF3.56, 10D N30 73.33%/+6.59/PF4.01, 20D N30 70.00%/+7.48/PF2.69.
+• A에서 유효한 Early-Fail은 ‘MA10 reclaim 발생 전에 frozen 섹터선정 상태(SectorSelected & UsableSelection)가 해제되는 경우 Setup cancel’ 하나였다. 5건(16.7%) 취소 후 생존25건: 5D 80.00%/+4.26/PF5.21, 10D 76.00%/+7.82/PF4.76, 20D 72.00%/+9.71/PF3.58. 10D D/V=88.89%/68.75%. 취소군은 20D 평균 -3.64%로 기대값이 낮았다.
+• A의 다른 Fail 후보는 미채택: RS Q5 이탈은 10D/20D 승자를 삭제했고, Trend 이탈도 취소군이 오히려 강했으며, 점수방향 하락+RS중기약화는 10D를 악화했다. 신고가 돌파선 훼손은 30건 중28건을 취소해 정상 눌림까지 제거했다. 따라서 stacking 금지.
+• A에서 섹터선정 해제가 MA10 reclaim과 같은 날 발생한 경우까지 취소하면 10D N23 승률73.91%/PF4.54로 pre-trigger cancel만 사용한 76.00%/PF4.76보다 약했다. 따라서 Fail은 reclaim ‘이전’ 발생만 취소하며 같은날 충돌은 현재 Acceleration 우선으로 둔다.
+• #2-A 최신 연구구조: E6 Setup → MA10 reclaim 전 섹터선정 이탈 시 Setup cancel → 생존 중 D3~12 첫 MA10 reclaim → EOD 확인→익일Open actual Entry. Research Candidate / NOT Production.
+• #2-B 역사 정본은 10D N98/57.14%/+2.78/PF1.81이나, 당시 산출물에 event ledger 및 재돌파 최대대기/중복처리 등 세부 causal 구현이 저장되지 않아 동일98건을 정확 재생할 수 없었다. 따라서 결과맞춤 역추정으로 공식 B를 재구성하지 않는다.
+• 문서에 명시된 B 규칙만으로 새로 causal replay한 진단 cohort(raw145, 10D완결138)는 10D53.62%/+2.31/PF1.68. Setup prerequisite의 섹터선정 이탈, Q5 이탈, MA10/MA20 훼손, Trend 이탈, 점수하락+RS중기약화는 개선하지 못했다.
+• B clean replay에서 유일한 방향성 Early-Fail 단서는 Setup 시 RS단기개선>0이던 사건이 재돌파 전에 <=0으로 꺾이는 경우였다. 이를 취소하면 5D49.29→52.85%, 10D53.62→54.55%(N121,+2.60/PF1.73), 20D51.11→54.24%(N118,+5.14/PF1.96); 취소군20D 승률29.41%/평균-4.35%. 그러나 생존군도60% 미달이며 공식N98 parity가 아니므로 B 확정규칙으로 승격하지 않는다.
+• #2-B 상태: Setup/Watch 유지. RS단기개선 양→비양 전환을 Early-Fail 후보로만 보존하며, 원 N98 event ledger/코드가 확보되지 않는 한 공식 B 성과로 표기하지 않는다. 추가 threshold tuning 없음.
 .
