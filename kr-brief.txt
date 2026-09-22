@@ -1,13 +1,13 @@
-[SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-22T19:17:44+09:00
-refreshed_at_utc: 2026-09-22T10:17:44Z
-source_sha256: 2bc3d7418c623b3f7608c9cb22920117942da0fc30c8ed03b2f194a40f46d743
+[SIGNALFIND_SOURCE]
+refreshed_at_kst: 2026-09-22T19:22:00+09:00
+refreshed_at_utc: 2026-09-22T10:22:00Z
+source_sha256: a62088f7159978647656f2a98a38fe04209a2907f6654f3b9427c20ae2db0aca
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:35715173180
+trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-22 19:17 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-22 19:22 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-22 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-09-22 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-22 17:50 KST (5분 폴링)
@@ -616,8 +616,28 @@ trigger_cron: cloudflare:mirror-complete:35715173180
 # [4] 외부채널 인텔리전스
 ======================================================================
 
-외부채널 판독 정리분 300건 — **최신순** · 만료·중복분 포함(표시함)
+외부채널 판독 정리분 301건 — **최신순** · 만료·중복분 포함(표시함)
 
+- [2026-09-22 · KR · 중요도 B · 긍정] 한국항공우주 (047810) / KF-21 / Defense Aerospace / Fighter Production
+  공군이 9월 22일 KF-21 최초 양산기 001호기를 공식 인수해 사천에서 예천기지로 전개. 개발·시험 단계에서 실제 양산 인도·전력화 단계로 넘어간 프로그램 마일스톤으로 한국항공우주의 생산 실행과 후속 양산 매출 가시성을 지지. 공군은 2030년대 초까지 약 100대를 확보할 계획이며 전투배치는 내년 하반기 이후 예정.
+  검증: CONFIRMED OFFICIAL — 국방일보/공군 공식 보도에서 KF-21 최초 양산기 001호기 인수·예천기지 전개와 향후 전력화 계획을 확인. 신규 수주가 아니라 예정된 양산 프로그램의 실행 마일스톤으로 반영.
+  출처: HI_GS
+- [2026-09-22 · MACRO · 중요도 A · 긍정] BNO / USO / XLE / FRO / DHT / INSW / Strait of Hormuz / Oil Shipping / Middle East
+  이란이 미국이 이란 항만 봉쇄와 호르무즈 주변 군사작전을 중단할 경우 호르무즈 해협을 7일 이내 재개방할 수 있다는 조건부 제안을 한 것으로 보도. 성사 시 원유·LNG·해운의 지정학적 위험 프리미엄을 낮출 수 있는 직접 완화 Catalyst지만 미국의 수용이나 실제 통항 정상화 합의는 아직 없음.
+  검증: CONFIRMED REUTERS + KYODO-CITED MEDIA — Reuters 2026-09-22 시장보도에서 이란의 1주 내 호르무즈 재개방 가능성 제안이 에너지주·유가에 반영된 점을 확인했고, Kyodo 인용 보도에서 미국의 봉쇄·군사압박 완화 조건을 확인. 최종 합의·재개방은 미확정.
+  출처: insidertracking
+- [2026-09-22 · MACRO · 중요도 B · 긍정] BNO / USO / XLE / Asian refiners / Saudi East-West Pipeline / Yanbu / Oil Supply
+  Saudi Aramco가 최소 3개 아시아 정유사에 Yanbu 원유 선적이 조만간 재개될 수 있다고 비공식 전달한 것으로 보도. East-West 송유관·Yanbu 재가동이 현실화되면 홍해 방향 수출능력 회복으로 원유 공급 리스크 프리미엄을 낮출 수 있으나, 구체 재개일은 없고 10월 유럽향 일부 물량 차질도 남아 있어 실제 재가동 확인이 필요.
+  검증: PARTIALLY CONFIRMED — The Edge Malaysia가 거래자들을 인용해 Aramco의 재개 가능성 통보를 보도. Reuters는 Yanbu 선적 중단과 Ras Tanura 우회수출, East-West pipeline 복구 기대를 확인했지만 실제 Yanbu 재가동 시점은 아직 확인되지 않음.
+  출처: energy_youn
+- [2026-09-22 · KR · 중요도 A · 긍정] 포스코퓨처엠 (003670) / LFP Cathode / US ESS-EV Battery / Battery Materials
+  포스코퓨처엠이 SK온과 미국 등 공급용 LFP 양극재 1조742억원 규모 계약을 체결. 최근 매출의 36.6% 규모로 2027~2029년 공급하며 양사 협의 시 2031년까지 2년 연장 가능. 고니켈 중심 사업에서 LFP로 제품군을 넓히고 SK온으로 양극재 고객을 확대하는 직접 매출 가시성 Catalyst.
+  검증: CONFIRMED REGULATORY-FILING-BASED MEDIA — 2026-09-22 서울경제가 회사 규제공시를 인용해 계약금액 1.074조원, SK온, 2027~2029년 공급 및 2031년까지 연장 가능성을 확인. Telegram의 DART short link는 이번 실행에서 timeout되어 원문 직접 fetch는 불가했으나 핵심 계약조건은 교차확인.
+  출처: skitteam
+- [2026-09-22 · BOTH · 중요도 B · 긍정] 삼성전자 (005930) / SK하이닉스 (000660) / MU / SNDK / NAND / Enterprise SSD / AI Storage
+  TrendForce는 AI 서버·기업용 스토리지 수요와 생산능력 재배분으로 eSSD 공급이 타이트해져 리드타임이 약 16주로 늘었다고 분석. 수급 균형 시 통상 약 8주 대비 두 배 수준이며 HDD도 매우 타이트한 상태로 제시돼 NAND·eSSD 가격결정력과 AI 스토리지 업황에는 긍정적 신호. 개별 업체 실적 가이던스나 단독 매수신호로는 사용하지 않음.
+  검증: CONFIRMED PRIMARY — TrendForce Weekly Radar 2026-09-21에서 eSSD lead time 약 16주 vs balanced benchmark 약 8주, NAND 공급부족 및 HDD tightness를 확인. 산업 수급 데이터로만 반영.
+  출처: merITz_tech
 - [2026-09-22 · BOTH · 중요도 B · 중립] 005930,000660,MU,SKHY / 메모리 반도체 / 밸류에이션
   SK증권 9/22 스냅샷 기준 12MF P/E는 삼성전자 4.6배·SK하이닉스 4.4배(자체 추정), Micron 7.1배·CXMT 19.8배(Bloomberg consensus). SK하이닉스 본주와 ADR 간 괴리율은 36.4%로 제시됨. 시장 상대가치 비교용 데이터이며 매수·매도 신호로 해석하지 않음.
   검증: SOURCE_ONLY | SK증권 추정치 및 Bloomberg consensus를 인용한 증권사 밸류에이션 스냅샷; 별도 매매신호 생성하지 않음
@@ -1742,22 +1762,6 @@ trigger_cron: cloudflare:mirror-complete:35715173180
   메리츠의 Gamescom 2026 참관 결과 중국 게임사의 PC·콘솔 진출과 플레이어블 신작 공개가 크게 확대된 반면 한국은 공개 신작 파이프라인이 제한적이었다고 평가. 11월 GTA6 출시를 앞두고 서구권도 보수적 라인업을 유지해 중국 업체가 공백을 메우는 구도이며, 국내 업체는 연말 2027년 라인업 공개 여부가 핵심 관전 포인트.
   검증: ANALYST VIEW — 메리츠증권 인터넷/게임 2026-09-01 공식 Telegram 리서치 요약. 경쟁구도와 신작 파이프라인 평가는 현장 참관 기반 증권사 의견.
   출처: meritz_research
-- [2026-09-01 · KR · 중요도 A · 긍정] [만료] SK하이닉스 / 삼성전자 / Semiconductor / Treasury Share Program / Market Flow
-  9/1 장내 자사주 프로그램 체결로 SK하이닉스는 보통주 65만주 약 1.10조원, 삼성전자는 200만주 약 0.52조원을 집행. 누적 진행률은 각각 24.7%(9.88조원), 23.8%(3.57조원)이며 양사 모두 9/2 동일 수량을 추가 신청.
-  검증: CONFIRMED — 메리츠 Tech가 KIND 자료를 직접 인용. 2026-09-01 시장 보도에서도 삼성전자 200만주·SK하이닉스 65만주 프로그램 체결이 확인됨.
-  출처: merITz_tech
-- [2026-09-01 · KR · 중요도 A · 긍정] [만료] 삼성전자 (005930) / Semiconductor / Shareholder Return / Capital Allocation
-  삼성전자는 2024~2026년 누적 FCF의 50% 환원 정책에 따라 2024~2025년 환원액 29.3조원을 제외한 2026년 잔여 주주환원 재원을 약 90~110조원으로 예상. 3Q26 정규배당을 포함해 약 30조원 현금배당을 계획하고, 나머지는 2027년 1월 이사회에서 확정할 예정.
-  검증: CONFIRMED — 삼성전자 공시 요약과 2026-08-21 보도에서 2026년 잔여 환원재원 90~110조원, 3Q 약 30조원 현금배당 계획을 교차확인.
-  출처: KISemicon
-- [2026-09-01 · KR · 중요도 B · 중립] [만료] 삼성전자 / SK하이닉스 / 은행 / 건설 / Korea Strategy / Semiconductors / Financials / Construction
-  메리츠 9월 전략은 KOSPI 박스권을 기본 시나리오로 제시하면서 반도체 최선호 의견을 유지. 현금기반 배당·자사주 희소성을 강조하고 금융 중 은행을 선호, 건설을 차선호로 제시.
-  검증: ANALYST VIEW — 메리츠증권 2026-09-01 전략자료 공식 채널 요약.
-  출처: meritz_research
-- [2026-09-01 · KR · 중요도 B · 긍정] [만료] 삼성전자 / SK하이닉스 / MU / CXMT / Memory / Semiconductor Valuation / ADR
-  SK증권 9/1 업데이트 기준 12MF P/E는 삼성전자 4.4배, SK하이닉스 4.1배, 마이크론 6.6배, CXMT 20.0배. SK하이닉스 본주와 ADR 간 괴리율은 33.8%로 제시됨.
-  검증: ANALYST DATA — 삼성전자·SK하이닉스는 SK증권 추정치, MU·CXMT는 Bloomberg consensus 기반.
-  출처: skitteam
 - [2026-09-01 · KR · 중요도 A · 긍정] LS ELECTRIC / HD현대일렉트릭 / 전력기기 밸류체인 / Transformer / Switchgear / Cable / US Power Grid
   전력기기 수출은 이번 엑셀에서 가장 강한 축 중 하나. 8월 고용량변압기 일평균수출 +60.6% MoM·+71.7% YoY, 판가 +3.6% YoY; 미국향 고용량변압기 +44.4% MoM·+56.2% YoY, 판가 +6.3% YoY; 미국향 전체 변압기 +10.8% MoM·+35.2% YoY, 판가 +13.1% YoY; 미국향 전선 +3.0% MoM·+96.1% YoY, 판가 +16.0% YoY. SignalFind 전력기기 섹터도 10:43 기준 5.95·Δ+3.1로 강한 가속이 확인돼 산업·타이밍 Confluence가 높음.
   검증: USER XLSX + SIGNALFIND — 업로드 원본 엑셀의 고용량변압기/미국향 변압기/미국향 전선 8월 행을 직접 확인. LS ELECTRIC·HD현대일렉트릭 등 개별기업 귀속은 HS코드·수출주체 재확인 필요하지만 산업 방향은 강하게 지지.
@@ -3570,12 +3574,14 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
+
+
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-SignalFind 한국장 핵심메모 — CURRENT MASTER
+﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
