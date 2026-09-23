@@ -1,16 +1,16 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-23T18:33:00+09:00
-refreshed_at_utc: 2026-09-23T09:33:00Z
-source_sha256: 1ca3ac25d8359eb60cabd4ec11b3b0d4efe1d91e9e2fc8617fb7c1ee7438177d
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-23T19:15:45+09:00
+refreshed_at_utc: 2026-09-23T10:15:45Z
+source_sha256: 81770a9578f4207d225c5b4d419039c86c7148da1a3d10611eb2e0d5b89fb50e
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35847753705
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-23 18:33 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-23 19:15 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-09-23 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-23 17:44 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-23 18:40 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1760,14 +1760,15 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 838건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **613건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 839건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **614건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-23 18:40 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11219) 역추세가 아직 발동중 다만 현금 비중을 10월에 25% 정도 챙겨야 할 수 있다고 이야기 하는 듯 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11219.jpg
 - [2026-09-23 17:44 · [DAOL퀀트 김경훈] 탑다운 전략] (id 1108342152_13761) 연휴만큼은 주식시장 걱정 없이 편안하고 풍성한 한가위 보내세요 ❤️
 - [2026-09-23 16:57 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18139) 즐거운 추석 명절 보내세요 작지만 소중한 선물을 준비 했습니다 ^^ 도움이 되시길 바랍니다 첨부파일은 저작권 없으니 마음대로 공유 가능합니다 ㅋ https://blog.naver.com/love392722/224421076522
 - [2026-09-23 16:34 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11218) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_11218.jpg
@@ -3799,14 +3800,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -5334,4 +5333,25 @@ E8_RS_RECLAIM_QUIET: 55 = 0.045/day
 • 가격구조형 Pool은 20D/60D/252D breakout, Rising Window, MA10/MA20 reclaim, MA5x10/MA10x20 GC, Trend-up proxy, F5-style rebreak 등 재현 가능한 저승률 구조를 통합. Discovery 최선 공통식도 동일하게 Score<=6.5 & IM>0 & QuietVolume → FI LOW_TURN, pre-trigger IM negative cancel에서 D N285 20D61.40%/+2.95까지 올라갔으나 Validation N205 48.29%/+1.24로 재현 실패. 가격구조 Meta-Family 공통 Entry도 DROP.
 • 해석: FAIL Pool에는 Winner가 많고 Early-Fail 정보도 강하지만, 여러 저승률 Family를 하나의 공통 causal Entry로 전환하는 60%+ 규칙은 현재 Turn형/가격구조형에서 재현되지 않음. Discovery 60%만으로 채택 금지.
 • 다음 우선순위: Recovery/Defensive형(E10 B/C/ABC 및 Recovery 계열)의 exact historical screener ledger를 기준으로 같은 Meta-Family 방식 1회 검증. 여기서도 Validation 60%+가 아니면 DROP. 최종 목표 unique Actual Entry >=3/day 유지.
+
+
+[2026-09-23 FI OSC × 주봉 20W 구조 재검증]
+• 사용자 가설: FI OSC LOW_TURN/LOW_EMA5_CROSS 신호에서 주가가 주봉 20주 이동평균을 이미 이탈한 경우를 제거하면 성공률이 크게 올라가는지 확인.
+• 원천: SignalWarehouse OHLCV 2020~2025 + FI_OSC_CONTEXT60 canonical NONE trade_events. 주봉 20W는 미래누수 방지를 위해 신호일 기준 현재주 종가(당일 Close) + 직전19개 완료주 종가로 계산한 live 20W SMA. 신호일 EOD→다음Open, 20D NetReturn 기준.
+• 대표 6사례 exact 확인: 실패3건(SK하이닉스 2022-06-02, 카카오 2022-08-25, 삼성SDI 2024-10-14)은 모두 신호일 종가가 20W 아래이고 20W도 하락. 성공3건(두산에너빌리티 2025-05-29, SK하이닉스 2025-09-30, 현대차 2024-01-11)은 모두 20W 위이고 20W 상승. 대표사례에서는 3/3 대 3/3로 완벽분리.
+• 세부값: SK하이닉스 실패 Close107,000 vs live20W116,925(-8.49%); 카카오76,100 vs79,510(-4.29%); 삼성SDI351,472 vs352,329(-0.24%). 두산에너빌리티 성공42,200 vs27,655(+52.59%); SK하이닉스 성공347,500 vs272,775(+27.39%); 현대차 성공187,000 vs186,965(+0.02%).
+• 그러나 전체 canonical LOW_TURN/LOW_EMA5_CROSS 20D Date×Ticker OR union에서는 단순 종목20W 필터가 승률을 높이지 못함. 전체 N13,038 승률48.62% 평균+1.55% PF1.35; Stock>20W N6,690 승률47.23% 평균+1.68% PF1.35; Stock>20W&20W상승 N5,695 승률48.15% 평균+2.08% PF1.43. 오히려 Stock<20W N6,348 승률50.08%로 hit-rate는 약간 높았음.
+• 시장 20W 상태는 기대값에 더 중요. KODEX코스피(226490) >20W이면 N7,263 승률50.65% 평균+2.85% PF1.70; 종목·시장 모두 >20W이면 N4,658 승률50.45% 평균+3.18% PF1.72; 둘 다 >20W이고 두 20W 모두 상승이면 N3,788 승률51.03% 평균+3.60% PF1.81. 승률60%에는 미달하지만 평균수익/PF는 의미 있게 개선.
+• D/V 20D: 종목·시장 모두 >20W&상승 조건은 Discovery2021~23 N1,316 승률46.35% 평균+2.11% PF1.46, Validation2024~25 N2,472 승률53.52% 평균+4.39% PF2.01. 레짐 차이가 있어 단독 Entry gate로 채택하지 않음.
+• 해석: 대표 극단사례에서는 사용자 가설이 정확히 맞았지만, 전체 FI Turn에서 '종목 20W 이탈 제거'만으로는 성공률이 상승하지 않는다. FI Turn은 약세주식의 mean-reversion도 많이 포함하기 때문. 반면 시장20W 회복·상승은 기대값을 높인다. 기존 E9처럼 시장+종목 20W 장기구조 회복 → 5W/10W 상향전환 → Setup High 돌파 → 같은날 FI Turn까지 결합될 때 20D72%가 되는 구조와 일치. 따라서 주봉20W는 단독 filter가 아니라 느린 구조 Setup의 핵심축으로 유지.
+
+
+[2026-09-23 FI OSC 실패경로 — MA5/10 × RSI14-Signal9 재검증]
+• 사용자 차트관찰을 exact OHLCV로 확인. RSI Signal9는 RSI14의 9기간 EMA를 사용해 진단했으며, 대표 실패3건에서 뷰노(2023-09-14)와 에스티아이(2024-07-08)는 FI 신호일 당일 이미 MA5<MA10 + RSI14<Signal9 & Signal9하락이 동시 발생. 서연이화(2023-07-18)는 신호일에는 MA5>MA10이었지만 다음 거래일 2023-07-19 RSI 하락역배열이 먼저 발생했고, 2023-07-26 MA5<MA10까지 전환되어 두 약화조건이 동시 성립. 서연이화는 신호 직전 반복 윗꼬리도 확인됨.
+• 20W 구조양호 FI Turn Pool(종목>20W&20W상승 + KODEX코스피>20W&20W상승) N3,724의 원 Entry 20D 승률51.05%/평균+3.62%.
+• 신호일 현재만 사용하는 causal 필터는 효과 없음: MA5>=MA10 N1,573 승률49.78%; RSI14>=Signal9 또는 Signal9 비하락 N1,720 승률50.06%; 둘 다 건전 N1,027 승률49.95%. 따라서 MA/RSI 상태를 FI 신호 당일 hard Setup gate로 채택하지 않음.
+• 반면 FI Setup 이후 D0~D5 경로를 사후진단하면 MA5<MA10 미발생군 원진입20D58.65%, RSI14<Signal9+Signal하락 미발생군72.51%, 두 약화 모두 미발생군 N191 72.77%(Discovery77.42%, Validation70.54%). 이는 실패경로 식별력이 매우 강함.
+• 그러나 위 D0~D5 정보를 보고도 원 FI 다음날 진입수익을 평가하면 미래정보 누수이므로 Entry 성과로 사용할 수 없음. 이를 causal하게 고쳐 D5 EOD까지 생존을 확인하고 D6 Open 실제진입으로 이동하면 N191에서 5D52.36%,10D48.69%,20D52.88%(20D Discovery50.00%, Validation54.26%), 평균20D+3.77%로 60% 미달.
+• 반복 윗꼬리도 대표 실패에서는 보이나 보편 gate로 추가하면 과필터. D0~D5 MA/RSI 약화없음 + 직전5D 윗꼬리 반복<2의 사후 원진입20D는 N82 70.73%로 단순 MA/RSI 생존72.77%보다 낮아 universal 조건 미채택.
+• 결론: MA5/10 역배열과 RSI14/Signal9 하락역배열은 FI Turn 이후 실패경로를 조기에 설명하는 강한 Warning/Early-Fail 후보이지만, 이것만 기다린 뒤 진입하면 alpha가 남지 않는다. 다음 정확한 용도는 FI LOW_TURN/EMA5_CROSS를 Setup으로 두고, 실제 FI OSC 0선 상향돌파 같은 독립 Acceleration을 기다리는 동안 MA5<MA10 또는 RSI14<Signal9&Signal9하락이 먼저 발생하면 Setup cancel하는 구조로 검증한다.
 .
