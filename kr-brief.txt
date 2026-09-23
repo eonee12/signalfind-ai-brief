@@ -1,16 +1,16 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-23T16:58:00+09:00
-refreshed_at_utc: 2026-09-23T07:58:00Z
-source_sha256: ef2da55ffbebaf15987268ac526444b2e2d28c08ae8b049e78b0280b08f3ebf6
+refreshed_at_kst: 2026-09-23T17:51:00+09:00
+refreshed_at_utc: 2026-09-23T08:51:00Z
+source_sha256: 87f31c1a9d97ba26d94a6273ec9501d7b4d9a4e1e2dce83a737c71b9aec8161d
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-23 16:58 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-23 17:51 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-09-23 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-23 16:34 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-23 17:44 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1760,7 +1760,7 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 836건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+외부채널 원문 838건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
 첨부 이미지 **613건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
@@ -1768,6 +1768,8 @@ trigger_cron: github:schedule:brief-full-direct-sync
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-23 17:44 · [DAOL퀀트 김경훈] 탑다운 전략] (id 1108342152_13761) 연휴만큼은 주식시장 걱정 없이 편안하고 풍성한 한가위 보내세요 ❤️
+- [2026-09-23 16:57 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18139) 즐거운 추석 명절 보내세요 작지만 소중한 선물을 준비 했습니다 ^^ 도움이 되시길 바랍니다 첨부파일은 저작권 없으니 마음대로 공유 가능합니다 ㅋ https://blog.naver.com/love392722/224421076522
 - [2026-09-23 16:34 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11218) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_11218.jpg
 - [2026-09-23 16:34 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11217) 국내 피어앤그리드 오실레이터 상승중 주식 아직 높게 유지 필요 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11217.jpg
 - [2026-09-23 16:27 · 주식장인 이창대 텔레그램] (id 2428152138_29847) 추석연휴간 어떻게 영상이 진행되는지 그리고 어떤 포인트를 봐야하는지를 알려드리도록 할테니 참고하시길 바랍니다. 제약바이오에 앞으로 전망이나 그리고 자주 질문이 올라오는 종목들을 위주로 살펴봤습니다. 추석당일이 금요일이다보니 다소 짧은 명절입니다. 이번 추석명절 기간동안 가족분들이랑 행복한 시간 보내시고 다음주 월요일에 뵙도록 하겠습니다. 항상 여러분들이 돈을 벌어야 제가 돈을 번다는 모토로 정진해나가도록 하겠습니다
@@ -5320,4 +5322,16 @@ E8_RS_RECLAIM_QUIET: 55 = 0.045/day
 • Turn/Acceleration계와 Price-Structure계로 1차 분리해도 신호일 공통 Setup 최고 20D는 Discovery 약54.4%/54.3%, Validation 약51.9%/52.4%. 공통 라이브러리 방식으로 한 개 Setup gate + 한 개 Acceleration + 최대 한 개 Early-Fail을 Discovery에서 고정선택하고 Validation에 그대로 적용한 1차 스크린에서도 신규60% 재현 Family는 확인되지 않음.
 • 판정: '모든 FAIL을 하나의 Universal Setup/Early-Fail로 동시에 구제'하는 단일 규칙은 1차 FAIL. 기존 PASS/F4/E5-R1/F7-R1 등은 영향 없음. 중요한 발견은 Winner가 없는 것이 아니라, 초기경로의 가격·Score·RS 개선은 관찰 시점 이후 추가수익을 안정적으로 예측하지 못한다는 점이다.
 • 다음 연구방향: 모든 FAIL을 폐기하지 않는다. 같은 공통 feature/Acceleration/Early-Fail 라이브러리를 사용하되 lifecycle 성격별 소수 Meta-Family(저점/Turn, 가격구조/Breakout, Recovery/Defensive 등)로 분리하고, Discovery에서 정한 규칙을 Validation에 고정 적용하여 60%+와 unique supply를 동시에 통과하는 경로만 살리고 나머지는 DROP한다. 목표 unique Actual Entry ≥3/day 유지.
+
+
+[2026-09-23 FAIL Pool Meta-Family 2차 — 저점/Turn형 및 가격구조형]
+• 저점/Turn형 Pool: M1, Internal-M, FI LOW_TURN, FI LOW_EMA5, FastRS Accel, RS20 zero-cross, Score5 재가속, Sortino zero-cross, MA5 slope turn, Trend-up proxy, Ret3 turn, MA10 reclaim의 12개 저승률 계열을 Date×Ticker 기준 통합. D/V 완결 사건 143,374건, pooled 20D 승률48.88%, 평균+1.60%.
+• Winner-vs-ClearFail 신호일 공통특성: Score<=6.5는 Winner에서 D +4.06%p, V +1.10%p 더 흔했고 Score<8.5도 D +3.56%p, V +1.33%p로 같은 방향. IM positive는 D +2.65%p였으나 V -1.97%p로 반전. 기타 RS/MA/Breadth/섹터 강세는 전기간 공통 Winner Setup으로 재현되지 않음.
+• Early-Fail 선행특성은 강하게 재현: Setup 후5D 이내 Score+RS 동시약화는 Winner-Fail 발생률차 D -23.22%p / V -24.18%p, IM 음전환 -22.29/-23.20, MA20 loss -20.01/-21.75, Trend break -17.29/-16.42. 즉 실패경로 식별력은 존재.
+• Acceleration 발생률도 Winner에서 높음: 5D내 Score5 재가속 +20.39/+19.88%p, Ret5 turn +19.11/+16.01, MA10 reclaim +18.32/+16.75, IM BullCross +13.65/+16.21(D/V Winner-Fail 차이). 그러나 이 정보를 실제 관찰한 시점으로 Entry를 이동하면 이후 수익예측력이 약화.
+• Discovery-only 공통 Setup/Acceleration/Early-Fail grid의 Turn형 최선: Score<=6.5 & IM>0 & QuietVolume Setup → D1~10 first FI LOW_TURN → 그 전 IM negative cross면 cancel(동일일 Acceleration 우선). Discovery N499, 20D57.11%, 평균+2.60%; Validation N371, 20D50.67%, 평균+2.05%. 60% 미달.
+• Discovery에서 해당 공통규칙에 잘 맞는 origin family만 선택(Score5 reaccel/MA5 slope turn/MA10 reclaim)하면 D N246 20D62.60%였으나 Validation N183 46.45%로 붕괴. 따라서 저점/Turn Meta-Family 공통 Entry는 DROP. 개별 기존 PASS/Overlay는 유지.
+• 가격구조형 Pool은 20D/60D/252D breakout, Rising Window, MA10/MA20 reclaim, MA5x10/MA10x20 GC, Trend-up proxy, F5-style rebreak 등 재현 가능한 저승률 구조를 통합. Discovery 최선 공통식도 동일하게 Score<=6.5 & IM>0 & QuietVolume → FI LOW_TURN, pre-trigger IM negative cancel에서 D N285 20D61.40%/+2.95까지 올라갔으나 Validation N205 48.29%/+1.24로 재현 실패. 가격구조 Meta-Family 공통 Entry도 DROP.
+• 해석: FAIL Pool에는 Winner가 많고 Early-Fail 정보도 강하지만, 여러 저승률 Family를 하나의 공통 causal Entry로 전환하는 60%+ 규칙은 현재 Turn형/가격구조형에서 재현되지 않음. Discovery 60%만으로 채택 금지.
+• 다음 우선순위: Recovery/Defensive형(E10 B/C/ABC 및 Recovery 계열)의 exact historical screener ledger를 기준으로 같은 Meta-Family 방식 1회 검증. 여기서도 Validation 60%+가 아니면 DROP. 최종 목표 unique Actual Entry >=3/day 유지.
 .
