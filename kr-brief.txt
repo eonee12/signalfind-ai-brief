@@ -1,13 +1,13 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-24T19:32:00+09:00
-refreshed_at_utc: 2026-09-24T10:32:00Z
-source_sha256: 77b09e93a6abd99027beca6a359a93ea3d50e6535cd7d3da52f3d780548c8f70
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-24T20:09:00+09:00
+refreshed_at_utc: 2026-09-24T11:09:00Z
+source_sha256: 04dffce95baa9bf7e6dda87b894bff0c54adb13f95fecb59da368a1b8d5f0a3e
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35991315281
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 19:32 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 20:08 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-24 15:51 KST (5분 폴링)
@@ -3572,14 +3572,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -5701,3 +5699,16 @@ Drive 폴더: 투자/KR Entry & Exit Module
   - SQUEEZE_FASTRS_ER10_MAXRET_interaction_20260924.csv
   - SQUEEZE_FASTRS_ER10_bootstrap_20260924.csv
 • Entry 통합정본 Google Sheet 신규행 반영. Production 변경 없음.
+
+
+
+
+[2026-09-24 KR Entry DVF 원본대조 재감사 — 표준 D=2021~23 / V=2024 / F=2025]
+• 사용자 지시에 따라 Entry 통합정본의 교차검증 기준을 재정의/정정: Discovery=2021~2023, Validation=2024, Forward=2025 historical forward. 2025는 이미 관찰된 역사구간이므로 pristine OOS가 아니며, 2026은 표본이 충분할 때 보조진단으로만 사용한다.
+• DVF PASS 기준: 동일 조건·동일 평가 Horizon에서 D/V/F 승률이 각각 모두 >=60%일 때만 DVF PASS. 한 구간이라도60% 미달이면 DVF FAIL. 원본에 2024/2025 분리값 또는 event ledger가 없어 동일 Horizon을 재산출할 수 없으면 DVF FAIL(미완료)로 처리한다.
+• R-PASS와 DVF-PASS를 분리한다. 기존 R-PASS는 pooled/Horizon 연구보존 상태이며 삭제하지 않지만, Production/강건성 판단에서는 별도 DVF 상태를 반드시 확인한다.
+• 원본 대조에 사용한 주요 산출물: SignalFind_KR_EntryFamily_Supply_v1_20260921.zip, SignalFind_KR_E4_및_E3승률향상형_20260921.zip, SignalFind_KR_Candlestick_Entry_Ideas_20260921.zip, SignalFind_KR_E7_60D재가속_짧은윗꼬리_저거래량_20260921.zip, frozen 개별 Entry 모듈/Current Master의 yearly 기록, 2026-09-24 Squeeze/F8/MAXRET/ER10 event·yearly CSV.
+• 주요 교정: E9 20D는 기존 D21~23=68.18%, V24~25=75.00%였으나 표준 분리 시 V2024=45.45%, F2025=94.12% → DVF FAIL. F8 20D는 D73.33%, V2024=87.50%, F2025=50.00% → FAIL. Squeeze+MAXRET 15D는 D84.21%, V2024=100%, F2025=33.33% → FAIL. E4 10D는 D75.00%, V2024=37.50%, F2025=76.19% → FAIL. FastRS+Breadth 20D는 D60.00%, V2024=30.00%, F2025=91.67% → FAIL.
+• 현재 원본에서 동일 Horizon의 D/V/F가 수치상 모두60% 이상 확인된 항목은: (1) R2 Exact LOW_RISING 20D D60.00%(N20)/V80.00%(N5)/F100%(N2), (2) Squeeze→FastRS 10-Bar HC 15D D64.44%(N45)/V70.00%(N10)/F62.50%(N8), (3) Squeeze→FastRS HC+ER10<0.50 30D D80.95%(N21)/V83.33%(N6)/F100%(N2). 모두 Small-N/역사적 Forward이므로 DVF PASS*로만 표기하고 PROD-PASS로 해석하지 않는다.
+• 연도별 원본이 미분리된 E3-FastRS, F4, F7-R1, E8-v2, E5-R1, E10 route 일부, Weekly recovered 일부 등은 교차검증 미완료를 성공으로 보지 않고 DVF FAIL(미완료)로 표시했다.
+• Google Sheet SignalFind_KR_Entry_통합정본표_2026-09-24에 Q:V 원본대조 열과 별도 'DVF 교차검증' 탭을 반영. 연구 규칙 탭도 최신 DVF 정의로 교체. Production 변경 없음.
