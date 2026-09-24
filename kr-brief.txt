@@ -1,15 +1,15 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-24T14:29:00+09:00
-refreshed_at_utc: 2026-09-24T05:29:00Z
-source_sha256: 464993668246ca031d6da7e0f923a35b0bc86792a4769aaccc0f275ff17063f0
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-24T14:38:44+09:00
+refreshed_at_utc: 2026-09-24T05:38:44Z
+source_sha256: e9e6ef778deded15b595c057360969e14ec9a0af7040f1af73555878c5e75c2e
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35960848574
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 14:29 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
-기준일: 2026-09-23 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
-종목·섹터 스냅샷: 2026-09-24 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
+생성 시각: 2026-09-24 14:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+기준일: 2026-09-23 · 스냅샷 슬롯 14:30 (장중 잠정 — 확정 종가 아님)
+종목·섹터 스냅샷: 2026-09-24 14:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-24 14:24 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
@@ -285,7 +285,7 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [3] 종목 신호 (전 종목 · 시장 기준)
 ======================================================================
 
-기준일 2026-09-23 12:30 · **시장 열기 보통**(KODEX 코스피 10거래일 +0.21% · 컷 눌림 ≤-1.4 / 과열 >1.84) · 이 구간 기본 승률 47.4%(적극매수 · **7거래일 보유** · 585거래일 실측 · 전체 49.4%) · 302종 (전체 — 기타 포함, 보유 점검용) · 시장순위 오름차순
+기준일 2026-09-23 14:30 · **시장 열기 보통**(KODEX 코스피 10거래일 +0.21% · 컷 눌림 ≤-1.4 / 과열 >1.84) · 이 구간 기본 승률 47.4%(적극매수 · **7거래일 보유** · 585거래일 실측 · 전체 49.4%) · 302종 (전체 — 기타 포함, 보유 점검용) · 시장순위 오름차순
 
 **이 구간은 순위축이 없다 — 시장순위를 만들지 않았다.**
 게이트 통과분 14,718건을 다시 재보니 5기간 일관 지표가 하나도 없었다(SF-R53).
@@ -1743,7 +1743,7 @@ trigger_cron: github:schedule:brief-full-direct-sync
   대만 Nanya Technology의 2026년 8월 매출은 446.9억대만달러로 전월 대비 약 +1.9%, 전년 대비 +560.9% 증가하며 9개월 연속 사상 최고치를 기록. HBM·DDR5 중심의 글로벌 Capa 재배분으로 DDR4 공급 부족과 가격 협상력이 이어지는 가운데 회사는 수요 대응을 위한 2026년 CAPEX 상향 계획도 제시. 한국·미국 메모리 업체의 범용 DRAM 가격 환경을 보강하는 업황 데이터로 해석하되 개별 종목의 단독 매수신호로 사용하지 않음.
   검증: CONFIRMED/PARTIAL — Nanya의 8월 매출 446.9억대만달러, +1.88% MoM, +560.85% YoY 및 사상 최고 갱신은 2026-09-02 대만 TechNews 보도로 확인. AI 수요에 따른 메모리 공급 구조 변화·LTA 확대도 회사 경영진 발언과 일치. CAPEX 520억→최대 697억대만달러 세부 수치는 메리츠 요약 기준으로 별도 공식 IR 원문 재확인 전 PARTIAL 처리.
   출처: merITz_tech
-- [2026-09-03 · KR · 중요도 A · 긍정] S-Oil / SK이노베이션 / HD현대오일뱅크 / Refining / Diesel Export Arbitrage / Europe Supply Shortage / Hormuz
+- [2026-09-03 · KR · 중요도 A · 긍정] [만료] S-Oil / SK이노베이션 / HD현대오일뱅크 / Refining / Diesel Export Arbitrage / Europe Supply Shortage / Hormuz
   유럽의 디젤 공급 부족과 높은 유럽-아시아 가격 스프레드로 한국산 디젤 약 9만톤이 서유럽으로 향하는 이례적 장거리 거래가 포착됨. Priamos호가 한국에서 북서유럽까지 약 1만2,000마일을 운항할 예정이며 Trafigura가 거래를 주선한 것으로 전해짐. 통상 운송비 때문에 경제성이 낮은 한국→유럽 디젤 수출이 성사될 정도로 유럽의 제품 수급이 타이트하다는 의미로, 국내 정유사의 수출 마진·가동률에는 우호적 Catalyst. 다만 단일 화물 사례이므로 구조적 추세 판단은 후속 선적·스프레드 확인 필요.
   검증: CONFIRMED MEDIA / PARTIAL — Bloomberg 2026-09-03 보도를 채널 원문에서 확인. 약 9만톤, Priamos호, 북서유럽 목적, Trafigura 주선 및 유럽-아시아 디젤 스프레드 확대 내용을 확인. Bloomberg 원문은 robots 제한으로 직접 재열람 불가했으나 Reuters 2026-09-01은 전쟁 이후 아시아 정제품 수입 급감·디젤 가격/정제마진 급등 등 글로벌 제품 공급 타이트 배경을 독립 확인.
   출처: energy_youn
@@ -3757,14 +3757,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
