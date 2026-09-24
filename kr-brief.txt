@@ -1,16 +1,16 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-24T15:46:00+09:00
-refreshed_at_utc: 2026-09-24T06:46:00Z
-source_sha256: 1b2bbaf865a23e93b1aa0678315c12eda9a2ca759788e5c0f2569f8a3de37fe4
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-24T16:08:44+09:00
+refreshed_at_utc: 2026-09-24T07:08:44Z
+source_sha256: ee326f29186fb57ca607996fcbabebefcb20f28784d3bf65c4cecba599a3bd58
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35968030586
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 15:46 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 16:08 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 14:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 14:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-24 14:38 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-24 15:51 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1752,14 +1752,15 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 805건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **578건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 806건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **579건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-24 15:51 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11293) 메타, Meta Connect 2026 주요 발표 : Muse 음성·실시간 영상 지원 - 개인 AI 에이전트 Muse와 장시간 음성·영상 대화가 가능해졌으며, 대화하는 동안에도 백그라운드에서 작업을 지속 수행. Muse를 글래스에도 탑재해 하루 종일 핸즈프리로 이용 가능 : 글래스 Private Processing 도입 - 일부 AI 기능에 Private Processing을 적용해 사용자 정보를 메타를 포함한 외부에서 접근할 수 없도록 설계 : 첫 오디오 글래스 Ray-Ban Meta Audio 출시, $349 - 카메라를 제거하고 최대 12시간 배터리를 탑재한 메타의 첫 오디오 전용 글래스. 43g으로 역대 가장 가벼운 프레임이며 Clubmaster·Burbank 2개 스타일로 출시 : Ray-Ban Meta Gen 3 공개, $449 - 배터리 최대 9시간으로 확대하고 6개 마이크를 탑재해 배경 소음을 90% 이상 감소. 12MP 카메라와 3K 영상 촬영을 지원하며 Aviator를 포함한 신규 디자인 추가 : Meta Glasses 라인업 확대, - 신규 Capri·Nova 디자인과 Kylie 에디션 아이보리 컬러($399~), LISA 협업 모델($399~) 공개. 보급형 Meta Adventurer는 $249부터 시작하며, 연말까지 전체 AI 글래스 옵션을 100종 이상으로 확대할 계획 : Meta VR Glasses 공개, $1,299 - 약 100g의 고해상도 안경 형태로 VR 구현. 개인 영화관, 멀티 모니터 워크스테이션, 게임 콘솔 기능을 하나의 글래스에 통합. 2027년 봄 출시 예정 : Muse Charm 공개, 가격 미공개 - 키체인에 달 수 있는 소형 Muse 전용 디바이스로, 실시간 음성 모델을 기반으로 개인 AI 에이전트와 상시 대화할 수 있도록 설계. 12월 출시 예정 https://www.youtube.com/live/w9RyNj0ukWo https://x.com/finkd/status/2102913005730271579 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11293.jpg
 - [2026-09-24 14:38 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18144) 돈이 인생을 바꿀 수 있을까? https://youtu.be/nIwSZ04jeSM?si=MC1Mtn2jMAfqJWNk · 이미지: https://signalfind.co.kr/ai/media/1619402703_18144.jpg
 - [2026-09-24 14:24 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18143) 원자재 지금은 구리 등 비철금속 상승구간 내년에는 본격적 곡물 & 소프트 상승 예상 유동성 공급 이후 원자재 상승은 시간순으로 척척! https://stockeasy.intellio.kr/market-analysis?tab=commodity · 이미지: https://signalfind.co.kr/ai/media/1619402703_18143.jpg
 - [2026-09-24 10:48 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11292) 시간날때 보시면 좋습니다.
@@ -3674,14 +3675,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -5670,3 +5669,33 @@ Drive 폴더: 투자/KR Entry & Exit Module
   - TRADER_3BAR_PULLBACK_RECLAIM_events_20260924.csv
   - TRADER_3BAR_PULLBACK_RECLAIM_yearly_20260924.csv
 • Production 변경 없음.
+
+
+
+
+[2026-09-24 Trader-Formula Audit #2B — 3-Bar Setup/Early-Fail + Winner Overlap]
+• 질문1: 3-Bar Pullback→High Reclaim을 Setup→Early-Fail 관점으로 다시 보면 개선되는가?
+• 현재 저장된 exact Primary Actual Entry 400건에서 Setup 당시 필수 전제(SectorSelected/UsableSelection/RSQ5)가 다음날 High-Reclaim 확인일까지 유지되는지 자연 Early-Fail로 검사. 이는 새 threshold가 아니라 Setup premise invalidation만 제거하는 감사.
+• 결과(동일종목 non-overlap):
+  - 원식 10D N362 승률43.37%, 평균+0.25%, PF1.06.
+  - SectorSelected 유지 N352 승률43.75%, +0.36%, PF1.08.
+  - UsableSelection 유지 N349 승률43.55%, +0.31%, PF1.07.
+  - RSQ5 유지 N357 승률43.14%, +0.30%, PF1.07.
+  - Selection+RSQ5 모두 유지 N344 승률43.31%, +0.36%, PF1.08.
+  - 5D에서 combined 유지가 45.45→46.43%로 약 +0.98%p 개선되지만, 7/10/15/20/30D 모두 60%와 거리가 큼.
+• 해석: '다음날 확인'이라는 원식 구조에서는 Early-Fail 대기창이 하루뿐이라 premise invalidation만으로는 구조적 구제가 되지 않음. 더 긴 Setup→wait→Acceleration 연구는 별도 가설로 해야 하며 현재 저장된 400건 confirmed ledger만으로 1,895개 전체 Setup을 소급해 새 wait-window를 만들면 selection bias가 생기므로 실행하지 않음.
+
+
+• 질문2: 약40%대 승자들이 기존 연구 산식과 얼마나 겹치는가?
+• 정확히 재현 가능한 사건원장이 현재 보존된 범위만 사용: FI LOW_TURN/LOW_EMA5 연구계열(VolDown/SectorRSUp/BothRSUp 포함, E1 exact 포함) + Squeeze→FastRS HC. 오래된 E2/E3/E4/E5/E7/E8/E9/E10 전체는 당시 Date×Ticker event ledger가 모두 저장돼 있지 않아 '전체 연구산식 union'이라고 과장하지 않음.
+• 10D 기준 3-Bar non-overlap N362 중 승자157/패자205.
+  - 보존 사건집합 union과 당일 exact 겹침: 승자15.29%, 패자15.61%.
+  - 직전5거래일 포함 causal overlap: 승자35.03%, 패자35.61%.
+  → 승자만 기존 연구산식에 특별히 많이 겹치지 않음.
+• Horizon별 available-union exact 승자 overlap: 5D13.14%, 7D13.13%, 10D15.29%, 15D14.19%, 20D10.34%, 30D14.08%.
+• 직전5D 포함 승자 overlap: 5D32.00%, 7D33.13%, 10D35.03%, 15D28.38%, 20D26.90%, 30D30.28%. 같은 기준 패자는 각각39.52/37.44/35.61/37.50/37.91/36.75%.
+• E1 LOW_TURN BothRSUp exact same-day overlap은 대부분 Horizon에서 0~0.7% 수준, 직전5D도 약0.7~2.1%; Squeeze→FastRS HC는 당일/직전5D 모두 0%. 즉 3-Bar 승자의 대다수는 현재 exact-covered FI/Squeeze R-PASS 사건과 독립적.
+• 단, FI EMA5+VolDown이 3-Bar 신호 직전5D에 있었던 소표본 subset은 5D N19 승률63.16%(D60/V66.67)와 30D N14 승률64.29%(D57.14/V71.43)를 보였으나, V 5D 평균수익은 -0.91%이고 표본이 작아 새 PASS로 승격하지 않음. FI EMA5+SectorRSUp도 5D N12 66.67%이나 Small-N/평균수익 불안정. 연구 lead로만 보존.
+• 결론: 자연 Early-Fail만으로는 3-Bar FAIL을 구제하지 못함. 반면 승자들이 기존 exact-covered 산식과 크게 중복되지 않아 '독립적 price-structure family 후보'라는 성격은 남음. 재개한다면 threshold 추가가 아니라 전체 Setup ledger에서 별도 사전정의한 longer wait + causal acceleration을 처음부터 재구성해야 함.
+• 저장: TRADER_3BAR_EARLYFAIL_AUDIT_20260924.csv / TRADER_3BAR_WINNER_OVERLAP_DETAIL_20260924.csv / TRADER_3BAR_WINNER_OVERLAP_UNION_20260924.csv.
+• PASS Registry/Entry 통합정본표 변경 없음. Production 변경 없음.
