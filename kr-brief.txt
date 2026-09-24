@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-24T20:09:00+09:00
-refreshed_at_utc: 2026-09-24T11:09:00Z
-source_sha256: 04dffce95baa9bf7e6dda87b894bff0c54adb13f95fecb59da368a1b8d5f0a3e
+refreshed_at_kst: 2026-09-24T21:43:03+09:00
+refreshed_at_utc: 2026-09-24T12:43:03Z
+source_sha256: b8a212c47e99946bc875117688c4581e9b1552d1b294394859d54b1fa9229847
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:35991315281
+trigger_cron: cloudflare:mirror-complete:36000807891
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 20:08 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 21:43 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-24 15:51 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-24 20:19 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1727,11 +1727,11 @@ trigger_cron: cloudflare:mirror-complete:35991315281
   Fed Governor Christopher Waller said he is inclined to support holding rates steady at the Sep. 15-16 FOMC if August inflation continues cooling, while remaining open to a hike if inflation reaccelerates. His comments reduced near-term hike pricing and eased rate pressure on equities; this is a macro catalyst, not a standalone equity signal.
   검증: CONFIRMED — Reuters 2026-09-03 reported Waller could support holding rates steady if August inflation confirms disinflation, but would consider a hike if inflation accelerates. Reuters also reported market-implied September hike odds fell toward even odds after the remarks.
   출처: insidertracking
-- [2026-09-03 · MACRO · 중요도 B · 중립] US labor market / Fed / US Employment / Rates / Fed Policy
+- [2026-09-03 · MACRO · 중요도 B · 중립] [만료] US labor market / Fed / US Employment / Rates / Fed Policy
   미국 주간 신규 실업수당 청구건수는 20.6만건으로 전주 수정치 20.4만건 대비 2천건 증가했고 컨센서스 20.5만건을 소폭 상회. 계속청구는 177.9만건으로 8천건 증가. 노동시장이 급격히 악화됐다기보다 ‘저채용·저해고’ 상태가 지속되는 수치로, 9월 FOMC 금리경로를 바꿀 정도의 단독 신호는 아니며 다음 고용보고서 확인이 필요.
   검증: CONFIRMED — Reuters 2026-09-03이 미 노동부 발표를 인용해 신규 청구 206K(+2K), 예상 205K, 계속청구 1.779M(+8K)을 확인. 청구건수는 2026년 범위의 하단부에 있어 노동시장 급변 신호는 아니라는 평가.
   출처: insidertracking
-- [2026-09-03 · MACRO · 중요도 A · 중립] WTI / Brent / Hormuz shipping / Oil / Strait of Hormuz / Middle East Supply Risk
+- [2026-09-03 · MACRO · 중요도 A · 중립] [만료] WTI / Brent / Hormuz shipping / Oil / Strait of Hormuz / Middle East Supply Risk
   미군이 9월 1일 호르무즈 해협을 통과하는 약 40척의 상선과 약 1,800만배럴의 원유를 호송해 전쟁 이후 최대 단일일 물량을 기록. 전쟁 전 일평균 약 2,000만배럴에 근접한 규모로 공급 정상화 가능성을 보여주지만, Reuters의 9월 3일 선박 추적에서는 실제 통항 선박 수가 최근 평균을 크게 밑돌고 유가도 중동 긴장으로 6주 최고권을 기록. 따라서 ‘정상화 완료’가 아니라 군 호송 하에서 일부 물량 회복으로 판단.
   검증: PARTIAL CONFIRM / CROSS-CHECK — CNN을 인용한 다수 보도에서 미군 호송 40척·약 18M배럴을 확인. Reuters 2026-09-03은 호르무즈 통항 선박 수가 10일 평균 13척 대비 6척 수준에 그쳤고 Brent/WTI가 6주 최고권으로 상승했다고 보도해 해상 리스크가 여전히 높음을 확인.
   출처: insidertracking
@@ -1740,14 +1740,16 @@ trigger_cron: cloudflare:mirror-complete:35991315281
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 715건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **519건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 717건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **520건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-24 20:19 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11295) [톰 리: FOMC 이후 증시 ‘VERY BIG RALLY’ 가능성] Fundstrat 톰 리의 핵심 논리는 단순한 금리 인하 기대가 아니다. Fed의 매파적 결정도 이미 상당 부분 선반영 → 25bp 인상 자체는 새로운 악재가 아님. ‘Hike & Done’ 가능성 → 이번 인상이 사실상 마지막 인상이 되면 추가 긴축 우려가 완화. 인플레이션 둔화 가능성 → 관세·에너지·메모리 가격 등 일시적 요인이 향후 약화되면서 PCE가 자연스럽게 내려갈 가능성. 장기금리 하락 → 인플레이션 둔화 + 추가 긴축 우려 완화 → 10년물 금리 하락 가능성 → 성장주 밸류에이션 부담 완화. 대기자금 유입 → 최근 조정으로 투자심리가 약해진 상황에서 금리 불확실성이 해소되면 현금이 주식시장으로 이동할 가능성. 실적도 추가 개선 여지 → 톰 리는 주택투자 회복 등을 통해 S&P500 EPS에 추가 상승
+- [2026-09-24 20:18 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11294) » Meta의 AI 에이전트 Muse는 출시 이후 글로벌 일간 활성 사용자(DAU)가 빠르게 증가. 9월 10일 약 7만 명에서 20일 약 70만 명으로 열흘 만에 약 10배 확대 » 특히 9월 16일 이후 사용자 증가세가 가속되며 초기 이용자 확보가 빠르게 진행되는 모습 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11294.jpg
 - [2026-09-24 15:51 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11293) 메타, Meta Connect 2026 주요 발표 : Muse 음성·실시간 영상 지원 - 개인 AI 에이전트 Muse와 장시간 음성·영상 대화가 가능해졌으며, 대화하는 동안에도 백그라운드에서 작업을 지속 수행. Muse를 글래스에도 탑재해 하루 종일 핸즈프리로 이용 가능 : 글래스 Private Processing 도입 - 일부 AI 기능에 Private Processing을 적용해 사용자 정보를 메타를 포함한 외부에서 접근할 수 없도록 설계 : 첫 오디오 글래스 Ray-Ban Meta Audio 출시, $349 - 카메라를 제거하고 최대 12시간 배터리를 탑재한 메타의 첫 오디오 전용 글래스. 43g으로 역대 가장 가벼운 프레임이며 Clubmaster·Burbank 2개 스타일로 출시 : Ray-Ban Meta Gen 3 공개, $449 - 배터리 최대 9시간으로 확대하고 6개 마이크를 탑재해 배경 소음을 90% 이상 감소. 12MP 카메라와 3K 영상 촬영을 지원하며 Aviator를 포함한 신규 디자인 추가 : Meta Glasses 라인업 확대, - 신규 Capri·Nova 디자인과 Kylie 에디션 아이보리 컬러($399~), LISA 협업 모델($399~) 공개. 보급형 Meta Adventurer는 $249부터 시작하며, 연말까지 전체 AI 글래스 옵션을 100종 이상으로 확대할 계획 : Meta VR Glasses 공개, $1,299 - 약 100g의 고해상도 안경 형태로 VR 구현. 개인 영화관, 멀티 모니터 워크스테이션, 게임 콘솔 기능을 하나의 글래스에 통합. 2027년 봄 출시 예정 : Muse Charm 공개, 가격 미공개 - 키체인에 달 수 있는 소형 Muse 전용 디바이스로, 실시간 음성 모델을 기반으로 개인 AI 에이전트와 상시 대화할 수 있도록 설계. 12월 출시 예정 https://www.youtube.com/live/w9RyNj0ukWo https://x.com/finkd/status/2102913005730271579 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11293.jpg
 - [2026-09-24 14:38 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18144) 돈이 인생을 바꿀 수 있을까? https://youtu.be/nIwSZ04jeSM?si=MC1Mtn2jMAfqJWNk · 이미지: https://signalfind.co.kr/ai/media/1619402703_18144.jpg
 - [2026-09-24 14:24 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18143) 원자재 지금은 구리 등 비철금속 상승구간 내년에는 본격적 곡물 & 소프트 상승 예상 유동성 공급 이후 원자재 상승은 시간순으로 척척! https://stockeasy.intellio.kr/market-analysis?tab=commodity · 이미지: https://signalfind.co.kr/ai/media/1619402703_18143.jpg
