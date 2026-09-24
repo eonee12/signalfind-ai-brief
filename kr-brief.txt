@@ -1,13 +1,13 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-24T18:33:00+09:00
-refreshed_at_utc: 2026-09-24T09:33:00Z
-source_sha256: 817a9c00f75d1b2fa3564a2429bbcbd6da0b0e567e6d704542905e987b3732c8
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-24T19:29:40+09:00
+refreshed_at_utc: 2026-09-24T10:29:40Z
+source_sha256: ca6e60e1cac68a2b8f3bba4915ff9e52eeb73c98d5b5654c1b2e187dabd34eba
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:35987526651
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 18:33 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 19:29 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-24 15:51 KST (5분 폴링)
@@ -617,7 +617,7 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [4] 외부채널 인텔리전스
 ======================================================================
 
-외부채널 판독 정리분 282건 — **최신순** · 만료·중복분 포함(표시함)
+외부채널 판독 정리분 279건 — **최신순** · 만료·중복분 포함(표시함)
 
 - [2026-09-24 · MACRO · 중요도 B · 부정] - / US-China-Iran / Defense supply chain / Sanctions
   WSJ가 이란 세관 자료를 분석한 결과 2026년 1~6월 중국발 이중용도 부품 약 1,300건이 이란 국방부로 반입된 것으로 보도. 전자부품·모터·GPS·항공기 부품 등 드론·미사일에 전용 가능한 품목이 포함돼 미·중 정상회담 및 대이란 제재 리스크를 높일 수 있는 사안.
@@ -1735,18 +1735,6 @@ trigger_cron: github:schedule:brief-full-direct-sync
   미군이 9월 1일 호르무즈 해협을 통과하는 약 40척의 상선과 약 1,800만배럴의 원유를 호송해 전쟁 이후 최대 단일일 물량을 기록. 전쟁 전 일평균 약 2,000만배럴에 근접한 규모로 공급 정상화 가능성을 보여주지만, Reuters의 9월 3일 선박 추적에서는 실제 통항 선박 수가 최근 평균을 크게 밑돌고 유가도 중동 긴장으로 6주 최고권을 기록. 따라서 ‘정상화 완료’가 아니라 군 호송 하에서 일부 물량 회복으로 판단.
   검증: PARTIAL CONFIRM / CROSS-CHECK — CNN을 인용한 다수 보도에서 미군 호송 40척·약 18M배럴을 확인. Reuters 2026-09-03은 호르무즈 통항 선박 수가 10일 평균 13척 대비 6척 수준에 그쳤고 Brent/WTI가 6주 최고권으로 상승했다고 보도해 해상 리스크가 여전히 높음을 확인.
   출처: insidertracking
-- [2026-09-03 · KR · 중요도 B · 긍정] [만료] KMW (032500) / Telecom Equipment / 5G / US CAPEX / Filters / Systems
-  하나증권은 KMW에 대해 BUY와 12개월 목표가 7만원을 유지. 미국 통신장비 시장 개화와 공급업체 동향을 근거로 2027년 2분기부터 이익 급증 가능성을 높게 보고, 미국 시장 개화 이후 필터·시스템 장비 쇼티지 가능성을 제시. 장기 적자에 따른 재무 우려에 대해서는 최근 현금흐름·펀딩 여건 등을 감안해 디폴트 리스크가 낮다고 평가. 이는 증권사 전망으로 실제 미국 통신사 CAPEX·수주 확인이 필요.
-  검증: CONFIRMED ANALYST VIEW — 하나증권의 KMW BUY/목표가 70,000원 유지, 2027년 2Q 이후 이익 급증 및 필터·시스템 장비 공급부족 전망은 2026-08-21 공개 리포트 요약과 일치. 목표가·실적 전망은 증권사 추정이며 회사 확정 가이던스나 수주 공시가 아님.
-  출처: HanaResearchTelecom
-- [2026-09-03 · KR · 중요도 A · 긍정] [만료] 삼성전자 (005930) / Semiconductors / Shareholder Return / Capital Allocation
-  삼성전자는 2026년 주주환원 재원을 약 90~110조원으로 예상하고 3분기 정규배당을 포함해 약 30조원의 현금배당을 추진할 계획. 2024~2026년 누적 FCF의 50% 환원 정책에 따른 최대 규모 주주환원으로, 잔여 환원은 2026년 실적 확정 후 2027년 1월 이사회에서 현금배당과 자사주 매입·소각을 포함해 결정될 예정. 반도체 이익 개선이 실제 주주환원으로 연결되는 직접적 주가 Catalyst.
-  검증: CONFIRMED — 삼성전자 공식 Global Newsroom 및 공시에서 2026년 주주환원 예상액 90~110조원, 3Q 현금배당 약 30조원, 2024~2026년 FCF 50% 환원 정책을 확인. 잔여 규모·방식은 2027년 1월 이사회에서 확정 예정이므로 현재는 예상치로 구분.
-  출처: KISemicon
-- [2026-09-03 · BOTH · 중요도 B · 긍정] [만료] 삼성전자 / SK하이닉스 / MU / Nanya Technology / DRAM / DDR4 / Memory Supply / Semiconductor Capex
-  대만 Nanya Technology의 2026년 8월 매출은 446.9억대만달러로 전월 대비 약 +1.9%, 전년 대비 +560.9% 증가하며 9개월 연속 사상 최고치를 기록. HBM·DDR5 중심의 글로벌 Capa 재배분으로 DDR4 공급 부족과 가격 협상력이 이어지는 가운데 회사는 수요 대응을 위한 2026년 CAPEX 상향 계획도 제시. 한국·미국 메모리 업체의 범용 DRAM 가격 환경을 보강하는 업황 데이터로 해석하되 개별 종목의 단독 매수신호로 사용하지 않음.
-  검증: CONFIRMED/PARTIAL — Nanya의 8월 매출 446.9억대만달러, +1.88% MoM, +560.85% YoY 및 사상 최고 갱신은 2026-09-02 대만 TechNews 보도로 확인. AI 수요에 따른 메모리 공급 구조 변화·LTA 확대도 회사 경영진 발언과 일치. CAPEX 520억→최대 697억대만달러 세부 수치는 메리츠 요약 기준으로 별도 공식 IR 원문 재확인 전 PARTIAL 처리.
-  출처: merITz_tech
 
 ======================================================================
 # [5] 외부채널 원문
@@ -3584,14 +3572,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -5685,3 +5671,31 @@ Drive 폴더: 투자/KR Entry & Exit Module
   - PERSISTENT_RS6_summary_20260924.csv
   - PERSISTENT_RS6_overlay_detail_20260924.csv
 • PASS Registry 및 Entry 통합정본표에는 추가하지 않음.
+
+
+
+
+[2026-09-24 Trader-Formula Audit #6 — Kaufman ER10 × Squeeze→FastRS]
+• 출처: 사용자 제공 『유명 트레이더 매매법』의 Perry Kaufman. Efficiency Ratio는 일정기간 순수 이동폭 / 그 기간 일별 절대 이동폭 합. 기본 ER 기간=10일, adaptive MA fast=2/slow=30은 출처 확인. 다만 'ER=0.50'은 Kaufman 원전 매수문턱이 아니며, KAMA 매수의 threshold는 자료별 0.1/0.5/1.0 등으로 갈려 exact original trigger 확정 불가. 따라서 이번 연구는 ER10 자체를 SignalFind Family-specific quality overlay로만 사용.
+• 데이터/QA: selection-layer 일별 ledger의 EntryOpen/Ret5/10/20과 공식 비용0.20%p로 각 ExitDate Close를 역산. 같은 Date×Ticker에서 3개 horizon으로 복원한 Close의 최대 상대오차는 약4.8e-16, 3-Bar known Close와도 floating-point 수준 parity. 해당 Close로 causal ER10 계산.
+• Parent=SQUEEZE_FASTRS_10BAR_HC. ER10<0.50은 SignalFind 연구 operationalization. 의미는 10일 순이동이 실제 이동거리 합의 절반 미만 → 아직 가격이 직선적으로 과도하게 뻗지 않은 상태.
+• Parent ER-auditable 표본: 63 raw parent events(초기 history 부족 3건 ER 불가).
+• ER10<0.50 결과: raw36≈0.029/day(reference, 독립공급0). 5D N35 승률62.86%/+2.96/PF3.08; 7D N35 71.43%/+3.65/PF3.75; 10D N35 65.71%/+5.05/PF3.61; 15D N34 70.59%/+5.58/PF4.68; 20D N34 64.71%/+4.62/PF3.31; 30D N29 82.76%/+6.60/PF4.72.
+• D/V: 7D 65.22/83.33, 10D60.87/75.00, 15D69.57/72.73, 20D65.22/63.64, 30D80.95/87.50. 5D는 D56.52/V75.00로 Discovery60 미달이나 pooled R-PASS.
+• 반대군 ER10>=0.50은 7D53.85%(평균-0.73/PF0.77), 10D46.15%(-0.72/PF0.80), 20D50.0%, 30D44.0%로 약화. 즉 Squeeze family에서 low-ER가 quality discriminator로 작동.
+• Threshold robustness: ER cap 0.35/0.40/0.45/0.50/0.55/0.60 모두 주요 7D/15D/30D pooled 60%+; ER<0.50은 해석가능한 중간값으로 고정. 0.50은 source original threshold가 아니라 SignalFind research rule임을 반드시 표시.
+• Bootstrap: ER<0.50 ticker/date cluster 95% win CI는 7D 약57~86%, 15D 약53~85%, 20D 약47~82%, 30D 약69~97%. 평균수익 cluster bootstrap 하단은 7D/15D/20D/30D 모두 양수. 따라서 30D가 가장 견고, 20D win-rate 불확실성은 남음.
+• MAXRET interaction: Squeeze parent 안에서 ER10과 MAXRET20_PCT Spearman≈0.075로 거의 독립. ER<0.50 AND MAXRET20_PCT<0.80이면 7D N19 78.95%/+4.29/PF5.32, 15D N18 83.33%/+7.81/PF5.86, 20D N18 77.78%/+5.56/PF5.13, 30D N15 93.33%/+8.34. ER cap0.35~0.60에서도 주요 Horizon D/V60%+ 대체로 유지.
+• 그러나 ER+MAXRET 동시조건은 N15~19로 작고 두 개의 family-specific overlay를 stacking한 결과이므로 별도 독립 Family/Production Gate로 승격하지 않고 HC+ / Precision diagnostic으로만 보존. 부모 Squeeze Entry 삭제 금지.
+• Family-specific audit: F8 3-Bar에서는 ER<0.50 20D 약71.4%, ER>=0.50 약83.3%(N작음)로 동일 방향의 보편 Gate 근거 없음. E1에서도 ER 방향이 Horizon/Regime별 혼재. 따라서 ER<0.50을 universal Entry filter로 사용 금지.
+• KAMA full signal: 기본 10/2/30 계산은 가능하지만 원전 매수 threshold 정의가 현재 자료에서 확정되지 않으므로 임의 KAMA-cross/threshold를 만들어 검증하지 않음.
+• 판정: SQUEEZE_FASTRS_ER10_LT05_HC = R-PASS 5D/7D/10D/20D/30D / Family-specific HC Overlay / Small-N / NOT Production. 최대승률 30D82.76%. 독립 순증공급0.
+• 코드/결과 저장: KR Entry & Exit Module
+  - SQUEEZE_FASTRS_ER10_LT05_HC_RPASS_v1_0.py
+  - SQUEEZE_FASTRS_ER10_events_enriched_20260924.csv
+  - SQUEEZE_FASTRS_ER10_summary_20260924.csv
+  - SQUEEZE_FASTRS_ER10_threshold_robustness_20260924.csv
+  - SQUEEZE_FASTRS_ER10_yearly_20260924.csv
+  - SQUEEZE_FASTRS_ER10_MAXRET_interaction_20260924.csv
+  - SQUEEZE_FASTRS_ER10_bootstrap_20260924.csv
+• Entry 통합정본 Google Sheet 신규행 반영. Production 변경 없음.
