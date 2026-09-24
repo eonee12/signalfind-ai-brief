@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-24T10:38:44+09:00
-refreshed_at_utc: 2026-09-24T01:38:44Z
-source_sha256: ea648da69d4b658781d1f025d46641e2f09f0260b7e35d55e6be74f5b6c5ed55
+refreshed_at_kst: 2026-09-24T11:38:44+09:00
+refreshed_at_utc: 2026-09-24T02:38:44Z
+source_sha256: 5c2f2dd1e9ee091c73f3826d02c62038523a08fe80287884585b4696cbe5fa85
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:35943823487
+trigger_cron: cloudflare:mirror-complete:35948111578
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 10:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 11:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 10:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 10:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-24 10:28 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-24 10:48 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1760,7 +1760,7 @@ trigger_cron: cloudflare:mirror-complete:35943823487
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 802건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+외부채널 원문 803건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
 첨부 이미지 **576건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
@@ -1768,6 +1768,7 @@ trigger_cron: cloudflare:mirror-complete:35943823487
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-24 10:48 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11292) 시간날때 보시면 좋습니다.
 - [2026-09-24 10:28 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11291) 뮤즈
 - [2026-09-24 10:27 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11290) 일본은 기판 강세 뮤즈 수혜
 - [2026-09-24 10:26 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11289) Ibiden, Muse 등장에 따른 CPU 수요 확대 및 ABF 기판 수혜 기대감에 힘입어 일본 장 초반 +14% 급등 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11289.jpg
@@ -5633,3 +5634,24 @@ Drive 폴더: 투자/KR Entry & Exit Module
 • 연도별20D: 2021 N9 55.56%, 2022 N18 66.67%, 2023 N11 63.64%, 2024 N3 66.67%(평균은 -0.43%), 2025 N6 50.00% → Small-N/Regime-sensitive.
 • 판정: FASTRS_QUALITY_SCORE_REACCEL_EARLYFAIL = R-PASS20D / Small-N / Regime-sensitive / NOT Production. 추가 threshold stacking 없음.
 • 코드: FASTRS_QUALITY_SCORE_REACCEL_EARLYFAIL_RPASS_v1_0.py / SHA256 1d6d72af67b4bbcd5d9ca8fb456bca89bed6a8273152bd084d10a6d17632b0be / Drive https://drive.google.com/file/d/1wxOA3cV95VO5fRPJU88iWCnUgP99Ujj2/view
+
+
+[Horizon-Recovery #8 — FastRS 품질층 → RS20 Zero-Cross]
+• Setup: frozen selected/usable sector + stock RS Q5 + FAST_RS_ACCEL_ONSET(RS20Delta5 직전<=0→현재>0) + StandardScore<8.5 + 기존진입타이밍='반등·대기'.
+• Actual Entry: Setup 이후 defining FastRS episode(RS20Delta5>0)가 유지되는 동안 최초 MarketRS20 0선 상향돌파(직전<=0→현재>0) EOD 확인→다음 Open. 추가 threshold/Early-Fail 없음.
+• 기존 저장 연구성과: 20D N65 승률60.00%. Discovery61.70% / Validation55.56%로 Regime-sensitive.
+• 사용자 Horizon 규칙상 20D가 정확히60%이므로 R-PASS20D로 승격. 5/7/10/30D는 기존 저장요약에 없으므로 임의 추정하지 않음.
+• 예상 공급≈65/1,225≈0.053/day. 다만 FASTRS_ZERO_AFTER_SCOREUP 및 FASTRS_QUALITY_SCORE_REACCEL_EARLYFAIL과 동일 FastRS episode에서 중복될 수 있어 공식 unique supply에는 아직 가산하지 않음.
+• 상태: R-PASS20D / Regime-sensitive / NOT Production.
+• 코드: FASTRS_QUALITY_RS20_ZERO_RPASS_v1_0.py / SHA256 3a380bdee295a96358ff7edce48436f290a065e16d17e1361b18f0021b89895e.
+
+
+[Horizon-Recovery #9 — E8 Setup → Recovery False→True]
+• Parent Setup: frozen E8 Quiet RS Reclaim 원식 그대로 사용(선택/사용가능 섹터 + RS Q5 + Trend='상승 유지' + MarketRS20 0선 상향재진입 + RS20Delta5>0 + 양봉·짧은윗꼬리 + Quiet Volume).
+• Actual Entry: Parent E8 Setup 후 D5~D15 사이 최초 회복확인 False→True 전환일 EOD 확인→다음 Open. 추가 threshold 없음.
+• 기존 저장 연구성과: N46, 이후10D 승률60.00%, 평균+4.23%. Discovery56.52% / Validation63.64% → Small-N·Regime-sensitive.
+• 사용자 Horizon 규칙상 10D가 정확히60%이므로 R-PASS10D로 승격.
+• 예상 확인공급≈46/1,225≈0.038/day. Parent E8 및 E8-v2 Ret3 Turn과 동일 Setup episode 파생이므로 독립 Family 공급에는 중복가산하지 않음.
+• Early-Fail 참고: Recovery trigger 전에 Trend가 '상승 유지'를 이탈하면 cancel하는 HC 버전은 생존N35,10D65.71%, D/V61.11/70.59로 더 높았지만 20D에는 일부 취소군 회복이 관찰돼 base 원식에는 포함하지 않음. 필요시 단기 HC overlay로만 보존.
+• 상태: E8_RECOVERY_REON = R-PASS10D / Small-N / Regime-sensitive / NOT Production.
+• 코드: E8_RECOVERY_REON_RPASS_v1_0.py / SHA256 41b3c54109a576f603abbf7d4ebd790f7499161dbc305199a5d4d27b45aeabb8 / Drive https://drive.google.com/file/d/1OhFw9Q8F36dqrkVazrHAIo47n1X-fP97/view
