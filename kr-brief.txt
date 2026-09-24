@@ -1,13 +1,13 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-24T13:38:46+09:00
-refreshed_at_utc: 2026-09-24T04:38:46Z
-source_sha256: 1c7fecf742f594851ffa1ce6ce2fbabfa85dc5175d74381994ca154400c12155
+refreshed_at_kst: 2026-09-24T14:20:26+09:00
+refreshed_at_utc: 2026-09-24T05:20:26Z
+source_sha256: e6f8d069e9b1a80c787d61c3cf4be65517ab7da52b773b894d94471792e0c8c6
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:35956514996
+trigger_cron: cloudflare:mirror-complete:35959492405
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-24 13:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-24 14:20 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-24 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-24 10:48 KST (5분 폴링)
@@ -5671,3 +5671,42 @@ Drive 폴더: 투자/KR Entry & Exit Module
 • ABC-only는 일부 소표본 trigger에서 60%+가 관찰됐으나 N과 Discovery/Validation 안정성이 부족했고, 가격 trigger 및 RSI D0~D5 Acceleration에서도 전 Horizon60% 미달. generic Early-Fail 역시 대표 Family 개선에 실패.
 • 따라서 추가 threshold stacking, 기간선택, 소표본 cherry-pick 없이 B-only와 ABC-only는 Horizon-Recovery 최종 FAIL/STOP. 기존 E10 Setup Family 자체는 유지하며 B=Setup/Pilot/Watch, ABC=저품질 Setup으로 관리. 기존 A/AB/AC raw Horizon-PASS, BC Actual Entry, E10_RSI_ROUTE_ACCEL PASS는 영향 없음.
 • 신규 코드/공급 순증 없음. Production 변경 없음.
+
+
+
+
+[2026-09-24 Horizon-Recovery #11 — E6 raw 5D/7D 최소확인 종료]
+• 대상: E6 52W LOW_TURN Short Wick + SectorRSUp raw Setup(72건)의 과거 미저장 5D/7D Horizon.
+• 원 산출물(SignalFind_KR_52주신고가_OSC_Turn_위꼬리_연구_20260921.zip)과 E6 코드/정본을 재확인. 보존된 E6 raw 집계는 10D54.17%,15D55.56%,20D58.33%,30D52.78%이며, 원 산출물에는 5D/7D aggregate 또는 E6 short-wick 72건의 event-level ledger가 저장되어 있지 않음.
+• 사용자 원칙 '7D 미저장 연구는 원 event ledger에서 계산, 추정 금지'에 따라 raw E6 5D/7D를 임의 추정하거나 다른 cohort 수치로 대체하지 않음. 판정=raw 5D/7D 확인되지 않음(FAIL 판정 아님).
+• 다만 E6 Setup의 실전 Actual Entry 정교화는 이미 완료: D3~12 첫 MA10 reclaim N30에서 5D73.33%,10D73.33%,20D70.00%; reclaim 전 SectorSelected/UsableSelection 해제 Early-Fail 적용 후 N25에서 5D80.00%,10D76.00%,20D72.00%, 10D D/V88.89/68.75. F4_52W_LOWTURN_MA10_RECLAIM_RPASS_v1_0.py로 정식 R-PASS Entry 보존.
+• 따라서 raw E6 5D/7D 재구성을 위해 대규모 원천데이터를 다시 빌드하지 않고 STOP. E6는 Setup→Early-Fail→MA10 Acceleration 경로로 이미 회수되어 Entry Horizon-Recovery 완결을 막는 미해결 항목으로 보지 않음.
+• 신규 코드/Registry 변경 없음. Production 변경 없음.
+
+
+
+
+[2026-09-24 FAIL 신호 Context-Reuse Audit — 기존 강한 Actual Entry의 선행 Context로 재활용]
+• 목적: 독립 Entry로 FAIL한 신호를 다시 숫자 threshold로 구제하지 않고, 기존 R-PASS Actual Entry 직전의 선행 Context/Setup 정보로만 재사용할 가치가 있는지 정리. 기존 PASS 원식/Production 변경 없음.
+• 판정원칙: Context는 독립 Entry가 아니며, 기존 강한 Entry의 실행일을 바꾸지 않는다. Context 적용 후 성과 개선이 확인돼도 동일 Actual Entry의 subset이면 독립 공급량 0으로 처리한다. 새 threshold stacking 금지.
+• ✅ Rising Window → E7 Acceleration: 이미 exact 검증 완료. Rising Window 독립 breakout-confirm은 10D 약47.8%로 FAIL이었으나, pattern bottom 종가훼손 전 기존 frozen E7 60D Reacceleration Quiet가 발생한 경우 그 E7 신호를 Actual Entry로 사용하면 10D N104 승률64.42%, 평균+4.73%, PF2.54, Discovery70.97% / Validation61.64%. 모든 actual Entry가 기존 E7이므로 독립 순증공급0. 상태=R-PASS High-Confidence Context Overlay 유지.
+• 🟡 Deep Reset → CORE Context: 과거 결합효과에서는 직전20D Deep Reset 동반 CORE가 D20 pooled N186 승률61.3%, 평균+3.78%, PF2.34로 미동반 CORE 50.6%/+1.90/PF1.45보다 절대성과가 높았으나, KODEX코스피 대비 초과수익은 +0.47% vs +0.57%로 개선되지 않았고 p=0.928. 현재 공급 정본기간 2021~2025 exact replay에서는 20D58.79%, Discovery약58.68 / Validation약59.09로 60% 미달. 따라서 Positive Entry Overlay가 아니라 'Reset Context/시장회복형' 태그로만 유지; Hard Gate/우선순위 가점 금지.
+• 🔴 F20 broad natural onset: Score5/MarketRS20/ThemeRS20/Sortino60/VolumeAccel/MA5 slope/Recovery/Trend-up 8종을 Setup으로 두고 Ret3 turn·MA10 reclaim·Setup High break 및 각 자연 반대상태 Early-Fail, Breadth+ScoreAccel/Recovery, selected sector+RSQ5까지 이미 검증했으나 D/V 모두60% 미달. 가장 나은 대량경로도 확정 Entry 기준 미달. Positive Context Overlay로 승격하지 않고 Context/Watch 정보로만 유지.
+• 🔴 E10 B-only / ABC-only: 기존 route-specific 연구에서 B는 Ret3/Ret5/MA5·10 slope/cross/SetupHigh/Score·RS·Recovery 전환을 폭넓게 검사해도 큰 표본 10D 약53~55% 수준. ABC는 기본품질이 낮고 일부 소표본 60%+ trigger도 D/V 안정성 부족. Positive Context Overlay로 추가 승격하지 않음. B=Slow Setup/Pilot/Watch, ABC=Low-quality Setup 상태 유지.
+• 이미 역할변경으로 회수된 기존 FAIL 신호는 Context Overlay 재검증 대상에서 제외: Fresh CORE→T3/P1/R2, E6 raw→F4 MA10 reclaim, FastRS immediate→Score Reaccel/RS20 Zero, RSI Bull Cross→E10 route-specific timing. 이들은 이미 Setup/Acceleration 구조로 정식 R-PASS 경로가 존재하므로 중복연구 금지.
+• 최종결론: 현재 '실패신호 자체가 기존 강한 Entry의 선행 Context로 명확히 추가가치를 보인' 정식 사례는 Rising Window→E7 1개. Deep Reset은 시장회복 Context 태그로만 제한적 가치. F20 및 E10 B/ABC는 Positive Context 가점으로 사용하지 않는다. 신규 R-PASS/Registry 추가 없음.
+• 다음 단계: Entry 공급/Horizon-Recovery는 종료 상태 유지. 다음 연구는 공통 Warning/Early-Fail에서 RSI Bear, MA5<MA10, Score/RS 약화, SectorSelected/UsableSelection 해제 중 'Entry 직후 실패를 가장 빨리 구별하는 신호'를 Family별로 비교한다.
+
+
+
+
+[2026-09-24 KR Entry 통합정본표 Google Sheet 등록]
+• Google Sheet: https://docs.google.com/spreadsheets/d/1CYg56eaW8FYCWBYjzPtnSUYeu2C8roS2G-dfW22CeZQ/edit?usp=drivesdk
+• 보관위치: 투자/KR Entry & Exit Module 코드 폴더(폴더 ID 1aPl03ZiBorQn6AKrUNrBpFDQILqwt1V4).
+• 목적: 지금까지 보존된 KR Entry / Setup / Actual Entry / Re-entry / High-Confidence Overlay / Horizon-RPASS를 한 표에서 조회하는 실행·연구 인덱스.
+• 'Entry 전체표' 탭 컬럼: 대분류, 조건 이름, 산식, 발동조건(쉽게), 형태, Setup 조건, Early-Fail, 최대 승률, 최대승률 기간, 일평균 공급량, 공급 성격, 상태, 비고, 코드파일, 정본 링크.
+• 일평균 공급량은 raw / setup / actual / reference / subset·독립0 / upper-bound를 구분했다. Overlay/subset은 부모와 동일 Entry이므로 공식 독립 공급량에 중복가산하지 않는다. 전체 시스템 공급량은 Date×Ticker cross-dedup 전에는 단순합산 금지.
+• '형태 가이드' 탭에는 즉시형, Setup/Pilot형, 조기 가속형, 지연 가속형, 재진입형, 주봉 구조형, 압축→돌파형, Context Overlay, 수급 초기턴형을 쉬운 설명과 대표 조건으로 정리.
+• '연구 규칙' 탭에는 EOD→Next Open, Horizon 의미, R-PASS 기준, 공급 중복금지, Production 분리 원칙을 기록.
+• 이 Sheet는 조회·운영용 통합정본표다. 각 조건의 frozen 산식/코드는 기존 개별 Python 모듈과 PASS Registry 기록이 원천정본이며, Sheet가 이를 임의로 재튜닝하거나 대체하지 않는다.
+• Production 변경 없음.
