@@ -1,6 +1,6 @@
 SignalFind US — AI BRIEF
 ============================================================
-BRIEF_GENERATED_AT_KST: 2026-09-24 21:51 KST
+BRIEF_GENERATED_AT_KST: 2026-09-24 21:52 KST
 BASIS_DATE: 2026-09-23
 STOCK_BASIS_DATE: 2026-09-23
 SECTOR_BASIS_DATE: 2026-09-23
@@ -19,7 +19,7 @@ PUBLIC_DASHBOARD: https://signalfind-us.marketpilot.workers.dev/
 - Drive 링크 접근이 불가능하면 내용을 추정하거나 꾸며내지 말고 접근 불가를 명시한다.
 
 [IMPORTANT FOR AI]
-이 문서는 2026-09-24 21:51 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
+이 문서는 2026-09-24 21:52 KST에 생성된 최신 SignalFind US Refresh Snapshot이다.
 종목 분석 시 이 생성시각을 먼저 알리고, 해당 시각의 Snapshot을 기준으로 분석한다고 명시한다.
 STOCK/SECTOR/ETF 기준일과 SAME_EOD_STATUS를 먼저 확인하며 FAIL이면 혼합 기준일임을 명시하고 신규진입 판단을 확정하지 않는다.
 이 문서의 기계적 FinalState/Entry lifecycle 값을 임의로 다시 계산하거나 다른 상태로 재라벨링하지 않는다.
