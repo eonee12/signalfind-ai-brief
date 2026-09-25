@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-25T12:38:48+09:00
-refreshed_at_utc: 2026-09-25T03:38:48Z
-source_sha256: 65ee821bc78275580933c8333627e3100ca7a5e70f9eef04cb00ecf781d0974f
+refreshed_at_kst: 2026-09-25T13:38:49+09:00
+refreshed_at_utc: 2026-09-25T04:38:49Z
+source_sha256: 5e9069235ad4e97bb4829f2abb3fc2e009e95dfc647983ce83b64a3fde5093db
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:36091187620
+trigger_cron: cloudflare:mirror-complete:36095270685
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-25 12:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-25 13:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-25 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-25 07:07 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-25 13:33 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1707,7 +1707,7 @@ trigger_cron: cloudflare:mirror-complete:36091187620
   ITEQ 8월 매출 50.44억TWD(+6.2% MoM, +97.9% YoY)로 사상 최대 재경신. E-Glass 공급 부족 속 2Q 약 30% 가격 인상으로 GPM이 1Q 11.4%→2Q 22.0% 개선됐고, 가동률 70~75%에서 수요보다 원재료 확보가 생산 제약이라고 설명. 2027년 서버 PCIe 6.0·고다층화로 CCL 사양 상향이 예상돼 국내 AI PCB/CCL 밸류체인의 판가·믹스 개선을 보강하는 업황 신호.
   검증: CONFIRMED/PARTIAL — ITEQ의 2026년 8월 매출 5.044B TWD, +97.93% YoY는 2026-09-04 공개 월매출 공시 보도로 확인. 2Q GPM 22.02%(1Q 11.42%)도 8월 실적자료 요약과 일치. 30% 판가 인상·E-Glass 병목·M9 인증 및 2027 믹스 전망은 ITEQ IR 인용 메리츠 자료로 PARTIAL 처리.
   출처: merITz_tech
-- [2026-09-04 · BOTH · 중요도 B · 부정] AAPL / 한국 디스플레이·폴더블 공급망 / Foldable Displays / Apple Hardware / Large-form-factor OLED
+- [2026-09-04 · BOTH · 중요도 B · 부정] [만료] AAPL / 한국 디스플레이·폴더블 공급망 / Foldable Displays / Apple Hardware / Large-form-factor OLED
   Omdia를 인용한 9to5Mac 보도에 따르면 Apple이 검토해온 16.1~18인치급 대형 폴더블 MacBook/iPad 하이브리드 제품 계획이 취소된 것으로 전해짐. 기존 2028년 출시 가능성이 거론되던 프로젝트로, 고가 부품·메모리 비용 등 경제성 부담이 배경으로 지목됨. 이는 대형 폴더블 OLED·힌지·부품 공급망의 잠재 수요에는 부정적 Catalyst지만, 폴더블 iPhone 개발 취소를 의미하지 않으며 Apple의 공식 발표도 아직 없음.
   검증: CONFIRMED MEDIA / NOT OFFICIAL — 9to5Mac 2026-09-03이 Omdia 리서치를 인용해 16.1~18인치 foldable MacBook product plans canceled라고 보도. Mark Gurman도 과거 해당 대형 폴더블 제품이 실험 단계에 머물 수 있다고 언급. Apple 공식 제품 취소 발표는 없으므로 보도 단계로 구분하며 폴더블 iPhone까지 확대 해석하지 않음.
   출처: insidertracking
@@ -1724,14 +1724,20 @@ trigger_cron: cloudflare:mirror-complete:36091187620
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 525건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **373건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 531건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **376건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-25 13:33 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11356) 이비덴 이틀간 +18% 급등, CPU·ABF 재평가, 국내에서는 삼성전기 주목 ▶️ 이비덴 급등 원인 일본 ABF 기판 업체 이비덴이 이틀 연속 강세. 9/23 종가 대비로는 약 +18.2% 상승. AI Agent는 검색, 예약, 결제, 데이터 처리 등 복합적인 작업을 동시에 처리. 연산 자체는 GPU가 담당하지만, 이를 배분하고 연결하는 오케스트레이션은 CPU의 몫. Agent가 고도화될수록 서버에 탑재되는 CPU의 수와 사양도 함께 올라가는 구조 AI Agent 확대 → CPU 증가·고사양화 → 대면적 ABF 기판 수요 증가 이비덴은 서버 CPU용 ABF 기판 대표 업체라 이 흐름의 직접적인 수혜 기대가 반영되는 모습. 여기에 AI칩은 크기가 커지고 기판 층수가 늘면서 ABF 생산능력을 훨씬 많이 소모. 맥쿼리는 "AI칩이 일반 CPU 대비 ABF 캐파를 10~20배 소모하며, ABF 5년 공급부족 사이클이 시작됐다"고 분석. 결국 이비덴의 이틀 연속 급등은 시장의 관심이 GPU·HBM → CPU·ABF 로 확산되고 있다는 신호. ▶️ 국내에서 가장 직접적으로 연결되는 기업, 삼성전기 삼성전기는 서버 CPU·AI칩용 ABF 기판을 공급하고 있으며, 메리츠는 PC 포함 CPU향 비중이 전체 ABF 매출의 45% 이상으로 추정. 맥쿼리는 삼성전기가 고객사 자금을 활용해 2028년까지 ABF 생산능력을 2배 확대할 것으로 전망. 여기에 삼성전기는 ABF뿐 아니라 AI 서버용 고사양 MLCC도 보유. 맥쿼리 추정 기준 - AI 서버 MLCC 탑재량: 일반 서버 대비 약 30배 - AI향 MLCC OPM: 35% vs IT향 8% - 향후 3년 MLCC 캐파: 매년 약 +20% CPU 증가로 인한 ABF 수요 증가+ CPU·GPU 고성능화로 인한 고사양 MLCC 수요 증가 두 축의 수혜가 동시에 가능.
+- [2026-09-25 13:29 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11355) 최근 미장 52주 신고가 보안, 암진단, 바이오장비는 미장에서 플레이 하는게 좋고 국장은 반도체와 데이터센터 인프라 위주 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11355.jpg
+- [2026-09-25 12:55 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11354) 파일 업데이트 했습니다. · 이미지: https://signalfind.co.kr/ai/media/4362306699_11354.jpg
+- [2026-09-25 12:52 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11353) 소라티노 돌리는데 티커를 추가하니 이렇게 뜨기도 하네요 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11353.jpg
+- [2026-09-25 12:52 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11352) ㄴ미국 주도업종 바이오 진단과 장비 관련 한것들을 넣었습니다.
+- [2026-09-25 12:51 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11351) 🔥 완전 정배열 ETF (Price > 4W > 13W > 26W > 52W) 1. SEA (Shipping & Cargo) | 2026-07-24부터 | 41거래일 유지 2. SKYY (Cloud Computing) | 2026-09-14부터 | 6거래일 유지 3. ARKG (Genomic Revolution) | 2026-09-15부터 | 5거래일 유지 4. GNOM (Genomics & Biotechnology) | 2026-09-17부터 | 3거래일 유지 5. XLK (Technology) | 2026-09-17부터 | 3거래일 유지 6. ECON (Emerging Markets Consumer) | 2026-09-21부터 | 1거래일 유지 7. TDIV (Tech Dividend) | 2026-09-21부터 | 1거래일 유지 8. FDN (Internet) | 2026-09-21부터 | 1거래일 유지
 - [2026-09-25 07:07 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18145) [美증시 마감] 빅테크와 바이오 주도의 질적 압축 속 내부 양극화 심화 • 대형 AI 플랫폼 및 헬스케어 중심의 좁은 리더십. 좁은 주도군이 지수 상승을 견인하며 종목별 차별화 심화. • AI 하드웨어 및 생명과학 장비 기업들의 신고가 행진. 견조한 소비와 기술 혁신이 특정 섹터의 강세를 뒷받침. • 금리 민감 소비재 및 부동산 관련 업종의 신저가 확대. 고금리, 고유가 부담이 경기 민감 업종의 부진을 심화. • 한국 영향: 반도체, 바이오 등 실적 가시성 높은 수출주로 자금 집중 강화 전망. 고환율·고금리 취약 업종은 상대적 소외 가능성. 🔗 https://stockeasy.intellio.kr/us/briefing · 이미지: https://signalfind.co.kr/ai/media/1619402703_18145.jpg
 - [2026-09-25 06:53 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11350) 미국에 생긱는 주도업종군 52주 신고가 그룹에서 국장에 영향 주는건 반도체라고 생각합니다. 나머지 섹터는 미장에서 플레이 하는게 좋을 것 같네요
 - [2026-09-25 06:52 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11349) https://taerinsdad-market.streamlit.app/ 하루더 미장 동향 보고 월요일 국장 시작 동향 고민해야겠네요 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11349.jpg
@@ -5543,3 +5549,26 @@ Drive 폴더: 투자/KR Entry & Exit Module
 • 연도별 split 자체가 원본에 없으면 임의 재추정하지 않는다. 대신 2021~2025 pooled 승률/N/평균수익/PF 등 실제 보존 수치를 적고 '연도분할 없음'으로 명시한다.
 • 원본 근거는 파일명뿐 아니라 Drive 원본 URL을 함께 기록한다.
 • 2026-09-25 기준 SignalFind_KR_Entry_통합정본표의 'Entry 전체표'와 'DVF 교차검증' 탭을 이 규칙으로 수정했다. 특히 SWEEP4/W_MA20_SLOPE/W_GC5x20/BOX12/ATR4<WATR12/W_RECLAIM/W_GC10x20/CHOCH 등의 기존 '원본 2021~25 확인' placeholder를 실제 pooled/yearly 수치와 직접 원본 링크로 교체했다.
+
+
+
+
+[2026-09-25 FI OSC Price-Wave Coverage / Main Setup Feeder — 연구 정본]
+• 목적: FI OSC를 독립 Entry로 평가하는 승률연구가 아니라, 실제 주가 상승파동을 얼마나 넓게 선행 포착하는지 Recall/Coverage로 검증.
+• 상승파동 분모: SignalFind/RS/섹터/FI를 사용하지 않고 Close 기반 10% ZigZag 상승파동만 사용.
+• FI Turn 정의: FI OSC가 직전 63거래일 평균 아래에 있는 상태에서 방향이 하락→상승으로 전환. FI는 전일 EOD 데이터이므로 원 Turn EOD(t)는 다음 거래일 t+1부터 사용 가능으로 처리.
+• Coverage 창: 가격 상승파동 WaveStart 기준 D-5 / D-10 / D-20 이내에 사용가능 FI Turn이 존재했는지 측정. Lead Time은 FI 사용가능일→WaveStart 거래일 수.
+• 연구 분할은 사용자 확정: D=2021 / V=2022~2023 / 추가 독립검증=2024 / F=2025~2026.
+• D2021: price-wave 278건 중 FI 63D 이력 충분 eligible193건. D-5 37.8%, D-10 68.4%, D-20 89.1%, median lead 6D.
+• V2022~2023: eligible527건. D-5 42.3%, D-10 61.9%, D-20 89.0%, median lead 6D.
+• I24 2024 추가 독립검증: N307. D-5 45.0%, D-10 69.1%, D-20 92.5%, median lead 6D.
+• F2025~2026: N680. D-5 46.2%, D-10 67.8%, D-20 92.1%, median lead 5D.
+• 해석: 동일 방법에서 D/V/I24/F 모두 D-20 Coverage 약89~93%로 유지. 이는 'FI Turn을 사면 90% 오른다'가 아니라 '실제 10%+ 상승파동 대부분에서 선행 FI Turn이 존재한다'는 Recall 결과다.
+• Setup 위치: D-20 포착 상승파동에서 FI 사용가능일의 Price<MA20 비중은 D2021 약75.0%, V2022~23 약77%, I24 69.7%, F2025~26 66.5%. 최근으로 갈수록 일부 가격회복 후 Turn 비중이 늘지만 Price<MA20 바닥·회복형이 여전히 최대 Family.
+• 별도 확인: FI Turn 후 가격이 즉시 안 오른다는 사실 자체는 Entry alpha가 아님. 따라서 고정 5D/10D 대기 후 진입식은 채택하지 않는다.
+• 연구구조 확정: FI Turn = Main Setup Feeder → Setup Family 분기 → Family별 Early-Fail → 자연 Acceleration → Actual Entry. Lead Time은 결과지표일 뿐 Entry threshold로 사용하지 않는다.
+• PASS/Production: 사용자 PASS 판단 전 연구 정본 상태. 본 결과만으로 Production 승격하지 않음.
+• 재현 코드: FI_OSC_PRICE_WAVE_COVERAGE_FEEDER_v1_0.py
+  https://github.com/eonee12/signalfind-us/blob/main/research/kr/FI_OSC_PRICE_WAVE_COVERAGE_FEEDER_v1_0.py
+• 코드 동결 내용: price-only 10% ZigZag, FI 63D low-zone turn, EOD→next-session availability, D-5/10/20 Coverage, D/V/I24/F split, MA10/MA20 Setup Family 분류.
+• 다음 정교화: 가장 큰 BOTTOM_RECOVERY(Price<MA20) Family부터 Early-Fail과 Actual Entry를 분리 연구. 새 arbitrary threshold 추가 금지; 기존 자연상태 전환(MA reclaim, RS/FastRS/Score/Recovery/SetupHigh 등)만 비교.
