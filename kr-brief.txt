@@ -1,13 +1,13 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-25T17:11:00+09:00
-refreshed_at_utc: 2026-09-25T08:11:00Z
-source_sha256: 4818445df0bfeb134e94f26acf323062536525e7b511b0a96f40370ad0a4072a
+refreshed_at_kst: 2026-09-25T18:06:00+09:00
+refreshed_at_utc: 2026-09-25T09:06:00Z
+source_sha256: 70f06ddef4586e6b66355fe453edc9118b319363058d1085f2fef709f6672233
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-25 17:11 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-25 18:06 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-25 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-25 15:48 KST (5분 폴링)
@@ -1691,11 +1691,11 @@ trigger_cron: github:schedule:brief-full-direct-sync
   Bloomberg 보도 기준 Amundi, Pictet, Robeco, Fidelity 등 대형 자산운용사들이 최근 금 가격 조정 구간에서 금 보유를 재확대. Amundi는 금을 유동성 높은 헤지자산으로 평가하며 연말 온스당 5,000달러 회복을 전망. 금 현물은 고유가·지정학·인플레이션 우려와 금리 경로가 상충하는 환경이지만, 대형 기관의 재매집은 금·금광주에 대한 중기 센티먼트 보강 신호로 활용 가능. 자산운용사 전망은 가격 보장이 아니므로 단독 매수근거로 사용하지 않음.
   검증: CONFIRMED MEDIA — Bloomberg를 재전재한 MiningWeekly/Bloomberg HT 2026-09-04에서 Amundi가 금을 재매수하고 연말 $5,000/oz를 전망했으며 Pictet·Robeco·Fidelity도 조정 후 포지션을 재확대한 내용을 확인. Reuters 2026-09-04은 금 현물이 약 $4,467/oz 수준이며 Fed·고용지표가 단기 가격 변수임을 확인.
   출처: insidertracking
-- [2026-09-04 · KR · 중요도 B · 긍정] 두산 (000150) / NVDA / ASIC 공급망 / Elite Material(EMC) / AI Server CCL / GPU·ASIC / High-end Materials / Capacity Expansion
+- [2026-09-04 · KR · 중요도 B · 긍정] [만료] 두산 (000150) / NVDA / ASIC 공급망 / Elite Material(EMC) / AI Server CCL / GPU·ASIC / High-end Materials / Capacity Expansion
   대만 EMC(台光電) 8월 매출 201.46억TWD(+4.9% MoM, +129.8% YoY)로 사상 최대. AI 서버용 고사양 소재 수요와 풀가동이 핵심이며, 2Q 인프라 매출 비중 75~80%, M7 이상 소재 60~65%로 제시됨. 회사 자료 기준 2027년까지 수주 가시성이 있고 2028년까지 대규모 증설 계획도 제시돼, 두산 전자BG 등 국내 고사양 CCL 공급망에 강한 업황 read-through.
   검증: CONFIRMED/PARTIAL — EMC(台光電) 2026년 8월 매출 20.1456B TWD, +129.85% YoY 및 AI 서버 성장 수혜는 2026-09-04 공개 월매출 공시 보도로 확인. 인프라 매출 비중·M7 이상 비중·2027 수주 가시성·2028 CAPA 세부 계획은 EMC IR을 인용한 메리츠 자료로 PARTIAL 처리.
   출처: merITz_tech
-- [2026-09-04 · KR · 중요도 B · 긍정] 두산 (000150) / 대덕전자 / 코리아써키트 / TUC / AI Server CCL / High-speed Switch / Thailand Capacity / PCB Materials
+- [2026-09-04 · KR · 중요도 B · 긍정] [만료] 두산 (000150) / 대덕전자 / 코리아써키트 / TUC / AI Server CCL / High-speed Switch / Thailand Capacity / PCB Materials
   Taiwan Union Technology(TUC) 8월 매출 59.15억TWD(+0.1% MoM, +132.5% YoY). AI 서버·고성능 스위치 수요와 태국 신규 설비 가동 확대가 성장 배경이며, 태국·중산 증설로 월 생산능력을 2026년 260만장→2027년 380만장→2028년 530만장으로 확대할 계획. AI 인프라용 CCL 수요가 단기 판가뿐 아니라 중기 CAPA 투자로 이어지는 흐름을 재확인.
   검증: CONFIRMED/PARTIAL — TUC 2026년 8월 매출 59.15억TWD, +0.1% MoM, +132.5% YoY는 2026-09-04 TechNews/UAnalyze로 확인. TUC 공식 사이트에서도 태국 공장과 최대 월 90~120만장 생산능력 계획을 확인. 2027~2028년 총 월 CAPA 세부 수치는 회사·메리츠 자료 기반 전망으로 PARTIAL 처리.
   출처: merITz_tech
