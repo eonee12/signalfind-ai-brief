@@ -1,13 +1,13 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-25T09:38:31+09:00
-refreshed_at_utc: 2026-09-25T00:38:31Z
-source_sha256: 750a152963fe46f1ebc5af92a81b1acbc57bf5b03a6898a65115a7ef9c2b5936
+refreshed_at_kst: 2026-09-25T09:39:01+09:00
+refreshed_at_utc: 2026-09-25T00:39:01Z
+source_sha256: 6585a38aabdefdf4db4e921150de5548087902db6669de08eba255422e0fbb62
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:36078458043
+trigger_cron: cloudflare:mirror-complete:36078493427
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-25 09:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-25 09:39 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-23 · 스냅샷 슬롯 09:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-25 09:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-25 07:07 KST (5분 폴링)
