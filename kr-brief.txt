@@ -1,15 +1,15 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-25T14:26:00+09:00
-refreshed_at_utc: 2026-09-25T05:26:00Z
-source_sha256: c81b6c44438097ce2e6eee3ad109f47c871e42ce3f7992c69a4e516d03074746
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-09-25T14:38:52+09:00
+refreshed_at_utc: 2026-09-25T05:38:52Z
+source_sha256: cc4e8f2aa5f7fb4a2aea3b46bd93c8067571bea20c980cf56fd2aae27148e6d8
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:36099418306
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-25 14:26 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
-기준일: 2026-09-23 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
-종목·섹터 스냅샷: 2026-09-25 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
+생성 시각: 2026-09-25 14:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+기준일: 2026-09-23 · 스냅샷 슬롯 14:30 (장중 잠정 — 확정 종가 아님)
+종목·섹터 스냅샷: 2026-09-25 14:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-09-25 13:52 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
@@ -285,7 +285,7 @@ trigger_cron: github:schedule:brief-full-direct-sync
 # [3] 종목 신호 (전 종목 · 시장 기준)
 ======================================================================
 
-기준일 2026-09-23 12:30 · **시장 열기 보통**(KODEX 코스피 10거래일 +0.21% · 컷 눌림 ≤-1.4 / 과열 >1.84) · 이 구간 기본 승률 47.4%(적극매수 · **7거래일 보유** · 585거래일 실측 · 전체 49.4%) · 302종 (전체 — 기타 포함, 보유 점검용) · 시장순위 오름차순
+기준일 2026-09-23 14:30 · **시장 열기 보통**(KODEX 코스피 10거래일 +0.21% · 컷 눌림 ≤-1.4 / 과열 >1.84) · 이 구간 기본 승률 47.4%(적극매수 · **7거래일 보유** · 585거래일 실측 · 전체 49.4%) · 302종 (전체 — 기타 포함, 보유 점검용) · 시장순위 오름차순
 
 **이 구간은 순위축이 없다 — 시장순위를 만들지 않았다.**
 게이트 통과분 14,718건을 다시 재보니 5기간 일관 지표가 하나도 없었다(SF-R53).
@@ -3373,14 +3373,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
@@ -5575,3 +5573,15 @@ Drive 폴더: 투자/KR Entry & Exit Module
   https://github.com/eonee12/signalfind-us/blob/main/research/kr/FI_OSC_PRICE_WAVE_COVERAGE_FEEDER_v1_0.py
 • 코드 동결 내용: price-only 10% ZigZag, FI 63D low-zone turn, EOD→next-session availability, D-5/10/20 Coverage, D/V/I24/F split, MA10/MA20 Setup Family 분류.
 • 다음 정교화: 가장 큰 BOTTOM_RECOVERY(Price<MA20) Family부터 Early-Fail과 Actual Entry를 분리 연구. 새 arbitrary threshold 추가 금지; 기존 자연상태 전환(MA reclaim, RS/FastRS/Score/Recovery/SetupHigh 등)만 비교.
+
+
+
+
+[2026-09-25 Setup형 Entry FI OSC × RSI 정교화 — 변경관리 원칙]
+• 부모 Setup 원식과 기존 PASS/역사산식은 임의 수정하지 않는다.
+• FI OSC·RSI를 이용한 Early-Fail/Actual Buy가 기존 경로보다 명확히 개선되고 exact universe parity까지 확인된 Route만 CURRENT 실행산식을 수정하거나 신규 Fast Route로 추가한다.
+• 개선되지 않은 A/AB/AC/B/ABC 등 Route는 기존 산식을 그대로 유지한다.
+• 기존 장기 Actual Entry가 더 높은 승률/기대값을 가지면서 FI+RSI가 보유기간만 단축하는 경우 기존 경로를 삭제하지 않고 Standard Route와 Fast Route를 병렬 보존한다.
+• 개선 Route 확정 즉시 ① 해당 Python 코드 CURRENT 산식 반영(역사 v1 보존) ② KR CURRENT MASTER 동기화 ③ SignalFind_KR_Entry_통합정본표_CURRENT의 산식/Setup/Early-Fail/Actual Buy/Horizon/성과/코드링크 동시 반영한다.
+• 사용자 PASS/Production 승격은 별도 결정이며 AI가 자동 승격하지 않는다.
+• 현재 우선검증: E10 exact universe parity → C 신규 Actual Buy 후보 / BC Fast 15D 후보 재확인 → 유지 시 코드·MASTER·Sheet 동기화 → E8로 이동.
