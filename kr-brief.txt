@@ -1,16 +1,16 @@
-[SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-09-28T14:48:50+09:00
-refreshed_at_utc: 2026-09-28T05:48:50Z
-source_sha256: 37c01f63a66e9454e5d344a92bdfde195c03423277e0163496690e0b4b69b050
+[SIGNALFIND_SOURCE]
+refreshed_at_kst: 2026-09-28T14:55:00+09:00
+refreshed_at_utc: 2026-09-28T05:55:00Z
+source_sha256: c3b1ddac4313d9af648a1846e636608d246901527dfffefbf21a7ac32ed871cd
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:36383519900
+trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판 · 시장 기준)
 
-생성 시각: 2026-09-28 14:48 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-28 14:55 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-28 · 스냅샷 슬롯 14:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-28 14:39 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-28 14:35 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-28 14:49 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1549,11 +1549,11 @@ trigger_cron: cloudflare:mirror-complete:36383519900
   씨에스윈드가 Vestas American Wind Technology와 미국향 WIND TOWER 공급계약 1,510억원을 체결. 최근 매출 대비 약 5.2%, 계약기간은 2026-09-04~2027-07-02. 채널은 텍사스의 풍력·태양광·가스 복합 데이터센터 전력 프로젝트 관련 공급으로 추정하며, 미국 데이터센터 전력수요가 재생에너지 타워 발주로 연결되는 직접 계약 Catalyst. 데이터센터 프로젝트 특정은 채널 추정으로 구분.
   검증: CONFIRMED CONTRACT / PROJECT ATTRIBUTION PARTIAL — DART 공시번호 20260907800138 및 공개 공시 알림에서 Vestas American Wind Technology, 계약금액 1,510억원, 매출대비 5.2%, 2026-09-04~2027-07-02를 확인. 텍사스 데이터센터향 프로젝트라는 연결은 채널 추정으로 공식 공시에는 미기재.
   출처: SmallCap
-- [2026-09-07 · BOTH · 중요도 A · 긍정] 두산에너빌리티 / 현대건설 / 한전기술 / Westinghouse / US nuclear supply chain / US Nuclear / Korea-US Strategic Investment / EPC / Power Infrastructure
+- [2026-09-07 · BOTH · 중요도 A · 긍정] [만료] 두산에너빌리티 / 현대건설 / 한전기술 / Westinghouse / US nuclear supply chain / US Nuclear / Korea-US Strategic Investment / EPC / Power Infrastructure
   국내 보도에 따르면 한미 대미투자 최종 합의문 구상에 미국 내 원전 8기 건설 방향이 포함됐으며 이르면 9월 18일 MOU 서명이 거론됨. 현실화 시 국내 원전 주기기·EPC·설계 밸류체인의 미국 수주 파이프라인을 크게 확장할 수 있는 정책 Catalyst. 다만 현재는 최종 합의·발주·사업자 선정 전 단계이며 8기 모두의 사업 구조와 투자액은 미확정.
   검증: PARTIAL CONFIRM — 2026-09-07 머니투데이가 국회·정부 관계자를 인용해 한미 대미투자 합의문에 미국 원전 8기 방향성과 9/18 MOU 가능성을 보도. 이번 실행에서 한미 정부 공식 합의문은 확인되지 않아 확정 사업이 아닌 협상 단계로 저장.
   출처: eugene2team
-- [2026-09-07 · MACRO · 중요도 A · 중립] WTI / Brent / XLE / global inflation-sensitive assets / OPEC+ / Oil Supply / Hormuz / Energy Inflation
+- [2026-09-07 · MACRO · 중요도 A · 중립] [만료] WTI / Brent / XLE / global inflation-sensitive assets / OPEC+ / Oil Supply / Hormuz / Energy Inflation
   OPEC+ 핵심 산유국들이 10월 원유 생산정책을 동결하고 추가 증산을 멈춤. 이란 전쟁과 호르무즈 공급차질로 실제 물리적 공급이 불안정한 상황에서 공급 확대를 서두르지 않는 결정으로, 원유가격 하방 완충과 에너지 인플레이션 지속 가능성을 높이는 변수. 유가 자체는 지정학·실제 수출량이 더 큰 단기 결정요인.
   검증: CONFIRMED — Reuters 2026-09-06/07이 OPEC+의 October output policy unchanged 결정을 확인. 추가 증산 중단은 공식 회의 결과지만 실제 시장 공급량은 이란전쟁·수출차질로 쿼터와 괴리될 수 있음.
   출처: insidertracking
@@ -1726,14 +1726,16 @@ trigger_cron: cloudflare:mirror-complete:36383519900
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 193건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **131건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 195건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **133건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-28 14:49 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18167) [미디어] · 이미지: https://signalfind.co.kr/ai/media/1619402703_18167.jpg
+- [2026-09-28 14:49 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18166) 📊 외국인/기관 순매수 비중 상위 20 2026-09-28 14:49 · 이미지: https://signalfind.co.kr/ai/media/1619402703_18166.jpg
 - [2026-09-28 14:35 · 주식장인 이창대 텔레그램] (id 2428152138_29888) 메디톡스, 히알루론산 필러 ‘뉴라미스 볼륨 리도카인’ 중국 품목허가 획득 https://www.hankyung.com/article/202609289484P · 이미지: https://signalfind.co.kr/ai/media/2428152138_29888.jpg
 - [2026-09-28 14:25 · 주식장인 이창대 텔레그램] (id 2428152138_29887) 옆으로 횡보를 하고 있지만 다시 외국인, 기관 매수세가 유입이 되고 있습니다. 상단 120일 이평선을 돌파하면서 추세를 전환하는지 지켜보시길 바랍니다. 점차 시장에 2차전지 종목들이 살아나고 있는 상황입니다.
 - [2026-09-28 14:24 · 주식장인 이창대 텔레그램] (id 2428152138_29886) [미디어] · 이미지: https://signalfind.co.kr/ai/media/2428152138_29886.jpg
@@ -2996,12 +2998,14 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 27 | 2
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
+
+
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-SignalFind 한국장 핵심메모 — CURRENT MASTER
+﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
