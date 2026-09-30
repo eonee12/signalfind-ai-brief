@@ -1,16 +1,16 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-09-30T18:01:00+09:00
-refreshed_at_utc: 2026-09-30T09:01:00Z
-source_sha256: 4440f861ed605fda20ff5064f0268e1dfaae93aa0c895d147830a199d5aec15a
+refreshed_at_kst: 2026-09-30T19:01:00+09:00
+refreshed_at_utc: 2026-09-30T10:01:00Z
+source_sha256: 1af9224131a064c0ce8acc0e0719fdc1f433f21e85a59498d10ebf67b185f7a4
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-09-30 18:01 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-09-30 19:01 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-09-30 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-09-30 16:07 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-09-30 17:23 KST (5분 폴링)
+외부채널 최근 수집: 2026-09-30 18:40 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -2409,14 +2409,19 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 687건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **495건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 692건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **497건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-09-30 18:40 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11822) 50일신고가 반도체와 데이터센터인프라 다수 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11822.jpg
+- [2026-09-30 18:31 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11821) 국장은 브레스 많이 악화 미리 mdd가 많이 하락해 있어서 다음달에 코스피 지수에 연동되는 역추세 전략 하면 됩니다. 그러니 코스피 지수를 사거나 아니면 코스피를 이길 주도업종을 깔고 하면 되는데 저는 반도체와 데이터센터 인프라 유지 할 계획입니다. 10월 한달 주식 100% 해도 된다고 뜨는것 보니 피어앤그리드 오실레이터 둔화되어도 현금 비중을 많이 안가져 가도 될 수 있겠다 뭐 이렇게 생각합니다. · 이미지: https://signalfind.co.kr/ai/media/4362306699_11821.jpg
+- [2026-09-30 18:26 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11820) 그리고 내일 9월 한달치 수출데이터 발표 있습니다.
+- [2026-09-30 18:25 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11819) 내일 마이크론 실적발표 있습니다. 발표하고 나서 시장 관찰하는 맛이 있을 것 같아요 지난분기 마이크론은 투자이야기와 장비이야기가 있었는데 건설중심의 이야기였고 27년 이후 캐파라서 장비주 당장 수혜 해석 연결고리가 약했는데 이번에 마이크론 실적발표에서는 투자 이야기와 더불어 장비 반입 이야기나 이런게 좀 있으면 재밌을 것 같습니다.
+- [2026-09-30 18:06 · [DAOL퀀트 김경훈] 탑다운 전략] (id 1108342152_13770) └ 지난 6~7월부터 말씀드렸던 우려는 아직까지는 ‘탑다운 리스크’에 머물러 있었습니다. 이후 지난달부터 뭔가 꺼림칙했던 국내 경기 사이클이 이번 달 들어 실제로 큰 폭의 수축을 시작했습니다. 이는 기존의 ‘탑다운 리스크’가 ‘실물경기’로 전이되기 시작했다는 의미입니다. 이제 남은 최종 스텝은 ‘기업단’, 즉 기업 실적으로의 전이입니다. 이번 글로벌 긴축 공조는 2022년 당시의 공급병목+지정학적 리스크와는 전개 양상이 다르기에, 오히려 한 번에 충격을 주기보다 우리를 서서히 말려갈 개연성이 높습니다. 10월 세미나로 찾아뵙겠습니다. 🫡🫡
 - [2026-09-30 17:23 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11818) 국장이나 미장이나 투자 기본 로직은 주도업종을 소라티노나 수급이나 객관적으로 선정하고, 리스크관리는 피어앤그리드 오실레이터 참고하고, 최근에는 브레스 구간별 투자 로직도 같이 쓰고 있습니다. 확률높이려고 수급오실레이터를 국장에서 쓰고 미장은 최근 가격과 거래량으로 만든 오실레이터 지표 쓰고 있습니다. 그리고 좀더 먹겠다고 수출데이터도 뒤져보고, 컨센데이터도 뒤져보고. 실수해도 금방 팔려고 한종목 5프로를 평균비중으로 플레이 합니다. 실수하고 개선하고 하면서 보시는 분들도 저의 뻘짓 보면서 아 저러지 말아야겠다 생각으로 이어지면 좋겠습니다. 그리고 확률 높이기 위해 아침 저녁으로 머하는지 먼생각하는지도 남기고 있습니다. 저는 운도약하고 감도 별로없어서 데이터보고 생각하고 움직이는 방식을 택했습니다. 제꺼 많이 가져가서 자기꺼로 안들면좋겠습니다.
 - [2026-09-30 16:58 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11817) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_11817.jpg
 - [2026-09-30 16:58 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_11816) 미장이 찜찜하게 힘빠지고 있고 국장은 소부장 위주의 랠리?로 차별화 장세인데 미장 따라갈 가능성 있으니 주식 100%보다는 90~95% 잡고 언제든지 현금 만들 준비 필요 · 이미지: https://signalfind.co.kr/ai/media/4362306699_11816.jpg
@@ -6962,4 +6967,95 @@ Drive 폴더: 투자/KR Entry & Exit Module
 • 공통 exact metrics: https://drive.google.com/file/d/1nuFbNrZzlSo6i_RmQEkpy2vCXBwOuwgf/view?usp=drivesdk
 • CrossDate QA: exact ledger CrossDate는 proxy 재현상 8,502건 중 약98.6%가 LOW_TURN 이후 첫 FI OSC-EMA5 상향돌파일과 날짜가 일치. 그러나 CrossDate 진입 자체는 MID Leader/Leader Trend에서 60%를 만들지 못했으므로 별도 Entry Trigger로 승격하지 않음.
 • 공식 Coverage는 current592 Date×Ticker exact union이 완전 복원되지 않아 592/2,568=23.05% 유지. PH7/PH8 순수 신규 Coverage는 추정하지 않음.
+• Production 변경 없음.
+
+
+[2026-09-30 FI LOW_TURN Phenotype Coverage — Natural Market Regime Batch4]
+• 목적: PH1~PH10/BG2 이후에도 남은 성공을 커버하기 위해, 결과맞춤 수치 threshold 추가 대신 시장의 자연 상태(0선/증가·감소)만 사용한 독립 Route를 탐색. D1/D2 exact overlap 복원은 사용자 지시에 따라 후순위로 둔다.
+• 공통 실행: canonical LOW_TURN EOD 확인 → 다음 Open, 비용0.20%p. pooled 5/7/10/15/20/30D 중 하나라도 Win>=60%이면 R-PASS. V/F 약화만으로 폐기하지 않는다.
+
+
+• PH11 Short Crash + Market Weakness
+  - Parent = LOW_TURN + Close<MA20 + Ret20<=-7.78% + DD252>-36.52%.
+  - Quality = BreadthD5<=0 AND KODEXRet5<=0.
+  - 의미: 종목 단기 Crash와 동시에 시장 Breadth도 최근5D 개선되지 않고 KODEX도 5D 비양수인 broad washout 상태에서 FI LOW_TURN이 발생하는 mean-reversion route.
+  - pooled: 5D53.71 / 7D54.48 / 10D53.71 / 15D54.99 / 20D60.10 / 30D55.00%. 20D N391, +5 36.57%, Avg+3.05%, PF2.01.
+  - D/V/F 20D: D2021~23 N264 Win56.82% +5 34.47 Avg+2.13 PF1.63 / V2024 N70 Win60.00% +5 30.00 Avg+3.12 PF2.09 / F2025 N57 Win75.44% +5 54.39 Avg+7.22 PF5.75.
+  - 판정: R-PASS 20D / Regime-sensitive / NOT Production.
+  - 코드: https://drive.google.com/file/d/1q7ZIkcBS9k2X-MyXIgSV4gOKtLDYQRyh/view?usp=drivesdk
+  - Events: https://drive.google.com/file/d/1-YCBsveY9y6bGRy8shLO76qVEvHZwR5M/view?usp=drivesdk
+
+
+• PH12 Leader Bottom + Market Recovery
+  - Parent = LOW_TURN + Close<MA20 + Ret20>-7.78% + RSQuintile>=4.
+  - Quality = BreadthD5>0 AND KODEXRet10>0.
+  - 의미: 장기 RS 리더가 일봉상 Bottom 눌림에 있으나 시장 내부 Breadth가 5D 개선되고 KODEX의 10D 방향도 양수인 환경에서 재가속하는 route.
+  - pooled: 5D56.82 / 7D48.48 / 10D58.33 / 15D61.07 / 20D56.92 / 30D57.69%. 15D N131, +5 44.27%, Avg+6.04%, PF3.43.
+  - D/V/F 15D: D2021~23 N69 Win62.32% +5 47.83 Avg+4.91 PF3.15 / V2024 N35 Win48.57% +5 31.43 Avg+6.05 PF2.81 / F2025 N27 Win74.07% +5 51.85 Avg+8.93 PF5.71.
+  - 판정: R-PASS 15D / Regime-sensitive / NOT Production.
+  - 코드: https://drive.google.com/file/d/1_yZfcm2gEf7iGIiCFDp2lx-mkEtxXQ0E/view?usp=drivesdk
+  - Events: https://drive.google.com/file/d/1SABo4RZ4e25kxNEhjy7GGdDIan4r92VR/view?usp=drivesdk
+
+
+• 공통 metrics: https://drive.google.com/file/d/1QfE7SAMN9VRX5qhP8OAoX8oJf8WOPL-X/view?usp=drivesdk
+• Coverage 진단: 기존 working union(base470 + PH1~PH8 + BG2 + PH9 + PH10)은 937/2,568=36.49%였음(공식 D1/D2 exact overlap 미반영). 현재 feature-matched reconstruction에서 PH11은 기존 working routes 밖 약29건, PH12는 약51건의 추가 성공을 포착하여 합계 약+80건의 추가 가능성이 관찰됨. 이는 diagnostic estimate일 뿐 공식 Coverage가 아님. 같은 패턴을 단순 적용하면 working coverage는 약1,017/2,568=39.60% 수준이나 D1/D2 exact overlap 복원 전 공식화하지 않는다.
+• General Weak Bottom의 second route는 종목 D0 단일/2축으로 pooled60%가 재현되지 않았고, threshold-derived 시장식은 자연경계 단순화에서 무너져 추가 tuning STOP. 다음 Coverage 우선순위는 PH8 이후 남은 Leader Trend 및 PH7 이후 남은 MID Leader의 독립 환경/사이클 축이다.
+• Production 변경 없음.
+
+
+[2026-09-30 FI LOW_TURN Coverage 확장 — 100+ Success Multi-Route Batch5]
+• 사용자 목표: 작은 +10~50건 Route보다 current working residual에서 순수 신규 성공을 한 번에 약100건 이상 추가하는 Family를 우선 탐색.
+• 방법: 단일 phenotype의 1~3축 정적식으로는 순증100건+pooled Win60% 동시충족이 없었음. 따라서 FIR-D와 동일한 철학으로 서로 배타적인 phenotype Sub-route를 OR Family로 묶되, 모든 route는 D에서 사전정의한 자연경계 또는 D 성공군 중앙값을 동결하고 V/F로 재튜닝하지 않음. 공통 Horizon에서 Family pooled Win>=60%를 요구.
+• 공통 실행: canonical FI LOW_TURN EOD → 다음 Open, 비용0.20%p. 공식 current592 및 D1/D2 exact overlap 복원은 후순위 유지. 아래 신규수는 feature-matched working union 기준 diagnostic이며 공식 Coverage가 아님.
+
+
+• PH13 Residual Dual Route — 20D
+  - Route A General Weak RS Reset:
+    LOW_TURN + Close<MA20 + Ret20>-7.78% + RSQ<4 + MarketRS120>0 + RSPct>=37% + RS20Delta5<0.
+    의미: 일반 약세 Bottom이지만 장기 시장대비RS는 살아 있고, 단기 RS 가속만 아직 음수인 reset 상태.
+  - Route B Leader Trend Pause:
+    LOW_TURN + Close>=MA10 + RSQ>=4 + Ret20>0 + MarketRS20>=+15% + BreadthD3<=0 + SectorSelected=False.
+    의미: 강한 리더 추세에서 종목 RS는 강하지만 시장 Breadth가 잠깐 둔화되고 섹터 crowding 전인 pause/reaccel 상태.
+  - OR pooled: 5D54.19 / 7D54.88 / 10D53.49 / 15D57.58 / 20D60.51 / 30D57.88%. 20D N428, +5 39.95%, Avg+4.83%, PF2.36.
+  - D/V/F20D: D N227 Win54.19% Avg+2.83 PF1.83 / V2024 N114 64.91% +5.85 PF2.32 / F2025 N87 71.26% +8.72 PF4.22.
+  - feature-matched prior working union 밖 신규 성공 diagnostic +153건.
+  - 판정: R-PASS 20D / Regime-sensitive / Broad Coverage / NOT Production.
+  - 코드: https://drive.google.com/file/d/1LrluZxTq24B8TbzczQLUOFo-V_R5AChQ/view?usp=drivesdk
+  - Events: https://drive.google.com/file/d/1v7Zi4ELoYvzeIfOd7_PEF_PZGHngliJ6/view?usp=drivesdk
+
+
+• PH14 Residual Triple Route — 15D
+  - Route A General Weak Long-RS:
+    LOW_TURN + GeneralWeakBottom + ThemeRS120>0 + MarketRS120>0 + SectorBestSortinoRank<=10.
+  - Route B Leader Bottom Theme Pullback:
+    LOW_TURN + LeaderBottom + ThemeRS20>0 + DD60<=-9.5%.
+  - Route C General Trend Quality:
+    LOW_TURN + GeneralTrend + MA20Slope5>=+1.0% + StandardScore>=3 + Sortino60>0.
+  - OR pooled: 5D53.92 / 7D53.35 / 10D56.21 / 15D60.77 / 20D58.41 / 30D55.66%. 15D N520, +5 40.38%, Avg+4.52%, PF2.66.
+  - D/V/F15D: D N258 Win57.75% Avg+3.45 PF2.22 / V2024 N119 56.30% +3.83 PF2.23 / F2025 N143 69.93% +7.02 PF4.18.
+  - PH13 반영 후 추가 신규성공 diagnostic +107건.
+  - 판정: R-PASS 15D / Regime-sensitive / Broad Coverage / NOT Production.
+  - 코드: https://drive.google.com/file/d/1W4yA46OzqcqAkMLJ2k5dwJQFoib40tfA/view?usp=drivesdk
+  - Events: https://drive.google.com/file/d/181muY8dMCX2bpa7dqc-2amjMWOYNhhIW/view?usp=drivesdk
+
+
+• PH15 Residual Triple Route — 30D
+  - 목적: PH13/14 이후에도 100건 이상을 추가할 수 있는 장기 Horizon route 탐색. 이 Family는 Discovery-median-sensitive이므로 threshold 재튜닝 금지.
+  - Route A Leader Trend Slow-Market:
+    LOW_TURN + LeaderTrend + KODEX MA60Slope5>=+0.123574% + RS20Delta5>=+3.65971%p + SectorRS52Mean<=+1.23624.
+  - Route B MID Leader Broad-RS:
+    LOW_TURN + MIDLeaderCooling + Breadth>=53.2342% + MarketRS120>=+21.2057% + ThemeRS60>0.
+  - Route C DeepCap Non-rising MA20:
+    LOW_TURN + DeepCap + MA20Slope5<=0.
+  - OR pooled: 5D50.36 / 7D51.92 / 10D53.84 / 15D54.75 / 20D57.75 / 30D61.50%. 30D N813, +5 47.97%, Avg+6.63%, PF2.57.
+  - D/V/F30D: D N400 Win64.50% Avg+6.16 PF2.64 / V2024 N240 55.83% +4.68 PF1.86 / F2025 N173 62.43% +10.43 PF3.88.
+  - PH13+PH14 반영 후 추가 신규성공 diagnostic +102건.
+  - 판정: R-PASS 30D / Regime-sensitive / Discovery-median-sensitive / Broad Coverage / NOT Production.
+  - 코드: https://drive.google.com/file/d/1ENG0SQuhbEOirXk-sIjBSIXyabt1tM2v/view?usp=drivesdk
+  - Events: https://drive.google.com/file/d/1mLauENOoJV8nvTXiXwL3_Y0FdI4b7c3L/view?usp=drivesdk
+
+
+• 공통 metrics: https://drive.google.com/file/d/1iOoIzWhgkRrFXZ4qMjVgUWLHXAfp3e0a/view?usp=drivesdk
+• Coverage diagnostic: 동일 feature-matched reconstruction에서 PH12까지 covered success=927건. PH13 후1,080건(42.06%), PH14 후1,187건(46.22%), PH15 후1,289건(50.19%). 이는 공식 Coverage가 아니라 diagnostic union. FIR-D1/D2 exact ledger 및 기존 592와의 완전 Date×Ticker overlap 복원 전 공식 수치로 승격 금지.
+• 추가 탐색: PH15 이후에도 100건 family는 수학적으로 가능했으나 최소5개 이상 세부 Route를 묶어야 했고 각 route 신규기여가 15~28건으로 파편화됨. 현 단계에서는 100건 단위의 '큰 독립축'이라기보다 작은 edge 묶음이므로 즉시 등록하지 않고 STOP/보류. 다음 대형 Coverage 연구는 새 정보축(OSC cycle full path, sector lifecycle, weekly+market regime)으로 이동.
 • Production 변경 없음.
