@@ -1,13 +1,13 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-10-01T19:29:00+09:00
-refreshed_at_utc: 2026-10-01T10:29:00Z
-source_sha256: 79bddad86d82094fa592ef2ccc154732919e8f61d8fc7d838bf53b0f9b9e1297
+refreshed_at_kst: 2026-10-01T20:10:00+09:00
+refreshed_at_utc: 2026-10-01T11:10:00Z
+source_sha256: 367b3f789540cbab965bbff9e8eea6872f7e4cc6a95b0d149b751d5ce052adca
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-01 19:29 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-10-01 20:10 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-10-01 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-10-01 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-10-01 19:17 KST (5분 폴링)
@@ -1922,7 +1922,7 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   트럼프 대통령이 이란전 종료 시점을 11월 중간선거 이후로 예상한다고 언급한 가운데, 이란·미국의 선박 공격이 확대되고 후티가 예멘의 전략항 모카를 장악하며 바브엘만데브 해협 방향으로 위협 범위를 넓힌 것으로 전해짐. 기존 호르무즈 리스크에 홍해·바브엘만데브 운항 리스크가 동시에 겹치는 '이중 해상 chokepoint' 위험으로, 원유·LNG 운임·보험료와 글로벌 물류 리스크 프리미엄을 높이는 신규 Catalyst. 전쟁 종료 시점은 정치적 전망일 뿐 확정 일정이 아님.
   검증: CONFIRMED HIGH-QUALITY — Reuters 2026-09-10이 트럼프의 전쟁 종료 전망과 중동 해상공격 확대·Brent $100+를 보도했고, Guardian도 후티의 모카 장악 및 Bab el-Mandeb 인접 해운위험 확대를 확인. 종료 시점은 공식 협정이나 확정 예측이 아님.
   출처: insidertracking
-- [2026-09-10 · MACRO · 중요도 A · 중립] Brent / WTI / tanker shipping / marine insurers / Iran / Energy Shipping / Strait of Hormuz
+- [2026-09-10 · MACRO · 중요도 A · 중립] [만료] Brent / WTI / tanker shipping / marine insurers / Iran / Energy Shipping / Strait of Hormuz
   이란이 자국을 오가는 원유·가스·석유제품 운송 외국선박에 부과하던 10% 화물운송 부담금을 일시 중단하도록 지시. 호르무즈 주변의 전쟁·봉쇄 리스크로 높아진 운송비를 낮추고 외국선박 참여를 유도하려는 조치로, 이란산 에너지 물류의 비용 부담을 일부 완화할 수 있음. 다만 임시조치이며 최종 적용 품목과 정부 승인 절차가 남아 있어 공급 정상화 신호로 단정할 수 없음.
   검증: CONFIRMED REUTERS — 2026-09-10 Reuters가 외국선박의 이란산/이란향 에너지 제품에 대한 10% freight charge 임시 중단 지시를 확인. 대통령실 법률부 지시이며 정부 승인 및 최종 적용품목 확정 전이라 효과는 조건부.
   출처: insidertracking
