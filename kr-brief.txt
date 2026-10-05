@@ -1,13 +1,13 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-10-05T18:37:00+09:00
-refreshed_at_utc: 2026-10-05T09:37:00Z
-source_sha256: e093d7c3278419f7140c6efbc89b29f38178b7cebd7c974d11ed5fdac4ef35b6
+refreshed_at_kst: 2026-10-05T19:52:00+09:00
+refreshed_at_utc: 2026-10-05T10:52:00Z
+source_sha256: 19f47400d67f9bdb96c6eac5221d7438af5f33c437326a8f00dafcbc6e85843c
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-05 18:37 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-10-05 19:52 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-10-02 · 스냅샷 슬롯 16:00 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-10-05 16:09 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-10-05 18:13 KST (5분 폴링)
@@ -1304,7 +1304,7 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [4] 외부채널 인텔리전스
 ======================================================================
 
-외부채널 판독 정리분 109건 — **최신순** · 만료·중복분 포함(표시함)
+외부채널 판독 정리분 111건 — **최신순** · 만료·중복분 포함(표시함)
 
 - [2026-10-05 · BOTH · 중요도 B · 긍정] 000660,005930,MU / NAND / memory supply
   YMTC 측 관계자가 NAND 공급부족이 최소 3년 지속될 수 있다고 전망. 메모리 업황에는 긍정적 방향이나 '3년' 기간은 익명 관계자 발언으로 독립 확인되지 않아 보조 산업전망으로 제한.
@@ -1362,6 +1362,14 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   WSJ가 이란 세관 자료를 분석한 결과 2026년 1~6월 중국발 이중용도 부품 약 1,300건이 이란 국방부로 반입된 것으로 보도. 전자부품·모터·GPS·항공기 부품 등 드론·미사일에 전용 가능한 품목이 포함돼 미·중 정상회담 및 대이란 제재 리스크를 높일 수 있는 사안.
   검증: WSJ_CROSSCHECK | WSJ 2026-09-24 reports ~1,300 China-origin dual-use shipments to Iran defense ministry based on Iranian customs data; no independent official confirmation found
   출처: insidertracking
+- [2026-09-24 · KR · 중요도 A · 긍정] 012450 / Defense / K9 / Romania / localization
+  루마니아가 한화에어로스페이스 K9 자주포·K10 탄약운반차 초도 물량을 당초 2027년 초 계획보다 약 6개월 앞당겨 인수. 전체 계약은 K9 54문·K10 36대 약 $1B 규모이며, 후속 물량은 루마니아 Petrești H-ACE 공장에서 현지 생산 예정. 유럽 지상방산 매출 인식과 현지화 진척을 보여주는 수출 Catalyst.
+  검증: CONFIRMED | Hanwha official contract: 54 K9 + 36 K10, nearly $1B, original first delivery early 2027. Multiple Romanian/defense sources confirm first batch arrived Sep 25, 2026 ahead of schedule; Hanwha official 2026 H-ACE release confirms Petrești local production and up to 80% localization target.
+  출처: HI_GS
+- [2026-09-24 · MACRO · 중요도 A · 부정] 2222.SR,BNO,USO,XLE / Saudi energy / Red Sea / Yemen geopolitical risk
+  사우디 주도 연합군이 Yanbu와 Taif를 향한 후티 탄도미사일 6발을 요격했다고 발표. 후티는 Riyadh와 Yanbu의 Saudi Aramco 시설 공격도 주장했으나 피해는 확인되지 않음. 홍해 원유 수송·에너지 인프라 위험 프리미엄을 높이는 지정학 이벤트.
+  검증: CONFIRMED | Reuters and AP confirmed Saudi statement that six ballistic missiles targeting Yanbu/Taif were intercepted. Houthi claims of successful Aramco/Riyadh strikes were not independently confirmed; no confirmed damage/casualties.
+  출처: HI_GS
 - [2026-09-24 · KR · 중요도 B · 중립] - / KRX 지수·ETF / 산업분류
   한국거래소가 국내 산업구조를 반영한 자체 산업분류체계 KRICS를 도입. 모빌리티·조선·배터리 등 국내 주요 산업을 별도 분류하고, 하반기 코스피200·코스닥150 등 대표지수에 적용 예정이며 12월 정기변경부터 구성·비중에 영향을 줄 수 있음. 산업분류 결과는 10월 26일 공표 예정.
   검증: CONFIRMED | KRX official press release dated 2026-09-22 confirms KRICS introduction; methodology effective 2026-09-23
