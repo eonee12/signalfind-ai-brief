@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-10-05T10:38:59+09:00
-refreshed_at_utc: 2026-10-05T01:38:59Z
-source_sha256: 8e04aaa3eed90bbbe79a8c62b38d0540a2a5a3af92bd8c057279122c385bc1dd
+refreshed_at_kst: 2026-10-05T11:39:00+09:00
+refreshed_at_utc: 2026-10-05T02:39:00Z
+source_sha256: b0acc755f9abe66bd79cc487d4a410206e2d9b357483f067b35301816ad0101c
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:37252239445
+trigger_cron: cloudflare:mirror-complete:37256216905
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-05 10:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
-기준일: 2026-10-02 · 스냅샷 슬롯 09:30 (장중 잠정 — 확정 종가 아님)
-종목·섹터 스냅샷: 2026-10-05 09:39 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-10-05 10:33 KST (5분 폴링)
+생성 시각: 2026-10-05 11:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+기준일: 2026-10-02 · 스냅샷 슬롯 10:30 (장중 잠정 — 확정 종가 아님)
+종목·섹터 스냅샷: 2026-10-05 10:39 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
+외부채널 최근 수집: 2026-10-05 11:12 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -1306,6 +1306,34 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 
 외부채널 판독 정리분 110건 — **최신순** · 만료·중복분 포함(표시함)
 
+- [2026-10-05 · KR · 중요도 B · 긍정] 373220 / 46-series cylindrical battery / Mercedes-Benz / EV
+  LG에너지솔루션이 메르세데스 차세대 EV용 46100 원통형 배터리를 준비하며 폴란드 브로츠와프 생산라인에서 2028년 공급 개시를 추진한다는 업계 보도. 기존 46시리즈 대규모 공급계약의 구체적 셀 포맷이 드러난 것으로, 유럽 46파이 양산 확대에는 긍정적이나 정확한 46100 규격은 회사 공식 확인 전.
+  검증: PARTIALLY_CONFIRMED | TheElec/electrive 2026-10-03 report 46100 cells for Mercedes from 2028; LGES/Mercedes have not officially confirmed the exact cell format. Existing long-term supply agreements support the commercial relationship.
+  출처: SmallCap
+- [2026-10-05 · BOTH · 중요도 A · 긍정] 034020 / 015760 / CCJ / Nuclear power / US infrastructure / APR1400
+  한미가 미국 내 대형 원전 8기 건설을 위한 원전 프레임워크에 합의. 최대 1,200억달러를 투입하고 최소 2기는 한국형 APR1400으로 추진하며, 연말까지 장주기 기자재 확보를 위해 100억달러 선지급 협력도 논의. 두산에너빌리티·한전 등 한국 원전 공급망과 Westinghouse 지분 보유 CCJ에 중장기 직접 Catalyst.
+  검증: CONFIRMED | Yonhap 2026-10-01: Korea-U.S. framework covers 8 large reactors, up to $120B, at least 2 APR1400; cooperation on $10B early payment for long-lead equipment. Alaska LNG is separate and still conditional.
+  출처: eugene2team
+- [2026-10-05 · BOTH · 중요도 A · 긍정] 005930 / 000660 / MU / Server DRAM / AI memory / DDR5
+  SK증권은 4Q26 서버 DRAM 가격 기준선이 3Q 대비 +10~15%로 형성됐고 일부 공급사는 최대 +20~25% 인상 의향을 제시했다고 정리. AI CSP 수요와 공급 제약이 이어지며 2027년에도 서버 DRAM 부족이 지속될 가능성이 높아 삼성전자·SK하이닉스·Micron의 가격결정력에 우호적.
+  검증: CONFIRMED | TrendForce 2026-09-30: conventional DRAM contract prices +10~15% QoQ in 4Q26; 2027 server DRAM undersupply also supported by TrendForce July 2026. Broker's exact +20~25% supplier intention not independently confirmed.
+  출처: skitteam
+- [2026-10-05 · BOTH · 중요도 B · 중립] SPY / QQQ / 005930 / 000660 / Global/KR earnings revisions / Sector rotation
+  미래에셋 주간 집계에서 글로벌 12MF EPS는 최근 1개월 +1.2%(선진국 +1.4%, 신흥국 +0.6%), 미국 +0.9%로 상향된 반면 한국 3Q26 영업이익 컨센서스는 1주 -1.4%, 1개월 -2.5%로 하향 지속. 글로벌 IT·에너지 이익 모멘텀은 개선되지만 한국 단기 실적 눈높이는 낮아지는 차별화가 확인됨.
+  검증: BROKER_CONSENSUS_DATA | Mirae Asset weekly consensus: global 12MF EPS +1.2% 1M, U.S. +0.9%; Korea 3Q26 operating-profit consensus -1.4% 1W/-2.5% 1M. Not official reported earnings.
+  출처: eqmirae
+- [2026-10-05 · KR · 중요도 B · 긍정] 010950 / 096770 / Refining / Diesel / Jet fuel / Export controls
+  중국·러시아의 석유제품 수출 제한과 미국의 디젤 수출통제 압박 이후 하나증권 집계 일간 정제마진이 42.9달러/bbl로 재차 40달러를 상회. 등유·경유 마진이 각각 약 +11달러/+5달러 상승하고 주간 평균도 37.4달러/bbl로 전주 대비 +5.3달러 상승해 국내 정유사 마진 환경이 빠르게 개선.
+  검증: PARTIAL_CONFIRMED | Reuters confirms China/Russia export restrictions and U.S. diesel-export pressure; crack spread $42.9/bbl and product-margin moves are broker market data not independently re-fetched.
+  출처: energy_youn
+- [2026-10-05 · KR · 중요도 A · 긍정] 005930 / 000660 / Korea exports / Semiconductors / AI hardware
+  한국 9월 수출이 1,209억달러(+83.5% YoY)로 사상 처음 1,200억달러를 돌파했고 반도체 수출은 603억달러(+262.8%)로 역대 최대. 컴퓨터 수출도 +435.3% 증가해 AI 관련 품목이 수출 서프라이즈를 주도, 삼성전자·SK하이닉스 등 반도체 실적 모멘텀을 뒷받침.
+  검증: CONFIRMED | Reuters 2026-10-01: September exports $120.9B (+83.5% YoY); semiconductor exports $60.3B (+262.8%); computer exports +435.3%.
+  출처: meritz_research
+- [2026-10-05 · KR · 중요도 B · 긍정] 064290 / Semiconductor inspection / Advanced packaging / Substrate
+  메리츠는 인텍플러스 3Q26 매출 231억원(+133% YoY), 영업이익 10억원 흑자전환을 전망하고 3Q 수주공시 332억원과 3Q말 수주잔고 약 1,700억원을 근거로 2027년 영업이익 추정치를 기존 대비 +79% 상향. 목표주가도 9.5만원으로 올리며 수주 모멘텀 지속을 핵심 근거로 제시.
+  검증: BROKER_ESTIMATE | Meritz 3Q26 preview; 3Q order disclosures are factual inputs, while backlog ~KRW170B, 2027 OP +79% revision and TP KRW95,000 are analyst estimates.
+  출처: meritz_research
 - [2026-10-04 · MACRO · 중요도 A · 중립] - / US labor market / Fed rates
   미국 9월 비농업고용은 +2.9만명으로 Reuters 예상 +9.0만명을 크게 하회했고 실업률은 4.2%, 시간당 평균임금은 +0.1% MoM·+3.0% YoY로 둔화. 고용 냉각으로 10월 추가 금리인상 기대가 약해져 주식에는 단기 완화 요인이지만 경기 둔화 신호도 병존.
   검증: CONFIRMED | U.S. BLS 2026-10-02: NFP +29k, unemployment 4.2%. Reuters: consensus +90k; wage growth +0.1% MoM/+3.0% YoY.
@@ -1718,47 +1746,30 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   삼성중공업이 LNG운반선 4척 수주를 공시했으며 납기는 2029년 9월. 게시자는 LNG선 신조선가를 척당 약 2.63억달러로 제시했으나 이는 시장가격 추정치로 공식 계약금액과 구분. LNG선 수주잔고 확대와 고부가 선종 믹스에는 긍정적 Catalyst.
   검증: PRIMARY FILING LINK PRESENT — Telegram 게시물에 DART 접수번호 20260914800075가 직접 제시됨. DART 웹 fetch는 이번 실행에서 일시적 502로 본문 직접 대조는 불가했으며, 척당 $263M은 게시자/시장 추정으로만 반영.
   출처: HI_GS
-- [2026-09-14 · KR · 중요도 A · 중립] [만료] KOSPI / KOSDAQ / Korean equities / KRX After-Market / Market Microstructure / Liquidity
-  한국거래소가 9월 14일부터 오후 4시~8시 애프터마켓을 공식 운영. 기존 16~18시 시간외 단일가를 폐지하고 가격·시간 우선의 실시간 연속매매로 전환하며, 코스피·코스닥 주식 대부분이 대상. ETF·ETN 등은 초기 제외. 거래시간 확대는 장 마감 후 가격발견·유동성과 외국인/개인 주문 분산에 직접 영향을 주는 시장구조 변화.
-  검증: CONFIRMED KRX-BASED MEDIA — Korea Times·서울경제·SBS 2026-09-09~14 보도에서 9/14 개장, 16:00~20:00 연속매매, 기존 시간외 단일가 폐지, ETF/ETN 초기 제외를 확인. 거래소 규정 개정·금융위 승인 기반.
-  출처: insidertracking
-- [2026-09-14 · BOTH · 중요도 B · 긍정] [만료] Murata / 삼성전기 (009150) / 삼화콘덴서 (001820) / MLCC / AI Server / Physical AI / Electronic Components
-  Murata 부사장은 AI 서버용 MLCC 수요 증가가 최소 2028년까지 이어지고, AI 데이터센터에서 엣지AI·피지컬AI로 수요가 확장될 것으로 전망. 2028년 3월기까지 MLCC 설비에 800억엔을 추가 투자하며, 2028년 이후를 겨냥한 더 큰 생산능력 확대도 검토 중. 가격을 공격적으로 올리기보다 하이엔드 제품 믹스와 공급능력 확대에 초점을 두는 전략.
-  검증: PRIMARY INTERVIEW / BROKER RELAY — 메리츠가 Nikkei Asia의 Murata 부사장 인터뷰를 전달. 800억엔 투자 및 AI MLCC 수요 전망은 경영진 발언 기반이나 2028년 이후 추가 증설은 검토 단계로 확정 CAPEX와 구분.
-  출처: merITz_tech
-- [2026-09-14 · BOTH · 중요도 B · 중립] [만료] CATL / BYD / SK이노베이션 (096770) / battery materials / Lithium-ion / Sodium-ion / Solid-state Battery / China Policy
-  유진투자증권은 중국이 2026년 9월부터 내수 리튬이온 배터리에 2% 소비세를 부과하고 2027년 9월 4%로 확대하는 반면, 소듐이온·전고체·연료전지는 2028년 말까지 면세를 유지한다고 정리. 수출 VAT 환급도 2026년 6%로 축소 후 2027년 폐지 예정으로, 범용 리튬이온 지원을 줄이고 차세대 배터리로 정책 인센티브를 이동시키는 신호로 해석.
-  검증: BROKER POLICY ANALYSIS — 유진투자증권 주간자료 기준. 중국의 배터리 과잉생산 억제 정책은 Reuters가 2026-09-07 신규 프로젝트 승인 일시중단을 보도해 방향성은 부합. 세율·면세 세부는 리포트 수치로 반영하며 정책 시행세칙 추가 확인 필요.
-  출처: eugene2team
-- [2026-09-14 · KR · 중요도 B · 중립] [만료] KOSPI / 005930 / 000660 / KOSPI / Semiconductor ETF / Market Positioning
-  메리츠 퀀트/ETF는 KOSPI가 최근 1주 +3.3%, MTD +1.3%인 가운데 9월 7일 급등(+4.6%) 이후 되돌림이 나타났고, 반등 구간에서 코스피 대표·반도체 ETF 환매가 발생했다고 분석. 20일 RSI/ADR 과열은 해소됐지만 차익실현과 하락헤지 수요가 우위라는 판단으로, 단기 수급은 상승 추세 안에서도 보수적임.
-  검증: BROKER FLOW ANALYSIS — 메리츠 Q-ETF Weekly. RSI/ADR 및 ETF 환매는 단기 수급·기술적 보조지표이며 독립 매도 신호로 사용하지 않음.
-  출처: meritz_research
-- [2026-09-14 · KR · 중요도 B · 중립] [만료] 삼성전자 (005930) / SK하이닉스 (000660) / 한국전력 (015760) / Semiconductor Power Infrastructure / Grid Financing
-  삼성전자와 SK하이닉스가 한국전력이 제안한 5년치 전기요금 총 25조원 선납 방안을 거절한 것으로 확인. 대규모 선수금이 용인·호남 반도체 클러스터 전력망 재원으로 활용될 계획이었으나, 양사는 5년 업황 불확실성과 대규모 선지급에 따른 재무 부담을 이유로 수용하지 않은 것으로 보도됨. 반도체사의 현금유동성 보존에는 긍정적이나 전력망 재원조달 측면은 별도 과제로 남음.
-  검증: CONFIRMED YONHAP — 연합뉴스 2026-09-14가 양사의 25조원 전기료 선납 제안 거절을 확인. 삼성 약 20조원, SK하이닉스 약 5조원 제안으로 알려졌으며 회사의 공식 공시성 가이던스가 아니라 업계 취재 보도.
-  출처: insidertracking
-- [2026-09-14 · BOTH · 중요도 B · 긍정] [만료] TSM / NVDA / AMD / AVGO / 005930 / CoWoS / Advanced Packaging / AI Accelerators
-  현대차증권 Tech Daily는 TSMC CoWoS 월 생산능력이 2026년 말 약 13만장 수준에서 2028년 말 약 26만장으로 두 배 확대될 전망이라고 정리. AI 가속기·커스텀 ASIC 수요가 지속되면서 첨단패키징 병목을 완화할 공급확대 신호이나, TSMC 공식 가이던스가 아니라 업계 추정치임.
-  검증: SECONDARY INDUSTRY ESTIMATE — 현대차증권이 Wccftech 업계자료를 인용. 2026말 13만→2028말 26만장 전망은 비공식 추정으로, 확정 CAPEX나 TSMC 공식 생산능력 가이던스로 취급하지 않음.
-  출처: IThardwareDisplay
-- [2026-09-14 · KR · 중요도 B · 긍정] [만료] SFA반도체 (036540) / 삼성전자 (005930) / DDR5 / OSAT / Semiconductor Packaging & Test
-  한투증권은 삼성전자 온양의 HBM 전환과 DDR5 외주 확대를 근거로 SFA반도체 필리핀 법인의 2027년 매출 5,520억원(+45.3% YoY), 한국1공장 2,300억원(+177.5%)을 전망. 필리핀 테스트 장비는 11월 1단계, 2Q27 2단계 가동을 예상하며 목표주가를 12,000원으로 20% 상향. 확보 물량 외 추가수주 가능성은 열려 있으나 증권사 추정치임.
-  검증: BROKER NDR — 한국투자증권 NDR 기반 추정. 목표주가·2027 매출 전망과 외주 확대는 증권사 분석이며 확정 실적/수주 공시가 아님. 가동률 개런티 및 장비이관 진척은 투자 Catalyst로만 사용.
-  출처: KISemicon
 
 ======================================================================
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 329건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **225건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 340건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **233건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-10-05 11:12 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12476) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_12476.jpg
+- [2026-10-05 11:12 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12475) 아 이거 좀 편하긴 하네여 · 이미지: https://signalfind.co.kr/ai/media/4362306699_12475.jpg
+- [2026-10-05 11:09 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12474) 국장도 소부장이 전닉보다 강한흐름 기대
+- [2026-10-05 11:09 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12473) 판가가 가속도 장에선 전닉이 최선호인데 시장이 이익증가 가속도가 강한 종목군으로 스프레드 확산이 눈에 보이네요
+- [2026-10-05 11:07 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12472) ㄴ닛케이 지수가 2% 이상 상승하고 있습니다. TDK, 르네사스, 교세라, 도쿄일렉트론, 디스코가 모두 5% 안팎 급등하며 전기전자와 반도체주가 강세를 주도하고 있습니다. 지난주 미국 고용 둔화로 금리인상 우려가 낮아지고 테크주들이 강하게 반등한 흐름이 일본 증시로 이어지는 모습입니다. 특정 AI 종목에만 매기가 몰린다기보다 반도체 장비, 부품, 전자부품까지 매수세가 넓게 확산되는 장으로 보입니다. · 이미지: https://signalfind.co.kr/ai/media/4362306699_12472.jpg
+- [2026-10-05 11:06 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12471) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_12471.jpg
+- [2026-10-05 11:06 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12470) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_12470.jpg
+- [2026-10-05 11:06 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12469) [메리츠증권 전기전자/IT부품 양승수] ▶ 9월 대만 테스트 Interface Board 공급업체 Chunghwa Precision Test (티에스이 Peer) 매출액 651.8백만대만달러(+2.1% MoM, +55.9% YoY) 발표 - 3Q26 매출 1,905백만대만달러(+16.2% QoQ, +53.4% YoY) 기록. 1~9월 누적 매출은 이미 2025년 연간 매출을 상회 - AI·HPC·AI ASIC 고객사향 테스트 인터페이스 수요 확대가 실적 성장을 견인했으며, 관련 수요 증가에 힘입어 가동률도 높은 수준 유지 - AI 칩 및 데이터센터 투자 확대와 함께 이종집적·첨단 패키징 전환이 가속화되며 테스트 인터페이스의 기술 난이도와 수요가 동반 상승 - 주요 CSP의 AI 데이터센터 투자 지속 및 차세대 AI 칩의 엔지니어링 검증 확대를 기반으로 4Q26 및 2027년 수요 가시성도 긍정적임을 강조 - 기존 생산라인의 풀가동 체제가 지속되는 가운데, 추가 생산공간 확보 및 자동화 설비 도입을 통해 생산능력 확대 추진 (자료: CHPT IR) *본 내용은 당사의 코멘트 없이 국내외 언론사 뉴스 및 전자공시자료 등을 인용한 것으로 별도의 승인 절차 없이 제공합니다
+- [2026-10-05 10:45 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12468) 한국 테스트 업체 밸류체인 · 이미지: https://signalfind.co.kr/ai/media/4362306699_12468.jpg
+- [2026-10-05 10:44 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12467) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_12467.jpg
+- [2026-10-05 10:44 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12466) 일본과 대만 이린거 같네여 · 이미지: https://signalfind.co.kr/ai/media/4362306699_12466.jpg
 - [2026-10-05 10:33 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12465) 월단위 리밸런싱 전략도 올려놓고 있습니다. 출력결과가 안좋아서 수정하고 있습니다.
 - [2026-10-05 10:19 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12464) 기존에 수급 찬것중에 내일 오전 시세 보면서 일부 변경 해야겠네여
 - [2026-10-05 10:19 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_12463) 일단 내일은 기판과 mlcc 위주로 포지션 확대가 필요해 보입니다.
