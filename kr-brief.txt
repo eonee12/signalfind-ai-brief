@@ -1,15 +1,15 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-10-09T11:39:07+09:00
-refreshed_at_utc: 2026-10-09T02:39:07Z
-source_sha256: 9445da028cb8b43aefb161157f7f3b0f0f6d927ef204b866169efc7ee2c6d22c
+refreshed_at_kst: 2026-10-09T12:38:38+09:00
+refreshed_at_utc: 2026-10-09T03:38:38Z
+source_sha256: 0589b740af4d6fb4bf88b9a586c4f0e1f7211f1f383750ffc43a9bcebdc7d3c0
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:37875567000
+trigger_cron: cloudflare:mirror-complete:37880201924
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-09 11:39 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
-기준일: 2026-10-08 · 스냅샷 슬롯 10:30 (장중 잠정 — 확정 종가 아님)
-종목·섹터 스냅샷: 2026-10-09 10:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
+생성 시각: 2026-10-09 12:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+기준일: 2026-10-08 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
+종목·섹터 스냅샷: 2026-10-09 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-10-09 11:20 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
