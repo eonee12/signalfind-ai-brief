@@ -1,13 +1,13 @@
-[SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-10-09T15:47:00+09:00
-refreshed_at_utc: 2026-10-09T06:47:00Z
-source_sha256: bb46863fa016393314aa4b75ec1565bb619ddb688896c5010fd38b9c84dd630b
+[SIGNALFIND_MIRROR]
+refreshed_at_kst: 2026-10-09T16:08:29+09:00
+refreshed_at_utc: 2026-10-09T07:08:29Z
+source_sha256: 95f85f0a0f0d29ae8272c94155c9d4d811ee590ff3dd043d8521edfda95b2972
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: github:schedule:brief-full-direct-sync
+trigger_cron: cloudflare:mirror-complete:37897316134
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-09 15:47 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-10-09 16:08 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-10-08 · 스냅샷 슬롯 14:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-10-09 14:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
 외부채널 최근 수집: 2026-10-09 15:23 KST (5분 폴링)
@@ -1914,7 +1914,7 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   호르무즈 해협에서 유조선이 정체불명의 발사체에 피격돼 선내 화재가 발생했으며 이후 진압되고 승무원은 안전하다고 UKMTO가 보고. 같은 날 호르무즈 원자재선 통항량도 10일 평균을 크게 밑돌아 에너지 수송 리스크가 지속.
   검증: CONFIRMED | UKMTO 보고를 AP 등 고신뢰 매체가 확인; Reuters는 전일 호르무즈 원자재선 통항 4척 vs 10일 평균 16척으로 저조한 통항 지속 확인
   출처: insidertracking
-- [2026-09-18 · BOTH · 중요도 B · 중립] ARM / AI 투자금융 / 반도체 지분담보
+- [2026-09-18 · BOTH · 중요도 B · 중립] [만료] ARM / AI 투자금융 / 반도체 지분담보
   SoftBank가 Arm 주식 담보대출을 50억달러 늘려 총 250억달러로 확대했다는 보도. 5월 기준 약 7.69억주(Arm 지분 약 72%)가 담보로 제시된 것으로 전해졌으며 AI 투자 재원 조달 성격.
   검증: UNVERIFIED | Telegram 게시물의 금융조건을 공식 원문으로 독립 확인하지 못해 사실확정 제한
   출처: insidertracking
@@ -3982,14 +3982,12 @@ UNICORN 포스트IPO액티브 | 476000 | 수출·중소형 | 29 | 1
 
 **판단 우선순위** — 근거는 위 섹터·종목 신호 섹션이 먼저다. 이 섹션은 아이디어 발굴과 교차검증에 쓴다.
 
-
-
 ============================================================
 [CURRENT MASTER — GOOGLE DOC]
 SignalFind KR CURRENT MASTER
 ============================================================
 
-﻿SignalFind 한국장 핵심메모 — CURRENT MASTER
+SignalFind 한국장 핵심메모 — CURRENT MASTER
 [필수 참조 주소 — CURRENT]
 • KR SignalFind 원본: https://signalfind.co.kr/ai/brief-latest.txt
 • KR Worker event-driven fallback: https://signalfind-us.marketpilot.workers.dev/ai/kr-brief.txt
