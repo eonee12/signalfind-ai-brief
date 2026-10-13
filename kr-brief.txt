@@ -1,9 +1,9 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-10-13T10:38:26+09:00
-refreshed_at_utc: 2026-10-13T01:38:26Z
+refreshed_at_kst: 2026-10-13T10:38:50+09:00
+refreshed_at_utc: 2026-10-13T01:38:50Z
 source_sha256: c4866947faa389d441fb1cf3c597c93e20f78a4fbac52e57f6566a519b622532
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:38333078856
+trigger_cron: cloudflare:mirror-complete:38333106244
 
 # Signalfind AI Brief (공개판)
 
