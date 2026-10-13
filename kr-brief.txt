@@ -1,16 +1,16 @@
 [SIGNALFIND_SOURCE]
-refreshed_at_kst: 2026-10-13T21:11:00+09:00
-refreshed_at_utc: 2026-10-13T12:11:00Z
-source_sha256: 2c273d8240600450e9ad996650846e78a4516c087159ec2fcdda913706a23536
+refreshed_at_kst: 2026-10-13T21:58:00+09:00
+refreshed_at_utc: 2026-10-13T12:58:00Z
+source_sha256: b94b7333baee508132aa51b0ec21914ad2c95282ec89adb1944412e582b34ca7
 source_url: https://signalfind.co.kr/ai/brief-full.txt
 trigger_cron: github:schedule:brief-full-direct-sync
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-13 21:11 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-10-13 21:58 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-10-13 · 스냅샷 슬롯 16:00 (장 마감 후 확정)
 종목·섹터 스냅샷: 2026-10-13 16:10 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-10-13 21:09 KST (5분 폴링)
+외부채널 최근 수집: 2026-10-13 21:23 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -2144,11 +2144,11 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   미국 특사 Steve Witkoff와 Jared Kushner가 유엔총회 계기 이란 대표단과 약 3시간 직접 회담을 진행했고, 트럼프는 회담을 'very good'으로 평가하며 합의 가능성을 언급. 이란 측은 항만 봉쇄·군사압박 완화 등 조건을 전달한 것으로 보도돼 실제 고위급 대화 채널이 열린 점은 호르무즈·유가 리스크 프리미엄 완화에 긍정적. 다만 최종 합의나 해협 재개방은 아직 확인되지 않아 완전 정상화 신호로 해석하지 않음.
   검증: CONFIRMED REUTERS — Reuters 2026-09-22는 미국·이란 간 당일 대화 지속과 트럼프의 합의 기대 발언을 확인했고, Reuters 재전재 보도는 Witkoff·Kushner와 이란 대표단의 약 3시간 회담을 확인. 최종 합의·물리적 호르무즈 재개방은 미확인.
   출처: insidertracking
-- [2026-09-22 · MACRO · 중요도 B · 중립] BNO / USO / XLE / FRO / DHT / INSW / Gulf Energy Infrastructure / Strait of Hormuz / Oil & Gas Logistics
+- [2026-09-22 · MACRO · 중요도 B · 중립] [만료] BNO / USO / XLE / FRO / DHT / INSW / Gulf Energy Infrastructure / Strait of Hormuz / Oil & Gas Logistics
   트럼프 행정부가 이란전쟁 피해 걸프 지역 에너지 인프라 복구와 호르무즈 의존도 축소를 위한 신규 펀드에 미국이 50억달러를 출자하는 방안을 제안한 것으로 보도. 현실화되면 중동 원유·가스 우회수송 인프라 투자와 장기 공급망 복원에는 긍정적이나, 현재는 정부 최종 확정·자금집행 단계가 아닌 제안 수준.
   검증: CROSS-CHECKED REUTERS/WSJ — Reuters 2026-09-21이 WSJ 보도를 인용해 $5B US seed investment proposal와 Hormuz reliance reduction 목적을 확인했으나 Reuters 자체 독립검증 및 미 정부 최종 확정은 아직 없음. 제안 단계로만 반영.
   출처: insidertracking
-- [2026-09-22 · MACRO · 중요도 A · 중립] BNO / USO / XLE / FRO / DHT / INSW / Strait of Hormuz / Oil Shipping / Iran-US Diplomacy
+- [2026-09-22 · MACRO · 중요도 A · 중립] [만료] BNO / USO / XLE / FRO / DHT / INSW / Strait of Hormuz / Oil Shipping / Iran-US Diplomacy
   텔레그램 최신 브리핑은 '미국이 압박·항만봉쇄를 완화하면 7일 내 호르무즈 재개방' 제안 보도 이후 이란 측 소식통의 부인이 나왔다고 전함. Reuters는 같은 날 고위 이란 당국자를 인용해 제안 자체를 계속 보도하고 있어 사실관계가 엇갈림. 따라서 직전의 재개방 기대를 확정적 완화 Catalyst로 취급하기보다 협상 가능성은 열려 있으나 신뢰도는 낮아진 상태로 판단.
   검증: CONFLICTING — Telegram briefing reports a later Iranian-source denial, while Reuters 2026-09-22 continues to report the conditional 7-day reopening proposal from a senior Iranian official. No final US-Iran agreement or physical reopening confirmed; prior de-escalation signal downgraded to disputed.
   출처: insidertracking
@@ -2293,14 +2293,17 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 612건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **370건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 615건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **372건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-10-13 21:23 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13495) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_13495.jpg
+- [2026-10-13 21:23 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13494) 10월 20일 상장예정 ETF 미래에셋 11월에 상장예정 기판 ETF 기판이여 가즈아~~~~~~ · 이미지: https://signalfind.co.kr/ai/media/4362306699_13494.jpg
+- [2026-10-13 21:11 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13493) 내일 국장 마치고 미장 열리기 전에 ASML 실적발표 국장에는 발표 일시: 2026년 10월 14일 (CET 오전 7시 / 한국 시간 오후 2시 전후 예정) 내일도 재밌는 이벤트 이어질듯
 - [2026-10-13 21:09 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13492) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_13492.jpg
 - [2026-10-13 21:09 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13491) 국내도 해외도 출동 많이 한듯 · 이미지: https://signalfind.co.kr/ai/media/4362306699_13491.jpg
 - [2026-10-13 21:08 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13490) 행사하는데 글로벌 주요 반도체 장비는 거의 다 참가 한 상황 · 이미지: https://signalfind.co.kr/ai/media/4362306699_13490.jpg
