@@ -1,16 +1,16 @@
 [SIGNALFIND_MIRROR]
-refreshed_at_kst: 2026-10-15T12:38:23+09:00
-refreshed_at_utc: 2026-10-15T03:38:23Z
-source_sha256: 378fe53e4275e38c7e91cf9d367810b6ecbcb5c46b3443d22214bee210065d2b
+refreshed_at_kst: 2026-10-15T13:38:23+09:00
+refreshed_at_utc: 2026-10-15T04:38:23Z
+source_sha256: c58ab1d6313b0d358261ffe31546d41bf07ce57dc9695f8c3ee4aedd38f053de
 source_url: https://signalfind.co.kr/ai/brief-full.txt
-trigger_cron: cloudflare:mirror-complete:38677290891
+trigger_cron: cloudflare:mirror-complete:38682502537
 
 # Signalfind AI Brief (공개판)
 
-생성 시각: 2026-10-15 12:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
+생성 시각: 2026-10-15 13:38 KST  ← 자료를 만든 시각이다. 지금 시각과 크게 다르면 낡은 사본이다
 기준일: 2026-10-15 · 스냅샷 슬롯 12:30 (장중 잠정 — 확정 종가 아님)
 종목·섹터 스냅샷: 2026-10-15 12:37 KST (평일 09:30·10:30·12:30·14:30·16:00·23:00 갱신)
-외부채널 최근 수집: 2026-10-15 12:04 KST (5분 폴링)
+외부채널 최근 수집: 2026-10-15 13:35 KST (5분 폴링)
 
 ⚠ **분석 답변 맨 위에 위 시각을 반드시 표기할 것.** 어느 시점 자료로 판단했는지 밝히지 않으면
    읽는 사람이 낡은 자료로 내린 결론을 최신 결론으로 오인한다.
@@ -2232,15 +2232,15 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
   미국 주간 신규 실업수당청구건수는 9월 19일 종료 주간 19.7만건으로 전주 수정치 19.8만건보다 감소해 노동시장 회복력 신호를 보였다. Reuters 조사 예상은 20.1만건으로, 견조한 고용은 경기 둔화 우려를 낮추는 동시에 추가 완화 기대를 제한할 수 있다.
   검증: CONFIRMED | Reuters citing U.S. Labor Dept: initial claims 197k for week ended 2026-09-19; Reuters poll 201k. Telegram forecast showed 200k, vendor difference noted
   출처: insidertracking
-- [2026-09-24 · MACRO · 중요도 B · 부정] - / US-China-Iran / Defense supply chain / Sanctions
+- [2026-09-24 · MACRO · 중요도 B · 부정] [만료] - / US-China-Iran / Defense supply chain / Sanctions
   WSJ가 이란 세관 자료를 분석한 결과 2026년 1~6월 중국발 이중용도 부품 약 1,300건이 이란 국방부로 반입된 것으로 보도. 전자부품·모터·GPS·항공기 부품 등 드론·미사일에 전용 가능한 품목이 포함돼 미·중 정상회담 및 대이란 제재 리스크를 높일 수 있는 사안.
   검증: WSJ_CROSSCHECK | WSJ 2026-09-24 reports ~1,300 China-origin dual-use shipments to Iran defense ministry based on Iranian customs data; no independent official confirmation found
   출처: insidertracking
-- [2026-09-24 · KR · 중요도 A · 긍정] 012450 / Defense / K9 / Romania / localization
+- [2026-09-24 · KR · 중요도 A · 긍정] [만료] 012450 / Defense / K9 / Romania / localization
   루마니아가 한화에어로스페이스 K9 자주포·K10 탄약운반차 초도 물량을 당초 2027년 초 계획보다 약 6개월 앞당겨 인수. 전체 계약은 K9 54문·K10 36대 약 $1B 규모이며, 후속 물량은 루마니아 Petrești H-ACE 공장에서 현지 생산 예정. 유럽 지상방산 매출 인식과 현지화 진척을 보여주는 수출 Catalyst.
   검증: CONFIRMED | Hanwha official contract: 54 K9 + 36 K10, nearly $1B, original first delivery early 2027. Multiple Romanian/defense sources confirm first batch arrived Sep 25, 2026 ahead of schedule; Hanwha official 2026 H-ACE release confirms Petrești local production and up to 80% localization target.
   출처: HI_GS
-- [2026-09-24 · MACRO · 중요도 A · 부정] 2222.SR,BNO,USO,XLE / Saudi energy / Red Sea / Yemen geopolitical risk
+- [2026-09-24 · MACRO · 중요도 A · 부정] [만료] 2222.SR,BNO,USO,XLE / Saudi energy / Red Sea / Yemen geopolitical risk
   사우디 주도 연합군이 Yanbu와 Taif를 향한 후티 탄도미사일 6발을 요격했다고 발표. 후티는 Riyadh와 Yanbu의 Saudi Aramco 시설 공격도 주장했으나 피해는 확인되지 않음. 홍해 원유 수송·에너지 인프라 위험 프리미엄을 높이는 지정학 이벤트.
   검증: CONFIRMED | Reuters and AP confirmed Saudi statement that six ballistic missiles targeting Yanbu/Taif were intercepted. Houthi claims of successful Aramco/Riyadh strikes were not independently confirmed; no confirmed damage/casualties.
   출처: HI_GS
@@ -2469,14 +2469,20 @@ StableCore = 안정성 훼손 점검(RS·SORTINO·DD 3블록). `정상`=손상 0
 # [5] 외부채널 원문
 ======================================================================
 
-외부채널 원문 801건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
-첨부 이미지 **524건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
+외부채널 원문 807건 (최근 3일 보존분, **최신순**) · 전문 수록(자르지 않음)
+첨부 이미지 **528건**의 URL 을 각 줄 끝에 붙였다 — **인증 없이 그대로 받아 볼 수 있다.**
 이미지에만 있는 자료가 많다(자산배분표·Breadth·F&G 오실레이터·정배열 ETF 목록 등).
 텍스트에 "이거 보니", "아래 표" 처럼 지시어가 나오면 그 줄의 이미지를 반드시 함께 열어볼 것.
 같은 시각·같은 채널로 연속된 줄은 **하나의 앨범**이다(본문 1건 + 이미지 여러 건) — 묶어서 읽는다.
 `id` 는 채널_메시지 번호이고 이미지 파일명과 같다 — 텍스트와 이미지를 짝지을 때 쓴다.
 정리된 판단 근거는 위 인텔리전스 섹션을 우선 보고, 여기는 보조로 쓴다.
 
+- [2026-10-15 13:35 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13742) 대주전자재료 보합 까지 올라와서 ESS중에서 다른 삼아알미늄으로 갈아끼워 보는것도 좋을듯 합니다. · 이미지: https://signalfind.co.kr/ai/media/4362306699_13742.jpg
+- [2026-10-15 13:34 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13741) 아니 -9% 라서 갈아탔더니 든금없이 이것도 누가 관리하는건지 보합이 되었네요
+- [2026-10-15 13:28 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13740) 한양디지텍 버티는거 4%정리하고 인텍플러스, 심텍, 네오티스, 샘씨엔에스 4% 비중을 각가 5% 비중으로 올리는 방법을 하는게 좋을듯 합니다. · 이미지: https://signalfind.co.kr/ai/media/4362306699_13740.jpg
+- [2026-10-15 13:14 · 주식장인 이창대 텔레그램] (id 2428152138_30711) 코스피와 코스닥 모두 8% 이상 하락세를 보이며 서킷브레이커가 발동 됐습니다. 매도사이드카 이후에 서킷까지 오후장 접어들면서 증시 낙폭이 더 확대되고 있습니다.
+- [2026-10-15 13:13 · 주식장인 이창대 텔레그램] (id 2428152138_30710) [미디어] · 이미지: https://signalfind.co.kr/ai/media/2428152138_30710.jpg
+- [2026-10-15 13:05 · 스탁이지 - AI 투자 어시스턴트] (id 1619402703_18544) https://youtu.be/G_sW1a2lUJY?si=19iIap0h8anCsv6I · 이미지: https://signalfind.co.kr/ai/media/1619402703_18544.jpg
 - [2026-10-15 12:04 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13739) 이정도면 기회가 오는건데
 - [2026-10-15 12:04 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13738) 신용잔고 감소 기원
 - [2026-10-15 12:03 · 태린이아빠 주식투자 생각의 공간(26년 12월 말까지)] (id 4362306699_13737) [미디어] · 이미지: https://signalfind.co.kr/ai/media/4362306699_13737.jpg
