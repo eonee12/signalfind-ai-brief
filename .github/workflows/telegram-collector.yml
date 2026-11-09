@@ -1,0 +1,19 @@
+name: Telegram 21D collector (manual validation)
+on:
+  workflow_dispatch:
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'telethon>=1.40,<2' 'gspread>=6,<7' 'google-auth>=2,<3'
+      - name: Collect and append
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: python scripts/telegram_21d_collect.py
