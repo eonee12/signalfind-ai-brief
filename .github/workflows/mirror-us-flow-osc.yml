@@ -50,7 +50,7 @@ jobs:
 
           brief = pathlib.Path('us-brief.txt').read_text(encoding='utf-8')
           def field(key):
-              m = re.search(rf'^{re.escape(key)}:\\s*(\\S+)', brief, re.M)
+              m = re.search(rf'^{re.escape(key)}:\s*(\S+)', brief, re.M)
               return m.group(1) if m else None
           eod = field('STOCK_BASIS_DATE')
           if not eod or field('SAME_EOD_STATUS') != 'PASS' or field('ETF_BASIS_DATE') != eod:
@@ -98,7 +98,7 @@ jobs:
               'requested': requested,
               'tickers': results,
           }
-          target.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\\n', encoding='utf-8')
+          target.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\n', encoding='utf-8')
           print(f'FLOW_OSC_PASS eod={eod} tickers={len(results)}')
           PY
       - name: Commit only if EOD snapshot changed
