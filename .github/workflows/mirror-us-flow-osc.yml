@@ -1,0 +1,115 @@
+name: Mirror US Flow OSC for AI
+
+on:
+  push:
+    paths:
+      - .github/workflows/mirror-us-flow-osc.yml
+  schedule:
+    # US EOD + existing 6-hour oscillator cache; Tue-Sat 18:15 KST.
+    - cron: '15 9 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: 'Optional comma-separated ticker override (up to 24)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-us-flow-osc
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      INPUT_TICKERS: ${{ inputs.tickers || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch existing Flow OSC API and publish validated EOD snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import datetime as dt
+          import json
+          import os
+          import pathlib
+          import re
+          import urllib.parse
+          import urllib.request
+
+          API = 'https://signalfind-us.marketpilot.workers.dev/api/oscillator'
+          DEFAULT = 'NVDA,GOOGL,FAST,LLY,XLI,XLU,DLR,RSG,XLK,JNJ,FERG,WAB,EQIX,APH,UNP,J,LHX,RKLB,CRWV,AMD,ANET,MPWR'
+          requested = list(dict.fromkeys(s.strip().upper() for s in (os.environ.get('INPUT_TICKERS') or DEFAULT).split(',') if s.strip()))
+          if not requested or len(requested) > 24 or any(not re.fullmatch(r'[A-Z][A-Z0-9.\\-]{0,9}', s) for s in requested):
+              raise SystemExit('INVALID_TICKERS: require 1-24 valid tickers')
+
+          brief = pathlib.Path('us-brief.txt').read_text(encoding='utf-8')
+          def field(key):
+              m = re.search(rf'^{re.escape(key)}:\\s*(\\S+)', brief, re.M)
+              return m.group(1) if m else None
+          eod = field('STOCK_BASIS_DATE')
+          if not eod or field('SAME_EOD_STATUS') != 'PASS' or field('ETF_BASIS_DATE') != eod:
+              raise SystemExit('BRIEF_NOT_READY: US Brief EOD mismatch or missing')
+
+          target = pathlib.Path('us-flow-osc.json')
+          if target.exists():
+              prior = json.loads(target.read_text(encoding='utf-8'))
+              if prior.get('eod_date') == eod and prior.get('requested') == requested:
+                  print(f'FLOW_OSC_UNCHANGED eod={eod}'); raise SystemExit(0)
+
+          results = {}
+          for offset in range(0, len(requested), 12):
+              batch = requested[offset:offset + 12]
+              query = urllib.parse.urlencode({'tickers': ','.join(batch), 'period': '6M', 'indicator': 'FLOW_OSC'})
+              req = urllib.request.Request(API + '?' + query, headers={'User-Agent': 'SignalFind-Flow-OSC-Mirror/1.0', 'Accept': 'application/json'})
+              with urllib.request.urlopen(req, timeout=90) as response:
+                  data = json.load(response)
+              if data.get('errors'):
+                  raise SystemExit('FLOW_OSC_API_ERRORS: ' + json.dumps(data['errors'], ensure_ascii=False))
+              for item in data.get('results', []):
+                  ticker = item.get('ticker')
+                  chart = (item.get('flowCharts') or {}).get('6M') or {}
+                  latest = chart.get('latest') or {}
+                  if ticker not in batch or item.get('asof') != eod or chart.get('asof') != eod:
+                      raise SystemExit(f'STALE_OR_UNEXPECTED_EOD ticker={ticker} api={item.get("asof")} brief={eod}')
+                  if not isinstance(latest.get('osc'), (int, float)) or not isinstance(latest.get('percentile'), (int, float)):
+                      raise SystemExit('FLOW_OSC_MISSING_LATEST: ' + str(ticker))
+                  rows = [{k: row.get(k) for k in ('date', 'close', 'ma20', 'ma50', 'osc', 'oscEma3', 'oscPercentile', 'turnover')}
+                          for row in (chart.get('rows') or [])[-63:]]
+                  results[ticker] = {
+                      'asof': item['asof'], 'status': chart.get('status'),
+                      'turnover_mode': chart.get('turnoverMode'),
+                      'latest': latest, 'rows_3m': rows,
+                  }
+          if set(results) != set(requested):
+              raise SystemExit('FLOW_OSC_MISSING_TICKERS: ' + ','.join(sorted(set(requested) - set(results))))
+          output = {
+              'eod_date': eod,
+              'generated_at_utc': dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'),
+              'indicator': 'FLOW_OSC',
+              'source_api': API,
+              'source_brief': 'https://raw.githubusercontent.com/eonee12/signalfind-ai-brief/main/us-brief.txt',
+              'note': 'Relative-volume fallback is NOT institutional or active ETF net buying; Flow OSC is a timing overlay, not an Entry signal.',
+              'requested': requested,
+              'tickers': results,
+          }
+          target.write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\\n', encoding='utf-8')
+          print(f'FLOW_OSC_PASS eod={eod} tickers={len(results)}')
+          PY
+      - name: Commit only if EOD snapshot changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- us-flow-osc.json && git ls-files --error-unmatch us-flow-osc.json >/dev/null 2>&1; then
+            echo 'FLOW_OSC_UNCHANGED'
+            exit 0
+          fi
+          git config user.name 'signalfind-flow-osc-bot'
+          git config user.email 'signalfind-flow-osc-bot@users.noreply.github.com'
+          git add us-flow-osc.json
+          git commit -m 'data: mirror validated US Flow OSC EOD'
+          git push
