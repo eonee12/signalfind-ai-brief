@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/mirror-us-flow-osc.yml
+      - us-flow-osc-request.txt
   schedule:
     # US EOD + existing 6-hour oscillator cache; Tue-Sat 18:15 KST.
     - cron: '15 9 * * 2-6'
@@ -27,12 +28,21 @@ jobs:
     timeout-minutes: 12
     env:
       INPUT_TICKERS: ${{ inputs.tickers || '' }}
+      HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message || '' }}
     steps:
       - uses: actions/checkout@v4
       - name: Fetch existing Flow OSC API and publish validated EOD snapshot
         shell: bash
         run: |
           set -euo pipefail
+          if [[ "${GITHUB_EVENT_NAME}" == "push" && "${HEAD_COMMIT_MESSAGE}" == flow-request:* ]]; then
+            export INPUT_TICKERS="$(tr -d '\r\n' < us-flow-osc-request.txt)"
+          fi
+          if [[ -n "${INPUT_TICKERS//[[:space:]]/}" ]]; then
+            echo "FLOW_OUTPUT=us-flow-osc-candidates.json" >> "$GITHUB_ENV"
+          else
+            echo "FLOW_OUTPUT=us-flow-osc.json" >> "$GITHUB_ENV"
+          fi
           python3 - <<'PY'
           import datetime as dt
           import json
@@ -56,7 +66,7 @@ jobs:
           if not eod or field('SAME_EOD_STATUS') != 'PASS' or field('ETF_BASIS_DATE') != eod:
               raise SystemExit('BRIEF_NOT_READY: US Brief EOD mismatch or missing')
 
-          target = pathlib.Path('us-flow-osc.json')
+          target = pathlib.Path('us-flow-osc-candidates.json' if os.environ.get('INPUT_TICKERS', '').strip() else 'us-flow-osc.json')
           if target.exists():
               prior = json.loads(target.read_text(encoding='utf-8'))
               if prior.get('eod_date') == eod and prior.get('requested') == requested:
@@ -104,12 +114,13 @@ jobs:
       - name: Commit only if EOD snapshot changed
         run: |
           set -euo pipefail
-          if git diff --quiet -- us-flow-osc.json && git ls-files --error-unmatch us-flow-osc.json >/dev/null 2>&1; then
+          file="${FLOW_OUTPUT:-us-flow-osc.json}"
+          if git diff --quiet -- "$file" && git ls-files --error-unmatch "$file" >/dev/null 2>&1; then
             echo 'FLOW_OSC_UNCHANGED'
             exit 0
           fi
           git config user.name 'signalfind-flow-osc-bot'
           git config user.email 'signalfind-flow-osc-bot@users.noreply.github.com'
-          git add us-flow-osc.json
+          git add "$file"
           git commit -m 'data: mirror validated US Flow OSC EOD'
           git push
